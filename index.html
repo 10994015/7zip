@@ -8,16 +8,21 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
 <body>
-    <!-- <div id="hidden"></div> -->
-    <!-- <video autoplay controls id="video">
-        <source src="./styles/images/開場.gif" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-      </video> -->
-      <img src="./styles/images/開場.gif" alt="" class="OpeningAnimation">
-    <script>
-    var hidden = document.getElementById("hidden");
-    var video = document.getElementById('video');
-    var btn = document.getElementById('btn');
+      <!-- <img src="./styles/images/open.gif" alt="" class="OpeningAnimation"> -->
+      <main>
+          <div class="room">
+                <img src="./styles/images/index1/background.png" alt="" class="background">
+          </div>
+          <div class="room" style="background: #fff;">
+                <img src="./styles/images/index1/background.png" alt="" class="background">
+          </div>
+      </main>
+
+
+
+
+
+<script>
     var OpeningAnimation = document.getElementsByClassName('OpeningAnimation')[0];
     setTimeout(()=>{
         OpeningAnimation.style.opacity="0";
@@ -25,8 +30,8 @@
     setTimeout(()=>{
         OpeningAnimation.style.display="none";
     },12000)
-   
-    
-    </script>
+
+
+</script>
 </body>
 </html>
