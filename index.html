@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+<body>
+    <!-- <div id="hidden"></div> -->
+    <!-- <video autoplay controls id="video">
+        <source src="./styles/images/開場.gif" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      </video> -->
+      <img src="./styles/images/開場.gif" alt="" class="OpeningAnimation">
+    <script>
+    var hidden = document.getElementById("hidden");
+    var video = document.getElementById('video');
+    var btn = document.getElementById('btn');
+    var OpeningAnimation = document.getElementsByClassName('OpeningAnimation')[0];
+    setTimeout(()=>{
+        OpeningAnimation.style.opacity="0";
+    },11000)
+    setTimeout(()=>{
+        OpeningAnimation.style.display="none";
+    },12000)
+   
+    
+    </script>
+</body>
+</html>
