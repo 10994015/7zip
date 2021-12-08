@@ -10,21 +10,29 @@
 }
 main{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #000;
-    overflow-y:scroll;
     
 }
 .room{
     position: relative;
     width: 100%;
-    min-height: 100%;
-    background: #000;
+    height: 100vh;
 }
 .background{
     position: absolute;
-    left:calc(50% - 500px);
-    bottom: 0;
-    width: 1000px; 
-    transform: skew(-5deg, 10deg) scale(0.9) scale(1, 0.95);
+    left:calc(50% - 350px);
+    top:  calc(50% - 250px);
+    width: 700px;
+    height: 442px;
+}
+.background1{
+    
+    transform: skew(0deg, 0deg) scale(1) translate(0,0);
+    transition: .9s ease;
+}
+.background2{
+    
+    transform: perspective(200px) rotateX(15deg) skew(10deg, -20deg) scale(2) translate(600px,150px);
+    transition: .9s ease;
 }

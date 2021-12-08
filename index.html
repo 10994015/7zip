@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>7ZIP</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
 <body>
       <!-- <img src="./styles/images/open.gif" alt="" class="OpeningAnimation"> -->
       <main>
           <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background">
+                <img src="./styles/images/index1/background.png" alt="" class="background background1">
           </div>
-          <div class="room" style="background: #fff;">
-                <img src="./styles/images/index1/background.png" alt="" class="background">
+          <div class="room">
+                <img src="./styles/images/index1/background.png" alt="" class="background background2">
           </div>
       </main>
 
@@ -22,16 +22,44 @@
 
 
 
+<script src="script/jquery-3.6.0.min.js"></script>
+<script src="script/script.js"></script>
 <script>
-    var OpeningAnimation = document.getElementsByClassName('OpeningAnimation')[0];
-    setTimeout(()=>{
-        OpeningAnimation.style.opacity="0";
-    },11000)
-    setTimeout(()=>{
-        OpeningAnimation.style.display="none";
-    },12000)
-
-
+    var background1 = document.getElementsByClassName("background1")[0];
+    var background2 = document.getElementsByClassName("background2")[0];
+window.addEventListener("scroll", function(){
+    console.log(window.scrollY);
+    if(window.scrollY===0){
+        background1.style.transform = "skew(0deg, 0deg) scale(1) translate(0,0)";
+        background2.style.transform = "perspective(200px) rotateX(15deg) skew(10deg, -20deg) scale(2) translate(600px,150px)";
+        background.style.transition = "1s";
+    }
+    if(window.scrollY===100){
+        background1.style.transform = "   skew(-5deg, 10deg) scale(0.95) translate(-100px,-60px)";
+        background2.style.transform = "perspective(250px) rotateX(12deg) skew(8deg, -16deg) scale(1.8) translate(480px,80px)";
+        background.style.transition = "1s";
+    }
+    if(window.scrollY===200){
+        background1.style.transform = " skew(-10deg, 15deg) scale(0.9) translate(-200px,-120px)";
+        background2.style.transform = "perspective(300px) rotateX(9deg) skew(6deg, -12deg) scale(1.6) translate(360px,10px)";
+        background.style.transition = "1s";
+    }
+    if(window.scrollY===300){
+        background1.style.transform = " skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+        background2.style.transform = "perspective(350px) rotateX(6deg) skew(4deg, -8deg) scale(1.4) translate(240px,-60px)";
+        background.style.transition = "1s";
+    }
+    if(window.scrollY===400){
+        background2.style.transform = "perspective(400px) rotateX(3deg) skew(2deg, -4deg) scale(1.2) translate(120px,-130px)";
+        background.style.transition = "1s";
+    }
+    if(window.scrollY===500){
+        background2.style.transform = "perspective(450px) rotateX(0deg) skew(0deg, 0deg) scale(1) translate(0px,-200px)";
+        background.style.transition = "1s";
+    }
+        });
+       
+        
 </script>
 </body>
 </html>
