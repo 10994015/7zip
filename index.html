@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
 <body>
-      <img src="./styles/images/open.gif" alt="" class="OpeningAnimation">
+      <!-- <img src="./styles/images/open.gif" alt="" class="OpeningAnimation"> -->
       <main>
-          <div class="room">
+            <div class="room">
                 <img src="./styles/images/index1/background.png" alt="" class="background background1">
-          </div>
-          <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background background2">
-          </div>
+            </div>
+            <div class="room">
+                    <img src="./styles/images/index1/background.png" alt="" class="background background2">
+            </div>
+            <div class="room">
+                <img src="./styles/images/index1/background.png" alt="" class="background background3">
+            </div>
       </main>
 
 
@@ -27,38 +30,88 @@
 <script>
     var background1 = document.getElementsByClassName("background1")[0];
     var background2 = document.getElementsByClassName("background2")[0];
-window.addEventListener("scroll", function(){
-    console.log(window.scrollY);
-    if(window.scrollY===0){
-        background1.style.transform = "skew(0deg, 0deg) scale(1) translate(0,0)";
-        background2.style.transform = "perspective(200px) rotateX(15deg) skew(10deg, -20deg) scale(2) translate(600px,150px)";
-        background.style.transition = "1s";
-    }
-    if(window.scrollY===100){
-        background1.style.transform = "   skew(-5deg, 10deg) scale(0.95) translate(-100px,-60px)";
-        background2.style.transform = "perspective(250px) rotateX(12deg) skew(8deg, -16deg) scale(1.8) translate(480px,80px)";
-        background.style.transition = "1s";
-    }
-    if(window.scrollY===200){
-        background1.style.transform = " skew(-10deg, 15deg) scale(0.9) translate(-200px,-120px)";
-        background2.style.transform = "perspective(300px) rotateX(9deg) skew(6deg, -12deg) scale(1.6) translate(360px,10px)";
-        background.style.transition = "1s";
-    }
-    if(window.scrollY===300){
-        background1.style.transform = " skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
-        background2.style.transform = "perspective(350px) rotateX(6deg) skew(4deg, -8deg) scale(1.4) translate(240px,-60px)";
-        background.style.transition = "1s";
-    }
-    if(window.scrollY===400){
-        background2.style.transform = "perspective(400px) rotateX(3deg) skew(2deg, -4deg) scale(1.2) translate(120px,-130px)";
-        background.style.transition = "1s";
-    }
-    if(window.scrollY===500){
-        background2.style.transform = "perspective(450px) rotateX(0deg) skew(0deg, 0deg) scale(1) translate(0px,-200px)";
-        background.style.transition = "1s";
-    }
-        });
-       
+    var background3 = document.getElementsByClassName("background3")[0];
+    window.addEventListener("scroll", function(){
+        console.log(window.scrollY);
+        if(window.scrollY===0){
+            background1.style.transform = "skew(0deg, 0deg) scale(1) translate(0,0)";
+            background2.style.transform = "perspective(200px) rotateX(15deg) skew(10deg, -20deg) scale(2) translate(600px,150px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>0 && window.scrollY<101){
+            background1.style.transform = "skew(-5deg, 10deg) scale(0.95) translate(-100px,-60px)";
+            background2.style.transform = "perspective(250px) rotateX(12deg) skew(8deg, -16deg) scale(1.8) translate(480px,80px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>100 && window.scrollY<201){
+            background1.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-120px)";
+            background2.style.transform = "perspective(300px) rotateX(9deg) skew(6deg, -12deg) scale(1.6) translate(360px,10px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>200 && window.scrollY <301){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "perspective(350px) rotateX(6deg) skew(4deg, -8deg) scale(1.4) translate(240px,-60px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>300 && window.scrollY<401){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "perspective(400px) rotateX(3deg) skew(2deg, -4deg) scale(1.2) translate(120px,-130px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>400 && window.scrollY<501){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "perspective(450px) rotateX(0deg) skew(0deg, 0deg) scale(1) translate(0px,-200px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>500 && window.scrollY<601){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-5deg, 10deg) scale(0.95) translate(-100px,-260px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>600 && window.scrollY<701){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "perspective(200px) rotateX(15deg) skew(10deg, -20deg) scale(2) translate(600px,150px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>700 && window.scrollY<801){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "perspective(250px) rotateX(12deg) skew(8deg, -16deg) scale(1.8) translate(480px,80px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>800 && window.scrollY<901){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "perspective(300px) rotateX(9deg) skew(6deg, -12deg) scale(1.6) translate(360px,10px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>900 && window.scrollY<1001){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "perspective(350px) rotateX(6deg) skew(4deg, -8deg) scale(1.4) translate(240px,-60px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>1000 && window.scrollY<1101){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "perspective(400px) rotateX(3deg) skew(2deg, -4deg) scale(1.2) translate(120px,-130px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>1100 && window.scrollY<1201){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "perspective(450px) rotateX(0deg) skew(0deg, 0deg) scale(1) translate(0px,-200px)";
+            background.style.transition = "1s";
+        }
+        if(window.scrollY>1200 && window.scrollY<1301){
+            background1.style.transform = "skew(-10deg, 20deg) scale(0.85) translate(-300px,-180px)";
+            background2.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background3.style.transform = "skew(-10deg, 15deg) scale(0.9) translate(-200px,-320px)";
+            background.style.transition = "1s";
+        }
+    });
+        
         
 </script>
 </body>
