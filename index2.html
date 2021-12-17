@@ -11,31 +11,71 @@
       <!-- <img src="./styles/images/open.gif" alt="" class="OpeningAnimation"> -->
       <main>
           <h1 id="t" style="color:#fff"></h1>
-          <button id="up">上</button>
-          <button id="down">下</button>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg1">
+          <div class="share">
+             <img src="./styles/images/share/up.png" alt="" id="up">
+             <div id="border">
+                 <img src="./styles/images/share/border.png" alt="" id="border-eye">
+                 <img src="./styles/images/share/eye1.png" alt="" id="eye">
+             </div>
+             
+             <img src="./styles/images/share/down.png" alt="" id="down">
+          </div>
+          
+          
+            <div class="room" id="bg1">
+                <img src="./styles/images/index2/bg.png" alt="" class="background">
+                <img src="./styles/images/index2/peple.png" alt="" class="people">
+                <img src="./styles/images/index2/card.png" alt="" class="card">
+                <img src="./styles/images/index2/card-right.png" alt="" class="card-right">
+                <img src="./styles/images/index2/card-left.png" alt="" class="card-left">
             </div>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg2">
+            <div class="room" id="bg2">
+                <img src="./styles/images/index1/bg.png" alt="" class="background">
+                <img src="./styles/images/index1/peple.png" alt="" class="people">
+                <img src="./styles/images/index1/card.png" alt="" class="card">
+                <img src="./styles/images/index1/card-right.png" alt="" class="card-right">
+                <img src="./styles/images/index1/card-left.png" alt="" class="card-left">
             </div>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg3">
+            <div class="room" id="bg3">
+                    <img src="./styles/images/index3/bg.png" alt="" class="background">
+                    <img src="./styles/images/index3/peple.png" alt="" class="people">
+                    <img src="./styles/images/index3/card.png" alt="" class="card">
+                    <img src="./styles/images/index3/card-right.png" alt="" class="card-right">
+                    <img src="./styles/images/index3/card-left.png" alt="" class="card-left">
             </div>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg4">
+            <div class="room" id="bg4">
+                    <img src="./styles/images/index4/bg.png" alt="" class="background">
+                    <img src="./styles/images/index4/peple.png" alt="" class="people">
+                    <img src="./styles/images/index4/card.png" alt="" class="card">
+                    <img src="./styles/images/index4/card-right.png" alt="" class="card-right">
+                    <img src="./styles/images/index4/card-left.png" alt="" class="card-left">
             </div>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg5">
+            <div class="room" id="bg5">
+                    <img src="./styles/images/index5/bg.png" alt="" class="background">
+                    <img src="./styles/images/index5/peple.png" alt="" class="people">
+                    <img src="./styles/images/index5/card.png" alt="" class="card">
+                    <img src="./styles/images/index5/card-right.png" alt="" class="card-right">
+                    <img src="./styles/images/index5/card-left.png" alt="" class="card-left">
             </div>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg6">
+            <div class="room" id="bg6">
+                <img src="./styles/images/index1/bg.png" alt="" class="background">
             </div>
-            <div class="room">
-                <img src="./styles/images/index1/background.png" alt="" class="background" id="bg7">
+            <div class="room" id="bg7">
+                <img src="./styles/images/index1/bg.png" alt="" class="background" id="bg7">
             </div>
            
            
+
+            <div class="model">
+                <div class="main-model">
+                    <div class="mian-model-header"></div>
+                    <h1>確定進入 ?</h1>
+                    <div>
+                        <a href="javascript:;" class="yes">YES</a>
+                        <a href="javascript:;" class="no">NO</a>
+                    </div>
+                </div>
+            </div>
       </main>
 
 
@@ -54,11 +94,25 @@
     var bg5 = document.getElementById('bg5');
     var bg6 = document.getElementById('bg6');
     var bg7 = document.getElementById('bg7');
+    var eye = document.getElementById('eye');
+    var eyeNum = 1;
+    var people = document.getElementsByClassName("people");
+    var model = document.getElementsByClassName("model");
+    var no = document.getElementsByClassName("no");
     var times = 0;
     var t = document.getElementById('t');
     t.innerHTML = "times:"+times;
-    
-    up.addEventListener("click",()=>{
+    people[0].addEventListener("click",()=>{
+        model[0].style.display = "flex";
+    })
+    no[0].addEventListener("click",()=>{
+        model[0].style.display = "none";
+    })
+    down.addEventListener("click",()=>{
+        if(eyeNum<7){
+            eyeNum +=1;
+            eye.src = "./styles/images/share/eye"+eyeNum+".png";
+        }
         if(times>-6){
             times-=1;
         }
@@ -132,7 +186,11 @@
         
     });
 
-    down.addEventListener("click",()=>{
+    up.addEventListener("click",()=>{
+        if(eyeNum>1){
+            eyeNum -=1;
+            eye.src = "./styles/images/share/eye"+eyeNum+".png";
+        }
         if(times<0){
              times+=1;
         }
