@@ -18,7 +18,7 @@ main{
     width: 800px;
     height: 442px;
     position: absolute;
-    top:calc(50% - 250px);
+    top:calc(50% - 280px);
     left: calc(50% - 250px);
     z-index: -1;
     

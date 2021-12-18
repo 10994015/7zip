@@ -12,14 +12,16 @@
     display: none;
 }
 
-#room07 #bgimg{
+#room07 .bgimg{
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
     left:0;
+    opacity: 0;
+    transition: .3s;
 }
-#room07 #bgimg > img{
+#room07 .bgimg > img{
     width: 100%;
     object-fit: cover;
     z-index: -1;
@@ -28,8 +30,8 @@
     width: 800px;
     height: 442px;
     position: absolute;
-    top:calc(50% - 250px);
-    left: calc(50% - 400px);
+    left: calc(50% - 410px);
+    top:calc(50% - 280px);
     z-index: -1;
     animation: start 1s linear;
     
@@ -37,10 +39,11 @@
 @keyframes start{
     0%{
         left: calc(50% - 250px);
+        
     }
    
     100%{
-        left: calc(50% - 400px);
+        left: calc(50% - 410px);
     }
 }
 @keyframes fadeout{

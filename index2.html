@@ -115,9 +115,9 @@
 
 
       <div id="room07">
-            <!-- <div id="bgimg">
+            <div class="bgimg">
                 <img src="./styles/images/room07/bg.png" alt=""">
-            </div> -->
+            </div>
             <div class="room" id="bg1">
                 <img src="./styles/images/index2/bg.png" alt="" class="background" id="r7-background">
                 <img src="./styles/images/index2/peple.png" alt="" class="people" id="r7-people">
@@ -151,23 +151,33 @@
     var t = document.getElementById('t');
     var yes = document.getElementsByClassName('yes')[0];
     var room07 = document.getElementById("room07");
-
+    var bgimg = document.getElementsByClassName('bgimg')[0];
     var model0 = document.getElementById('model0');
     var model1 = document.getElementById('model1');
     var model2 = document.getElementById('model2');
     var model3 = document.getElementById('model3');
    
+
+    var r7people = document.getElementById('r7-people');
+    var r7card = document.getElementById('r7-card');
+    var r7cardRight = document.getElementById('r7-card-right');
+    var r7cardLeft = document.getElementById('re-card-left');
     yes.addEventListener("click",()=>{
         main.style.display = "none";
         room07.style.display = "block";
+        console.log(bgimg);
         setTimeout(()=>{
-        people.style.display = "none";
-        card.style.display = "none";
-        cardRight.style.display = "none";
-        cardLeft.style.display = "none";
-        room07.style.background = 'url("./styles/images/room07/bg.png") no-repeat';
+            bgimg.style.opacity = "1";
+        },1000)
+        setTimeout(()=>{
+            r7card.style.display = "none";
+            r7cardRight.style.display = "none";
+            r7cardLeft.style.display = "none";
+            
+        
        
-    },2100);
+        },2100);
+        
     })
 
     // t.innerHTML = "times:"+times;
