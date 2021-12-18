@@ -130,6 +130,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 9999999999;
 }
 .model .main-model .mian-model-header{
     width: calc(100% - 4px);
@@ -162,4 +163,77 @@ main{
 .model .main-model > div a:active {
     background: transparent;
     color:#fff;
+}
+.model .bg-model{
+    height: auto;
+    background: #000;
+    border:1px #fff solid;
+    color:#fff;
+}
+.model .bg-model.model1{
+    position: absolute;
+    width: 300px;
+    top: 200px;
+    right: 350px;
+    min-height: 300px;
+}
+.model .bg-model.model2{
+    position: absolute;
+    width: 300px;
+    top: 100px;
+    left: 400px;
+    min-height: 200px;
+}
+.model .bg-model.model3{
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    width: 400px;
+    min-height: 180px;
+}
+.model .bg-model code,
+.model .bg-model p{
+    color:#ccc;
+    padding:35px 10px 10px 10px;
+   
+}
+.model .bg-model.model1 .bg-model-header{
+    width: calc(100% - 4px);
+    height: 25px;
+    border:2px #fff solid;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background: linear-gradient(to right,#fff,#fff,#000,#000);
+}
+.model .bg-model.model3 .bg-model-header{
+    width: calc(100% - 4px);
+    height: 25px;
+    border:2px #fff solid;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background: linear-gradient(to right,#fff,#000,#000,#000);
+}
+.model .bg-model.model2 .bg-model-header{
+    width: calc(100% - 4px);
+    height: 25px;
+    border:2px #fff solid;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.model .bg-model.model3 img{
+    padding-top:45px;
+    padding-left: 15px;
+    width:90%;
+}
+.mian-model-header-img{
+    width: 100%;
+    height: 25px;
+    object-fit: cover;
+}
+#model0,#model1,#model2,#model3{
+    display: none;
 }

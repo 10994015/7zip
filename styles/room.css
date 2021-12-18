@@ -1,0 +1,109 @@
+#room07{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* background: url("./images/room07/bg.png") no-repeat; */
+    background-size:cover;
+
+    display: none;
+}
+
+#room07 #bgimg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+#room07 #bgimg > img{
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#room07 .room{
+    width: 800px;
+    height: 442px;
+    position: absolute;
+    top:calc(50% - 250px);
+    left: calc(50% - 400px);
+    z-index: -1;
+    animation: start 1s linear;
+    
+}
+@keyframes start{
+    0%{
+        left: calc(50% - 250px);
+    }
+   
+    100%{
+        left: calc(50% - 400px);
+    }
+}
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(3);
+        opacity: 0;
+    }
+
+}
+#room07 .room .background{
+    width: 800px;
+    height: auto;z-index: -1;
+    animation: fadeout 2s linear;
+    transform: scale(3);
+    opacity: 0;
+}
+#room07 .room .people{
+    position: absolute;
+    top: 113px;
+    left: 275px;
+    width: 275px;
+    height: auto;
+    z-index: 99999999999999;
+    cursor: pointer;
+}
+#room07 .room .card{
+    position: absolute;
+    top: 60px;
+    right: -20px;
+    width: 280px;
+    height: auto;
+    z-index: 99999;
+    animation: fadeout 2s linear;
+    transform: scale(3);
+    opacity: 0;
+}
+#room07 .room .card-right{
+    position: absolute;
+    bottom: -45px;
+    right: -23px;
+    width: 360px;
+    height: auto;
+    z-index: 99999;
+    animation: fadeout 2s linear;
+    transform: scale(3);
+    opacity: 0;
+}
+#room07 .room .card-left{
+    position: absolute;
+    bottom: -60px;
+    left: -23px;
+    width: 390px;
+    height: auto;
+    z-index: 99999;
+    animation: fadeout 2s linear;
+    transform: scale(3);
+    opacity: 0;
+}

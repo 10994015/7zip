@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/room.css">
+    <title>room</title>
+</head>
+<body>
+    <main id="main">
+        <div id="bgimg">
+            <img src="./styles/images/room07/bg.png" alt=""">
+        </div>
+        <div class="room" id="bg1">
+            <img src="./styles/images/index2/bg.png" alt="" class="background">
+            <img src="./styles/images/index2/peple.png" alt="" class="people">
+            <img src="./styles/images/index2/card.png" alt="" class="card">
+            <img src="./styles/images/index2/card-right.png" alt="" class="card-right">
+            <img src="./styles/images/index2/card-left.png" alt="" class="card-left">
+        </div>
+    </main>
+
+    <script>
+    var people = document.getElementById('people')[0];
+    var card = document.getElementById('card')[0];
+    var cardRight = document.getElementById('people')[0];
+    var cardLeft = document.getElementById('card-left')[0];
+    var main = document.getElementById('main');
+    
+    setTimeout(()=>{
+        people.style.display = "none";
+        card.style.display = "none";
+        cardRight.style.display = "none";
+        cardLeft.style.display = "none";
+
+       
+    },1100);
+    
+
+    </script>
+</body>
+</html>

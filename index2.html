@@ -7,9 +7,10 @@
     <title>7ZIP</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style2.css">
+    <link rel="stylesheet" href="./styles/room.css">
 <body>
       <!-- <img src="./styles/images/open.gif" alt="" class="OpeningAnimation"> -->
-      <main>
+      <main id="main">
           <h1 id="t" style="color:#fff"></h1>
           <div class="share">
              <img src="./styles/images/share/up.png" alt="" id="up">
@@ -67,24 +68,71 @@
            
 
             <div class="model">
-                <div class="main-model">
-                    <div class="mian-model-header"></div>
+                <div class="main-model" id="model0">
+                    <div class="mian-model-header">
+                        <img src="./styles/images/share/model-header.png" class="mian-model-header-img" alt="">
+                    </div>
                     <h1>確定進入 ?</h1>
                     <div>
                         <a href="javascript:;" class="yes">YES</a>
                         <a href="javascript:;" class="no">NO</a>
                     </div>
                 </div>
+                <div class="bg-model model1" id="model1">
+                    <div class="bg-model-header"></div>
+                    <code>
+                        html{ <br>
+                            font-family: Arial, Helvetica, sans-serif;<br>
+                            overflow: hidden;<br>
+                            overflow-y:auto;<br>
+                         }<br>
+                         <br>
+                        main{<br>
+                            width: 100%;<br>
+                            height: 100vh;<br>
+                            background-color: #000;<br>
+                            position: fixed;<br>
+                            top: 0;<br>
+                            left: 0;<br>
+                            overflow: hidden;<br>
+                        }
+                    </code>
+                   
+                </div>
+
+                <div class="bg-model model2" id="model2">
+                    <div class="bg-model-header"></div>
+                    <p>7.ZIP<br>_07</p>
+                </div>
+
+                <div class="bg-model model3" id="model3">
+                    <div class="bg-model-header"></div>
+                    <img src="./styles/images/share/model.png" alt="">
+                   
+                </div>
             </div>
       </main>
 
 
-
+      <div id="room07">
+            <!-- <div id="bgimg">
+                <img src="./styles/images/room07/bg.png" alt=""">
+            </div> -->
+            <div class="room" id="bg1">
+                <img src="./styles/images/index2/bg.png" alt="" class="background" id="r7-background">
+                <img src="./styles/images/index2/peple.png" alt="" class="people" id="r7-people">
+                <img src="./styles/images/index2/card.png" alt="" class="card" id="r7-card">
+                <img src="./styles/images/index2/card-right.png" alt="" class="card-right" id="r7-card-right">
+                <img src="./styles/images/index2/card-left.png" alt="" class="card-left" id="r7-card-left">
+            
+            </div>
+        </div>
 
 
 <script src="script/jquery-3.6.0.min.js"></script>
 <script src="script/script.js"></script>
 <script>
+    var main = document.getElementById("main");
     var up = document.getElementById('up');
     var down = document.getElementById('down');
     var bg1 = document.getElementById('bg1');
@@ -101,12 +149,49 @@
     var no = document.getElementsByClassName("no");
     var times = 0;
     var t = document.getElementById('t');
-    t.innerHTML = "times:"+times;
+    var yes = document.getElementsByClassName('yes')[0];
+    var room07 = document.getElementById("room07");
+
+    var model0 = document.getElementById('model0');
+    var model1 = document.getElementById('model1');
+    var model2 = document.getElementById('model2');
+    var model3 = document.getElementById('model3');
+   
+    yes.addEventListener("click",()=>{
+        main.style.display = "none";
+        room07.style.display = "block";
+        setTimeout(()=>{
+        people.style.display = "none";
+        card.style.display = "none";
+        cardRight.style.display = "none";
+        cardLeft.style.display = "none";
+        room07.style.background = 'url("./styles/images/room07/bg.png") no-repeat';
+       
+    },2100);
+    })
+
+    // t.innerHTML = "times:"+times;
     people[0].addEventListener("click",()=>{
         model[0].style.display = "flex";
+        setTimeout(()=>{
+            model1.style.display = "flex";
+        },100)
+        setTimeout(()=>{
+            model2.style.display = "flex";
+        },200)
+        setTimeout(()=>{
+            model3.style.display = "flex";
+        },300)
+        setTimeout(()=>{
+            model0.style.display = "flex";
+        },450)
     })
     no[0].addEventListener("click",()=>{
         model[0].style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        model0.style.display = "none";
     })
     down.addEventListener("click",()=>{
         if(eyeNum<7){
