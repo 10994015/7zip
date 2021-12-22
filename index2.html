@@ -124,8 +124,11 @@
                 <img src="./styles/images/index2/card.png" alt="" class="card" id="r7-card">
                 <img src="./styles/images/index2/card-right.png" alt="" class="card-right" id="r7-card-right">
                 <img src="./styles/images/index2/card-left.png" alt="" class="card-left" id="r7-card-left">
-            
             </div>
+
+            <div class="roomText" id="peopleText">主角（控制木偶的人）：控制狂、恐怖情人</div>
+
+            <input type="text" class="password" id="r7Password">
         </div>
 
 
@@ -162,25 +165,36 @@
     var r7card = document.getElementById('r7-card');
     var r7cardRight = document.getElementById('r7-card-right');
     var r7cardLeft = document.getElementById('re-card-left');
-    
+    var peopleText = document.getElementById('peopleText');
+    var roomText = document.getElementsByClassName("roomText");
     yes.addEventListener("click",()=>{
         main.style.display = "none";
         room07.style.display = "block";
         console.log(bgimg);
         setTimeout(()=>{
             bgimg.style.opacity = "1";
+            r7people.src = "styles/images/room07/people.png";
+            for(var r=0;r<roomText.length;r++){
+                roomText[r].style.display="block";
+            }
         },1000)
         setTimeout(()=>{
             r7card.style.display = "none";
             r7cardRight.style.display = "none";
             r7cardLeft.style.display = "none";
             
+            
         
        
         },2100);
         
     })
-
+    r7people.addEventListener("mouseover",()=>{
+        peopleText.style.opacity="1";
+    });
+    r7people.addEventListener("mouseout",()=>{
+        peopleText.style.opacity="0";
+    });
     // t.innerHTML = "times:"+times;
     people[0].addEventListener("click",()=>{
         model[0].style.display = "flex";
