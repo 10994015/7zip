@@ -1,6 +1,14 @@
     
+ @font-face {
+    font-family: SourceBlack;
+    src: url(./SourceBlack/GenYoGothic-B.ttc);
+  }
+  @font-face {
+    font-family: MANROPE;
+    src: url(./MANROPE/Manrope-Medium.ttf);
+  }
  html{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: MANROPE,MANROPE,Arial, Helvetica, sans-serif;
     overflow: hidden;
     overflow-y:auto;
  }
