@@ -1,3 +1,7 @@
+@font-face {
+    font-family: yo;
+    src: url('./font/源樣黑.ttf');
+  }
 #room07{
     width: 100%;
     height: 100vh;
@@ -50,9 +54,13 @@
 }
 #room07 .roomText{
     color:#ddd;    
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: none;
     opacity: 0;
+    color:#E5DC46;
+    line-height: 1.3;
+    letter-spacing:3px;
+    font-family: yo,'Comfortaa';
     
     
 }
@@ -62,11 +70,16 @@
     right:13%;
     width: 200px;
     height: 60px;
-    font-size: 24px;
+    font-size: 36px;
     outline: none;
     border:none;
     background-color: transparent;
     color:#fff;
+    color:#E5DC46;
+    letter-spacing:6px;
+    font-family: 'Comfortaa';
+    transform: scale(1,0.7);
+    font-weight: 600;
 }
 #room07 .roomEnter{ 
     position: absolute;
