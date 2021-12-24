@@ -24,7 +24,7 @@ main{
     left: 0;
     overflow: hidden;
 }
-.room{
+#main .room{
     width: 800px;
     height: 442px;
     position: absolute;
@@ -34,44 +34,58 @@ main{
     
 }
 
-.room .background{
+#main .room .background{
     width: 800px;
     height: auto;z-index: -1;
 }
-.room .people{
+#main .room .people{
     position: absolute;
-    top: 113px;
-    left: 275px;
-    width: 275px;
+    top: 128px;
+    left: 288px;
+    width: 260px;
     height: auto;
     z-index: 99999999999999;
     cursor: pointer;
 }
-.room .card{
+#main .room .card{
     position: absolute;
     top: 60px;
     right: -20px;
     width: 280px;
     height: auto;
     z-index: 99999;
+    cursor: pointer;
 }
-.room .card-right{
+#main .room .card:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
+#main .room .card-right{
     position: absolute;
     bottom: -45px;
     right: -23px;
     width: 360px;
     height: auto;
     z-index: 99999;
+    cursor: pointer;
 }
-.room .card-left{
+#main .room .card-right:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
+#main .room .card-left{
     position: absolute;
     bottom: -60px;
     left: -23px;
     width: 390px;
     height: auto;
     z-index: 99999;
+    cursor: pointer;
 }
-
+#main .room .card-left:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
 #bg1{
     transform: rotate(0deg)  translateY(0%);
 }
@@ -79,7 +93,7 @@ main{
     transform: rotate(20deg)  translateY(200%);
     opacity: 0;
 }
-.share{
+#main .share{
     height: 100%;
     position: absolute;
     top: 0;
@@ -89,26 +103,26 @@ main{
     justify-content: center;
     align-items: center;
 }
-.share #border-eye{
+#main .share #border-eye{
     width: 200px;
     margin: 50px 0;
     cursor: pointer;
     
 
 }
-.share #up,.share #down{
+#main .share #up,.share #down{
     width: 100px;
     cursor: pointer;
 }
-.share #up:hover,
-.share #down:hover{
+#main .share #up:hover,
+#main .share #down:hover{
     transform: scale(1.2);
     transition: .3s;
 }
-.share #border{
+#main .share #border{
     position: relative;
 }
-.share #border #eye{
+#main .share #border #eye{
     position: absolute;
     top: calc(50% - 100px);
     left: 0;

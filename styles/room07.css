@@ -3,22 +3,23 @@
     src: url('./font/源樣黑.ttf');
   }
 #room07{
-    width: 100%;
-    height: 100vh;
+    width: 1500px;
+    height: 721.1px;
     background-color: #000;
     position: relative;
-
+    top: 0;
+    left:0;
+    margin: auto;
     overflow: hidden;
     /* background: url("./images/room07/bg.png") no-repeat; */
     background-size:cover;
     display: none;
     z-index: 999;
-    
 }
 
 #room07 .bgimg{
     width: 1500px;
-    height: 100vh;
+    height: 721.1px;
     position: relative;
     position: absolute;
     top: 0;
@@ -31,9 +32,18 @@
 }
 #room07 .bgimg > img{
     width: 1500px;
-    height: 100vh;
+    height: 721.1px;
     object-fit: contain;
-    position: relative;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+#room07 .room07ImgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:1500px;
+    height: 721.1px;
 }
 #room07 .room{
     width: 800px;
@@ -41,13 +51,13 @@
     position: absolute;
     left: calc(50% - 410px);
     top:calc(50% - 280px);
-    z-index: -1;
+    z-index: 1;
     animation: start 1s linear;
     
 }
 #room07 .textBox{
     position: absolute;
-    top: 87%;
+    top: 86%;
     left: 2%;
     display: flex;
     align-items: center;
@@ -67,9 +77,9 @@
     font-weight: 500;
     
 }
-#room07 .password{
+#room07 #r7Password{
     position: absolute;
-    bottom: 4%;
+    bottom: 5%;
     right:13%;
     width: 200px;
     height: 60px;
@@ -83,26 +93,32 @@
     font-family: 'Comfortaa';
     transform: scale(1,0.7);
     font-weight: 600;
+    z-index: 3;
 }
-#room07 .roomEnter{ 
+#room07 #r7Enter{ 
     position: absolute;
-    bottom: 4%;
+    bottom: 5.8%;
     right:1%;
-    width: 120px;
+    width: 110px;
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
 }
-#room07 .prevPage{
+#room07 #r7-prevPage{
     position: absolute;
-    top: 3.2%;
-    left:0.2%;
-    width:50px;
+    top: 4.8%;
+    left:0.5%;
+    width:40px;
     height: auto;
     display: none;
     cursor: pointer;
+    z-index: 2;
 }
-#room07 .roomZenly{
+#room07 #r7-prevPage:hover{
+    transform: scale(1.1);
+}
+#room07 #r7Zenly{
     position: absolute;
     top: 22%;
     left:21%;
@@ -110,6 +126,7 @@
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
 }
 #room07 .yellowlove{
     position: absolute;
@@ -120,6 +137,7 @@
     cursor: pointer;
     animation: yellowlove 1s infinite linear;
     display: none;
+    z-index: 2;
 
 }
 #room07 .redlove{
@@ -131,6 +149,7 @@
     cursor: pointer;
     animation: redlove 1.5s infinite linear;
     display: none;
+    z-index: 2;
 }
 #room07 #r7hoverLove{
     position: absolute;
@@ -141,16 +160,23 @@
     height: 200px;
     cursor: pointer;
     display:none;
+    z-index: 2;
 }
 #room07 #r7Bird{
     position: absolute;
-    top: 16.3%;
+    top: 17.2%;
     left: 6%;
     width: 110px;
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
 }
+#room07 #r7Bird:hover{
+    transform-origin:top;
+    animation: rotateBrid 3s linear infinite;
+}
+
 #room07 #r7foot{
     position: absolute;
     bottom:18.3%;
@@ -159,34 +185,54 @@
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
 }
 #room07 #r7cupid{
     position: absolute;
     top:22.3%;
-    left: 55.4%;
+    left: 55.2%;
     width: 140px;
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
+}
+#room07 #r7cupid:hover{
+    animation: cupid 1s infinite linear;
+}
+@keyframes cupid{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    0%{
+        transform: translateY(0px);
+    }
 }
 #room07 #r7puppet{
     position: absolute;
-    top:33%;
-    left: 41.4%;
-    width: 100px;
+    top:36%;
+    left: 42.4%;
+    width: 80px;
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
 }
 #room07 #r7Gps{
     position: absolute;
-    top:52.7%;
-    left: 5%;
-    width: 25px;
+    top:53.1%;
+    left: 5.15%;
+    width: 20px;
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 1;
+    transition: .5;
 }
+
 #room07 #r7hoverGPS{
     position: absolute;
     top:50%;
@@ -197,16 +243,21 @@
     cursor: pointer;
     background-color: transparent;
     display: none;
+    z-index: 2;
+}
+#r7Gps.scale{
+    transform: scale(1.2);
 }
 #room07 #r7talkBox{
     position: absolute;
-    top:19.5%;
+    top:20%;
     left: 81.5%;
     width: 163px;
     height: 225.89px;
     cursor: pointer;
     perspective: 1000px;
     display: none;
+    z-index: 2;
     
 }
 #room07 #r7talkBox img{
@@ -215,6 +266,7 @@
     left: 0;
     width:100%;
     height: 100%;
+    z-index: 2;
 }
 #room07 #r7talkBox:hover > #r7talk{
     transform: rotateY(180deg);
@@ -226,6 +278,7 @@
     transform: rotateY(0deg);
     backface-visibility: hidden;
     transition: .4s ease-in-out;
+    z-index: 2;
 }
 #room07 #r7talkBox #r7talkhover{
     transform: rotateY(-180deg);
@@ -234,13 +287,14 @@
 }
 #room07 #r7sabrinaBox{
     position: absolute;
-    top:19.5%;
+    top:20%;
     left: 69.25%;
-    width: 163px;
-    height: 225.89px;
+    width: 158px;
+    height: 225px;
     cursor: pointer;
     perspective: 1000px;
     display: none;
+    z-index: 2;
     
 }
 #room07 #r7sabrinaBox img{
@@ -249,6 +303,7 @@
     left: 0;
     width:100%;
     height: 100%;
+    z-index: 2;
 }
 #room07 #r7sabrinaBox:hover > #r7sabrina{
     transform: rotateY(180deg);
@@ -260,11 +315,13 @@
     transform: rotateY(0deg);
     backface-visibility: hidden;
     transition: .4s ease-in-out;
+    z-index: 2;
 }
 #room07 #r7sabrinaBox #r7sabrinahover{
     transform: rotateY(-180deg);
     backface-visibility: hidden;
     transition: .4s ease-in-out;
+    z-index: 2;
 }
 
 #room07 #r7Butterfly{
@@ -275,6 +332,7 @@
     height: auto;
     cursor: pointer;
     display: none;
+    z-index: 2;
 }
 #room07 #r7Butterfly:hover{
     animation: butterfly 1.5s linear infinite;
@@ -289,6 +347,7 @@
     cursor: pointer;
     background-color: transparent;
     display: none;
+    z-index: 2;
 }
 #room07 #r7fishBox:hover > #r7leftfish{
     left:25px;
@@ -302,6 +361,7 @@
     width: 100px;
     height: auto;
     transition: .3s;
+    z-index: 2;
 }
 #room07 #r7fishBox #r7leftfish{
     left:10px;
@@ -316,6 +376,7 @@
     width:100%;
     height: 100vh;
     display: none;
+    z-index: 2;
 }
 @keyframes start{
     0%{
@@ -375,6 +436,23 @@
         transform: rotate(0);
     }
 }
+@keyframes rotateBrid{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 #room07 .room .background{
     width: 800px;
     height: auto;z-index: -1;
@@ -384,9 +462,11 @@
 }
 #room07 .room .people{
     position: absolute;
-    top: 113px;
-    left: 275px;
-    width: 275px;
+    /* top: 113px;
+    left: 275px; */
+    top: 133px;
+    left:285px;
+    width: 250px;
     height: auto;
     z-index: 99999999999999;
     cursor: pointer;
@@ -402,6 +482,7 @@
     transform: scale(3);
     opacity: 0;
 }
+
 #room07 .room .card-right{
     position: absolute;
     bottom: -45px;
