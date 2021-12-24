@@ -6,32 +6,34 @@
     width: 100%;
     height: 100vh;
     background-color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
+
     overflow: hidden;
     /* background: url("./images/room07/bg.png") no-repeat; */
     background-size:cover;
     display: none;
+    z-index: 999;
     
 }
 
 #room07 .bgimg{
-    width: 100%;
+    width: 1500px;
     height: 100vh;
+    position: relative;
     position: absolute;
     top: 0;
     left:0;
     opacity: 0;
     transition: .3s;
-    z-index: -1;
+    z-index: -99999999999999;
     display: flex;
     align-items: center;
 }
 #room07 .bgimg > img{
-    width: 100%;
-    height: 100%;
+    width: 1500px;
+    height: 100vh;
     object-fit: contain;
+    position: relative;
 }
 #room07 .room{
     width: 800px;
@@ -59,9 +61,10 @@
     opacity: 0;
     color:#E5DC46;
     line-height: 1.3;
-    letter-spacing:3px;
+    letter-spacing:2.5px;
     font-family: yo,'Comfortaa';
-    
+    transform: scale(1,0.95);
+    font-weight: 500;
     
 }
 #room07 .password{
