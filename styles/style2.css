@@ -11,6 +11,8 @@
     font-family: MANROPE,MANROPE,Arial, Helvetica, sans-serif;
     overflow: hidden;
     overflow-y:auto;
+    padding: 0 10px;
+    background-color: #000;
  }
 
 main{
