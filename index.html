@@ -166,7 +166,7 @@
 
                 <div class="bg-model model2" id="model2">
                     <div class="bg-model-header"></div>
-                    <p>7.ZIP<br>_07</p>
+                    <p>7.ZIP<br><span id="roomNumber">_07</span></p>
                 </div>
 
                 <div class="bg-model model3" id="model3">
@@ -193,7 +193,7 @@
                 <div class="room06ImgBox">
                     <img src="./styles/images/room06/prevPage.png" alt="" class="prevPage" id="r6-prevPage">
                     <div class="textBox">
-                        <p class="roomText" id="room06Text"></p>
+                        <p class="roomText" id="room06Text">12313</p>
                     </div>
                     <input type="text" class="password" id="r6Password" autocomplete="off">
                     <img src="./styles/images/room06/enter.png" alt="" class="roomEnter" id="r6Enter">
@@ -204,6 +204,10 @@
                     <img src="./styles/images/room06/bells.png" alt="" id="r6bells">
                     <div id="r6bellshover"></div>
                     <img src="./styles/images/room06/changeeye.png" alt="" id="r6face">
+                    <img src="./styles/images/room06/follow.png" alt="" id="r6follow">
+                    <img src="./styles/images/room06/photo.png" alt="" id="r6photo">
+                    <img src="./styles/images/room06/editimg.png" alt="" id="r6editimg">
+                    <img src="./styles/images/room06/vase.png" alt="" id="r6vase">
                 </div>
       </div>
 
@@ -273,6 +277,7 @@
     var bg5 = document.getElementById('bg5');
     var bg6 = document.getElementById('bg6');
     var bg7 = document.getElementById('bg7');
+    var roomNumber  = document.getElementById('roomNumber');
     var eye = document.getElementById('eye');
     var eyeNum = 1;
     var bg1people = document.querySelector('#bg1 > .people');
@@ -301,6 +306,7 @@
     // room6
     var room06 = document.getElementById("room06");
     var room06Bg = document.getElementById('room06Bg');
+    var room06Text = document.getElementById('room06Text');
     var r6people = document.getElementById('r6-people');
     var r6card = document.getElementById('r6-card');
     var r6cardRight = document.getElementById('r6-card-right');
@@ -314,6 +320,10 @@
     var r6bells = document.getElementById('r6bells');
     var r6bellshover = document.getElementById('r6bellshover');
     var r6face = document.getElementById('r6face');
+    var r6follow  =document.getElementById('r6follow');
+    var r6photo = document.getElementById('r6photo');
+    var r6editimg = document.getElementById('r6editimg');
+    var r6vase = document.getElementById("r6vase");
     yes[5].addEventListener("click",()=>{
         main.style.display = "none";
         room06.style.display = "block";
@@ -333,6 +343,10 @@
             r6noseBtn.style.display = "block";
             r6bells.style.display = "block";
             r6bellshover.style.display = "block";
+            r6follow.style.display = "block";
+            r6photo.style.display = "block";
+            r6editimg.style.display = "block";
+            r6vase.style.display = "block";
         },1000)
         setTimeout(()=>{
             r6card.style.display = "none";
@@ -391,6 +405,34 @@
     })
     r6bellshover.addEventListener("mouseout",()=>{
         r6bells.classList.remove('animation');
+    })
+    r6follow.addEventListener("mouseover",()=>{
+        r6follow.src = "./styles/images/room06/following.png";
+    })
+    r6follow.addEventListener("mouseout",()=>{
+        r6follow.src = "./styles/images/room06/follow.png";
+    })
+    r6photo.addEventListener("mouseover",()=>{
+        r6photo.src = "./styles/images/room06/app.png"
+    })
+    r6photo.addEventListener("mouseout",()=>{
+        r6photo.src = "./styles/images/room06/photo.png"
+    })
+    r6editimg.addEventListener("mouseover",()=>{
+        r6editimg.src = "./styles/images/room06/editimg2.png"
+    })
+    r6editimg.addEventListener("mouseout",()=>{
+        r6editimg.src = "./styles/images/room06/editimg.png"
+    })
+    r6vase.addEventListener("mouseover",()=>{
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "花";
+
+    })
+    r6vase.addEventListener("mouseout",()=>{
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
+
     })
     r6PrevPage.addEventListener("click",()=>{
 
@@ -603,6 +645,7 @@
     // t.innerHTML = "times:"+times;
     bg1people.addEventListener("click",()=>{
         model[0].style.display = "flex";
+        roomNumber.innerHTML = "_07";
         setTimeout(()=>{
             model1.style.display = "flex";
         },100)
@@ -618,6 +661,7 @@
     })
     bg4people.addEventListener("click",()=>{
         model[0].style.display = "flex";
+        roomNumber.innerHTML = "_06";
         setTimeout(()=>{
             model1.style.display = "flex";
         },100)
