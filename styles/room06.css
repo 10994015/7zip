@@ -218,6 +218,51 @@
     z-index: 999;
     display: none;
 }
+#room06 #r6venus{
+    position: absolute;
+    top: 46%;
+    right:6%;
+    width: 195px;
+    height: auto;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#room06 .r6like{
+    width: 35px;
+    height: auto;
+    z-index: 1001;
+}
+#room06  #r6biglike1{
+    position: absolute;
+    top: 48%;
+    right: 8%;
+}
+#room06  #r6biglike2{
+    position: absolute;
+    top: 53%;
+    right: 13%;
+}
+#room06  #r6biglike3{
+    position: absolute;
+    top: 58%;
+    right: 12%;
+}
+#room06  #r6biglike4{
+    position: absolute;
+    top: 63%;
+    right:11%;
+}
+#room06  #r6biglike5{
+    position: absolute;
+    top: 68%;
+    right: 9%;
+}
+#room06  #r6biglike6{
+    position: absolute;
+    top: 72%;
+    right: 10%;
+}
 #room06pass{
     position: fixed;
     top:0;
