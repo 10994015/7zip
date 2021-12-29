@@ -14,7 +14,12 @@
     padding: 0 10px;
     background-color: #000;
  }
-
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 main{
     width: 100%;
     height: 100vh;
@@ -23,6 +28,13 @@ main{
     top: 0;
     left: 0;
     overflow: hidden;
+}
+#roomBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #main .room{
     width: 800px;
