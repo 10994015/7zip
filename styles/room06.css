@@ -171,7 +171,7 @@
 }
 #room06 #r6face{
     position: absolute;
-    top: 36%;
+    top: 36.1%;
     left: 46.8%;
     width: 70px;
     height: auto;
@@ -254,8 +254,8 @@
 }
 #room06 #r6love1{
     position: absolute;
-    top: 27%;
-    left:27%;
+    top: 30%;
+    left:28%;
     width:10px;
     z-index: 9999;
     animation: love1 1s infinite linear;
@@ -263,8 +263,8 @@
 }
 #room06 #r6love2{
     position: absolute;
-    top: 27%;
-    left:27%;
+    top: 30%;
+    left:28%;
     width:10px;
     z-index: 9999;
     animation: love2 1.5s infinite linear;
@@ -272,8 +272,8 @@
 }
 #room06 #r6love3{
     position: absolute;
-    top: 27%;
-    left:27%;
+    top: 30%;
+    left:28%;
     width:10px;
     z-index: 9999;
     animation: love3 .8s infinite linear;
@@ -281,8 +281,8 @@
 }
 #room06 #r6love4{
     position: absolute;
-    top: 27%;
-    left:27%;
+    top: 30%;
+    left:28%;
     width:10px;
     z-index: 9999;
     animation: love4 1.8s infinite linear;
@@ -290,8 +290,8 @@
 }
 #room06 #r6love5{
     position: absolute;
-    top: 27%;
-    left:27%;
+    top: 30%;
+    left:28%;
     width:10px;
     z-index: 9999;
     animation: love5 1.6s infinite linear;
@@ -433,6 +433,57 @@
     width:80px;
     animation: msg 1.3s infinite linear;
     display: none;
+}
+#room06 #r6liveLove1{
+    position: absolute;
+    top: 40%;
+    right:7%;
+    width:23px;
+    animation: liveLove 1s infinite linear;
+}
+#room06 #r6liveLove2{
+    position: absolute;
+    top: 40%;
+    right:4%;
+    width:23px;
+    animation: liveLove 2.5s infinite linear;
+}
+#room06 #r6liveLove3{
+    position: absolute;
+    top: 40%;
+    right:6%;
+    width:23px;
+    animation: liveLove 1.5s infinite linear;
+}
+#room06 #r6liveLove4{
+    position: absolute;
+    top: 40%;
+    right:8%;
+    width:23px;
+    animation: liveLove 2s infinite linear;
+}
+#room06 #r6liveLove5{
+    position: absolute;
+    top: 40%;
+    right:10%;
+    width:23px;
+    animation: liveLove 1.75s infinite linear;
+}
+#room06 .r6liveLove{
+    display: none;
+}
+@keyframes liveLove{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
 }
 #room06pass{
     position: fixed;

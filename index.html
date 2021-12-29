@@ -222,13 +222,18 @@
                     <div id="liveNum">0000+</div>
                     <img src="./styles/images/room06/msg1.png" alt="" id="r6msg1">
                     <img src="./styles/images/room06/msg2.png" alt="" id="r6msg2">
+                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove1">
+                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove2">
+                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove3">
+                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove4">
+                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove5">
 
                     <img src="./styles/images/room06/Venus2.png" alt="" id="r6venus2">
-                    <img src="./styles/images/room06/love.png" alt="" id="r6love1">
-                    <img src="./styles/images/room06/love.png" alt="" id="r6love2">
-                    <img src="./styles/images/room06/love.png" alt="" id="r6love3">
-                    <img src="./styles/images/room06/love.png" alt="" id="r6love4">
-                    <img src="./styles/images/room06/love.png" alt="" id="r6love5">
+                    <img src="./styles/images/room06/love.png" alt=""  id="r6love1">
+                    <img src="./styles/images/room06/love.png" alt=""  id="r6love2">
+                    <img src="./styles/images/room06/love.png" alt=""  id="r6love3">
+                    <img src="./styles/images/room06/love.png" alt=""  id="r6love4">
+                    <img src="./styles/images/room06/love.png" alt=""  id="r6love5">
 
                     
                 </div>
@@ -363,6 +368,7 @@
     var livepeopleNum = 1000;
     var r6msg1 = document.getElementById("r6msg1");
     var r6msg2 = document.getElementById("r6msg2");
+    var r6liveLove = document.getElementsByClassName('r6liveLove');
 
     var r6venus2 = document.getElementById('r6venus2');
     var r6love1 = document.getElementById('r6love1');
@@ -505,6 +511,9 @@
         liveNum.style.display = "block";
         r6msg1.style.display = "block";
         r6msg2.style.display = "block";
+        for(var r=0;r<r6liveLove.length;r++){
+            r6liveLove[r].style.display = "block";
+        }
         livestart();
         
     })
@@ -512,6 +521,9 @@
         liveNum.style.display = "none";
         r6msg1.style.display = "none";
         r6msg2.style.display = "none";
+        for(var r=0;r<r6liveLove.length;r++){
+            r6liveLove[r].style.display = "none";
+        }
     })
     
    
