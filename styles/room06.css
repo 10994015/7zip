@@ -226,42 +226,213 @@
     height: auto;
     cursor: pointer;
     z-index: 999;
+    display: none;
 }
-
+#room06 #r6venusBox{
+    position: absolute;
+    top: 43%;
+    right:6.8%;
+    width: 133px;
+    height: 240px;
+    background-color: rgba(255, 0, 0, .3);
+    z-index: 1100;
+    cursor: pointer;
+}
 #room06 .r6like{
     width: 35px;
     height: auto;
     z-index: 1001;
 }
+#room06 #r6venus2{
+    position: absolute;
+    top:21%;
+    left:18.5%;
+    width: 180px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+#room06 #r6love1{
+    position: absolute;
+    top: 27%;
+    left:27%;
+    width:10px;
+    z-index: 9999;
+    animation: love1 1s infinite linear;
+    display: none;
+}
+#room06 #r6love2{
+    position: absolute;
+    top: 27%;
+    left:27%;
+    width:10px;
+    z-index: 9999;
+    animation: love2 1.5s infinite linear;
+    display: none;
+}
+#room06 #r6love3{
+    position: absolute;
+    top: 27%;
+    left:27%;
+    width:10px;
+    z-index: 9999;
+    animation: love3 .8s infinite linear;
+    display: none;
+}
+#room06 #r6love4{
+    position: absolute;
+    top: 27%;
+    left:27%;
+    width:10px;
+    z-index: 9999;
+    animation: love4 1.8s infinite linear;
+    display: none;
+}
+#room06 #r6love5{
+    position: absolute;
+    top: 27%;
+    left:27%;
+    width:10px;
+    z-index: 9999;
+    animation: love5 1.6s infinite linear;
+    display: none;
+}
+@keyframes love1{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(70px,70px) scale(4);
+    }
+}
+@keyframes love2{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(35px,70px) scale(3.5);
+    }
+}
+@keyframes love3{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(50px,40px) scale(3);
+    }
+}
+@keyframes love4{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(25px,20px) scale(2);
+    }
+}
+@keyframes love5{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(50px,25px) scale(2.5);
+    }
+}
 #room06  #r6biglike1{
     position: absolute;
     top: 48%;
     right: 8%;
+    animation: like1 1s infinite linear;
+    display: none;
 }
 #room06  #r6biglike2{
     position: absolute;
     top: 53%;
-    right: 13%;
+    right: 7%;
+    animation: like2 1s infinite linear;
+    display: none;
 }
 #room06  #r6biglike3{
     position: absolute;
     top: 58%;
-    right: 12%;
+    right: 8.5%;
+    animation: like3 1s infinite linear;
+    display: none;
 }
 #room06  #r6biglike4{
     position: absolute;
     top: 63%;
-    right:11%;
+    right:9.5%;
+    animation: like4 1s infinite linear;
+    display: none;
 }
 #room06  #r6biglike5{
     position: absolute;
     top: 68%;
     right: 9%;
+    animation: like5 1s infinite linear;
+    display: none;
 }
 #room06  #r6biglike6{
     position: absolute;
     top: 72%;
-    right: 10%;
+    right: 7%;
+    animation: like6 1s infinite linear;
+    display: none;
+}
+#room06 #liveNum{
+    position: absolute;
+    top: 30.2%;
+    right:8%;
+    font-size: 20px;
+    font-weight: 600;
+    color:#EA888F;
+    display: none;
+}
+#room06 #cartBox{
+    position: absolute;
+    top: 12.2%;
+    right:3%;
+    width: 150px;
+    height: 220px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999;
+}
+#room06 #r6msg1{
+    position: absolute;
+    top:33%;
+    right:3%;
+    width:80px;
+    animation: msg .9s infinite linear;
+    display: none;
+}
+#room06 #r6msg2{
+    position: absolute;
+    top:37%;
+    right:5%;
+    width:80px;
+    animation: msg 1.3s infinite linear;
+    display: none;
 }
 #room06pass{
     position: fixed;
@@ -271,6 +442,97 @@
     height: 100vh;
     display: none;
     z-index: 2;
+}
+@keyframes msg{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+@keyframes like1{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+}
+@keyframes like2{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-130px);
+        opacity: 0;
+    }
+}
+@keyframes like3{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-170px);
+        opacity: 0;
+    }
+}
+@keyframes like4{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-110px);
+        opacity: 0;
+    }
+}
+@keyframes like5{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+@keyframes like6{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-140px);
+        opacity: 0;
+    }
 }
 @keyframes start{
     0%{

@@ -210,13 +210,25 @@
                     <img src="./styles/images/room06/vase.png" alt="" id="r6vase">
                     <img src="./styles/images/room06/Venus1.png" alt="" id="r6venus">
                     
-                        <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike1">
-                        <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike2">
-                        <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike3">
-                        <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike4">
-                        <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike5">
-                        <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike6">
+                    <div id="r6venusBox"></div>
+                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike1">
+                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike2">
+                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike3">
+                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike4">
+                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike5">
+                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike6">
 
+                    <div id="cartBox"></div>
+                    <div id="liveNum">0000+</div>
+                    <img src="./styles/images/room06/msg1.png" alt="" id="r6msg1">
+                    <img src="./styles/images/room06/msg2.png" alt="" id="r6msg2">
+
+                    <img src="./styles/images/room06/Venus2.png" alt="" id="r6venus2">
+                    <img src="./styles/images/room06/love.png" alt="" id="r6love1">
+                    <img src="./styles/images/room06/love.png" alt="" id="r6love2">
+                    <img src="./styles/images/room06/love.png" alt="" id="r6love3">
+                    <img src="./styles/images/room06/love.png" alt="" id="r6love4">
+                    <img src="./styles/images/room06/love.png" alt="" id="r6love5">
 
                     
                 </div>
@@ -272,8 +284,8 @@
 
 
 
-        
-        <div id="room07pass"><p style="color:#fff;">過關</p></div>
+        <div id="room06pass"><p style="color:#fff;">第六關過關</p></div>
+        <div id="room07pass"><p style="color:#fff;">第七關過關</p></div>
 
 <script src="script/jquery-3.6.0.min.js"></script>
 <script src="script/script.js"></script>
@@ -335,6 +347,30 @@
     var r6photo = document.getElementById('r6photo');
     var r6editimg = document.getElementById('r6editimg');
     var r6vase = document.getElementById("r6vase");
+
+    var r6venus = document.getElementById('r6venus');
+    var r6like = document.getElementsByClassName('r6like');
+    var r6venusBox  =document.getElementById('r6venusBox');
+    var r6biglike1 = document.getElementById('r6biglike1');
+    var r6biglike2 = document.getElementById('r6biglike2');
+    var r6biglike3 = document.getElementById('r6biglike3');
+    var r6biglike4 = document.getElementById('r6biglike4');
+    var r6biglike5 = document.getElementById('r6biglike5');
+    var r6biglike6 = document.getElementById('r6biglike6');
+    
+    var cartBox = document.getElementById('cartBox');
+    var liveNum = document.getElementById('liveNum');
+    var livepeopleNum = 1000;
+    var r6msg1 = document.getElementById("r6msg1");
+    var r6msg2 = document.getElementById("r6msg2");
+
+    var r6venus2 = document.getElementById('r6venus2');
+    var r6love1 = document.getElementById('r6love1');
+    var r6love2 = document.getElementById('r6love2');
+    var r6love3 = document.getElementById('r6love3');
+    var r6love4 = document.getElementById('r6love4');
+    var r6love5 = document.getElementById('r6love5');
+    var room06pass  =document.getElementById('room06pass');
     yes[5].addEventListener("click",()=>{
         main.style.display = "none";
         room06.style.display = "block";
@@ -358,6 +394,8 @@
             r6photo.style.display = "block";
             r6editimg.style.display = "block";
             r6vase.style.display = "block";
+            r6venus.style.display = "block";
+            r6venus2.style.display = "block";
         },1000)
         setTimeout(()=>{
             r6card.style.display = "none";
@@ -444,7 +482,107 @@
         room06Text.innerHTML = "";
 
     })
+    r6venusBox.addEventListener("mouseover",()=>{
+        r6biglike1.style.display = "block";
+        r6biglike2.style.display = "block";
+        r6biglike3.style.display = "block";
+        r6biglike4.style.display = "block";
+        r6biglike5.style.display = "block";
+        r6biglike6.style.display = "block";
+       
+
+    })
+    r6venusBox.addEventListener("mouseout",()=>{
+        r6biglike1.style.display = "none";
+        r6biglike2.style.display = "none";
+        r6biglike3.style.display = "none";
+        r6biglike4.style.display = "none";
+        r6biglike5.style.display = "none";
+        r6biglike6.style.display = "none";
+    })
+   
+    cartBox.addEventListener("mouseover",()=>{
+        liveNum.style.display = "block";
+        r6msg1.style.display = "block";
+        r6msg2.style.display = "block";
+        livestart();
+        
+    })
+    cartBox.addEventListener("mouseout",()=>{
+        liveNum.style.display = "none";
+        r6msg1.style.display = "none";
+        r6msg2.style.display = "none";
+    })
+    
+   
+    
+    function livestart(){
+        const  liveadd = setInterval(() => {
+        livepeopleNum++;
+        if(livepeopleNum>9999){
+            livepeopleNum = 1000;
+        }
+        liveNum.innerHTML = livepeopleNum + "+";
+    }, 1);
+    }
+ 
+    
+    r6venus2.addEventListener("mouseover",()=>{
+        r6love1.style.display = "block";
+        r6love2.style.display = "block";
+        r6love3.style.display = "block";
+        r6love4.style.display = "block";
+        r6love5.style.display = "block";
+    })
+    r6venus2.addEventListener("mouseout",()=>{
+        r6love1.style.display = "none";
+        r6love2.style.display = "none";
+        r6love3.style.display = "none";
+        r6love4.style.display = "none";
+        r6love5.style.display = "none";
+    })
+    r6Enter.addEventListener("click",()=>{
+        if(r6Password.value!="2954"){
+            alert("密碼錯誤");
+            return;
+        }
+        alert("密碼正確!");
+        room06.style.display = "none";
+        room06pass.style.display = "block";
+    })
     r6PrevPage.addEventListener("click",()=>{
+        r6people.src = "styles/images/index6/peple.png";
+        room06.style.display = "none";
+        main.style.display = "block";
+        model[0].style.display = "none";
+        model06.style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        room06Bg.style.opacity = "0";
+
+        r6people.style.width = "250px";
+        r6people.style.top="133px";
+        r6people.style.left = "285px";
+        room06Text.style.display = "none";
+        r6Enter.style.display = "none";
+        r6PrevPage.style.display = "none";
+        r6eyeBtn.style.display = "none";
+        r6faceBtn.style.display = "none";
+        r6makeupBtn.style.display = "none";
+        r6noseBtn.style.display = "none";
+        r6bells.style.display = "none";
+        r6bellshover.style.display = "none";
+        r6follow.style.display = "none";
+        r6photo.style.display = "none";
+        r6editimg.style.display = "none";
+        r6vase.style.display = "none";
+        r6venus.style.display = "none";
+        r6venus2.style.display = "none";
+
+        r6card.style.display = "block";
+        r6cardRight.style.display = "block";
+        r6cardLeft.style.display = "block"; 
 
     })
     
