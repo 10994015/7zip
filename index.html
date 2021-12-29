@@ -378,6 +378,7 @@
     var r6love4 = document.getElementById('r6love4');
     var r6love5 = document.getElementById('r6love5');
     var room06pass  =document.getElementById('room06pass');
+    var liveadd = null;
     yes[5].addEventListener("click",()=>{
         main.style.display = "none";
         room06.style.display = "block";
@@ -507,7 +508,15 @@
         r6biglike5.style.display = "none";
         r6biglike6.style.display = "none";
     })
-   
+    function livestart(){
+        liveadd = setInterval(() => {
+        livepeopleNum++;
+        if(livepeopleNum>9999){
+            livepeopleNum = 1000;
+        }
+        liveNum.innerHTML = livepeopleNum + "+";
+    }, 1);
+    }
     cartBox.addEventListener("mouseover",()=>{
         liveNum.style.display = "block";
         r6msg1.style.display = "block";
@@ -525,19 +534,12 @@
         for(var r=0;r<r6liveLove.length;r++){
             r6liveLove[r].style.display = "none";
         }
+        clearInterval(liveadd);
     })
     
    
     
-    function livestart(){
-        const  liveadd = setInterval(() => {
-        livepeopleNum++;
-        if(livepeopleNum>9999){
-            livepeopleNum = 1000;
-        }
-        liveNum.innerHTML = livepeopleNum + "+";
-    }, 1);
-    }
+    
  
     
     r6venus2.addEventListener("mouseover",()=>{
