@@ -237,7 +237,13 @@
                     <img src="./styles/images/room06/love.png" alt=""  id="r6love4">
                     <img src="./styles/images/room06/love.png" alt=""  id="r6love5">
 
-                    
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow1">
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow2">
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow3">
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow4">
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow5">
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow6">
+                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow7">
 
                     
                 </div>
@@ -289,6 +295,13 @@
                     <img src="./styles/images/room07/leftfish.png" alt="" id="r7leftfish">
                     <img src="./styles/images/room07/rightfish.png" alt=""  id="r7rightfish">
                 </div>
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow1">
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow2">
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow3">
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow4">
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow5">
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow6">
+                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow7">
             </div>
         </div>
 </div>
@@ -384,6 +397,8 @@
     var room06pass  =document.getElementById('room06pass');
     var liveadd = null;
     var room06People = document.getElementById('room06People');
+    var r6arrow = document.getElementsByClassName('r6arrow');
+    
     yes[5].addEventListener("click",()=>{
         main.style.display = "none";
         room06.style.display = "block";
@@ -410,6 +425,9 @@
             r6vase.style.display = "block";
             r6venus.style.display = "block";
             r6venus2.style.display = "block";
+            for(let a=0;a<r6arrow.length;a++){
+                r6arrow[a].style.display = "block";
+            }
         },1000)
         setTimeout(()=>{
             r6card.style.display = "none";
@@ -571,6 +589,45 @@
         room06.style.display = "none";
         room06pass.style.display = "block";
     })
+    setInterval(()=>{
+        r6arrow[0].style.opacity = 0;
+        r6arrow[1].style.opacity = 0;
+        r6arrow[2].style.opacity = 0;
+        r6arrow[3].style.opacity = 0;
+        r6arrow[4].style.opacity = 0;
+        r6arrow[5].style.opacity = 0;
+        r6arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r6arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r6arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r6arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r6arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r6arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r6arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r6arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r6arrow[0].style.opacity = 0;
+            r6arrow[1].style.opacity = 0;
+            r6arrow[2].style.opacity = 0;
+            r6arrow[3].style.opacity = 0;
+            r6arrow[4].style.opacity = 0;
+            r6arrow[5].style.opacity = 0;
+            r6arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
     r6PrevPage.addEventListener("click",()=>{
         r6people.src = "styles/images/index6/peple.png";
         room06.style.display = "none";
@@ -601,7 +658,9 @@
         r6vase.style.display = "none";
         r6venus.style.display = "none";
         r6venus2.style.display = "none";
-        
+        for(let a=0;a<r6arrow.length;a++){
+            r6arrow[a].style.display = "none";
+        }
         r6people.style.display = "block";
         r6card.style.display = "block";
         r6cardRight.style.display = "block";
@@ -642,6 +701,7 @@
     var roomText = document.getElementsByClassName("roomText");
     var roomEnter = document.getElementsByClassName('roomEnter');
     var room07People  =document.getElementById('room07People');
+    var r7arrow = document.getElementsByClassName('r7arrow');
     yes[6].addEventListener("click",()=>{
 
         main.style.display = "none";
@@ -667,6 +727,9 @@
             r7Butterfly.style.display = "block";
             r7fishBox.style.display = "block";
             room07Bg.style.display = "block";
+            for(let a=0;a<r7arrow.length;a++){
+                r7arrow[a].style.display = "block";
+            }
         },1000)
         setTimeout(()=>{
             r7people.style.display = "none";
@@ -781,6 +844,45 @@
         room07pass.style.display = "block";
         
     })
+    setInterval(()=>{
+        r7arrow[0].style.opacity = 0;
+        r7arrow[1].style.opacity = 0;
+        r7arrow[2].style.opacity = 0;
+        r7arrow[3].style.opacity = 0;
+        r7arrow[4].style.opacity = 0;
+        r7arrow[5].style.opacity = 0;
+        r7arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r7arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r7arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r7arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r7arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r7arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r7arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r7arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r7arrow[0].style.opacity = 0;
+            r7arrow[1].style.opacity = 0;
+            r7arrow[2].style.opacity = 0;
+            r7arrow[3].style.opacity = 0;
+            r7arrow[4].style.opacity = 0;
+            r7arrow[5].style.opacity = 0;
+            r7arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
     r7PrevPage.addEventListener("click",()=>{
         room07.style.display = "none";
         main.style.display = "block";
@@ -807,11 +909,14 @@
         r7sabrinaBox.style.display = "none";
         r7Butterfly.style.display = "none";
         r7fishBox.style.display = "none";
-        
+        for(let a=0;a<r7arrow.length;a++){
+                r7arrow[a].style.display = "none";
+            }
         r7people.style.display = "block";
         r7card.style.display = "block";
         r7cardRight.style.display = "block";
         r7cardLeft.style.display = "block"; 
+        
     })
     // room7 END
     
