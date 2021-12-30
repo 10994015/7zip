@@ -3,8 +3,8 @@
     src: url('./font/源樣黑.ttf');
   }
 #room06{
-    width: 1500px;
-    height: 721.1px;
+    width: 1400px;
+    height: 672px;
     background-color: #000;
     position: relative;
     top: 0;
@@ -19,8 +19,8 @@
 }
 
 #room06 .bgimg{
-    width: 1500px;
-    height: 721.1px;
+    width: 1400px;
+    height: 672px;
     position: relative;
     position: absolute;
     top: 0;
@@ -32,8 +32,8 @@
     align-items: center;
 }
 #room06 .bgimg > img{
-    width: 1500px;
-    height: 721.1px;
+    width: 1400px;
+    height: 672px;
     object-fit: contain;
     position: absolute;
     top:0;
@@ -43,8 +43,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width:1500px;
-    height: 721.1px;
+    width: 1400px;
+    height: 672px;
 }
 #room06 .room{
     width: 800px;
