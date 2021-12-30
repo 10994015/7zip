@@ -55,14 +55,27 @@
     animation: start 1s linear;
     
 }
+#room07 #room07People{
+    position: absolute;
+    /* top: 113px;
+    left: 275px; */
+    top: 30%;
+    left:41.5%;
+    width: 250px;
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
 #room07 .textBox{
     position: absolute;
-    top: 86%;
-    left: 2%;
+    top: 84.8%;
+    left: 4%;
     display: flex;
     align-items: center;
-    width: 700px;
-    height: 65px;
+    width: 660px;
+    height: 60px;
+    z-index: 999;
 }
 #room07 .roomText{
     color:#ddd;    
@@ -79,15 +92,14 @@
 }
 #room07 #r7Password{
     position: absolute;
-    bottom: 5%;
-    right:13%;
+    bottom: 6.5%;
+    right:14%;
     width: 200px;
     height: 60px;
     font-size: 36px;
     outline: none;
     border:none;
     background-color: transparent;
-    color:#fff;
     color:#E5DC46;
     letter-spacing:6px;
     font-family: 'Comfortaa';
@@ -97,8 +109,8 @@
 }
 #room07 #r7Enter{ 
     position: absolute;
-    bottom: 5.8%;
-    right:1%;
+    bottom: 7.5%;
+    right:3%;
     width: 110px;
     height: auto;
     cursor: pointer;
@@ -107,8 +119,8 @@
 }
 #room07 #r7-prevPage{
     position: absolute;
-    top: 4.8%;
-    left:0.5%;
+    top: 6.8%;
+    left:2.65%;
     width:40px;
     height: auto;
     display: none;
@@ -120,9 +132,9 @@
 }
 #room07 #r7Zenly{
     position: absolute;
-    top: 22%;
-    left:21%;
-    width: 120px;
+    top: 24%;
+    left:22%;
+    width: 110px;
     height: auto;
     cursor: pointer;
     display: none;
@@ -131,7 +143,7 @@
 #room07 .yellowlove{
     position: absolute;
     top: 20%;
-    left:24.5%;
+    left:25.5%;
     width: 25px;
     height: auto;
     cursor: pointer;
@@ -142,8 +154,8 @@
 }
 #room07 .redlove{
     position: absolute;
-    top: 22%;
-    left:1.75%;
+    top: 24%;
+    left:4%;
     width: 30px;
     height: auto;
     cursor: pointer;
@@ -153,20 +165,20 @@
 }
 #room07 #r7hoverLove{
     position: absolute;
-    top: 19%;
-    left: 0%;
+    top: 21%;
+    left: 2%;
     background: transparent;
     width: 128px;
-    height: 200px;
+    height: 185px;
     cursor: pointer;
     display:none;
     z-index: 2;
 }
 #room07 #r7Bird{
     position: absolute;
-    top: 17.2%;
-    left: 6%;
-    width: 110px;
+    top: 18.7%;
+    left: 7.9%;
+    width: 105px;
     height: auto;
     cursor: pointer;
     display: none;
@@ -179,8 +191,8 @@
 
 #room07 #r7foot{
     position: absolute;
-    bottom:18.3%;
-    left: 11%;
+    bottom:19.5%;
+    left: 12%;
     width: 180px;
     height: auto;
     cursor: pointer;
@@ -189,8 +201,8 @@
 }
 #room07 #r7cupid{
     position: absolute;
-    top:22.3%;
-    left: 55.2%;
+    top:23%;
+    left: 54.6%;
     width: 140px;
     height: auto;
     cursor: pointer;
@@ -224,7 +236,7 @@
 #room07 #r7Gps{
     position: absolute;
     top:53.1%;
-    left: 5.15%;
+    left: 7.15%;
     width: 20px;
     height: auto;
     cursor: pointer;
@@ -236,9 +248,9 @@
 #room07 #r7hoverGPS{
     position: absolute;
     top:50%;
-    left: 3.8%;
+    left: 5.7%;
     width: 80px;
-    height: 115px;
+    height: 110px;
     transform: skewX(23deg);
     cursor: pointer;
     background-color: transparent;
@@ -250,10 +262,10 @@
 }
 #room07 #r7talkBox{
     position: absolute;
-    top:20%;
-    left: 81.5%;
-    width: 163px;
-    height: 225.89px;
+    top:21.8%;
+    left: 80.2%;
+    width: 150px;
+    height: 208px;
     cursor: pointer;
     perspective: 1000px;
     display: none;
@@ -287,10 +299,10 @@
 }
 #room07 #r7sabrinaBox{
     position: absolute;
-    top:20%;
-    left: 69.25%;
-    width: 158px;
-    height: 225px;
+    top:21.8%;
+    left: 68.65%;
+    width: 145px;
+    height: 208px;
     cursor: pointer;
     perspective: 1000px;
     display: none;
@@ -326,9 +338,9 @@
 
 #room07 #r7Butterfly{
     position: absolute;
-    top:56%;
-    left: 89.9%;
-    width: 50px;
+    top:56.1%;
+    left: 88.2%;
+    width: 45px;
     height: auto;
     cursor: pointer;
     display: none;
@@ -340,9 +352,9 @@
 
 #room07 #r7fishBox{
     position: absolute;
-    top:55%;
-    left: 70.9%;
-    width: 250px;
+    top:54%;
+    left: 69.7%;
+    width: 242px;
     height: 169px;
     cursor: pointer;
     background-color: transparent;
@@ -357,8 +369,8 @@
 }
 #room07 #r7fishBox img{
     position: absolute;
-    top: 60px;
-    width: 100px;
+    top: 68px;
+    width: 95px;
     height: auto;
     transition: .3s;
     z-index: 2;
@@ -415,13 +427,13 @@
 }
 @keyframes redlove{
     0%{
-        top:22%;
+        top:24%;
     }
     50%{
-        top: 30%;
+        top: 32%;
     }
     100%{
-        top: 22%;
+        top: 24%;
     }
 
 }
@@ -471,6 +483,7 @@
     z-index: 99999999999999;
     cursor: pointer;
 }
+
 #room07 .room .card{
     position: absolute;
     top: 60px;

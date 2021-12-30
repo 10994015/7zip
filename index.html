@@ -196,6 +196,7 @@
                     <div class="textBox">
                         <p class="roomText" id="room06Text">12313</p>
                     </div>
+                    <img src="./styles/images/room06/people.png" alt="" id="room06People">
                     <input type="text" class="password" id="r6Password" autocomplete="off">
                     <img src="./styles/images/room06/enter.png" alt="" class="roomEnter" id="r6Enter">
                     <img src="./styles/images/room06/eyeBtn.png" alt="" class="roomBtn" id="r6eyeBtn">
@@ -237,6 +238,8 @@
                     <img src="./styles/images/room06/love.png" alt=""  id="r6love5">
 
                     
+
+                    
                 </div>
       </div>
 
@@ -244,7 +247,7 @@
 
       <div id="room07">
             <div class="bgimg" id="room07Bg">
-                <img src="./styles/images/room07/bg2.png" alt="">
+                <img src="./styles/images/room07/zip.png" alt="">
             </div>
             
             <div class="room" id="bg01">
@@ -260,6 +263,7 @@
                 <div class="textBox">
                     <p class="roomText" id="room07Text"></p>
                 </div>
+                <img src="./styles/images/room07/people.png" alt="" id="room07People">
                 <input type="text" class="password" id="r7Password" autocomplete="off">
                 <img src="./styles/images/room07/enter.png" alt="" class="roomEnter" id="r7Enter">
                 <img src="./styles/images/room07/zenly.png" alt="" class="roomZenly" id="r7Zenly">
@@ -379,13 +383,15 @@
     var r6love5 = document.getElementById('r6love5');
     var room06pass  =document.getElementById('room06pass');
     var liveadd = null;
+    var room06People = document.getElementById('room06People');
     yes[5].addEventListener("click",()=>{
         main.style.display = "none";
         room06.style.display = "block";
 
         setTimeout(()=>{
             room06Bg.style.opacity = "1";
-            r6people.src = "./styles/images/room06/people.png";
+            room06People.style.display = "block";
+            r6people.style.display = "none";
             r6people.style.width = "280px";
             r6people.style.top="151px";
             r6people.style.left = "254px";
@@ -576,6 +582,7 @@
         model3.style.display = "none";
         room06Bg.style.opacity = "0";
 
+        room06People.style.display = "none";
         r6people.style.width = "250px";
         r6people.style.top="133px";
         r6people.style.left = "285px";
@@ -594,7 +601,8 @@
         r6vase.style.display = "none";
         r6venus.style.display = "none";
         r6venus2.style.display = "none";
-
+        
+        r6people.style.display = "block";
         r6card.style.display = "block";
         r6cardRight.style.display = "block";
         r6cardLeft.style.display = "block"; 
@@ -633,15 +641,16 @@
     var room07Text = document.getElementById('room07Text');
     var roomText = document.getElementsByClassName("roomText");
     var roomEnter = document.getElementsByClassName('roomEnter');
+    var room07People  =document.getElementById('room07People');
     yes[6].addEventListener("click",()=>{
 
         main.style.display = "none";
         room07.style.display = "block";
         // console.log(bgimg);
         setTimeout(()=>{
+            room07People.style.display = "block";
+            r7people.style.display = "none";
             room07Bg.style.opacity = "1";
-            r7people.src = "styles/images/room07/people.png";
-            r7people.style.width = "250px";
             room07Text.style.display = "block";
             r7Enter.style.display = "block";
             r7PrevPage.style.display = "block";
@@ -660,31 +669,33 @@
             room07Bg.style.display = "block";
         },1000)
         setTimeout(()=>{
+            r7people.style.display = "none";
             r7card.style.display = "none";
             r7cardRight.style.display = "none";
             r7cardLeft.style.display = "none"; 
-        },2100);
+        },2000);
+       
         
     })
-    r7people.addEventListener("mouseover",()=>{
+    room07People.addEventListener("mouseover",()=>{
         room07Text.style.opacity="1";
         room07Text.innerHTML = "主角（控制木偶的人）：控制狂、恐怖情人";
     });
-    r7people.addEventListener("mouseout",()=>{
+    room07People.addEventListener("mouseout",()=>{
         room07Text.style.opacity="0";
         room07Text.innerHTML ="";
     });
     r7Zenly.addEventListener("mouseover",()=>{
         r7Zenly.src="./styles/images/room07/zenlyhover.png";
         r7YellowLove.style.display = "block";
-        r7Zenly.style.top = "17.5%";
+        r7Zenly.style.top = "19.5%";
         room07Text.style.opacity="1";
         room07Text.innerHTML = "Zenly : Zenly是一個追蹤定位的應用程式，它可以讓你即時知道家人朋友的位置，可以看到在哪裡之外，還可以知道在各個地點待了多久、行駛的速度以及手機電池狀態";
     })
     r7Zenly.addEventListener("mouseout",()=>{
         r7Zenly.src="./styles/images/room07/zenly.png";
         r7YellowLove.style.display = "none";
-        r7Zenly.style.top = "22%";
+        r7Zenly.style.top = "24%";
         room07Text.style.opacity="0";
         room07Text.innerHTML ="";
     })
@@ -771,7 +782,6 @@
         
     })
     r7PrevPage.addEventListener("click",()=>{
-        r7people.src = "styles/images/index2/peple.png";
         room07.style.display = "none";
         main.style.display = "block";
         model[0].style.display = "none";
@@ -781,8 +791,7 @@
         model3.style.display = "none";
         room07Bg.style.display = "none";
         
-        
-
+        room07People.style.display = "none";
         room07Text.style.display = "none";
         r7Enter.style.display = "none";
         r7PrevPage.style.display = "none";
@@ -798,7 +807,8 @@
         r7sabrinaBox.style.display = "none";
         r7Butterfly.style.display = "none";
         r7fishBox.style.display = "none";
-
+        
+        r7people.style.display = "block";
         r7card.style.display = "block";
         r7cardRight.style.display = "block";
         r7cardLeft.style.display = "block"; 

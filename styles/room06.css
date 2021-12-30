@@ -56,14 +56,27 @@
     animation: start 1s linear;
     
 }
+#room06 #room06People{
+    position: absolute;
+    /* top: 113px;
+    left: 275px; */
+    top: 33.5%;
+    left:40.2%;
+    width: 265px;
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
 #room06 .textBox{
     position: absolute;
-    top: 86%;
-    left: 2%;
+    top: 84.8%;
+    left: 4%;
     display: flex;
     align-items: center;
-    width: 700px;
-    height: 65px;
+    width: 660px;
+    height: 60px;
     z-index: 999;
 }
 #room06 .roomText{
@@ -80,15 +93,14 @@
 }
 #room06 #r6Password{
     position: absolute;
-    bottom: 5%;
-    right:13%;
+    bottom: 6.5%;
+    right:14%;
     width: 200px;
     height: 60px;
     font-size: 36px;
     outline: none;
     border:none;
     background-color: transparent;
-    color:#fff;
     color:#E5DC46;
     letter-spacing:6px;
     font-family: 'Comfortaa';
@@ -98,8 +110,8 @@
 }
 #room06 #r6Enter{ 
     position: absolute;
-    bottom: 5.8%;
-    right:1%;
+    bottom: 7.5%;
+    right:3%;
     width: 110px;
     height: auto;
     cursor: pointer;
@@ -108,8 +120,8 @@
 }
 #room06 #r6-prevPage{
     position: absolute;
-    top: 4.8%;
-    left:0.5%;
+    top: 6.8%;
+    left:2.65%;
     width:40px;
     height: auto;
     display: none;
@@ -119,34 +131,36 @@
 #room06 #r6-prevPage:hover{
     transform: scale(1.1);
 }
+
+
 #room06 .roomBtn{
-    width:70px;
-    height: 70px;
+    width:65px;
+    height: 65px;
     position: absolute;
-    top: 75%;
+    top: 73%;
     z-index: 99999;
     cursor: pointer;
 }
 #room06 #r6eyeBtn{
-    left:41%;
+    left:40%;
     display: none;
 }
 #room06 #r6faceBtn{
-    left:46%;
+    left:45%;
     display: none;
 }
 #room06 #r6makeupBtn{
     display: none;
-    left:51%;
+    left:50%;
 }
 #room06 #r6noseBtn{
     display: none;
-    left:56%;
+    left:55%;
 }
 #room06 #r6bells{
     position: absolute;
-    top: 25%;
-    left: 10.9%;
+    top: 26.2%;
+    left: 12.65%;
     width:18px;
     height: auto;
     cursor: pointer;
@@ -158,7 +172,7 @@
 #room06 #r6bellshover{
     position: absolute;
     top: 20%;
-    left: 8.9%;
+    left: 10.5%;
     width: 80px;
     height: 120px;
     background-color: transparent;
@@ -172,18 +186,18 @@
 }
 #room06 #r6face{
     position: absolute;
-    top: 36.1%;
-    left: 46.8%;
-    width: 70px;
+    top: 37.19%;
+    left: 47.039%;
+    width: 66.41px;
     height: auto;
     z-index: 999;
     display: none;
 }
 #room06 #r6follow{
     position: absolute;
-    top: 30.5%;
-    right:21%;
-    width: 90px;
+    top: 31.5%;
+    right:22.2%;
+    width: 88px;
     height: auto;
     cursor: pointer;
     z-index: 99;
@@ -191,9 +205,9 @@
 }
 #room06 #r6photo{
     position: absolute;
-    top: 35.7%;
-    left: 21.3%;
-    width: 140px;
+    top: 36.5%;
+    left: 22.7%;
+    width: 130px;
     height: auto;
     cursor: pointer;
     z-index: 998;
@@ -201,9 +215,9 @@
 }
 #room06 #r6editimg{
     position: absolute;
-    top: 47.5%;
-    right:24.1%;
-    width:55.5px;
+    top: 47.8%;
+    right:25.23%;
+    width:54px;
     height: auto;
     cursor: pointer;
     z-index: 999;
@@ -211,9 +225,9 @@
 }
 #room06 #r6vase{
     position: absolute;
-    top: 48%;
-    left:3%;
-    width: 76px;
+    top: 50%;
+    left:5%;
+    width: 70px;
     height: auto;
     cursor: pointer;
     z-index: 999;
@@ -221,9 +235,9 @@
 }
 #room06 #r6venus{
     position: absolute;
-    top: 46%;
-    right:6%;
-    width: 195px;
+    top: 45.9%;
+    right:8%;
+    width: 190px;
     height: auto;
     cursor: pointer;
     z-index: 999;
@@ -232,7 +246,7 @@
 #room06 #r6venusBox{
     position: absolute;
     top: 43%;
-    right:6.8%;
+    right:8.4%;
     width: 133px;
     height: 240px;
     background-color: transparent;
@@ -246,8 +260,8 @@
 }
 #room06 #r6venus2{
     position: absolute;
-    top:21%;
-    left:18.5%;
+    top:21.5%;
+    left:19.3%;
     width: 180px;
     cursor: pointer;
     z-index: 999;
@@ -255,8 +269,8 @@
 }
 #room06 #r6love1{
     position: absolute;
-    top: 30%;
-    left:28%;
+    top: 30.5%;
+    left:29.5%;
     width:10px;
     z-index: 9999;
     animation: love1 1s infinite linear;
@@ -264,8 +278,8 @@
 }
 #room06 #r6love2{
     position: absolute;
-    top: 30%;
-    left:28%;
+    top: 30.5%;
+    left:29.5%;
     width:10px;
     z-index: 9999;
     animation: love2 1.5s infinite linear;
@@ -273,8 +287,8 @@
 }
 #room06 #r6love3{
     position: absolute;
-    top: 30%;
-    left:28%;
+    top: 30.5%;
+    left:29.5%;
     width:10px;
     z-index: 9999;
     animation: love3 .8s infinite linear;
@@ -282,8 +296,8 @@
 }
 #room06 #r6love4{
     position: absolute;
-    top: 30%;
-    left:28%;
+    top: 30.5%;
+    left:29.5%;
     width:10px;
     z-index: 9999;
     animation: love4 1.8s infinite linear;
@@ -291,8 +305,8 @@
 }
 #room06 #r6love5{
     position: absolute;
-    top: 30%;
-    left:28%;
+    top: 30.5%;
+    left:29.5%;
     width:10px;
     z-index: 9999;
     animation: love5 1.6s infinite linear;
@@ -360,50 +374,50 @@
 }
 #room06  #r6biglike1{
     position: absolute;
-    top: 48%;
+    top: 46%;
     right: 8%;
     animation: like1 1s infinite linear;
     display: none;
 }
 #room06  #r6biglike2{
     position: absolute;
-    top: 53%;
+    top: 51%;
     right: 7%;
     animation: like2 1s infinite linear;
     display: none;
 }
 #room06  #r6biglike3{
     position: absolute;
-    top: 58%;
+    top: 56%;
     right: 8.5%;
     animation: like3 1s infinite linear;
     display: none;
 }
 #room06  #r6biglike4{
     position: absolute;
-    top: 63%;
+    top: 61%;
     right:9.5%;
     animation: like4 1s infinite linear;
     display: none;
 }
 #room06  #r6biglike5{
     position: absolute;
-    top: 68%;
+    top: 66%;
     right: 9%;
     animation: like5 1s infinite linear;
     display: none;
 }
 #room06  #r6biglike6{
     position: absolute;
-    top: 72%;
+    top: 70%;
     right: 7%;
     animation: like6 1s infinite linear;
     display: none;
 }
 #room06 #liveNum{
     position: absolute;
-    top: 30.2%;
-    right:8%;
+    top: 31.0%;
+    right:9.5%;
     font-size: 20px;
     font-weight: 600;
     color:#EA888F;
@@ -411,10 +425,10 @@
 }
 #room06 #cartBox{
     position: absolute;
-    top: 12.2%;
-    right:3%;
+    top: 14.5%;
+    right:4.6%;
     width: 150px;
-    height: 220px;
+    height: 210px;
     background-color: transparent;
     cursor: pointer;
     z-index: 999;
@@ -422,7 +436,7 @@
 #room06 #r6msg1{
     position: absolute;
     top:33%;
-    right:3%;
+    right:5%;
     width:80px;
     animation: msg .9s infinite linear;
     display: none;
@@ -430,7 +444,7 @@
 #room06 #r6msg2{
     position: absolute;
     top:37%;
-    right:5%;
+    right:7%;
     width:80px;
     animation: msg 1.3s infinite linear;
     display: none;
@@ -438,35 +452,35 @@
 #room06 #r6liveLove1{
     position: absolute;
     top: 40%;
-    right:7%;
+    right:9%;
     width:23px;
     animation: liveLove 1s infinite linear;
 }
 #room06 #r6liveLove2{
     position: absolute;
     top: 40%;
-    right:4%;
+    right:6%;
     width:23px;
     animation: liveLove 2.5s infinite linear;
 }
 #room06 #r6liveLove3{
     position: absolute;
     top: 40%;
-    right:6%;
+    right:8%;
     width:23px;
     animation: liveLove 1.5s infinite linear;
 }
 #room06 #r6liveLove4{
     position: absolute;
     top: 40%;
-    right:8%;
+    right:10%;
     width:23px;
     animation: liveLove 2s infinite linear;
 }
 #room06 #r6liveLove5{
     position: absolute;
     top: 40%;
-    right:10%;
+    right:12%;
     width:23px;
     animation: liveLove 1.75s infinite linear;
 }
