@@ -59,9 +59,9 @@
     position: absolute;
     /* top: 113px;
     left: 275px; */
-    top: 30.5%;
-    left:41%;
-    width: 225px;
+    top: 29.5%;
+    left:40.5%;
+    width: 235px;
     height: auto;
     z-index: 1;
     cursor: pointer;
@@ -226,8 +226,8 @@
 }
 #room07 #r7puppet{
     position: absolute;
-    top:36%;
-    left: 41.7%;
+    top:35.8%;
+    left: 41.5%;
     width: 75px;
     height: auto;
     cursor: pointer;
