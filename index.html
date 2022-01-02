@@ -441,6 +441,15 @@
     r6Enter.addEventListener("mouseup",()=>{
         r6Enter.src="./styles/images/room06/enter.png";
     })
+    room06People.addEventListener("mouseover",()=>{
+        
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "《維納斯的誕生》 : 羅馬神話中女神維納斯從海中誕生的情景，右邊春之女神正在為她披上華服而左邊的風神送來暖風陣風，吹起她的髮絲。 ";
+    })
+    room06People.addEventListener("mouseout",()=>{
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
+    })
     r6eyeBtn.addEventListener("mouseover",()=>{
         r6eyeBtn.src="./styles/images/room06/eyeClose.png";
         r6face.style.display = "block";
@@ -489,15 +498,23 @@
     })
     r6follow.addEventListener("mouseover",()=>{
         r6follow.src = "./styles/images/room06/following.png";
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "Instagram：於2010/10發布，截止2021/1 Instagram的全球活躍使用者數量已超過10億";
     })
     r6follow.addEventListener("mouseout",()=>{
         r6follow.src = "./styles/images/room06/follow.png";
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
     })
     r6photo.addEventListener("mouseover",()=>{
         r6photo.src = "./styles/images/room06/photo.png"
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "修圖軟體：2021修圖軟體下載量前8名";
     })
     r6photo.addEventListener("mouseout",()=>{
-        r6photo.src = "./styles/images/room06/app.png"
+        r6photo.src = "./styles/images/room06/app.png";
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
     })
     r6editimg.addEventListener("mouseover",()=>{
         r6editimg.src = "./styles/images/room06/editimg2.png"
@@ -507,7 +524,7 @@
     })
     r6vase.addEventListener("mouseover",()=>{
         room06Text.style.opacity = "1";
-        room06Text.innerHTML = "花";
+        room06Text.innerHTML = "百合花：百合花在聖經中象徵在污穢的世界中過純潔的生活的良人";
     })
     r6vase.addEventListener("mouseout",()=>{
         room06Text.style.opacity = "0";
@@ -521,6 +538,8 @@
         r6biglike4.style.display = "block";
         r6biglike5.style.display = "block";
         r6biglike6.style.display = "block";
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "《維納斯的誕生》 : 羅馬神話中女神維納斯從海中誕生的情景，右邊春之女神正在為她披上華服而左邊的風神送來暖風陣風，吹起她的髮絲。 ";
        
 
     })
@@ -531,6 +550,8 @@
         r6biglike4.style.display = "none";
         r6biglike5.style.display = "none";
         r6biglike6.style.display = "none";
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
     })
     function livestart(){
         liveadd = setInterval(() => {
@@ -545,6 +566,8 @@
         liveNum.style.display = "block";
         r6msg1.style.display = "block";
         r6msg2.style.display = "block";
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "直播：利用視訊方式進行線上現場直播，一般實況主常透過直播平台網站轉播遊戲過程、生活瑣事等，並與觀眾即時性互動";
         for(var r=0;r<r6liveLove.length;r++){
             r6liveLove[r].style.display = "block";
         }
@@ -555,6 +578,8 @@
         liveNum.style.display = "none";
         r6msg1.style.display = "none";
         r6msg2.style.display = "none";
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
         for(var r=0;r<r6liveLove.length;r++){
             r6liveLove[r].style.display = "none";
         }
@@ -572,6 +597,8 @@
         r6love3.style.display = "block";
         r6love4.style.display = "block";
         r6love5.style.display = "block";
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "《維納斯的誕生》 : 羅馬神話中女神維納斯從海中誕生的情景，右邊春之女神正在為她披上華服而左邊的風神送來暖風陣風，吹起她的髮絲。 ";
     })
     r6venus2.addEventListener("mouseout",()=>{
         r6love1.style.display = "none";
@@ -579,6 +606,8 @@
         r6love3.style.display = "none";
         r6love4.style.display = "none";
         r6love5.style.display = "none";
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
     })
     r6Enter.addEventListener("click",()=>{
         if(r6Password.value!="2954") return alert("密碼錯誤");
