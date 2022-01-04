@@ -211,6 +211,7 @@
                     <img src="./styles/images/room06/editimg.png" alt="" id="r6editimg">
                     <img src="./styles/images/room06/vase.png" alt="" id="r6vase">
                     <img src="./styles/images/room06/Venus1.png" alt="" id="r6venus">
+                    <div id="r6touchFollow"></div>
                     
                     <div id="r6venusBox"></div>
                     <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike1">
@@ -388,6 +389,8 @@
     var r6msg2 = document.getElementById("r6msg2");
     var r6liveLove = document.getElementsByClassName('r6liveLove');
 
+    var r6touchFollow = document.getElementById('r6touchFollow');
+
     var r6venus2 = document.getElementById('r6venus2');
     var r6love1 = document.getElementById('r6love1');
     var r6love2 = document.getElementById('r6love2');
@@ -425,6 +428,7 @@
             r6vase.style.display = "block";
             r6venus.style.display = "block";
             r6venus2.style.display = "block";
+            r6touchFollow.style.display = "block";
             for(let a=0;a<r6arrow.length;a++){
                 r6arrow[a].style.display = "block";
             }
@@ -518,9 +522,13 @@
     })
     r6editimg.addEventListener("mouseover",()=>{
         r6editimg.src = "./styles/images/room06/editimg2.png"
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "Instagram：於2010/10發布，截止2021/1 Instagram的全球活躍使用者數量已超過10億";
     })
     r6editimg.addEventListener("mouseout",()=>{
         r6editimg.src = "./styles/images/room06/editimg.png"
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
     })
     r6vase.addEventListener("mouseover",()=>{
         room06Text.style.opacity = "1";
@@ -562,6 +570,16 @@
         liveNum.innerHTML = livepeopleNum + "+";
     }, 1);
     }
+    r6touchFollow.addEventListener("mouseover",()=>{
+        console.log(111);
+        
+        room06Text.style.opacity = "1";
+        room06Text.innerHTML = "Instagram：於2010/10發布，截止2021/1 Instagram的全球活躍使用者數量已超過10億";
+    })
+    r6touchFollow.addEventListener("mouseout",()=>{
+        room06Text.style.opacity = "0";
+        room06Text.innerHTML = "";
+    })
     cartBox.addEventListener("mouseover",()=>{
         liveNum.style.display = "block";
         r6msg1.style.display = "block";
@@ -697,6 +715,7 @@
         r6vase.style.display = "none";
         r6venus.style.display = "none";
         r6venus2.style.display = "none";
+        r6touchFollow.style.display = "none";
         for(let a=0;a<r6arrow.length;a++){
             r6arrow[a].style.display = "none";
         }
@@ -792,7 +811,7 @@
         r7YellowLove.style.display = "block";
         r7Zenly.style.top = "19.5%";
         room07Text.style.opacity="1";
-        room07Text.innerHTML = "Zenly : Zenly是一個追蹤定位的應用程式，它可以讓你即時知道家人朋友的位置，可以看到在哪裡之外，還可以知道在各個地點待了多久、行駛的速度以及手機電池狀態";
+        room07Text.innerHTML = "Zenly : Zenly是一個追蹤定位的應用程式，可以讓你即時知道家人朋友的位置、在各個地點待了多久、行駛的速度以及手機電池狀態";
     })
     r7Zenly.addEventListener("mouseout",()=>{
         r7Zenly.src="./styles/images/room07/zenly.png";
@@ -852,7 +871,7 @@
 
     r7Butterfly.addEventListener("mouseover",()=>{
         room07Text.style.opacity="1";
-        room07Text.innerHTML = "被關起來的蝴蝶";
+        room07Text.innerHTML = "被關起來的蝴蝶：行動受到限制";
     })
     r7Butterfly.addEventListener("mouseout",()=>{
         room07Text.style.opacity="0";

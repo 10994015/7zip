@@ -200,7 +200,7 @@
     width: 84px;
     height: auto;
     cursor: pointer;
-    z-index: 99;
+    z-index: 999;
     display: none;
 }
 #room06 #r6photo{
@@ -499,6 +499,16 @@
         opacity: 0;
         transform: translateY(-80px);
     }
+}
+#room06 #r6touchFollow{
+    width:166px;
+    height: 288px;
+    background-color: transparent;
+    position: absolute;
+    top:21%;
+    left:67%;
+    display: none;
+    z-index: 998;
 }
 #room06 .r6arrow{
     width: 10px;
