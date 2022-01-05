@@ -102,11 +102,33 @@
     border:none;
     background-color: transparent;
     color:#E5DC46;
-    letter-spacing:6px;
+    letter-spacing:8px;
     font-family: 'Comfortaa';
     transform: scale(1,0.7);
     font-weight: 600;
     z-index: 3;
+}
+#room06 .r6botoomBorder{
+    position: absolute;
+    bottom:8%;
+    width:20px;
+    height: 5px;
+    background-color: #E5DC46;
+    border-radius: 6px;
+    display: none;
+
+}
+#room06 .r6botoomBorder#r6border1{
+    left:72.7%;
+}
+#room06 .r6botoomBorder#r6border2{
+    left:74.7%;
+}
+#room06 .r6botoomBorder#r6border3{
+    left:76.7%;
+}
+#room06 .r6botoomBorder#r6border4{
+    left:78.7%;
 }
 #room06 #r6Enter{ 
     position: absolute;
