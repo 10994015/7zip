@@ -1,0 +1,85 @@
+
+#room07pass{
+    width:100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+#room07pass #room07passTop,
+#room07pass #room07passCenter,
+#room07pass #room07passBottom{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+#room07pass #room07passTop #topbg,
+#room07pass #room07passCenter #centerbg,
+#room07pass #room07passBottom #bottombg{
+    width:100%;
+}
+#room07pass #room07passTop #p7box{
+    position: absolute;
+    top: 199px;
+    left:1062px;
+    width:180px;
+    height: auto;
+    cursor: pointer;
+}
+#room07pass #room07passCenter{
+    position: relative;
+}
+#room07pass #room07passCenter .p7control{
+    position: absolute;
+    width:181px;
+    height: auto;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#room07pass #room07passCenter #p7control1{
+    position: absolute;
+    top: 230px;
+    left:384px;
+    transition: all .5s ease;
+}
+#room07pass #room07passCenter #p7control2{
+    position: absolute;
+    top: 443px;
+    left:599px;
+}
+#room07pass #room07passCenter #p7control3{
+    position: absolute;
+    top: 232px;
+    left:793px;
+}
+#room07pass #room07passCenter #p7control4{
+    position: absolute;
+    top: 443px;
+    left:1022px;
+}
+#room07pass #room07passCenter #p7people{
+    position: absolute;
+    top: 300px;
+    left:230px;
+    /* transform: translate(175px, -235px); */
+    /* top:65px;
+    left:405px; */
+    /* top:65px;
+    left:814px; */
+    /* top:280px;
+    left:620px; */
+    /* top:280px;
+    left:1029px; */
+    width:140px;
+}
+#room07pass #room07passBottom{
+    position: relative;
+}
+#room07pass #room07passBottom #p7badge{
+    position: absolute;
+    top: 440px;
+    left:320px;
+    width:150px;
+    display: none;
+}
