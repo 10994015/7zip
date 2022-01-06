@@ -60,6 +60,12 @@ main{
     z-index: 99999999999999;
     cursor: pointer;
 }
+.room#bg2 .people{
+    position: absolute;
+    top: 129px;
+    left: 282px;
+    width: 250px;
+}
 #bg4 .people{
     position: absolute;
    

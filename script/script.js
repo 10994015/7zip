@@ -49,6 +49,45 @@ var peopleText = document.getElementById('peopleText');
 var roomText = document.getElementsByClassName("roomText");
 var roomEnter = document.getElementsByClassName('roomEnter');
 
+// room02
+var room02 = document.getElementById('room02');
+var room02Bg = document.getElementById('room02Bg');
+var room02Text = document.getElementById('room02Text');
+var r2people = document.getElementById('r2-people');
+var r2card = document.getElementById('r2-card');
+var r2cardRight = document.getElementById('r2-card-right');
+var r2cardLeft = document.getElementById('r2-card-left');
+var r2PrevPage = document.getElementById("r2-prevPage");
+var r2Enter = document.getElementById("r2Enter");
+var room02People = document.getElementById('room02People');
+var r2Password = document.getElementById('r2Password');
+var r2botoomBorder = document.getElementsByClassName('r2botoomBorder');
+yes[1].addEventListener("click",()=>{
+    main.style.display = "none";
+    room02.style.display = "block";
+    setTimeout(()=>{
+        room02Bg.style.opacity = "1";
+        room02People.style.display = "block";
+        r2people.style.display = "none";
+        room02Text.style.display = "block";
+        r2Enter.style.display = "block";
+        r2PrevPage.style.display = "block";
+        r2Password.style.display = "block";
+        for(let b=0;b<r2botoomBorder.length;b++){
+            r2botoomBorder[b].style.display = "block";
+        }
+    },1000)
+
+    r2Enter.addEventListener("click",()=>{
+        if(r2Password.value!="1234") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room02.style.display = "none";
+        room02pass.style.display = "block";
+    })
+})
+
+// room02 END
+
 // room6
 var room06 = document.getElementById("room06");
 var room06Bg = document.getElementById('room06Bg');
@@ -59,6 +98,7 @@ var r6cardRight = document.getElementById('r6-card-right');
 var r6cardLeft = document.getElementById('r6-card-left');
 var r6PrevPage = document.getElementById("r6-prevPage");
 var r6Enter = document.getElementById("r6Enter");
+var r6Password  =document.getElementById('r6Password');
 var r6eyeBtn = document.getElementById('r6eyeBtn');
 var r6faceBtn = document.getElementById('r6faceBtn');
 var r6makeupBtn = document.getElementById('r6makeupBtn');
@@ -110,12 +150,10 @@ yes[5].addEventListener("click",()=>{
         room06Bg.style.opacity = "1";
         room06People.style.display = "block";
         r6people.style.display = "none";
-        r6people.style.width = "280px";
-        r6people.style.top="151px";
-        r6people.style.left = "254px";
         room06Text.style.display = "block";
         r6Enter.style.display = "block";
         r6PrevPage.style.display = "block";
+        r6Password.style.display = "block";
         r6eyeBtn.style.display = "block";
         r6faceBtn.style.display = "block";
         r6makeupBtn.style.display = "block";
@@ -405,6 +443,8 @@ r6PrevPage.addEventListener("click",()=>{
     r6people.style.left = "285px";
     room06Text.style.display = "none";
     r6Enter.style.display = "none";
+    r6Password.style.display = "none";
+    r6Password.value="";
     r6PrevPage.style.display = "none";
     r6eyeBtn.style.display = "none";
     r6faceBtn.style.display = "none";
@@ -771,6 +811,22 @@ bg1people.addEventListener("click",()=>{
         model07.style.display = "flex";
     },450)
 })
+bg2people.addEventListener("click",()=>{
+    model[0].style.display = "flex";
+    roomNumber.innerHTML = "_02";
+    setTimeout(()=>{
+        model1.style.display = "flex";
+    },100)
+    setTimeout(()=>{
+        model2.style.display = "flex";
+    },200)
+    setTimeout(()=>{
+        model3.style.display = "flex";
+    },300)
+    setTimeout(()=>{
+        model02.style.display = "flex";
+    },450)
+})
 bg4people.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_06";
@@ -786,6 +842,13 @@ bg4people.addEventListener("click",()=>{
     setTimeout(()=>{
         model06.style.display = "flex";
     },450)
+})
+no[1].addEventListener("click",()=>{
+    model[0].style.display = "none";
+    model1.style.display = "none";
+    model2.style.display = "none";
+    model3.style.display = "none";
+    model02.style.display = "none";
 })
 no[5].addEventListener("click",()=>{
     model[0].style.display = "none";
