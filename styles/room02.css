@@ -147,6 +147,278 @@
     cursor: pointer;
     z-index: 2;
 }
+#room02 #r2-prevPage:hover{
+    transform: scale(1.1);
+}
+#room02 #r2ans{
+    position: absolute;
+    top: 19.5%;
+    left: 66.3%;
+    width:80px;
+    height: auto;
+    display: none;
+}
+#room02 #r2ansBox{
+    position: absolute;
+    top: 18.2%;
+    left:65.8%;
+    width:95px;
+    height: 145px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+#room02 #r2ansBox:hover ~ #r2ans{
+    display: block;
+}
+#room02 #r2chickBox{
+    position: absolute;
+    top: 41%;
+    left:73.5%;
+    width:240px;
+    height: 168px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+#room02 #r2chick{
+    position: absolute;
+    top: 46%;
+    left:78.5%;
+    width:60px;
+    /* top: 47%;
+    left: 77%;
+    width:90px; */
+    display: none;
+}
+#room02 #r2magnifier{
+    position: absolute;
+    top: 8%;
+    left:calc(50% - 55px);
+    width:110px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+#room02 #r2finger{
+    position: absolute;
+    top: 51%;
+    left:10.25%;
+    width:120px;
+   
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+#room02 #r2owl{
+    position: absolute;
+    top:10.5%;
+    left:31.8%;
+    width:160px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+#room02 #r2pole{
+    position: absolute;
+    top: 23%;
+    left:42%;
+    width:218px;
+    z-index: 1000;
+    display: none;
+}
+#room02 #r2athena{
+    position: absolute;
+    top: 18%;
+    left:16%;
+    width:165px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+#room02 #r2vase{
+    position: absolute;
+    top: 19.5%;
+    left:9.1%;
+    width:80px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+#room02 #r2pig{
+    position: absolute;
+    top: 49%;
+    left:23%;
+    width:170px;
+    /* top: 43.4%;
+    left:22%;
+    width:180px; */
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+#room02 #r2itbox{
+    position: absolute;
+    top: 29%;
+    left:61.8%;
+    width:150px;
+    height: 240px;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 998;
+    display: none;
+}
+#room02 #r2itTouch{
+    position: absolute;
+    top: 41%;
+    left:65.9%;
+    width:94px;
+    height: 168px;
+    background-color: transparent;
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+}
+#room02 #r2it{
+    position: absolute;
+    top:0%;
+    right:-50px;
+    width:170px;
+    transition: .3s;
+    display: none;
+}
+#room02 #r2love{
+    position: absolute;
+    top:30%;
+    left:5.3%;
+    width:25px;
+    opacity: 0;
+    display: none;
+}
+#room02 #r2flash{
+    position: absolute;
+    top: 51%;
+    left:37%;
+    width:40px;
+    opacity: 0;
+    display: none;
+}
+#room02 #r2stairBox{
+    position: absolute;
+    top: 45.3%;
+    left:36.5%;
+    width:33px;
+    height: 200px;
+    background-color: transparent;
+    transform: skew(0deg, 45deg);
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+
+}
+#room02 #r2stairBox:hover ~ #r2flash{
+    left:35.5%;
+    opacity: 1;
+    transition: .5s;
+}
+#room02 #r2eyeBox{
+    position: absolute;
+    top: 61.5%;
+    left:15.7%;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+}
+@keyframes eye{
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(5px,5px);
+    }
+    50%{
+        transform: translate(-3px,-8px);
+    }
+    75%{
+        transform: translate(-5px,5px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+#room02 #r2eye{
+    position: absolute;
+    top: 68%;
+    left:18.8%;
+    width:10px;
+}
+#room02 #r2eyeBox:hover ~ #r2eye{
+    animation: eye 1s infinite linear;
+}
+#room02 #r2playBox{
+    position: absolute;
+    top: 18%;
+    left:73.5%;
+    width:240px;
+    height: 145px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    display: none;
+}
+#room02 #r2play{
+    position: absolute;
+    top: calc(50% - 50px);
+    left:calc(50% - 50px);
+    width:100px;
+    display: none;
+}
+#room02 #r2bullet{
+    position: absolute;
+    top: 15px;
+    right:0;
+    width:150px;
+    display: none;
+    opacity: 0;
+    /* animation: bullet 1s infinite linear; */
+}
+@keyframes bullet{
+    0%{
+        right:-150px;
+    }
+    100%{
+        right:50px;
+    }
+}
+@keyframes love{
+    0%{
+        opacity: .1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+}
+#room02 #r2buttBox{
+    position: absolute;
+    top: 24%;
+    left:2.9%;
+    width:66px;
+    height: 135px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
 @keyframes fadeout{
     0%{
         opacity: 1;

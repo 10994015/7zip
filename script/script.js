@@ -62,6 +62,30 @@ var r2Enter = document.getElementById("r2Enter");
 var room02People = document.getElementById('room02People');
 var r2Password = document.getElementById('r2Password');
 var r2botoomBorder = document.getElementsByClassName('r2botoomBorder');
+
+var r2ansBox = document.getElementById('r2ansBox');
+var r2ans = document.getElementById('r2ans');
+var r2chick = document.getElementById('r2chick');
+var r2chickBox = document.getElementById('r2chickBox');
+var r2magnifier = document.getElementById('r2magnifier');
+var r2finger = document.getElementById('r2finger');
+var r2athena = document.getElementById('r2athena');
+var r2owl = document.getElementById('r2owl');
+var r2pole = document.getElementById('r2pole');
+var r2vase = document.getElementById('r2vase');
+var r2pig = document.getElementById('r2pig');
+var r2itTouch = document.getElementById('r2itTouch');
+var r2itbox = document.getElementById('r2itbox');
+var r2it = document.getElementById('r2it');
+var r2buttBox = document.getElementById('r2buttBox');
+var r2love = document.getElementById('r2love');
+var r2stairBox = document.getElementById('r2stairBox');
+var r2flash = document.getElementById('r2flash');
+var r2eye = document.getElementById('r2eye');
+var r2eyeBox = document.getElementById('r2eyeBox');
+var r2play = document.getElementById('r2play');
+var r2bullet = document.getElementById('r2bullet');
+var r2playBox = document.getElementById('r2playBox');
 yes[1].addEventListener("click",()=>{
     main.style.display = "none";
     room02.style.display = "block";
@@ -73,16 +97,197 @@ yes[1].addEventListener("click",()=>{
         r2Enter.style.display = "block";
         r2PrevPage.style.display = "block";
         r2Password.style.display = "block";
+
+        r2ansBox.style.display = "block";
+        r2chickBox.style.display = "block";
+        r2chick.style.display = "block";
+        r2magnifier.style.display = "block";
+        r2finger.style.display = "block";
+        r2athena.style.display = "block";
+        r2owl.style.display = "block";
+        r2pole.style.display = "block";
+        r2vase.style.display = "block";
+        r2pig.style.display = "block";
+        r2it.style.display = "block";
+        r2itTouch.style.display = "block";
+        r2itbox.style.display = "block";
+        r2buttBox.style.display = "block";
+        r2love.style.display = "block";
+        r2stairBox.style.display = "block";
+        r2flash.style.display = "block";
+        r2eye.style.display = "block";
+        r2eyeBox.style.display = "block";
+        r2play.style.display = "block";
+        r2bullet.style.display = "block";
+        r2playBox.style.display  = "block";
         for(let b=0;b<r2botoomBorder.length;b++){
             r2botoomBorder[b].style.display = "block";
         }
     },1000)
-
+    
+    r2chickBox.addEventListener("mouseover",()=>{
+        r2chick.src = "./styles/images/room02/chickdie.png"
+        r2chick.style.top = "47%";
+        r2chick.style.left = "77%";
+        r2chick.style.width = "90px";
+        room02Text.style.opacity = "1";
+        room02Text.innerHTML = "cooking mama：有些兒童玩的遊戲中可能含有不適內容";
+    })
+    r2chickBox.addEventListener("mouseout",()=>{
+        r2chick.src = "./styles/images/room02/chick.png"
+        r2chick.style.top = "46%";
+        r2chick.style.left = "78.5%";
+        r2chick.style.width = "60px";
+        room02Text.style.opacity = "0";
+        room02Text.innerHTML = "";
+    })
+    r2magnifier.addEventListener("mouseover",()=>{
+        r2magnifier.src = "./styles/images/room02/magnifieropen.png";
+    })
+    r2magnifier.addEventListener("mouseout",()=>{
+        r2magnifier.src = "./styles/images/room02/magnifier.png";
+    })
+    r2finger.addEventListener("mouseover",()=>{
+        r2finger.src = "./styles/images/room02/fingercut.png";
+        r2finger.style.top = "50%";
+        r2finger.style.width = "100px";
+    })
+    r2finger.addEventListener("mouseout",()=>{
+        r2finger.src = "./styles/images/room02/finger.png";
+        r2finger.style.top = "51%";
+        r2finger.style.width = "120px";
+    })
+    r2athena.addEventListener("mouseover",()=>{
+        room02Text.style.opacity = "1";
+        room02Text.innerHTML = "雅典娜：希臘神話中的智慧女神與戰爭女神";
+    })
+    r2athena.addEventListener("mouseout",()=>{
+        room02Text.style.opacity = "0";
+        room02Text.innerHTML = "";
+    })
+    r2vase.addEventListener("mouseover",()=>{
+        room02Text.style.opacity = "1";
+        room02Text.innerHTML = "金鳳花代表了冷靜及智慧";
+    })
+    r2vase.addEventListener("mouseout",()=>{
+        room02Text.style.opacity = "0";
+        room02Text.innerHTML = "";
+    })
+    r2pig.addEventListener("mouseover",()=>{
+        r2pig.src = "./styles/images/room02/pig-knife.png";
+        r2pig.style.top = "43.4%";
+        r2pig.style.left = "22%";
+        r2pig.style.width = "180px";
+        room02Text.style.opacity = "1";
+        room02Text.innerHTML = "艾莎門：意指將暴力、色情等不適合兒童觀看之內容包裝於卡通人物之下";
+    })
+    r2pig.addEventListener("mouseout",()=>{
+        r2pig.src = "./styles/images/room02/pig-flower.png";
+        r2pig.style.top = "49%";
+        r2pig.style.left = "23%";
+        r2pig.style.width = "170px";
+        room02Text.style.opacity = "0";
+        room02Text.innerHTML = "";
+    })
+    r2owl.addEventListener("mouseover",()=>{
+        room02Text.style.opacity = "1";
+        room02Text.innerHTML = "貓頭鷹：不論在西方或東方都象徵著智慧";
+    })
+    r2owl.addEventListener("mouseout",()=>{
+        room02Text.style.opacity = "0";
+        room02Text.innerHTML = "";
+    })
+    r2itTouch.addEventListener("mouseover",()=>{
+        r2it.style.right = "-20px";
+    })
+    r2itTouch.addEventListener("mouseout",()=>{
+        r2it.style.right = "-50px";
+    })
+    r2buttBox.addEventListener("mouseover",()=>{
+        r2love.style.animation = "love 1s infinite linear";
+    })
+    r2buttBox.addEventListener("mouseout",()=>{
+        r2love.style.animation = "none";
+    })
+    r2playBox.addEventListener("mouseover",()=>{
+        r2play.src = "./styles/images/room02/pause.png";
+        r2bullet.style.opacity = "1";
+        r2bullet.style.animation = "bullet 1s infinite linear";
+    })
+    r2playBox.addEventListener("mouseout",()=>{
+        r2play.src = "./styles/images/room02/play.png";
+        r2bullet.style.opacity = "0";
+        r2bullet.style.animation = "none";
+    })
     r2Enter.addEventListener("click",()=>{
-        if(r2Password.value!="1234") return alert("密碼錯誤");
+        if(r2Password.value!="0923") return alert("密碼錯誤");
         alert("密碼正確!");
         room02.style.display = "none";
         room02pass.style.display = "block";
+    })
+    r2Password.addEventListener("keydown",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r2Enter.src="./styles/images/room02/enter2.png";
+    })
+    r2Password.addEventListener("keyup",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r2Enter.src="./styles/images/room02/enter.png";
+        if(r2Password.value!=="0923") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room02.style.display = "none";
+        room02pass.style.display = "block";
+        
+    })
+    r2PrevPage.addEventListener("click",()=>{
+        room02.style.display = "none";
+        main.style.display = "block";
+        model[0].style.display = "none";
+        model02.style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        room02Bg.style.opacity = "0";
+
+        room02People.style.display = "none";
+        
+        room02Text.style.display = "none";
+        r2Enter.style.display = "none";
+        r2Password.style.display = "none";
+        r2Password.value="";
+        r2PrevPage.style.display = "none";
+        
+        r2ansBox.style.display = "none";
+        r2chickBox.style.display = "none";
+        r2chick.style.display = "none";
+        r2magnifier.style.display = "none";
+        r2finger.style.display = "none";
+        r2athena.style.display = "none";
+        r2owl.style.display = "none";
+        r2pole.style.display = "none";
+        r2vase.style.display = "none";
+        r2pig.style.display = "none";
+        r2it.style.display = "none";
+        r2itTouch.style.display = "none";
+        r2itbox.style.display = "none";
+        r2buttBox.style.display = "none";
+        r2love.style.display = "none";
+        r2stairBox.style.display = "none";
+        r2flash.style.display = "none";
+        r2eye.style.display = "none";
+        r2eyeBox.style.display = "none";
+        r2play.style.display = "none";
+        r2bullet.style.display = "none";
+        r2playBox.style.display  = "none";
+        for(let b=0;b<r2botoomBorder.length;b++){
+                r2botoomBorder[b].style.display = "none";
+            }
+        // for(let a=0;a<r2arrow.length;a++){
+        //     r2arrow[a].style.display = "none";
+        // }
+        r2people.style.display = "block";
+        r2card.style.display = "block";
+        r2cardRight.style.display = "block";
+        r2cardLeft.style.display = "block"; 
     })
 })
 
