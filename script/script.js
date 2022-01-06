@@ -179,15 +179,15 @@ yes[1].addEventListener("click",()=>{
     })
     r2pig.addEventListener("mouseover",()=>{
         r2pig.src = "./styles/images/room02/pig-knife.png";
-        r2pig.style.top = "43.4%";
-        r2pig.style.left = "22%";
-        r2pig.style.width = "180px";
+        r2pig.style.top = "42.3%";
+        r2pig.style.left = "21.575%";
+        r2pig.style.width = "190px";
         room02Text.style.opacity = "1";
         room02Text.innerHTML = "艾莎門：意指將暴力、色情等不適合兒童觀看之內容包裝於卡通人物之下";
     })
     r2pig.addEventListener("mouseout",()=>{
         r2pig.src = "./styles/images/room02/pig-flower.png";
-        r2pig.style.top = "49%";
+        r2pig.style.top = "48.9%";
         r2pig.style.left = "23%";
         r2pig.style.width = "170px";
         room02Text.style.opacity = "0";
@@ -202,7 +202,7 @@ yes[1].addEventListener("click",()=>{
         room02Text.innerHTML = "";
     })
     r2itTouch.addEventListener("mouseover",()=>{
-        r2it.style.right = "-20px";
+        r2it.style.right = "-1px";
     })
     r2itTouch.addEventListener("mouseout",()=>{
         r2it.style.right = "-50px";
@@ -708,7 +708,7 @@ r6PrevPage.addEventListener("click",()=>{
     r6venus2.style.display = "none";
     r6touchFollow.style.display = "none";
     for(let b=0;b<r6botoomBorder.length;b++){
-            r6botoomBorder[b].style.display = "block";
+            r6botoomBorder[b].style.display = "none";
         }
     for(let a=0;a<r6arrow.length;a++){
         r6arrow[a].style.display = "none";

@@ -102,7 +102,7 @@
     border:none;
     background-color: transparent;
     color:#E5DC46;
-    letter-spacing:7px;
+    letter-spacing:11px;
     font-family: 'Comfortaa';
     transform: scale(1,0.7);
     font-weight: 600;
@@ -113,23 +113,22 @@
     position: absolute;
     bottom:8%;
     width:20px;
-    height: 5px;
+    height: 3px;
     background-color: #E5DC46;
     border-radius: 6px;
     display: none;
-
 }
 #room07 .r7botoomBorder#r7border1{
     left:72.7%;
 }
 #room07 .r7botoomBorder#r7border2{
-    left:74.7%;
+    left:74.9%;
 }
 #room07 .r7botoomBorder#r7border3{
-    left:76.7%;
+    left:77.1%;
 }
 #room07 .r7botoomBorder#r7border4{
-    left:78.7%;
+    left:79.3%;
 }
 #room07 #r7Enter{ 
     position: absolute;
