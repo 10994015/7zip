@@ -418,7 +418,36 @@
     z-index: 999;
     display: none;
 }
-
+#room02 .r2arrow{
+    width: 10px;
+    height: auto;
+    position: absolute;
+    bottom: 7.5%;
+    display: none;
+    opacity: 0;
+    
+}
+#room02 #r2arrow1{
+    left:54.8%;
+}
+#room02 #r2arrow2{
+    left:55.5%;
+}
+#room02 #r2arrow3{
+    left:56.2%;
+}
+#room02 #r2arrow4{
+    left:56.9%;
+}
+#room02 #r2arrow5{
+    left:57.6%;
+}
+#room02 #r2arrow6{
+    left:58.3%;
+}
+#room02 #r2arrow7{
+    left:59%;
+}
 @keyframes fadeout{
     0%{
         opacity: 1;

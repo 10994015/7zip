@@ -86,6 +86,7 @@ var r2eyeBox = document.getElementById('r2eyeBox');
 var r2play = document.getElementById('r2play');
 var r2bullet = document.getElementById('r2bullet');
 var r2playBox = document.getElementById('r2playBox');
+var r2arrow = document.getElementsByClassName('r2arrow');
 yes[1].addEventListener("click",()=>{
     main.style.display = "none";
     room02.style.display = "block";
@@ -122,6 +123,9 @@ yes[1].addEventListener("click",()=>{
         r2playBox.style.display  = "block";
         for(let b=0;b<r2botoomBorder.length;b++){
             r2botoomBorder[b].style.display = "block";
+        }
+        for(let a=0;a<r2arrow.length;a++){
+            r2arrow[a].style.display = "block";
         }
     },1000)
     
@@ -238,6 +242,45 @@ yes[1].addEventListener("click",()=>{
         room02pass.style.display = "block";
         
     })
+    setInterval(()=>{
+        r2arrow[0].style.opacity = 0;
+        r2arrow[1].style.opacity = 0;
+        r2arrow[2].style.opacity = 0;
+        r2arrow[3].style.opacity = 0;
+        r2arrow[4].style.opacity = 0;
+        r2arrow[5].style.opacity = 0;
+        r2arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r2arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r2arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r2arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r2arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r2arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r2arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r2arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r2arrow[0].style.opacity = 0;
+            r2arrow[1].style.opacity = 0;
+            r2arrow[2].style.opacity = 0;
+            r2arrow[3].style.opacity = 0;
+            r2arrow[4].style.opacity = 0;
+            r2arrow[5].style.opacity = 0;
+            r2arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
     r2PrevPage.addEventListener("click",()=>{
         room02.style.display = "none";
         main.style.display = "block";
@@ -281,9 +324,9 @@ yes[1].addEventListener("click",()=>{
         for(let b=0;b<r2botoomBorder.length;b++){
                 r2botoomBorder[b].style.display = "none";
             }
-        // for(let a=0;a<r2arrow.length;a++){
-        //     r2arrow[a].style.display = "none";
-        // }
+        for(let a=0;a<r2arrow.length;a++){
+            r2arrow[a].style.display = "none";
+        }
         r2people.style.display = "block";
         r2card.style.display = "block";
         r2cardRight.style.display = "block";
