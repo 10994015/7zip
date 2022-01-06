@@ -27,6 +27,11 @@
     height: auto;
     cursor: pointer;
 }
+#room07pass #room07passTop #p7-prevPage{
+    position: absolute;
+    top: 0;
+    left:0;
+}
 #room07pass #room07passCenter{
     position: relative;
 }

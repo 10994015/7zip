@@ -107,6 +107,7 @@
     transform: scale(1,0.7);
     font-weight: 600;
     z-index: 3;
+    display: none;
 }
 #room07 .r7botoomBorder{
     position: absolute;

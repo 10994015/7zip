@@ -32,6 +32,14 @@ var times = 0;
 var t = document.getElementById('t');
 var yes = document.getElementsByClassName('yes');
 
+var passBadge01 = document.getElementsByClassName('passBadge01');
+var passBadge02 = document.getElementsByClassName('passBadge02');
+var passBadge03 = document.getElementsByClassName('passBadge03');
+var passBadge04 = document.getElementsByClassName('passBadge04');
+var passBadge05 = document.getElementsByClassName('passBadge05');
+var passBadge06 = document.getElementsByClassName('passBadge06');
+var passBadge07 = document.getElementsByClassName('passBadge07');
+
 var model07 = document.getElementById('model07');
 var model1 = document.getElementById('model1');
 var model2 = document.getElementById('model2');
@@ -470,6 +478,7 @@ yes[6].addEventListener("click",()=>{
         room07Bg.style.opacity = "1";
         room07Text.style.display = "block";
         r7Enter.style.display = "block";
+        r7Password.style.display = "block";
         r7PrevPage.style.display = "block";
         r7Zenly.style.display = "block";
         r7hoverLove.style.display = "block";
@@ -652,7 +661,8 @@ setInterval(()=>{
         r7arrow[6].style.opacity = 0;
     },4000)
 },4000)
-r7PrevPage.addEventListener("click",()=>{
+r7PrevPage.addEventListener("click",clearR7room)
+function clearR7room(){
     room07.style.display = "none";
     main.style.display = "block";
     model[0].style.display = "none";
@@ -661,7 +671,7 @@ r7PrevPage.addEventListener("click",()=>{
     model2.style.display = "none";
     model3.style.display = "none";
     room07Bg.style.display = "none";
-    
+    r7Password.style.display = "none";
     room07People.style.display = "none";
     room07Text.style.display = "none";
     r7Enter.style.display = "none";
@@ -688,8 +698,9 @@ r7PrevPage.addEventListener("click",()=>{
     r7card.style.display = "block";
     r7cardRight.style.display = "block";
     r7cardLeft.style.display = "block"; 
-    
-})
+    room07pass.style.display = "none";
+    r7Password.value = "";
+}
 // room7 END
 // pass07
 var p7box =  document.getElementById('p7box');
@@ -699,9 +710,9 @@ var p7control3 = document.getElementById('p7control3');
 var p7control4 = document.getElementById('p7control4');
 var p7people = document.getElementById('p7people');
 var p7badge = document.getElementById('p7badge');
+var p7PrevPage = document.getElementById('p7-prevPage');
 p7box.addEventListener("mouseover",()=>{
     p7box.src="./styles/images/pass07/box2.png";
-    console.log(1123);
     
 })
 p7box.addEventListener("mouseout",()=>{
@@ -717,20 +728,31 @@ p7control2.addEventListener("click",()=>{
     p7people.style.top = "280px";
     p7people.style.left = "620px";
     p7badge.style.display = "block";
-    p7badge.src = "./styles/images/pass07/s2.png";
+    for(let p=0;p<passBadge07.length;p++){
+        passBadge07[p].src ="./styles/images/pass07/s2.png";
+    }
+    
 })
 p7control3.addEventListener("click",()=>{
     p7people.style.top = "65px";
     p7people.style.left = "814px";
     p7badge.style.display = "block";
-    p7badge.src = "./styles/images/pass07/s3.png";
+    for(let p=0;p<passBadge07.length;p++){
+        passBadge07[p].src ="./styles/images/pass07/s3.png";
+    }
+
 })
 p7control4.addEventListener("click",()=>{
     p7people.style.top = "280px";
     p7people.style.left = "1048px";
     p7badge.style.display = "block";
-    p7badge.src = "./styles/images/pass07/s4.png";
+    for(let p=0;p<passBadge07.length;p++){
+        passBadge07[p].src ="./styles/images/pass07/s4.png";
+    }
+
 })
+p7PrevPage.addEventListener("click",clearR7room);
+ 
 // pass07 END
 // t.innerHTML = "times:"+times;
 bg1people.addEventListener("click",()=>{
