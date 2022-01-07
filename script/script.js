@@ -49,6 +49,122 @@ var peopleText = document.getElementById('peopleText');
 var roomText = document.getElementsByClassName("roomText");
 var roomEnter = document.getElementsByClassName('roomEnter');
 
+
+// room01
+var room01 = document.getElementById('room01');
+var room01Bg = document.getElementById('room01Bg');
+var room01Text = document.getElementById('room01Text');
+var r1people = document.getElementById('r1-people');
+var r1card = document.getElementById('r1-card');
+var r1cardRight = document.getElementById('r1-card-right');
+var r1cardLeft = document.getElementById('r1-card-left');
+var r1PrevPage = document.getElementById("r1-prevPage");
+var r1Enter = document.getElementById("r1Enter");
+var room01People = document.getElementById('room01People');
+var r1Password = document.getElementById('r1Password');
+var r1botoomBorder = document.getElementsByClassName('r1botoomBorder');
+
+var r1authority = document.getElementById('r1authority');
+var r1ansBox = document.getElementById('r1ansBox');
+var r1ans = document.getElementById('r1ans');
+yes[0].addEventListener("click",()=>{
+    main.style.display = "none";
+    room01.style.display = "block";
+    r1people.style.width = "213px";
+    r1people.style.top = "133px";
+    r1people.style.left = "313px";
+    setTimeout(()=>{
+        room01Bg.style.opacity = "1";
+        room01People.style.display = "block";
+        r1people.style.display = "none";
+        room01Text.style.display = "block";
+        r1Enter.style.display = "block";
+        r1PrevPage.style.display = "block";
+        r1Password.style.display = "block";
+        r1authority.style.display = "block";
+        r1ansBox.style.display = "block";
+        r1ans.style.display = "block";
+        for(let b=0;b<r1botoomBorder.length;b++){
+            r1botoomBorder[b].style.display = "block";
+        }
+        
+    },1000)
+
+    r1authority.addEventListener("mouseover",()=>{
+        r1authority.src = "./styles/images/room01/authority2.png";
+    })
+    r1authority.addEventListener("mouseout",()=>{
+        r1authority.src = "./styles/images/room01/authority.png";
+    })
+    r1ansBox.addEventListener("mouseover",()=>{
+        r1ans.src = "./styles/images/room01/ans1.png";
+        r1ans.style.width = "75px";
+    })
+    r1ansBox.addEventListener("mouseout",()=>{
+        r1ans.src = "./styles/images/room01/ans.png";
+        r1ans.style.width = "80px";
+    })
+    r1Enter.addEventListener("click",()=>{
+        if(r1Password.value!="1204") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room01.style.display = "none";
+        room01pass.style.display = "block";
+    })
+    r1Password.addEventListener("keydown",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r1Enter.src="./styles/images/room01/enter2.png";
+    })
+    r1Password.addEventListener("keyup",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r1Enter.src="./styles/images/room01/enter.png";
+        if(r1Password.value!=="1204") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room01.style.display = "none";
+        room01pass.style.display = "block";
+        
+    })
+    setInterval(()=>{
+        r1arrow[0].style.opacity = 0;
+        r1arrow[1].style.opacity = 0;
+        r1arrow[2].style.opacity = 0;
+        r1arrow[3].style.opacity = 0;
+        r1arrow[4].style.opacity = 0;
+        r1arrow[5].style.opacity = 0;
+        r1arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r1arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r1arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r1arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r1arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r1arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r1arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r1arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r1arrow[0].style.opacity = 0;
+            r1arrow[1].style.opacity = 0;
+            r1arrow[2].style.opacity = 0;
+            r1arrow[3].style.opacity = 0;
+            r1arrow[4].style.opacity = 0;
+            r1arrow[5].style.opacity = 0;
+            r1arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
+})
+// room01 END
+
 // room02
 var room02 = document.getElementById('room02');
 var room02Bg = document.getElementById('room02Bg');
@@ -1075,6 +1191,22 @@ bg2people.addEventListener("click",()=>{
         model02.style.display = "flex";
     },450)
 })
+bg3people.addEventListener("click",()=>{
+    model[0].style.display = "flex";
+    roomNumber.innerHTML = "_01";
+    setTimeout(()=>{
+        model1.style.display = "flex";
+    },100)
+    setTimeout(()=>{
+        model2.style.display = "flex";
+    },200)
+    setTimeout(()=>{
+        model3.style.display = "flex";
+    },300)
+    setTimeout(()=>{
+        model01.style.display = "flex";
+    },450)
+})
 bg4people.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_06";
@@ -1090,6 +1222,13 @@ bg4people.addEventListener("click",()=>{
     setTimeout(()=>{
         model06.style.display = "flex";
     },450)
+})
+no[0].addEventListener("click",()=>{
+    model[0].style.display = "none";
+    model1.style.display = "none";
+    model2.style.display = "none";
+    model3.style.display = "none";
+    model01.style.display = "none";
 })
 no[1].addEventListener("click",()=>{
     model[0].style.display = "none";
@@ -1125,9 +1264,9 @@ down.addEventListener("click",()=>{
     // t.innerHTML = "times:"+times;
     if(times===-1){
         //bg1
-        bg1.style.transform = "rotate(-20deg) translateY(-200%)";
-        bg1.style.transition = "1s";
-        bg1.style.opacity = "0";
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
         //bg2
         bg2.style.transform = "rotate(0) translateY(0%)";
         bg2.style.transition = "1s";
@@ -1140,16 +1279,16 @@ down.addEventListener("click",()=>{
         bg2.style.transition = "1s";
         bg2.style.opacity = "0";
         //bg3
-        bg3.style.transform = "rotate(0) translateY(0%)";
-        bg3.style.transition = "1s";
-        bg3.style.opacity = "1";
+        bg1.style.transform = "rotate(0) translateY(0%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "1";
 
     }
     if(times===-3){
         //bg3
-        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
-        bg3.style.transition = "1s";
-        bg3.style.opacity = "0";
+        bg1.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
         //bg4
         bg4.style.transform = "rotate(0) translateY(0%)";
         bg4.style.transition = "1s";
@@ -1204,9 +1343,9 @@ up.addEventListener("click",()=>{
     // t.innerHTML = "times:"+times;
     if(times===0){
         //bg1
-        bg1.style.transform = "rotate(0deg) translateY(0%)";
-        bg1.style.transition = "1s";
-        bg1.style.opacity = "1";
+        bg3.style.transform = "rotate(0deg) translateY(0%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "1";
         //bg2
         bg2.style.transform = "rotate(20deg) translateY(200%)";
         bg2.style.transition = "1s";
@@ -1218,15 +1357,15 @@ up.addEventListener("click",()=>{
         bg2.style.transition = "1s";
         bg2.style.opacity = "1";
         //bg3
-        bg3.style.transform = "rotate(20deg) translateY(200%)";
-        bg3.style.transition = "1s";
-        bg3.style.opacity = "0";
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
     }
     if(times===-2){
-        //bg3
-        bg3.style.transform = "rotate(0deg) translateY(0%)";
-        bg3.style.transition = "1s";
-        bg3.style.opacity = "1";
+        //bg1
+        bg1.style.transform = "rotate(0deg) translateY(0%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "1";
         //bg4
         bg4.style.transform = "rotate(20deg) translateY(200%)";
         bg4.style.transition = "1s";

@@ -66,6 +66,12 @@ main{
     left: 282px;
     width: 250px;
 }
+.room#bg3 .people{
+    position: absolute;
+    top: 133px;
+    left: 313px;
+    width: 213px;
+}
 #bg4 .people{
     position: absolute;
    
@@ -109,10 +115,10 @@ main{
     transform: scale(1.05);
     transition: .5s;
 }
-#bg1{
+#bg3{
     transform: rotate(0deg)  translateY(0%);
 }
-#bg2,#bg3,#bg4,#bg5,#bg6,#bg7{
+#bg2,#bg1,#bg4,#bg5,#bg6,#bg7{
     transform: rotate(20deg)  translateY(200%);
     opacity: 0;
 }
