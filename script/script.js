@@ -67,6 +67,32 @@ var r1botoomBorder = document.getElementsByClassName('r1botoomBorder');
 var r1authority = document.getElementById('r1authority');
 var r1ansBox = document.getElementById('r1ansBox');
 var r1ans = document.getElementById('r1ans');
+var r1purelove = document.getElementById('r1purelove');
+var r1house  = document.getElementById('r1house');
+var r1hand = document.getElementById("r1hand");
+var handbox = document.getElementById('handbox');
+var r1door = document.getElementById('r1door');
+var r1snake = document.getElementById('r1snake');
+var r1softwareBox  = document.getElementById('r1softwareBox');
+var r1panBox = document.getElementById('r1panBox');
+var r1Syrinx = document.getElementById('r1Syrinx');
+var r1flamingo = document.getElementById('r1flamingo');
+var r1peoplehand = document.getElementById('r1peoplehand');
+var r1shootBox = document.getElementById('r1shootBox');
+var r1folder1 = document.getElementById('r1folder1');
+var r1folder2 = document.getElementById('r1folder2');
+var r1folder3 = document.getElementById('r1folder3');
+var r1folderBox = document.getElementById('r1folderBox');
+var r1thing1 = document.getElementById('r1thing1');
+var r1thing2 = document.getElementById('r1thing2');
+var r1thingBox = document.getElementById('r1thingBox');
+var r1note1 = document.getElementById('r1note1');
+var r1note2 = document.getElementById('r1note2');
+var r1note3 = document.getElementById('r1note3');
+var r1typeBox = document.getElementById('r1typeBox');
+var r1typeText = document.getElementById('r1typeText');
+var r1flash  = document.getElementById('r1flash');
+var r1cloud = document.getElementById('r1cloud');
 yes[0].addEventListener("click",()=>{
     main.style.display = "none";
     room01.style.display = "block";
@@ -75,15 +101,31 @@ yes[0].addEventListener("click",()=>{
     r1people.style.left = "313px";
     setTimeout(()=>{
         room01Bg.style.opacity = "1";
-        room01People.style.display = "block";
         r1people.style.display = "none";
         room01Text.style.display = "block";
         r1Enter.style.display = "block";
         r1PrevPage.style.display = "block";
         r1Password.style.display = "block";
+
         r1authority.style.display = "block";
         r1ansBox.style.display = "block";
         r1ans.style.display = "block";
+        r1purelove.style.display = "block";
+        r1house.style.display = "block";
+        handbox.style.display = "block";
+        r1door.style.display = "block";
+        r1snake.style.display = "block";
+        r1panBox.style.display = "block";
+        r1flamingo.style.display = "block";
+        r1peoplehand.style.display = "block";
+        r1shootBox.style.display = "block";
+        r1folderBox.style.display = "block";
+        r1thing1.style.display = "block";
+        r1thing2.style.display = "block";
+        r1thingBox.style.display = "block";
+        r1typeBox.style.display = "block";
+        r1flash.style.display = "block";
+        r1cloud.style.display = "block";
         for(let b=0;b<r1botoomBorder.length;b++){
             r1botoomBorder[b].style.display = "block";
         }
@@ -103,6 +145,125 @@ yes[0].addEventListener("click",()=>{
     r1ansBox.addEventListener("mouseout",()=>{
         r1ans.src = "./styles/images/room01/ans.png";
         r1ans.style.width = "80px";
+    })
+    r1purelove.addEventListener("mouseover",()=>{
+        r1purelove.src = "./styles/images/room01/purelove2.png";
+    })
+    r1purelove.addEventListener("mouseout",()=>{
+        r1purelove.src = "./styles/images/room01/purelove.png";
+    })
+    r1house.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "Ｎ號房：又稱「博士房」，指2018下半年至2020/3月間發生在南韓的性剝削案件";
+    })
+    r1house.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+    })
+    r1house.addEventListener("mouseover",()=>{
+        r1hand.style.display = "block";
+    })
+    r1house.addEventListener("mouseout",()=>{
+        r1hand.style.display = "none";
+    })
+    r1snake.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "蛇：在伊甸園為魔鬼的化身，誘惑夏娃偷嚐禁果";
+    })
+    r1snake.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+    })
+    r1softwareBox.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "交友軟體：現代人常會利用交友軟體尋找戀愛對象或一夜情對象";
+        r1flash.style.animation = "r1flash 1s linear infinite";
+    })
+    r1softwareBox.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+        r1flash.style.animation = "none";
+    })
+    r1panBox.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "潘恩(Pan)：潘恩生性好色，經常藏匿在樹叢之中等待美女經過，然後上前求愛";
+        r1note1.style.display = "block";
+        setTimeout(()=>{
+            r1note2.style.display = "block";
+        },500)
+        setTimeout(()=>{
+            r1note3.style.display = "block";
+        },1000)
+    })
+    r1panBox.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+        r1note1.style.display = "none";
+        r1note2.style.display = "none";
+        r1note3.style.display = "none";
+    })
+    r1Syrinx.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "希林克斯(Syrinx)：古希臘神話的女性人物，被潘恩追求。後讓河神將自己變成蘆葦";
+        r1cloud.style.animation = "cloud 2s infinite linear";
+    })
+    r1Syrinx.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+        r1cloud.style.animation = "none";
+    })
+    r1flamingo.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "紅鶴：象徵忠貞、矢志不渝的愛情";
+    })
+    r1peoplehand.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "紅鶴：象徵忠貞、矢志不渝的愛情";
+    })
+    r1flamingo.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+    })
+    r1peoplehand.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+    })
+    r1shootBox.addEventListener("mouseover",()=>{
+        room01Text.style.opacity = "1";
+        room01Text.innerHTML = "攝影機：暗指拍攝性愛影片的行為";
+    })
+    r1shootBox.addEventListener("mouseout",()=>{
+        room01Text.style.opacity = "0";
+        room01Text.innerHTML = "";
+    })
+    r1folderBox.addEventListener("mouseover",()=>{
+        r1folder1.style.display = "block";
+        setTimeout(()=>{
+            r1folder2.style.display = "block";
+        },500)
+        setTimeout(()=>{
+            r1folder3.style.display = "block";
+        },1000)
+    })
+    r1folderBox.addEventListener("mouseout",()=>{
+        r1folder1.style.display = "none";
+        r1folder2.style.display = "none";
+        r1folder3.style.display = "none";
+     
+    })
+    r1thingBox.addEventListener("mouseover",()=>{
+        r1thing1.style.animation = "thing .3s linear infinite";
+        r1thing2.style.animation = "thing .3s linear infinite";
+    })
+    r1thingBox.addEventListener("mouseout",()=>{
+        r1thing1.style.animation = "none";
+        r1thing2.style.animation = "none";
+    })
+    r1typeBox.addEventListener("mouseover",()=>{
+        r1typeText.style.display = "block";
+    })
+    r1typeBox.addEventListener("mouseout",()=>{
+        r1typeText.style.display = "none";
     })
     r1Enter.addEventListener("click",()=>{
         if(r1Password.value!="1204") return alert("密碼錯誤");
@@ -162,6 +323,55 @@ yes[0].addEventListener("click",()=>{
             r1arrow[6].style.opacity = 0;
         },4000)
     },4000)
+
+    r1PrevPage.addEventListener("click",()=>{
+        room01.style.display = "none";
+        main.style.display = "block";
+        model[0].style.display = "none";
+        model01.style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        room01Bg.style.opacity = "0";
+        
+        room01Text.style.display = "none";
+        r1Enter.style.display = "none";
+        r1Password.style.display = "none";
+        r1Password.value="";
+        r1PrevPage.style.display = "none";
+
+        r1authority.style.display = "none";
+        r1ansBox.style.display = "none";
+        r1ans.style.display = "none";
+        r1purelove.style.display = "none";
+        r1house.style.display = "none";
+        handbox.style.display = "none";
+        r1door.style.display = "none";
+        r1snake.style.display = "none";
+        r1panBox.style.display = "none";
+        r1flamingo.style.display = "none";
+        r1peoplehand.style.display = "none";
+        r1shootBox.style.display = "none";
+        r1folderBox.style.display = "none";
+        r1thing1.style.display = "none";
+        r1thing2.style.display = "none";
+        r1thingBox.style.display = "none";
+        r1typeBox.style.display = "none";
+        r1flash.style.display = "none";
+        r1cloud.style.display = "none";
+        
+        r1people.style.display = "block";
+        r1card.style.display = "block";
+        r1cardRight.style.display = "block";
+        r1cardLeft.style.display = "block"; 
+        for(let b=0;b<r1botoomBorder.length;b++){
+                r1botoomBorder[b].style.display = "none";
+            }
+        for(let a=0;a<r1arrow.length;a++){
+            r1arrow[a].style.display = "none";
+        }
+        
+    })
 })
 // room01 END
 
