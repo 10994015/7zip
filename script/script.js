@@ -1340,7 +1340,12 @@ p7control1.addEventListener("click",()=>{
     p7people.style.top = "65px";
     p7people.style.left = "405px";
     p7badge.style.display = "block";
-    p7badge.src = "./styles/images/pass07/s1.png";
+    
+    for(let p=0;p<passBadge07.length;p++){
+        passBadge07[p].src ="./styles/images/pass07/s1.png";
+    }
+    document.body.scrollTop = 1500;
+    document.documentElement.scrollTop = 1500;
 })
 p7control2.addEventListener("click",()=>{
     p7people.style.top = "280px";
@@ -1349,6 +1354,8 @@ p7control2.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s2.png";
     }
+    document.body.scrollTop = 1500;
+    document.documentElement.scrollTop = 1500;
     
 })
 p7control3.addEventListener("click",()=>{
@@ -1358,6 +1365,8 @@ p7control3.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s3.png";
     }
+    document.body.scrollTop = 1500;
+    document.documentElement.scrollTop = 1500;
 
 })
 p7control4.addEventListener("click",()=>{
@@ -1367,6 +1376,8 @@ p7control4.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s4.png";
     }
+    document.body.scrollTop = 1500;
+    document.documentElement.scrollTop = 1500;
 
 })
 p7PrevPage.addEventListener("click",clearR7room);
