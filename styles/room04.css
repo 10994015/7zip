@@ -478,10 +478,13 @@
     } */
     0%{
         transform:translateY(100px);
+        opacity: 1;        
+    }
+    60%{
         opacity: 1;
     }
     100%{
-        transform:translateY(-100px);
+        transform:translateY(-200px);
         opacity: 0;
     }
 }
