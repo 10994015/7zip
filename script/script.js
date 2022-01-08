@@ -742,10 +742,18 @@ yes[3].addEventListener("click",()=>{
     },1000)
     room04People.addEventListener("mouseover",()=>{
         r4gold1.style.display = "block";
-        r4gold2.style.display = "block";
-        r4gold3.style.display = "block";
-        r4gold4.style.display = "block";
-        r4gold5.style.display = "block";
+        setTimeout(()=>{
+            r4gold2.style.display = "block";
+        },500)
+        setTimeout(()=>{
+            r4gold3.style.display = "block";
+        },1000)
+        setTimeout(()=>{
+            r4gold4.style.display = "block";
+        },1500)
+        setTimeout(()=>{
+            r4gold5.style.display = "block";
+        },1500)
     })
     room04People.addEventListener("mouseout",()=>{
         r4gold1.style.display = "none";

@@ -431,7 +431,7 @@
     top: 40%;
     left:40%;
     width:35px;
-    animation: anim-gold 5s linear infinite;
+    animation: anim-gold 1.5s linear infinite;
     display: none;
 }
 #room04 #r4gold2{
@@ -439,7 +439,7 @@
     top: 28%;
     left:43%;
     width:35px;
-    animation: anim-gold 5s linear infinite;
+    animation: anim-gold 1.5s linear infinite;
     display: none;
 }
 #room04 #r4gold3{
@@ -447,7 +447,7 @@
     top: 38%;
     left:56%;
     width:35px;
-    animation: anim-gold 5s linear infinite;
+    animation: anim-gold 1.5s linear infinite;
     display: none;
 }
 #room04 #r4gold4{
@@ -455,7 +455,7 @@
     top: 28%;
     left:55%;
     width:35px;
-    animation: anim-gold 5s linear infinite;
+    animation: anim-gold 1.5s linear infinite;
     display: none;
 }
 #room04 #r4gold5{
@@ -463,11 +463,11 @@
     top: 32%;
     left:58%;
     width:35px;
-    animation: anim-gold 5s linear infinite;
+    animation: anim-gold 1.5s linear infinite;
     display: none;
 }
 @keyframes anim-gold{
-    0%{
+    /* 0%{
         transform:translateY(100px)  rotate(0);
     }
     10%{
@@ -475,6 +475,14 @@
     }
     100%{
         transform: translateY(0) rotate(6000deg);
+    } */
+    0%{
+        transform:translateY(100px);
+        opacity: 1;
+    }
+    100%{
+        transform:translateY(-100px);
+        opacity: 0;
     }
 }
 @keyframes momo{
