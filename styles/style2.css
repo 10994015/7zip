@@ -78,6 +78,13 @@ main{
     position: absolute;
    
 }
+#main .room#bg6 .people{
+    position: absolute;
+    top: 124px;
+    left: 283px;
+    width: 265px;
+}
+
 #main .room .card{
     position: absolute;
     top: 60px;

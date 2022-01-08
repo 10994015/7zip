@@ -666,6 +666,332 @@ yes[1].addEventListener("click",()=>{
 
 // room02 END
 
+
+// room04 
+var room04 = document.getElementById('room04');
+var room04Bg = document.getElementById('room04Bg');
+var room04Text = document.getElementById('room04Text');
+var r4people = document.getElementById('r4-people');
+var r4card = document.getElementById('r4-card');
+var r4cardRight = document.getElementById('r4-card-right');
+var r4cardLeft = document.getElementById('r4-card-left');
+var r4PrevPage = document.getElementById("r4-prevPage");
+var r4Enter = document.getElementById("r4Enter");
+var room04People = document.getElementById('room04People');
+var r4Password = document.getElementById('r4Password');
+var r4botoomBorder = document.getElementsByClassName('r4botoomBorder');
+var r4arrow = document.getElementsByClassName("r4arrow");
+
+var r4productpage = document.getElementById('r4productpage');
+var r4productBox1 = document.getElementById('r4productBox1');
+var r4productBox2 = document.getElementById('r4productBox2');
+var r4productBox3 = document.getElementById('r4productBox3');
+var r4productBox4 = document.getElementById('r4productBox4');
+var r4liveTextBox = document.getElementById('r4liveTextBox');
+var r4liveBox = document.getElementById('r4liveBox');
+var r4shopaholicBox = document.getElementById('r4shopaholicBox');
+var r4pig = document.getElementById('r4pig');
+var r4progress = document.getElementById('r4progress');
+var r4double11 = document.getElementById('r4double11');
+var r4date11 = document.getElementById('r4date11');
+var r4airplane = document.getElementById('r4airplane');
+var r4parachute1 = document.getElementById('r4parachute1');
+var r4parachute2 = document.getElementById('r4parachute2');
+var r4parachute3 = document.getElementById('r4parachute3');
+var r4shopBox = document.getElementById('r4shopBox');
+var r4taobao = document.getElementById('r4taobao');
+var r4ship = document.getElementById('r4ship');
+var r4momo = document.getElementById('r4momo');
+var r4circle = document.getElementById('r4circle');
+var r4gold1 = document.getElementById('r4gold1');
+var r4gold2 = document.getElementById('r4gold2');
+var r4gold3 = document.getElementById('r4gold3');
+var r4gold4 = document.getElementById('r4gold4');
+var r4gold5 = document.getElementById('r4gold5');
+yes[3].addEventListener("click",()=>{
+    main.style.display = "none";
+    room04.style.display = "block";
+    setTimeout(()=>{
+        room04Bg.style.opacity = "1";
+        room04People.style.display = "block";
+        r4people.style.display = "none";
+        room04Text.style.display = "block";
+        r4Enter.style.display = "block";
+        r4PrevPage.style.display = "block";
+        r4Password.style.display = "block";
+
+        r4productBox1.style.display = "block";
+        r4productBox2.style.display = "block";
+        r4productBox3.style.display = "block";
+        r4productBox4.style.display = "block";
+        r4liveBox.style.display = "block";
+        r4shopaholicBox.style.display = "block";
+        r4pig.style.display = "block";
+        r4progress.style.display = "block";
+        r4double11.style.display = "block";
+        r4date11.style.display = "block";
+        r4airplane.style.display = "block";
+        r4shopBox.style.display = "block";
+        
+        for(let b=0;b<r4botoomBorder.length;b++){
+            r4botoomBorder[b].style.display = "block";
+        }
+        for(let a=0;a<r4arrow.length;a++){
+            r4arrow[a].style.display = "block";
+        }
+    },1000)
+    room04People.addEventListener("mouseover",()=>{
+        r4gold1.style.display = "block";
+        r4gold2.style.display = "block";
+        r4gold3.style.display = "block";
+        r4gold4.style.display = "block";
+        r4gold5.style.display = "block";
+    })
+    room04People.addEventListener("mouseout",()=>{
+        r4gold1.style.display = "none";
+        r4gold2.style.display = "none";
+        r4gold3.style.display = "none";
+        r4gold4.style.display = "none";
+        r4gold5.style.display = "none";
+    })
+    r4productBox1.addEventListener("mouseover",()=>{
+        r4productpage.src = "./styles/images/room04/productpage1.png";
+        r4productpage.style.display = "block";
+    })
+    r4productBox1.addEventListener("mouseout",()=>{
+        r4productpage.src = "";
+        r4productpage.style.display = "none";
+    })
+    r4productBox2.addEventListener("mouseover",()=>{
+        r4productpage.src = "./styles/images/room04/productpage2.png";
+        r4productpage.style.display = "block";
+    })
+    r4productBox2.addEventListener("mouseout",()=>{
+        r4productpage.src = "";
+        r4productpage.style.display = "none";
+    })
+    r4productBox3.addEventListener("mouseover",()=>{
+        r4productpage.src = "./styles/images/room04/productpage3.png";
+        r4productpage.style.display = "block";
+    })
+    r4productBox3.addEventListener("mouseout",()=>{
+        r4productpage.src = "";
+        r4productpage.style.display = "none";
+    })
+    r4productBox4.addEventListener("mouseover",()=>{
+        r4productpage.src = "./styles/images/room04/productpage4.png";
+        r4productpage.style.display = "block";
+    })
+    r4productBox4.addEventListener("mouseout",()=>{
+        r4productpage.src = "";
+        r4productpage.style.display = "none";
+    })
+    r4liveBox.addEventListener("mouseover",()=>{
+        r4liveTextBox.style.display = "block";
+    })
+    r4liveBox.addEventListener("mouseout",()=>{
+        r4liveTextBox.style.display = "none";
+    })
+    r4pig.addEventListener("mouseover",()=>{
+        r4pig.src = "./styles/images/room04/pig2.png";
+        r4pig.style.width = "138px";
+        room04Text.style.opacity = "1";
+        room04Text.innerHTML = "豬公撲滿：民間常見的存錢撲滿";
+    })
+    r4pig.addEventListener("mouseout",()=>{
+        r4pig.src = "./styles/images/room04/pig.png";
+        r4pig.style.width = "130px";
+        room04Text.style.opacity = "0";
+        room04Text.innerHTML = "";
+    })
+    r4shopaholicBox.addEventListener("mouseover",()=>{
+        room04Text.style.opacity = "1";
+        room04Text.innerHTML = "購物狂：藉由衝動性購物來排解內心的焦慮";
+    })
+    r4shopaholicBox.addEventListener("mouseout",()=>{
+        room04Text.style.opacity = "0";
+        room04Text.innerHTML = "";
+    })
+    r4progress.addEventListener("mouseover",()=>{
+        room04Text.style.opacity = "1";
+        room04Text.innerHTML = "出貨進度：買家可以從訂單資訊查看出貨進度";
+        r4circle.style.display = "block";
+        
+        setTimeout(()=>{
+            r4circle.style.top = "66.6%";
+        },0)
+        setTimeout(()=>{
+            r4circle.style.top = "63.8%";
+        },500)
+        setTimeout(()=>{
+            r4circle.style.top = "61%";
+        },1000)
+        setTimeout(()=>{
+            r4circle.style.top = "58.2%";
+        },1500)
+        setTimeout(()=>{
+            r4circle.style.top = "55.4%";
+        },2000)
+        setTimeout(()=>{
+            r4circle.style.top = "52.6%";
+        },2500)
+        
+    })
+    r4progress.addEventListener("mouseout",()=>{
+        room04Text.style.opacity = "0";
+        room04Text.innerHTML = "";
+        r4circle.style.display = "none";
+    })
+    r4double11.addEventListener("mouseover",()=>{
+        room04Text.style.opacity = "1";
+        room04Text.innerHTML = "雙十一：每年11月11日的大型促銷活動，最早起源於中國淘寶，現已演變成全行業一年一度的購物活動，影響全球零售業的消費現象。";
+    })
+    r4double11.addEventListener("mouseout",()=>{
+        room04Text.style.opacity = "0";
+        room04Text.innerHTML = "";
+    })
+    r4airplane.addEventListener("mouseover",()=>{
+        room04Text.style.opacity = "1";
+        room04Text.innerHTML = "境外購物：因為網路普及，現在境外購物越來越容易，也有許多國外網站在台灣興起，如：淘寶、amazon、shopbop等";
+        r4parachute2.style.display = "block";
+        setTimeout(()=>{
+            r4parachute1.style.display = "block";
+        },500)
+        setTimeout(()=>{
+            r4parachute3.style.display = "block";
+        },1000)
+    })
+    r4airplane.addEventListener("mouseout",()=>{
+        room04Text.style.opacity = "0";
+        room04Text.innerHTML = "";
+        r4parachute1.style.display = "none";
+        r4parachute2.style.display = "none";
+        r4parachute3.style.display = "none";
+    })
+    r4shopBox.addEventListener("mouseover",()=>{
+        room04Text.style.opacity = "1";
+        room04Text.innerHTML = "台灣人愛用購物網站前三名：淘寶、蝦皮、momo";
+        r4taobao.style.display = "block";
+        setTimeout(()=>{
+            r4ship.style.display = "block";
+        },500)
+        setTimeout(()=>{
+            r4momo.style.display = "block";
+        },1000)
+    })
+    r4shopBox.addEventListener("mouseout",()=>{
+        room04Text.style.opacity = "0";
+        room04Text.innerHTML = "";
+        r4taobao.style.display = "none";
+        r4ship.style.display = "none";
+        r4momo.style.display = "none";
+    })
+    setInterval(()=>{
+        r4arrow[0].style.opacity = 0;
+        r4arrow[1].style.opacity = 0;
+        r4arrow[2].style.opacity = 0;
+        r4arrow[3].style.opacity = 0;
+        r4arrow[4].style.opacity = 0;
+        r4arrow[5].style.opacity = 0;
+        r4arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r4arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r4arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r4arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r4arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r4arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r4arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r4arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r4arrow[0].style.opacity = 0;
+            r4arrow[1].style.opacity = 0;
+            r4arrow[2].style.opacity = 0;
+            r4arrow[3].style.opacity = 0;
+            r4arrow[4].style.opacity = 0;
+            r4arrow[5].style.opacity = 0;
+            r4arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
+
+    r4Enter.addEventListener("click",()=>{
+        if(r4Password.value!="10350") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room04.style.display = "none";
+        room04pass.style.display = "block";
+    })
+    r4Password.addEventListener("keydown",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r4Enter.src="./styles/images/room04/enter2.png";
+    })
+    r4Password.addEventListener("keyup",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r4Enter.src="./styles/images/room04/enter.png";
+        if(r4Password.value!=="10350") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room04.style.display = "none";
+        room04pass.style.display = "block";
+        
+    })
+    r4PrevPage.addEventListener("click",()=>{
+        room04.style.display = "none";
+        main.style.display = "block";
+        model[0].style.display = "none";
+        model04.style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        room04Bg.style.opacity = "0";
+        room04People.style.display = "none";
+        room04Text.style.display = "none";
+        r4Enter.style.display = "none";
+        r4Password.style.display = "none";
+        r4Password.value="";
+        r4PrevPage.style.display = "none";
+
+        r4productBox1.style.display = "none";
+        r4productBox2.style.display = "none";
+        r4productBox3.style.display = "none";
+        r4productBox4.style.display = "none";
+        r4liveBox.style.display = "none";
+        r4shopaholicBox.style.display = "none";
+        r4pig.style.display = "none";
+        r4progress.style.display = "none";
+        r4double11.style.display = "none";
+        r4date11.style.display = "none";
+        r4airplane.style.display = "none";
+        r4shopBox.style.display = "none";
+        
+        r4people.style.display = "block";
+        r4card.style.display = "block";
+        r4cardRight.style.display = "block";
+        r4cardLeft.style.display = "block"; 
+        for(let b=0;b<r1botoomBorder.length;b++){
+                r4botoomBorder[b].style.display = "none";
+            }
+        for(let a=0;a<r1arrow.length;a++){
+            r4arrow[a].style.display = "none";
+        }
+        
+    })
+})
+// room04 END
+
+
+
+
 // room6
 var room06 = document.getElementById("room06");
 var room06Bg = document.getElementById('room06Bg');
@@ -1448,6 +1774,22 @@ bg4people.addEventListener("click",()=>{
         model06.style.display = "flex";
     },450)
 })
+bg6people.addEventListener("click",()=>{
+    model[0].style.display = "flex";
+    roomNumber.innerHTML = "_04";
+    setTimeout(()=>{
+        model1.style.display = "flex";
+    },100)
+    setTimeout(()=>{
+        model2.style.display = "flex";
+    },200)
+    setTimeout(()=>{
+        model3.style.display = "flex";
+    },300)
+    setTimeout(()=>{
+        model04.style.display = "flex";
+    },450)
+})
 no[0].addEventListener("click",()=>{
     model[0].style.display = "none";
     model1.style.display = "none";
@@ -1469,12 +1811,12 @@ no[5].addEventListener("click",()=>{
     model3.style.display = "none";
     model06.style.display = "none";
 })
-no[6].addEventListener("click",()=>{
+no[3].addEventListener("click",()=>{
     model[0].style.display = "none";
     model1.style.display = "none";
     model2.style.display = "none";
     model3.style.display = "none";
-    model07.style.display = "none";
+    model04.style.display = "none";
 })
 
 
