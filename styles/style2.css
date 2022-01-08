@@ -133,10 +133,12 @@ main{
 }
 #bg3{
     transform: rotate(0deg)  translateY(0%);
+    cursor: pointer;
 }
 #bg2,#bg1,#bg4,#bg5,#bg6,#bg7{
     transform: rotate(20deg)  translateY(200%);
     opacity: 0;
+    cursor: pointer;
 }
 #main .share{
     height: 100%;

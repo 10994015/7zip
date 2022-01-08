@@ -1788,7 +1788,7 @@ p7PrevPage.addEventListener("click",clearR7room);
  
 // pass07 END
 // t.innerHTML = "times:"+times;
-bg1people.addEventListener("click",()=>{
+bg1.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_07";
     setTimeout(()=>{
@@ -1804,7 +1804,7 @@ bg1people.addEventListener("click",()=>{
         model07.style.display = "flex";
     },450)
 })
-bg2people.addEventListener("click",()=>{
+bg2.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_02";
     setTimeout(()=>{
@@ -1820,7 +1820,7 @@ bg2people.addEventListener("click",()=>{
         model02.style.display = "flex";
     },450)
 })
-bg3people.addEventListener("click",()=>{
+bg3.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_01";
     setTimeout(()=>{
@@ -1836,7 +1836,7 @@ bg3people.addEventListener("click",()=>{
         model01.style.display = "flex";
     },450)
 })
-bg4people.addEventListener("click",()=>{
+bg4.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_06";
     setTimeout(()=>{
@@ -1852,7 +1852,7 @@ bg4people.addEventListener("click",()=>{
         model06.style.display = "flex";
     },450)
 })
-bg5people.addEventListener("click",()=>{
+bg5.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_05";
     setTimeout(()=>{
@@ -1868,7 +1868,7 @@ bg5people.addEventListener("click",()=>{
         model05.style.display = "flex";
     },450)
 })
-bg6people.addEventListener("click",()=>{
+bg6.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_04";
     setTimeout(()=>{
@@ -1884,7 +1884,7 @@ bg6people.addEventListener("click",()=>{
         model04.style.display = "flex";
     },450)
 })
-bg7people.addEventListener("click",()=>{
+bg7.addEventListener("click",()=>{
     model[0].style.display = "flex";
     roomNumber.innerHTML = "_03";
     setTimeout(()=>{
