@@ -63,6 +63,7 @@ var r1Enter = document.getElementById("r1Enter");
 var room01People = document.getElementById('room01People');
 var r1Password = document.getElementById('r1Password');
 var r1botoomBorder = document.getElementsByClassName('r1botoomBorder');
+var r1arrow = document.getElementsByClassName('r1arrow');
 
 var r1authority = document.getElementById('r1authority');
 var r1ansBox = document.getElementById('r1ansBox');
@@ -113,7 +114,6 @@ yes[0].addEventListener("click",()=>{
         r1purelove.style.display = "block";
         r1house.style.display = "block";
         handbox.style.display = "block";
-        r1door.style.display = "block";
         r1snake.style.display = "block";
         r1panBox.style.display = "block";
         r1flamingo.style.display = "block";
@@ -129,7 +129,9 @@ yes[0].addEventListener("click",()=>{
         for(let b=0;b<r1botoomBorder.length;b++){
             r1botoomBorder[b].style.display = "block";
         }
-        
+        for(let a=0;a<r1arrow.length;a++){
+            r1arrow[a].style.display = "block";
+        }
     },1000)
 
     r1authority.addEventListener("mouseover",()=>{
@@ -155,17 +157,19 @@ yes[0].addEventListener("click",()=>{
     r1house.addEventListener("mouseover",()=>{
         room01Text.style.opacity = "1";
         room01Text.innerHTML = "Ｎ號房：又稱「博士房」，指2018下半年至2020/3月間發生在南韓的性剝削案件";
+        r1door.style.display = "block";
+        setTimeout(()=>{
+            r1hand.style.display = "block";
+
+        },500)
     })
     r1house.addEventListener("mouseout",()=>{
         room01Text.style.opacity = "0";
         room01Text.innerHTML = "";
-    })
-    r1house.addEventListener("mouseover",()=>{
-        r1hand.style.display = "block";
-    })
-    r1house.addEventListener("mouseout",()=>{
+        r1door.style.display = "none";
         r1hand.style.display = "none";
     })
+   
     r1snake.addEventListener("mouseover",()=>{
         room01Text.style.opacity = "1";
         room01Text.innerHTML = "蛇：在伊甸園為魔鬼的化身，誘惑夏娃偷嚐禁果";

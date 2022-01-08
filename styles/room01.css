@@ -1,3 +1,7 @@
+@font-face{
+    font-family: fzyx;
+    src: url(./font/FZYXB.TTF);
+}
 #room01{
     width: 1400px;
     height: 672px;
@@ -272,18 +276,18 @@
 }
 #room01 #r1flamingo{
     position: absolute;
-    top: 53.3%;
-    left:43%;
-    width:239px;
+    top: 52%;
+    left:41.8%;
+    width:252px;
     z-index: 999;
     cursor: pointer;
     display: none;
 }
 #room01 #r1peoplehand{
     position: absolute;
-    top: 59.3%;
-    left:48%;
-    width:88px;
+    top: 59.1%;
+    left:48.1%;
+    width:95px;
     z-index: 999;
     cursor: pointer;
     display: none;
@@ -409,6 +413,8 @@
     blinkTextCursor 500ms steps(40) infinite normal;
 }
 #room01 #r1typeText{
+    font-family: fzyx;
+    font-weight: 600;
     display: none;
 }
 #room01 #r1typeBox{
@@ -440,6 +446,37 @@
     /* animation: cloud 2s infinite linear; */
     
 }
+#room01 .r1arrow{
+    width: 10px;
+    height: auto;
+    position: absolute;
+    bottom: 7.5%;
+    
+    opacity: 0;
+    
+}
+#room01 #r1arrow1{
+    left:54.8%;
+}
+#room01 #r1arrow2{
+    left:55.5%;
+}
+#room01 #r1arrow3{
+    left:56.2%;
+}
+#room01 #r1arrow4{
+    left:56.9%;
+}
+#room01 #r1arrow5{
+    left:57.6%;
+}
+#room01 #r1arrow6{
+    left:58.3%;
+}
+#room01 #r1arrow7{
+    left:59%;
+}
+
 @keyframes cloud{
     0%{
         transform: translateX(0px);
