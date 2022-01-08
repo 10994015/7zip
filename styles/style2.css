@@ -68,16 +68,23 @@ main{
     left: 282px;
     width: 250px;
 }
-.room#bg3 .people{
+#main .room#bg3 .people{
     position: absolute;
     top: 133px;
     left: 313px;
-    width: 213px;
+    width: 213px
 }
 #bg4 .people{
     position: absolute;
    
 }
+#main .room#bg5 .people{
+    position: absolute;
+    top: 135px;
+    left: 283px;
+    width: 267px;
+}
+
 #main .room#bg6 .people{
     position: absolute;
     top: 124px;
