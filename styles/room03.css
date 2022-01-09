@@ -312,9 +312,9 @@
 }
 #room03 #r3motorcycle{
     position: absolute;
-    top: 54%;
-    right:-36px;
-    width:250px;
+    top: 48%;
+    right:-106px;
+    width:330px;
     z-index: 1001;
     display: none;
     cursor: pointer;
@@ -470,7 +470,7 @@
         right:100%;
     }
     100%{
-        right:-36px;
+        right:-106px;
     }
 }
 @keyframes fadeout{
