@@ -681,6 +681,28 @@ var r3Password = document.getElementById('r3Password');
 var r3botoomBorder = document.getElementsByClassName('r3botoomBorder');
 var r3arrow = document.getElementsByClassName("r3arrow");
 
+var r3imgslides = document.getElementById('r3imgslides');
+var r3left = document.getElementById('r3left');
+var r3right = document.getElementById('r3right');
+var r3imgslide = document.getElementsByClassName('r3imgslide');
+var r3Num = 0;
+var r3paint = document.getElementById('r3paint');
+var r3couponBox = document.getElementById('r3couponBox');
+var r3requestBox = document.getElementById('r3requestBox');
+var r3usBox = document.getElementById('r3usBox');
+var r3storeBox = document.getElementById('r3storeBox');
+var r3candyhouse = document.getElementById('r3candyhouse');
+var r3chick = document.getElementById('r3chick');
+var r3cover = document.getElementById('r3cover');
+var r3motorcycle = document.getElementById('r3motorcycle');
+var r3hourglass = document.getElementById('r3hourglass');
+var r3hourglassBox = document.getElementById('r3hourglassBox');
+var r3window = document.getElementById('r3window');
+var r3mosaic = document.getElementById('r3mosaic');
+var r3mosaicNum = 1;
+var mosaictime = null;
+var r3detailsBox = document.getElementById('r3detailsBox');
+var r3item = document.getElementsByClassName('r3item');
 yes[2].addEventListener("click",()=>{
     main.style.display = "none";
     room03.style.display = "block";
@@ -692,6 +714,27 @@ yes[2].addEventListener("click",()=>{
         r3Enter.style.display = "block";
         r3PrevPage.style.display = "block";
         r3Password.style.display = "block";
+        
+        r3imgslides.style.display = "flex";
+        r3left.style.display = "block";
+        r3right.style.display = "block";
+        r3paint.style.display = "block";
+        r3couponBox.style.display = "block";
+        r3requestBox.style.display = "block";
+        r3usBox.style.display = "block";
+        r3storeBox.style.display = "block";
+        r3candyhouse.style.display = "block";
+        r3chick.style.display = "block";
+        r3cover.style.display = "block";
+        r3motorcycle.style.display = "block";
+        r3hourglass.style.display = "block";
+        r3hourglassBox.style.display = "block";
+        r3window.style.display = "block";
+        r3mosaic.style.display = "block";
+        r3detailsBox.style.display = "block";
+        for(let s=0;s<r3imgslide.length;s++){
+            r3imgslide[s].style.display = "block";
+        }
         for(let b=0;b<r3botoomBorder.length;b++){
             r3botoomBorder[b].style.display = "block";
         }
@@ -699,6 +742,236 @@ yes[2].addEventListener("click",()=>{
             r3arrow[a].style.display = "block";
         }
     },1000)
+    r3right.addEventListener("click",()=>{
+        r3Num++;
+        if(r3Num>3){
+            r3Num = 0;
+        }
+        for(let i=0;i<r3imgslide.length;i++){
+            r3imgslide[i].style.transform = "translateX(-"+r3Num+"00%)";
+        }
+    })
+    r3left.addEventListener("click",()=>{
+        r3Num--;
+        if(r3Num<0){
+            r3Num = 3;
+        }
+        for(let i=0;i<r3imgslide.length;i++){
+            r3imgslide[i].style.transform = "translateX(-"+r3Num+"00%)";
+        }
+    })
+    r3paint.addEventListener("mouseover",()=>{
+        r3paint.src = "./styles/images/room03/paint2.png";
+    })
+    r3paint.addEventListener("mouseout",()=>{
+        r3paint.src = "./styles/images/room03/paint.png";
+    })
+    r3right.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用";
+    })
+    r3right.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3left.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用";
+    })
+    r3left.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3couponBox.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用";
+    })
+    r3couponBox.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3requestBox.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "訂單備註：有時候外送員會接到一些無理或令人哭笑不得的要求";
+    })
+    r3requestBox.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3usBox.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "我們：<br>因為外送平台的便利，我們像嗷嗷待哺的嬰兒在家等食物的到來";
+    })
+    r3usBox.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3storeBox.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "外送平台的店家：可以看到店家評價、外送所需時間及運費";
+    })
+    r3storeBox.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3candyhouse.addEventListener("mouseover",()=>{
+        r3candyhouse.src = "./styles/images/room03/candyhouse2.png";
+        r3candyhouse.style.top = "51.9%";
+        for(let c=0;c<r3item.length;c++){
+            r3item[c].style.display = "block";
+        }
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "我們就算待在家，利用外送平台也可以吃到各式各樣的美食";
+    })
+    r3candyhouse.addEventListener("mouseout",()=>{
+        r3candyhouse.src = "./styles/images/room03/candyhouse.png";
+        r3candyhouse.style.top = "56.5%";
+        for(let c=0;c<r3item.length;c++){
+            r3item[c].style.display = "none";
+        }
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3cover.addEventListener("mouseover",()=>{
+        r3cover.style.transform = "translateY(-75px)";
+    })
+    r3cover.addEventListener("mouseout",()=>{
+        r3cover.style.transform = "translateY(0px)";
+    })
+    r3hourglassBox.addEventListener("mouseover",()=>{
+        r3hourglass.style.transform = "rotate(180deg)";
+    })
+    r3hourglassBox.addEventListener("mouseout",()=>{
+        r3hourglass.style.transform = "rotate(0deg)";
+    })
+    r3motorcycle.addEventListener("mouseover",()=>{
+        room03Text.style.opacity = "1";
+        room03Text.innerHTML = "外送服務：與各地的當地餐廳合作，並讓使用者可以使用手機應用程式在線上訂餐，由外送員將食物運送至用戶手上。";
+    })
+    r3motorcycle.addEventListener("mouseout",()=>{
+        room03Text.style.opacity = "0";
+        room03Text.innerHTML = "";
+    })
+    r3detailsBox.addEventListener("mouseover",mosaicplay);
+    function mosaicplay(){
+         mosaictime = setInterval(()=>{
+            r3mosaicNum++;
+            if(r3mosaicNum>4){
+                r3mosaicNum = 1;
+            }
+            r3mosaic.src = "./styles/images/room03/mosaic"+r3mosaicNum+".png";
+        },100)
+    }
+    r3detailsBox.addEventListener("mouseout",()=>{
+        clearInterval(mosaictime);
+    })
+    setInterval(()=>{
+        r3arrow[0].style.opacity = 0;
+        r3arrow[1].style.opacity = 0;
+        r3arrow[2].style.opacity = 0;
+        r3arrow[3].style.opacity = 0;
+        r3arrow[4].style.opacity = 0;
+        r3arrow[5].style.opacity = 0;
+        r3arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r3arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r3arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r3arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r3arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r3arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r3arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r3arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r3arrow[0].style.opacity = 0;
+            r3arrow[1].style.opacity = 0;
+            r3arrow[2].style.opacity = 0;
+            r3arrow[3].style.opacity = 0;
+            r3arrow[4].style.opacity = 0;
+            r3arrow[5].style.opacity = 0;
+            r3arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
+
+    r3Enter.addEventListener("click",()=>{
+        if(r3Password.value!="1800") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room03.style.display = "none";
+        room03pass.style.display = "block";
+    })
+    r3Password.addEventListener("keydown",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r3Enter.src="./styles/images/room03/enter2.png";
+    })
+    r3Password.addEventListener("keyup",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r3Enter.src="./styles/images/room03/enter.png";
+        if(r3Password.value!=="1800") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room03.style.display = "none";
+        room03pass.style.display = "block";
+    })
+    r3PrevPage.addEventListener("click",()=>{
+        room03.style.display = "none";
+        main.style.display = "block";
+        model[0].style.display = "none";
+        model03.style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        room03Bg.style.opacity = "0";
+        room03People.style.display = "none";
+        room03Text.style.display = "none";
+        r3Enter.style.display = "none";
+        r3Password.style.display = "none";
+        r3Password.value="";
+        r3PrevPage.style.display = "none";
+
+        r3imgslides.style.display = "none";
+        r3left.style.display = "none";
+        r3right.style.display = "none";
+        r3paint.style.display = "none";
+        r3couponBox.style.display = "none";
+        r3requestBox.style.display = "none";
+        r3usBox.style.display = "none";
+        r3storeBox.style.display = "none";
+        r3candyhouse.style.display = "none";
+        r3chick.style.display = "none";
+        r3cover.style.display = "none";
+        r3motorcycle.style.display = "none";
+        r3hourglass.style.display = "none";
+        r3hourglassBox.style.display = "none";
+        r3window.style.display = "none";
+        r3mosaic.style.display = "none";
+        r3detailsBox.style.display = "none";
+        for(let s=0;s<r3imgslide.length;s++){
+            r3imgslide[s].style.display = "none";
+        }
+        
+        r3people.style.display = "block";
+        r3card.style.display = "block";
+        r3cardRight.style.display = "block";
+        r3cardLeft.style.display = "block"; 
+        for(let b=0;b<r3botoomBorder.length;b++){
+                r3botoomBorder[b].style.display = "none";
+            }
+        for(let a=0;a<r3arrow.length;a++){
+            r3arrow[a].style.display = "none";
+        }
+        
+    })
 })
 // room03 END
 
@@ -1021,10 +1294,10 @@ yes[3].addEventListener("click",()=>{
         r4card.style.display = "block";
         r4cardRight.style.display = "block";
         r4cardLeft.style.display = "block"; 
-        for(let b=0;b<r1botoomBorder.length;b++){
+        for(let b=0;b<r4botoomBorder.length;b++){
                 r4botoomBorder[b].style.display = "none";
             }
-        for(let a=0;a<r1arrow.length;a++){
+        for(let a=0;a<r4arrow.length;a++){
             r4arrow[a].style.display = "none";
         }
         
