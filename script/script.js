@@ -703,6 +703,8 @@ var r3mosaicNum = 1;
 var mosaictime = null;
 var r3detailsBox = document.getElementById('r3detailsBox');
 var r3item = document.getElementsByClassName('r3item');
+var r3plateBox = document.getElementById('r3plateBox');
+var r3candyhouseBox = document.getElementById('r3candyhouseBox');
 yes[2].addEventListener("click",()=>{
     main.style.display = "none";
     room03.style.display = "block";
@@ -732,6 +734,8 @@ yes[2].addEventListener("click",()=>{
         r3window.style.display = "block";
         r3mosaic.style.display = "block";
         r3detailsBox.style.display = "block";
+        r3plateBox.style.display = "block";
+        r3candyhouseBox.style.display = "block";
         for(let s=0;s<r3imgslide.length;s++){
             r3imgslide[s].style.display = "block";
         }
@@ -814,7 +818,7 @@ yes[2].addEventListener("click",()=>{
         room03Text.style.opacity = "0";
         room03Text.innerHTML = "";
     })
-    r3candyhouse.addEventListener("mouseover",()=>{
+    r3candyhouseBox.addEventListener("mouseover",()=>{
         r3candyhouse.src = "./styles/images/room03/candyhouse2.png";
         r3candyhouse.style.top = "51.9%";
         for(let c=0;c<r3item.length;c++){
@@ -823,7 +827,7 @@ yes[2].addEventListener("click",()=>{
         room03Text.style.opacity = "1";
         room03Text.innerHTML = "我們就算待在家，利用外送平台也可以吃到各式各樣的美食";
     })
-    r3candyhouse.addEventListener("mouseout",()=>{
+    r3candyhouseBox.addEventListener("mouseout",()=>{
         r3candyhouse.src = "./styles/images/room03/candyhouse.png";
         r3candyhouse.style.top = "56.5%";
         for(let c=0;c<r3item.length;c++){
@@ -832,10 +836,10 @@ yes[2].addEventListener("click",()=>{
         room03Text.style.opacity = "0";
         room03Text.innerHTML = "";
     })
-    r3cover.addEventListener("mouseover",()=>{
+    r3plateBox.addEventListener("mouseover",()=>{
         r3cover.style.transform = "translateY(-75px)";
     })
-    r3cover.addEventListener("mouseout",()=>{
+    r3plateBox.addEventListener("mouseout",()=>{
         r3cover.style.transform = "translateY(0px)";
     })
     r3hourglassBox.addEventListener("mouseover",()=>{
@@ -956,6 +960,8 @@ yes[2].addEventListener("click",()=>{
         r3window.style.display = "none";
         r3mosaic.style.display = "none";
         r3detailsBox.style.display = "none";
+        r3plateBox.style.display = "none";
+        r3candyhouseBox.style.display = "none";
         for(let s=0;s<r3imgslide.length;s++){
             r3imgslide[s].style.display = "none";
         }

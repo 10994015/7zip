@@ -283,6 +283,16 @@
     display: none;
     cursor: pointer;
 }
+#room03 #r3candyhouseBox{
+    position: absolute;
+    top: 54.5%;
+    left:8%;
+    width:123px;
+    height:102px;
+    background-color: transparent;
+    z-index: 1000;
+    cursor: pointer;
+}
 #room03 #r3chick{
     position: absolute;
     top: 47%;
@@ -301,6 +311,17 @@
     cursor: pointer;
     display: none;
     /* transform: translateY(-100px); */
+}
+#room03 #r3plateBox{
+    position: absolute;
+    top: 37.3%;
+    left:58.25%;
+    width:158px;
+    height: 150px;
+    z-index: 1002;
+    cursor: pointer;
+    display: none;
+    background-color: transparent;
 }
 #room03 #r3window{
     position: absolute;
