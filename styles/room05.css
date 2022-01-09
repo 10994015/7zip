@@ -184,7 +184,257 @@
     left:59%;
 }
 
-
+#room05 #r5puzzle1{
+    position: absolute;
+    /* top:44%; */
+    top: 49%;
+    left:20.1%;
+    width:148px;
+    z-index: 999;
+    transition: .5s;
+    display: none;
+}
+#room05 #r5puzzle2{
+    position: absolute;
+    /* top: 54%; */
+    top: 49%;
+    left:20.1%;
+    width:148px;
+    z-index: 999;
+    transition: .5s;
+    display: none;
+}
+#room05 #r5pussleBox{
+    position: absolute;
+    top:39.7%;
+    left:19.5%;
+    width:165px;
+    height: 171px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+#room05 #r5show{
+    position: absolute;
+    top: 48.5%;
+    right:18.7%;
+    width:55px;
+    z-index: 999;
+    display: none;
+}
+#room05 #r5showBox{
+    position: absolute;
+    top: 47.8%;
+    right:18.1%;
+    width:70px;
+    height: 55px;
+    z-index: 999;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room05 #r5sloth{
+    position: absolute;
+    top:31.5%;
+    left:8%;
+    width:150px;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+#room05 #r5checkBox{
+    position: absolute;
+    top: 23.1%;
+    left:68.7%;
+    width:192px;
+    height: 107px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+}
+#room05 #r5BelphegoBox1{
+    position: absolute;
+    top: 71%;
+    left:34.6%;
+    width:82px;
+    height: 88px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+}
+#room05 #r5BelphegoBox2{
+    position: absolute;
+    top: 71%;
+    left:59.6%;
+    width:82px;
+    height: 88px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+}
+#room05 #r5originalBox{
+    position: absolute;
+    top: 16.3%;
+    left:2.9%;
+    width:135px;
+    height: 128px;
+    background-color: transparent;
+    z-index: 10000;
+    cursor: pointer;
+}
+#room05 #r5copycatBox{
+    position: absolute;
+    top: 41%;
+    left:67%;
+    width:99px;
+    height: 105px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+}
+#room05 #r5copycatBox2{
+    position: absolute;
+    top: 51.2%;
+    left:65.5%;
+    width:20px;
+    height: 37px;
+    background-color: transparent;
+    z-index: 999;
+    cursor: pointer;
+}
+#room05 #r5viewBox{
+    position: absolute;
+    top: 41.8%;
+    left:67.4%;
+    width:89px;
+    height: 50px;
+    background-color: transparent;
+    z-index: 997;
+    overflow: hidden;
+    display: none;
+}
+#room05 #r5viewBox #r5view{
+    width:100%;
+    height: 300%;
+    /* animation: view 1s infinite linear; */
+}
+#room05 #r5cat{
+    position: absolute;
+    top: 42%;
+    left:67.8%;
+    width:76px;
+    z-index: 998;
+    display: none;
+}
+#room05 #r5light{
+    position: absolute;
+    top: 16%;
+    left:47%;
+    width:20px;
+    z-index: 998;
+    /* animation: light 1.5s  linear; */
+    display: none;
+}
+#room05 #r5handBox{
+    position: absolute;
+    top: 16.3%;
+    left:2.5%;
+    width:135px;
+    height: 128px;
+    background-color: transparent;
+    z-index: 1000;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+}
+#room05 #r5handBox #r5hand{
+    position: absolute;
+    right:-100%;
+    top: 10px;
+    width:70px;
+    z-index: 999;
+    /* animation: r5hand 3s  linear ; */
+    display: none;
+}
+#room05 #r5cloud1{
+    position: absolute;
+    top: 53%;
+    left:32%;
+    width:60px;
+    z-index: 999;
+    animation: r5cloud 3s infinite linear;
+}
+#room05 #r5cloud2{
+    position: absolute;
+    top: 66%;
+    left:3.5%;
+    width:120px;
+    z-index: 999;
+    animation: r5cloud 3s infinite linear;
+}
+#room05 #r5cloud3{
+    position: absolute;
+    top: 62%;
+    right:6%;
+    width:120px;
+    z-index: 999;
+    animation: r5cloud 3s infinite linear;
+}
+@keyframes sloth{
+    0%{
+        transform: translate(0,0) rotate(0deg);
+    }
+    25%{
+        transform: translate(100px,100px) rotate(30deg);
+    }
+}
+@keyframes r5cloud{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes light{
+    0%{
+        left:47%;
+    }
+    50%{
+        left:47%;
+    }
+    100%{
+        left:147%;
+    }
+}
+@keyframes r5hand{
+    0%{
+        right:-100%;
+    }
+    50%{
+        right:0%;
+    }
+    100%{
+        right:-100%;
+    }
+}
+@keyframes view{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-70%);
+    }
+}
 @keyframes fadeout{
     0%{
         opacity: 1;

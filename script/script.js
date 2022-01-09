@@ -1047,6 +1047,24 @@ var r5Password = document.getElementById('r5Password');
 var r5botoomBorder = document.getElementsByClassName('r5botoomBorder');
 var r5arrow = document.getElementsByClassName("r5arrow");
 
+var r5puzzle1 = document.getElementById('r5puzzle1');
+var r5puzzle2 = document.getElementById('r5puzzle2');
+var r5pussleBox = document.getElementById('r5pussleBox');
+var r5show = document.getElementById('r5show');
+var r5showBox = document.getElementById('r5showBox');
+var r5sloth = document.getElementById('r5sloth');
+var r5checkBox = document.getElementById('r5checkBox');
+var r5BelphegoBox1 = document.getElementById('r5BelphegoBox1');
+var r5BelphegoBox2 = document.getElementById('r5BelphegoBox2');
+var r5originalBox = document.getElementById('r5originalBox');
+var r5copycatBox = document.getElementById('r5copycatBox');
+var r5copycatBox2 = document.getElementById('r5copycatBox2');
+var r5viewBox = document.getElementById('r5viewBox');
+var r5cat = document.getElementById('r5cat');
+var r5view = document.getElementById('r5view');
+var r5light = document.getElementById('r5light');
+var r5handBox = document.getElementById('r5handBox');
+var r5hand = document.getElementById('r5hand');
 yes[4].addEventListener("click",()=>{
     main.style.display = "none";
     room05.style.display = "block";
@@ -1058,6 +1076,24 @@ yes[4].addEventListener("click",()=>{
         r5Enter.style.display = "block";
         r5PrevPage.style.display = "block";
         r5Password.style.display = "block";
+        r5puzzle1.style.display  = "block";
+        r5puzzle2.style.display  = "block";
+        r5pussleBox.style.display  = "block";
+        r5show.style.display = "block";
+        r5showBox.style.display = "block";
+        r5sloth.style.display = "block";
+        r5checkBox.style.display = "block";
+        r5BelphegoBox1.style.display = "block";
+        r5BelphegoBox2.style.display = "block";
+        r5originalBox.style.display = "block";
+        r5copycatBox.style.display = "block";
+        r5copycatBox2.style.display = "block";
+        r5viewBox.style.display = "block";
+        r5cat.style.display = "block";
+        r5view.style.display = "block";
+        r5light.style.display = "block";
+        r5handBox.style.display = "block";
+        r5hand.style.display = "block";
         for(let b=0;b<r5botoomBorder.length;b++){
             r5botoomBorder[b].style.display = "block";
         }
@@ -1065,6 +1101,88 @@ yes[4].addEventListener("click",()=>{
             r5arrow[a].style.display = "block";
         }
     },1000)
+
+    r5pussleBox.addEventListener("mouseover",()=>{
+        r5puzzle1.style.top = "44%";
+        r5puzzle2.style.top = "54%";
+    })
+    r5pussleBox.addEventListener("mouseout",()=>{
+        r5puzzle1.style.top = "49%";
+        r5puzzle2.style.top = "49%";
+    })
+    r5showBox.addEventListener("mouseover",()=>{
+        r5show.src = "./styles/images/room05/show2.png";
+    })
+    r5showBox.addEventListener("mouseout",()=>{
+        r5show.src = "./styles/images/room05/show.png";
+    })
+    r5sloth.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "樹懶抱火箭：暗指人偷懶坐快車的行為";
+    })
+    r5sloth.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+    })
+    r5checkBox.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "原創性檢查工具：Google工具「Assignments」將協助老師檢測出抄襲的作業內容，盼減少資訊時代抄襲氾濫的狀況";
+    })
+    r5checkBox.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+    })
+    r5BelphegoBox1.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "貝爾菲格（Belphegor）：在基督教傳統中，貝爾菲格以身為七宗罪之一的「怠惰大惡魔」為人所知";
+    })
+    r5BelphegoBox1.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+    })
+    r5BelphegoBox2.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "貝爾菲格（Belphegor）：在基督教傳統中，貝爾菲格以身為七宗罪之一的「怠惰大惡魔」為人所知";
+    })
+    r5BelphegoBox2.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+    })
+    r5originalBox.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "偷靈感的手：習慣用網路找答案會使人怠惰不去動腦思考";
+        r5light.style.animation = "light 3s  linear";
+        r5light.style.left = "147%";
+        r5hand.style.animation = "r5hand 3s  linear";
+    })
+    r5originalBox.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+        r5light.style.animation = "none";
+        r5hand.style.animation = "none";
+        r5light.style.left = "47%";
+        clearTimeout(lighttime);
+    })
+    r5copycatBox.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "copycat：學人精/缺乏主見的人/抄襲者";
+        r5view.style.animation = "view 1s infinite linear";
+    })
+    r5copycatBox.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+        r5view.style.animation = "none";
+    })
+    r5copycatBox2.addEventListener("mouseover",()=>{
+        room05Text.style.opacity = "1";
+        room05Text.innerHTML = "copycat：學人精/缺乏主見的人/抄襲者";
+        r5view.style.animation = "view 1s infinite linear";
+    })
+    r5copycatBox2.addEventListener("mouseout",()=>{
+        room05Text.style.opacity = "0";
+        room05Text.innerHTML = "";
+        r5view.style.animation = "none";
+    })
 })
 // room05 END
 
