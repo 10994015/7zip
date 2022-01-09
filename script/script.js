@@ -1076,6 +1076,7 @@ yes[4].addEventListener("click",()=>{
         r5Enter.style.display = "block";
         r5PrevPage.style.display = "block";
         r5Password.style.display = "block";
+
         r5puzzle1.style.display  = "block";
         r5puzzle2.style.display  = "block";
         r5pussleBox.style.display  = "block";
@@ -1151,9 +1152,9 @@ yes[4].addEventListener("click",()=>{
     r5originalBox.addEventListener("mouseover",()=>{
         room05Text.style.opacity = "1";
         room05Text.innerHTML = "偷靈感的手：習慣用網路找答案會使人怠惰不去動腦思考";
-        r5light.style.animation = "light 3s  linear";
+        r5light.style.animation = "light 1.5s  linear";
         r5light.style.left = "147%";
-        r5hand.style.animation = "r5hand 3s  linear";
+        r5hand.style.animation = "r5hand 1.5s  linear";
     })
     r5originalBox.addEventListener("mouseout",()=>{
         room05Text.style.opacity = "0";
@@ -1182,6 +1183,114 @@ yes[4].addEventListener("click",()=>{
         room05Text.style.opacity = "0";
         room05Text.innerHTML = "";
         r5view.style.animation = "none";
+    })
+
+    r5Enter.addEventListener("click",()=>{
+        if(r5Password.value!="0814") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room05.style.display = "none";
+        room05pass.style.display = "block";
+    })
+    r5Password.addEventListener("keydown",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r5Enter.src="./styles/images/room05/enter2.png";
+    })
+    r5Password.addEventListener("keyup",(e)=>{
+        if(e.keyCode !== 13) return; 
+        r5Enter.src="./styles/images/room05/enter.png";
+        if(r5Password.value!=="0814") return alert("密碼錯誤");
+        alert("密碼正確!");
+        room05.style.display = "none";
+        room05pass.style.display = "block";
+        
+    })
+    setInterval(()=>{
+        r5arrow[0].style.opacity = 0;
+        r5arrow[1].style.opacity = 0;
+        r5arrow[2].style.opacity = 0;
+        r5arrow[3].style.opacity = 0;
+        r5arrow[4].style.opacity = 0;
+        r5arrow[5].style.opacity = 0;
+        r5arrow[6].style.opacity = 0;
+        setTimeout(()=>{
+            r5arrow[0].style.opacity = 1
+        },500)
+        setTimeout(()=>{
+            r5arrow[1].style.opacity = 1
+        },1000)
+        setTimeout(()=>{
+            r5arrow[2].style.opacity = 1
+        },1500)
+        setTimeout(()=>{
+            r5arrow[3].style.opacity = 1
+        },2000)
+        setTimeout(()=>{
+            r5arrow[4].style.opacity = 1
+        },2500)
+        setTimeout(()=>{
+            r5arrow[5].style.opacity = 1
+        },3000)
+        setTimeout(()=>{
+            r5arrow[6].style.opacity = 1
+        },3500)
+        setTimeout(()=>{
+            r5arrow[0].style.opacity = 0;
+            r5arrow[1].style.opacity = 0;
+            r5arrow[2].style.opacity = 0;
+            r5arrow[3].style.opacity = 0;
+            r5arrow[4].style.opacity = 0;
+            r5arrow[5].style.opacity = 0;
+            r5arrow[6].style.opacity = 0;
+        },4000)
+    },4000)
+    r5PrevPage.addEventListener("click",()=>{
+        r5people.src = "styles/images/index5/peple.png";
+        room05.style.display = "none";
+        main.style.display = "block";
+        model[0].style.display = "none";
+        model05.style.display = "none";
+        model1.style.display = "none";
+        model2.style.display = "none";
+        model3.style.display = "none";
+        room05Bg.style.opacity = "0";
+
+        room05Text.style.display = "none";
+        r5Enter.style.display = "none";
+        r5Password.style.display = "none";
+        r5Password.value="";
+        r5PrevPage.style.display = "none";
+
+        r5puzzle1.style.display  = "none";
+        r5puzzle2.style.display  = "none";
+        r5pussleBox.style.display  = "none";
+        r5show.style.display = "none";
+        r5showBox.style.display = "none";
+        r5sloth.style.display = "none";
+        r5checkBox.style.display = "none";
+        r5BelphegoBox1.style.display = "none";
+        r5BelphegoBox2.style.display = "none";
+        r5originalBox.style.display = "none";
+        r5copycatBox.style.display = "none";
+        r5copycatBox2.style.display = "none";
+        r5viewBox.style.display = "none";
+        r5cat.style.display = "none";
+        r5view.style.display = "none";
+        r5light.style.display = "none";
+        r5handBox.style.display = "none";
+        r5hand.style.display = "none";
+        room05People.style.display = "none";
+      
+        for(let b=0;b<r5botoomBorder.length;b++){
+                r5botoomBorder[b].style.display = "none";
+            }
+        for(let a=0;a<r5arrow.length;a++){
+            r5arrow[a].style.display = "none";
+        }
+        r5people.style.display = "block";
+        r5card.style.display = "block";
+        r5cardRight.style.display = "block";
+        r5cardLeft.style.display = "block"; 
+    
     })
 })
 // room05 END
