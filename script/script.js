@@ -800,7 +800,7 @@ yes[2].addEventListener("click",()=>{
     })
     r3usBox.addEventListener("mouseover",()=>{
         room03Text.style.opacity = "1";
-        room03Text.innerHTML = "我們：<br>因為外送平台的便利，我們像嗷嗷待哺的嬰兒在家等食物的到來";
+        room03Text.innerHTML = "我們：因為外送平台的便利，我們像嗷嗷待哺的嬰兒在家等食物的到來";
     })
     r3usBox.addEventListener("mouseout",()=>{
         room03Text.style.opacity = "0";

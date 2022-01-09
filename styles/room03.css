@@ -312,9 +312,9 @@
 }
 #room03 #r3motorcycle{
     position: absolute;
-    top: 48%;
-    right:-106px;
-    width:330px;
+    top: 43%;
+    right:-154px;
+    width:370px;
     z-index: 1001;
     display: none;
     cursor: pointer;
@@ -366,32 +366,37 @@
     top: 56%;
     left:10%;
     width:30px;
-    z-index: 999;
     display: none;
 }
 #room03 #r3item1{
-    transform: translate(-60px,-20px);
+    transform: translate(-5px,-10px);
     animation: r3item1 1s  linear;
+    z-index: 999;
 }
 #room03 #r3item2{
-    transform: translate(-70px,-40px);
+    transform: translate(-40px,0px);
     animation: r3item2 1s  linear;
+    z-index: 998;
 }
 #room03 #r3item3{
-    transform: translate(-100px,-25px);
+    transform: translate(-50px,-10px);
     animation: r3item3 1s  linear;
+    z-index: 997;
 }
 #room03 #r3item4{
-    transform: translate(-95px,5px);
+    transform: translate(-105px,-35px);
     animation: r3item4 1s  linear;
+    z-index: 999;
 }
 #room03 #r3item5{
-    transform: translate(-60px,20px);
+    transform: translate(-75px,-10px);
     animation: r3item5 1s  linear;
+    z-index: 999;
 }
 #room03 #r3item6{
-    transform: translate(-12px,-30px);
+    transform: translate(-100px,-30px);
     animation: r3item6 1s  linear;
+    z-index: 999;
 }
 @keyframes r3item1{
     0%{
@@ -402,7 +407,7 @@
         opacity: 1;
     }
     100%{
-        transform: translate(-60px,-20px);
+        transform: translate(-5px,-10px);
     }
 }
 @keyframes r3item2{
@@ -414,7 +419,7 @@
         opacity: 1;
     }
     100%{
-        transform: translate(-70px,-40px);
+        transform: translate(-40px,0px);
     }
 }
 @keyframes r3item3{
@@ -426,7 +431,7 @@
         opacity: 1;
     }
     100%{
-        transform: translate(-100px,-25px);
+        transform: translate(-50px,-10px);
     }
 }
 @keyframes r3item4{
@@ -438,7 +443,7 @@
         opacity: 1;
     }
     100%{
-        transform: translate(-95px,5px);
+        transform: translate(-105px,-35px);
     }
 }
 @keyframes r3item5{
@@ -450,7 +455,7 @@
         opacity: 1;
     }
     100%{
-        transform: translate(-60px,20px);
+        transform: translate(-75px,-10px);
     }
 }
 @keyframes r3item6{
@@ -462,7 +467,7 @@
         opacity: 1;
     }
     100%{
-        transform: translate(-12px,-30px);
+        transform: translate(-100px,-30px);
     }
 }
 @keyframes motorcycle{
@@ -470,7 +475,7 @@
         right:100%;
     }
     100%{
-        right:-106px;
+        right:-154px;
     }
 }
 @keyframes fadeout{
