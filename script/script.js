@@ -770,7 +770,7 @@ yes[2].addEventListener("click",()=>{
     })
     r3right.addEventListener("mouseover",()=>{
         room03Text.style.opacity = "1";
-        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用";
+        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用（點擊左右箭頭可以切換優惠卷呦！）";
     })
     r3right.addEventListener("mouseout",()=>{
         room03Text.style.opacity = "0";
@@ -778,7 +778,7 @@ yes[2].addEventListener("click",()=>{
     })
     r3left.addEventListener("mouseover",()=>{
         room03Text.style.opacity = "1";
-        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用";
+        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用（點擊左右箭頭可以切換優惠卷呦！）";
     })
     r3left.addEventListener("mouseout",()=>{
         room03Text.style.opacity = "0";
@@ -786,7 +786,7 @@ yes[2].addEventListener("click",()=>{
     })
     r3couponBox.addEventListener("mouseover",()=>{
         room03Text.style.opacity = "1";
-        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用";
+        room03Text.innerHTML = "優惠卷：為了吸引更多人使用外送平台通常會不定期發放優惠卷，讓用戶可以選擇優惠做使用（點擊左右箭頭可以切換優惠卷呦！）";
     })
     r3couponBox.addEventListener("mouseout",()=>{
         room03Text.style.opacity = "0";
