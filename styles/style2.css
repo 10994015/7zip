@@ -62,17 +62,23 @@ main{
     z-index: 99999999999999;
     cursor: pointer;
 }
+#main .room#bg1 .people{
+    position: absolute;
+    top: 126px;
+    left: 282px;
+    width: 260px;
+}
 .room#bg2 .people{
     position: absolute;
-    top: 129px;
-    left: 282px;
-    width: 250px;
+    top: 125px;
+    left: 284px;
+    width: 264px;
 }
 #main .room#bg3 .people{
     position: absolute;
-    top: 133px;
-    left: 313px;
-    width: 213px
+    top: 128px;
+    left: 285px;
+    width: 261px
 }
 #bg4 .people{
     position: absolute;

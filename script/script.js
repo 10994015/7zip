@@ -97,9 +97,7 @@ var r1cloud = document.getElementById('r1cloud');
 yes[0].addEventListener("click",()=>{
     main.style.display = "none";
     room01.style.display = "block";
-    r1people.style.width = "213px";
-    r1people.style.top = "133px";
-    r1people.style.left = "313px";
+   
     setTimeout(()=>{
         room01Bg.style.opacity = "1";
         r1people.style.display = "none";

@@ -3,7 +3,7 @@
     width:100%;
     height: auto;
     position: absolute;
-    top: 0;
+    top: 30px;
     left:0;
 }
 #room07pass #room07passTop,
@@ -45,23 +45,23 @@
 #room07pass #room07passCenter #p7control1{
     position: absolute;
     top: 230px;
-    left:384px;
+    left:380px;
     transition: all .5s ease;
 }
 #room07pass #room07passCenter #p7control2{
     position: absolute;
     top: 443px;
-    left:599px;
+    left:597px;
 }
 #room07pass #room07passCenter #p7control3{
     position: absolute;
     top: 232px;
-    left:793px;
+    left:792px;
 }
 #room07pass #room07passCenter #p7control4{
     position: absolute;
     top: 443px;
-    left:1022px;
+    left:1021px;
 }
 #room07pass #room07passCenter #p7people{
     position: absolute;
