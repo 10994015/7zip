@@ -83,7 +83,7 @@
     font-size: 1rem;
     display: none;
     opacity: 0;
-    color:#FFE3D2;
+    color:#FFB3DA;
     line-height: 1.3;
     letter-spacing:2.5px;
     font-family: yo,'Comfortaa';
@@ -101,7 +101,7 @@
     outline: none;
     border:none;
     background-color: transparent;
-    color:#FFE3D2;
+    color:#FFB3DA;
     letter-spacing:11px;
     font-family: 'Comfortaa';
     transform: scale(1,0.7);
@@ -114,7 +114,7 @@
     bottom:8%;
     width:20px;
     height: 2px;
-    background-color: #FFE3D2;
+    background-color: #FFB3DA;
     border-radius: 6px;
     display: none;
 
@@ -277,7 +277,7 @@
 #room01 #r1flamingo{
     position: absolute;
     top: 51.0%;
-    left:42.6%;
+    left:41.6%;
     width:260px;
     z-index: 999;
     cursor: pointer;
@@ -286,7 +286,7 @@
 #room01 #r1peoplehand{
     position: absolute;
     top: 59%;
-    left:47.5%;
+    left:48.5%;
     width:90px;
     z-index: 999;
     cursor: pointer;
@@ -434,6 +434,7 @@
     left:72%;
     width:100px;
     z-index: 999;
+    display: none;
     /* animation: r1flash 1s linear infinite; */
 }
 #room01 #r1cloud{

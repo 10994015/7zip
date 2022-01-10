@@ -75,11 +75,10 @@
     
 }
 #room05 .roomText{
-    color:#ddd;    
     font-size: 1rem;
     display: none;
     opacity: 0;
-    color:#FFE3D2;
+    color:#F7D76F;
     line-height: 1.3;
     letter-spacing:2.5px;
     font-family: yo,'Comfortaa';
@@ -97,7 +96,7 @@
     outline: none;
     border:none;
     background-color: transparent;
-    color:#FFE3D2;
+    color:#F7D76F;
     letter-spacing:11px;
     font-family: 'Comfortaa';
     transform: scale(1,0.7);
@@ -110,7 +109,7 @@
     bottom:8%;
     width:20px;
     height: 2px;
-    background-color: #FFE3D2;
+    background-color: #F7D76F;
     border-radius: 6px;
     display: none;
 
