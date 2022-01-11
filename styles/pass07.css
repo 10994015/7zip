@@ -88,3 +88,88 @@
     width:127px;
     display: none;
 }
+#room07pass #room07passBottom #p7eyeBox{
+    position: absolute;
+    top: 39%;
+    left:89.3%;
+    width:116px;
+    height: 116px;
+    background-color: transparent;
+    z-index: 999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7eye1{
+    position: absolute;
+    top: 0%;
+    right: 4%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .1s linear;
+    display:none;
+}
+#room07pass #room07passBottom #p7eye2{
+    position: absolute;
+    top: 14%;
+    right: 0%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .2s linear;
+    display:none;
+}
+#room07pass #room07passBottom #p7eye3{
+    position: absolute;
+    top: 28%;
+    right: -4%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .3s linear;
+    display:none;
+}
+#room07pass #room07passBottom #p7eye4{
+    position: absolute;
+    top: 42%;
+    right: -7%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .4s linear;
+    display:none;
+}
+#room07pass #room07passBottom #p7eye5{
+    position: absolute;
+    top: 56%;
+    right: -4%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .5s linear;
+    display:none;
+}
+#room07pass #room07passBottom #p7eye6{
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .6s linear;
+    display:none;
+}
+#room07pass #room07passBottom #p7eye7{
+    position: absolute;
+    top: 84%;
+    right: 4%;
+    width:90px;
+    cursor: pointer;
+    animation:  p7eye .7s linear;
+    display:none;
+}
+.show{
+    display: block;
+}
+@keyframes p7eye{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

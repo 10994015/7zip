@@ -2237,6 +2237,8 @@ var p7control4 = document.getElementById('p7control4');
 var p7people = document.getElementById('p7people');
 var p7badge = document.getElementById('p7badge');
 var p7PrevPage = document.getElementById('p7-prevPage');
+var p7eye = document.getElementsByClassName('p7eye');
+var p7eyeBox = document.getElementById('p7eyeBox');
 p7box.addEventListener("mouseover",()=>{
     p7box.src="./styles/images/pass07/box2.png";
     
@@ -2287,6 +2289,19 @@ p7control4.addEventListener("click",()=>{
     document.body.scrollTop = 1500;
     document.documentElement.scrollTop = 1500;
 
+})
+p7eyeBox.addEventListener("click",()=>{
+    if(p7eye[0].style.display ==="block"){
+        for(let e=0;e<p7eye.length;e++){
+            p7eye[e].style.display = "none";
+        }
+    }else{
+        for(let e=0;e<p7eye.length;e++){
+            p7eye[e].style.display = "block";
+        }
+    }
+    
+   
 })
 p7PrevPage.addEventListener("click",clearR7room);
  
