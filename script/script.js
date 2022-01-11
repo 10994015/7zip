@@ -2254,8 +2254,7 @@ p7control1.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s1.png";
     }
-    document.body.scrollTop = 1500;
-    document.documentElement.scrollTop = 1500;
+    $('html, body').animate({scrollTop: 1500}, 1500);
 })
 p7control2.addEventListener("click",()=>{
     p7people.style.top = "280px";
@@ -2264,8 +2263,7 @@ p7control2.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s2.png";
     }
-    document.body.scrollTop = 1500;
-    document.documentElement.scrollTop = 1500;
+     $('html, body').animate({scrollTop: 1500}, 1500);
     
 })
 p7control3.addEventListener("click",()=>{
@@ -2275,8 +2273,7 @@ p7control3.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s3.png";
     }
-    document.body.scrollTop = 1500;
-    document.documentElement.scrollTop = 1500;
+    $('html, body').animate({scrollTop: 1500}, 1500);
 
 })
 p7control4.addEventListener("click",()=>{
@@ -2286,8 +2283,7 @@ p7control4.addEventListener("click",()=>{
     for(let p=0;p<passBadge07.length;p++){
         passBadge07[p].src ="./styles/images/pass07/s4.png";
     }
-    document.body.scrollTop = 1500;
-    document.documentElement.scrollTop = 1500;
+    $('html, body').animate({scrollTop: 1500}, 1500);
 
 })
 p7eyeBox.addEventListener("click",()=>{
