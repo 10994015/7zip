@@ -40,6 +40,8 @@ var passBadge05 = document.getElementsByClassName('passBadge05');
 var passBadge06 = document.getElementsByClassName('passBadge06');
 var passBadge07 = document.getElementsByClassName('passBadge07');
 
+var passmainNum = 1;
+
 var model07 = document.getElementById('model07');
 var model1 = document.getElementById('model1');
 var model2 = document.getElementById('model2');
@@ -2129,12 +2131,12 @@ r7Enter.addEventListener("mouseup",()=>{
     r7Enter.src="./styles/images/room07/enter.png";
 })
 r7Enter.addEventListener("click",()=>{
-
     if(r7Password.value!="3691") return alert("密碼錯誤");
     alert("密碼正確!");
     room07.style.display = "none";
     room07pass.style.display = "block";
-    
+    passmainNum = 7;
+    p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
 })
 r7Password.addEventListener("keydown",(e)=>{
     if(e.keyCode !== 13) return; 
@@ -2147,6 +2149,8 @@ r7Password.addEventListener("keyup",(e)=>{
     alert("密碼正確!");
     room07.style.display = "none";
     room07pass.style.display = "block";
+    passmainNum = 7;
+    p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
 })
 setInterval(()=>{
     r7arrow[0].style.opacity = 0;
@@ -2239,6 +2243,9 @@ var p7badge = document.getElementById('p7badge');
 var p7PrevPage = document.getElementById('p7-prevPage');
 var p7eye = document.getElementsByClassName('p7eye');
 var p7eyeBox = document.getElementById('p7eyeBox');
+var p7mainEye = document.getElementById('p7mainEye');
+var p7eyeUp = document.getElementById('p7eyeUp');
+var p7eyeDown = document.getElementById('p7eyeDown');
 p7box.addEventListener("mouseover",()=>{
     p7box.src="./styles/images/pass07/box2.png";
     
@@ -2286,18 +2293,28 @@ p7control4.addEventListener("click",()=>{
     $('html, body').animate({scrollTop: 1500}, 1500);
 
 })
-p7eyeBox.addEventListener("click",()=>{
-    if(p7eye[0].style.display ==="block"){
-        for(let e=0;e<p7eye.length;e++){
-            p7eye[e].style.display = "none";
-        }
-    }else{
-        for(let e=0;e<p7eye.length;e++){
-            p7eye[e].style.display = "block";
-        }
+
+p7eyeUp.addEventListener("click",()=>{
+    passmainNum--;
+    if(passmainNum<1){
+        passmainNum = 7;
     }
-    
-   
+    p7mainEye.style.opacity = 0;
+    setTimeout(()=>{
+        p7mainEye.style.opacity = 1;
+    },1)
+    p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
+})
+p7eyeDown.addEventListener("click",()=>{
+    passmainNum++;
+    if(passmainNum>7){
+        passmainNum = 1;
+    }
+    p7mainEye.style.opacity = 0;
+    setTimeout(()=>{
+        p7mainEye.style.opacity = 1;
+    },1)
+    p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
 })
 p7PrevPage.addEventListener("click",clearR7room);
  

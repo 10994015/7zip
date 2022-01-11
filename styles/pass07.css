@@ -85,7 +85,7 @@
     position: absolute;
     top: 387px;
     left:282px;
-    width:127px;
+    width:115px;
     display: none;
 }
 #room07pass #room07passBottom .passBadge07{
@@ -104,10 +104,39 @@
 }
 #room07pass #room07passBottom #p7eyeBox{
     position: absolute;
-    top: 39%;
+    top: 38%;
+    left:87.8%;
+    width:125px;
+    height: 125px;
+    background-color: transparent;
+    z-index: 999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7eyeBox #p7mainEye{
+    position: absolute;
+    top: 7px;
+    left: 1px;
+    width:125px;
+    transition: .5s;
+}
+#room07pass #room07passBottom #p7eyeUp{
+    position: absolute;
+    top: 11.2%;
     left:89.3%;
-    width:116px;
-    height: 116px;
+    width:87px;
+    height: 87px;
+    background-color: transparent;
+    z-index: 999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7eyeDown{
+    position: absolute;
+    top: 75.8%;
+    left:89.3%;
+    width:87px;
+    height: 87px;
     background-color: transparent;
     z-index: 999;
     border-radius: 50%;
@@ -179,8 +208,50 @@
 #room07pass #room07passBottom #p7righteye1{
     position: absolute;
     top: 1%;
-    right: 0%;
-    width:70px;
+    right: -3%;
+    width:100px;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7righteye2{
+    position: absolute;
+    top: 13%;
+    right: -3%;
+    width:100px;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7righteye3{
+    position: absolute;
+    top: 25%;
+    right: -3%;
+    width:100px;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7righteye4{
+    position: absolute;
+    top: 37%;
+    right: -3%;
+    width:100px;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7righteye5{
+    position: absolute;
+    top: 49%;
+    right: -3%;
+    width:100px;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7righteye6{
+    position: absolute;
+    top: 61%;
+    right: -3%;
+    width:100px;
+    cursor: pointer;
+}
+#room07pass #room07passBottom #p7righteye7{
+    position: absolute;
+    top: 73%;
+    right: -3%;
+    width:100px;
     cursor: pointer;
 }
 @keyframes p7eye{
