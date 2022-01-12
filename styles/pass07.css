@@ -106,8 +106,6 @@
     position: absolute;
     top: 38%;
     left:87.8%;
-    width:125px;
-    height: 125px;
     background-color: transparent;
     z-index: 999;
     border-radius: 50%;
@@ -205,60 +203,4 @@
     animation:  p7eye .7s linear;
     display:none;
 }
-#room07pass #room07passBottom #p7righteye1{
-    position: absolute;
-    top: 1%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7righteye2{
-    position: absolute;
-    top: 13%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7righteye3{
-    position: absolute;
-    top: 25%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7righteye4{
-    position: absolute;
-    top: 37%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7righteye5{
-    position: absolute;
-    top: 49%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7righteye6{
-    position: absolute;
-    top: 61%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7righteye7{
-    position: absolute;
-    top: 73%;
-    right: -3%;
-    width:100px;
-    cursor: pointer;
-}
-@keyframes p7eye{
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
+

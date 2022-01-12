@@ -96,7 +96,8 @@ var r1typeBox = document.getElementById('r1typeBox');
 var r1typeText = document.getElementById('r1typeText');
 var r1flash  = document.getElementById('r1flash');
 var r1cloud = document.getElementById('r1cloud');
-yes[0].addEventListener("click",()=>{
+yes[0].addEventListener("click",openRoom01)
+function openRoom01(){
     main.style.display = "none";
     room01.style.display = "block";
    
@@ -133,7 +134,7 @@ yes[0].addEventListener("click",()=>{
             r1arrow[a].style.display = "block";
         }
     },1000)
-
+}
     r1authority.addEventListener("mouseover",()=>{
         r1authority.src = "./styles/images/room01/authority2.png";
     })
@@ -376,7 +377,7 @@ yes[0].addEventListener("click",()=>{
         }
         
     })
-})
+
 // room01 END
 
 // room02
@@ -417,7 +418,8 @@ var r2play = document.getElementById('r2play');
 var r2bullet = document.getElementById('r2bullet');
 var r2playBox = document.getElementById('r2playBox');
 var r2arrow = document.getElementsByClassName('r2arrow');
-yes[1].addEventListener("click",()=>{
+yes[1].addEventListener("click",openRoom02);
+function openRoom02(){
     main.style.display = "none";
     room02.style.display = "block";
     setTimeout(()=>{
@@ -458,7 +460,7 @@ yes[1].addEventListener("click",()=>{
             r2arrow[a].style.display = "block";
         }
     },1000)
-    
+}
     r2chickBox.addEventListener("mouseover",()=>{
         r2chick.src = "./styles/images/room02/chickdie.png"
         r2chick.style.top = "47%";
@@ -662,7 +664,7 @@ yes[1].addEventListener("click",()=>{
         r2cardRight.style.display = "block";
         r2cardLeft.style.display = "block"; 
     })
-})
+
 
 // room02 END
 
@@ -705,7 +707,8 @@ var r3detailsBox = document.getElementById('r3detailsBox');
 var r3item = document.getElementsByClassName('r3item');
 var r3plateBox = document.getElementById('r3plateBox');
 var r3candyhouseBox = document.getElementById('r3candyhouseBox');
-yes[2].addEventListener("click",()=>{
+yes[2].addEventListener("click",openRoom03)
+function openRoom03(){
     main.style.display = "none";
     room03.style.display = "block";
     setTimeout(()=>{
@@ -746,6 +749,7 @@ yes[2].addEventListener("click",()=>{
             r3arrow[a].style.display = "block";
         }
     },1000)
+}
     r3right.addEventListener("click",()=>{
         r3Num++;
         if(r3Num>3){
@@ -978,7 +982,7 @@ yes[2].addEventListener("click",()=>{
         }
         
     })
-})
+
 // room03 END
 
 // room04 
@@ -1022,7 +1026,8 @@ var r4gold2 = document.getElementById('r4gold2');
 var r4gold3 = document.getElementById('r4gold3');
 var r4gold4 = document.getElementById('r4gold4');
 var r4gold5 = document.getElementById('r4gold5');
-yes[3].addEventListener("click",()=>{
+yes[3].addEventListener("click",openRoom04)
+function openRoom04(){
     main.style.display = "none";
     room04.style.display = "block";
     setTimeout(()=>{
@@ -1054,6 +1059,7 @@ yes[3].addEventListener("click",()=>{
             r4arrow[a].style.display = "block";
         }
     },1000)
+}
     room04People.addEventListener("mouseover",()=>{
         r4gold1.style.display = "block";
         setTimeout(()=>{
@@ -1308,7 +1314,7 @@ yes[3].addEventListener("click",()=>{
         }
         
     })
-})
+
 // room04 END
 
 // room05 
@@ -1344,7 +1350,8 @@ var r5view = document.getElementById('r5view');
 var r5light = document.getElementById('r5light');
 var r5handBox = document.getElementById('r5handBox');
 var r5hand = document.getElementById('r5hand');
-yes[4].addEventListener("click",()=>{
+yes[4].addEventListener("click",openRoom05)
+function openRoom05(){
     main.style.display = "none";
     room05.style.display = "block";
     setTimeout(()=>{
@@ -1381,7 +1388,7 @@ yes[4].addEventListener("click",()=>{
             r5arrow[a].style.display = "block";
         }
     },1000)
-
+}
     r5pussleBox.addEventListener("mouseover",()=>{
         r5puzzle1.style.top = "44%";
         r5puzzle2.style.top = "54%";
@@ -1571,7 +1578,7 @@ yes[4].addEventListener("click",()=>{
         r5cardLeft.style.display = "block"; 
     
     })
-})
+
 // room05 END
 
 
@@ -1630,7 +1637,8 @@ var room06People = document.getElementById('room06People');
 var r6arrow = document.getElementsByClassName('r6arrow');
 var r6botoomBorder = document.getElementsByClassName('r6botoomBorder');
 
-yes[5].addEventListener("click",()=>{
+yes[5].addEventListener("click",openRoom06)
+function openRoom06(){
     main.style.display = "none";
     room06.style.display = "block";
 
@@ -1667,7 +1675,7 @@ yes[5].addEventListener("click",()=>{
         r6cardRight.style.display = "none";
         r6cardLeft.style.display = "none"; 
     },2100);
-})
+}
 r6Enter.addEventListener("mousedown",()=>{
     r6Enter.src="./styles/images/room06/enter2.png";
 })
@@ -1995,8 +2003,8 @@ var roomEnter = document.getElementsByClassName('roomEnter');
 var room07People  =document.getElementById('room07People');
 var r7arrow = document.getElementsByClassName('r7arrow');
 var r7botoomBorder = document.getElementsByClassName('r7botoomBorder');
-yes[6].addEventListener("click",()=>{
-
+yes[6].addEventListener("click",openRoom07)
+function openRoom07(){
     main.style.display = "none";
     room07.style.display = "block";
     // console.log(bgimg);
@@ -2035,8 +2043,7 @@ yes[6].addEventListener("click",()=>{
         r7cardLeft.style.display = "none"; 
     },2000);
    
-    
-})
+}
 room07People.addEventListener("mouseover",()=>{
     room07Text.style.opacity="1";
     room07Text.innerHTML = "主角（控制木偶的人）：控制狂、恐怖情人";
@@ -2316,8 +2323,40 @@ p7eyeDown.addEventListener("click",()=>{
     },1)
     p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
 })
+p7mainEye.addEventListener("click",changeroom);
 p7PrevPage.addEventListener("click",clearR7room);
- 
+function changeroom(){
+    clearR7room();
+    if(passmainNum === 1){
+        openRoom01();
+        return;
+    }
+    if(passmainNum === 2){
+        openRoom02();
+        return;
+    }
+    if(passmainNum === 3){
+        openRoom03();
+        return;
+    }
+    if(passmainNum === 4){
+        openRoom04();
+        return;
+    }
+    if(passmainNum === 5){
+        openRoom05();
+        return;
+    }
+    if(passmainNum === 6){
+        openRoom06();
+        return;
+    }
+    if(passmainNum === 7){
+        openRoom07();
+        return;
+    }
+
+}
 // pass07 END
 // t.innerHTML = "times:"+times;
 bg1.addEventListener("click",()=>{
