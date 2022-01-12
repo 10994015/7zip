@@ -18,6 +18,7 @@ var bg7 = document.getElementById('bg7');
 var roomNumber  = document.getElementById('roomNumber');
 var eye = document.getElementById('eye');
 var eyeNum = 1;
+var resetNum = 0;
 var bg1people = document.querySelector('#bg1 > .people');
 var bg2people = document.querySelector("#bg2 > .people");
 var bg3people = document.querySelector("#bg3 > .people");
@@ -330,6 +331,12 @@ function openRoom01(){
     },4000)
 
     r1PrevPage.addEventListener("click",()=>{
+        times = -1;
+        eyeNum = 2;
+        resetNum = 1;
+        resetroomFn();
+        upFn();
+        
         room01.style.display = "none";
         main.style.display = "block";
         model[0].style.display = "none";
@@ -614,6 +621,11 @@ function openRoom02(){
         },4000)
     },4000)
     r2PrevPage.addEventListener("click",()=>{
+        times = 0;
+        eyeNum = 1;
+        resetNum = 2;
+        resetroomFn();
+        downFn();
         room02.style.display = "none";
         main.style.display = "block";
         model[0].style.display = "none";
@@ -932,6 +944,11 @@ function openRoom03(){
         room03pass.style.display = "block";
     })
     r3PrevPage.addEventListener("click",()=>{
+        times = -1;
+        eyeNum = 2;
+        resetNum = 3;
+        resetroomFn();
+        downFn();
         room03.style.display = "none";
         main.style.display = "block";
         model[0].style.display = "none";
@@ -1274,6 +1291,11 @@ function openRoom04(){
         
     })
     r4PrevPage.addEventListener("click",()=>{
+        times = -2;
+        eyeNum = 3;
+        resetNum = 4;
+        resetroomFn();
+        downFn();
         room04.style.display = "none";
         main.style.display = "block";
         model[0].style.display = "none";
@@ -1530,6 +1552,11 @@ function openRoom05(){
         },4000)
     },4000)
     r5PrevPage.addEventListener("click",()=>{
+        times = -3;
+        eyeNum = 4;
+        resetNum = 5;
+        resetroomFn();
+        downFn();
         r5people.src = "styles/images/index5/peple.png";
         room05.style.display = "none";
         main.style.display = "block";
@@ -1643,6 +1670,7 @@ function openRoom06(){
     room06.style.display = "block";
 
     setTimeout(()=>{
+        
         room06Bg.style.opacity = "1";
         room06People.style.display = "block";
         r6people.style.display = "none";
@@ -1923,6 +1951,11 @@ setInterval(()=>{
     },4000)
 },4000)
 r6PrevPage.addEventListener("click",()=>{
+    times = -4;
+    eyeNum = 5;
+    resetNum = 6;
+    resetroomFn();
+    downFn();
     r6people.src = "styles/images/index6/peple.png";
     room06.style.display = "none";
     main.style.display = "block";
@@ -2200,6 +2233,11 @@ setInterval(()=>{
 },4000)
 r7PrevPage.addEventListener("click",clearR7room)
 function clearR7room(){
+    times = -5;
+    eyeNum = 6;
+    resetNum = 7;
+    resetroomFn();
+    downFn();
     room07.style.display = "none";
     main.style.display = "block";
     model[0].style.display = "none";
@@ -2522,7 +2560,8 @@ no[6].addEventListener("click",()=>{
 })
 
 
-down.addEventListener("click",()=>{
+down.addEventListener("click",downFn);
+function downFn(){
     if(eyeNum<7){
         eyeNum +=1;
         eye.src = "./styles/images/share/eye"+eyeNum+".png";
@@ -2597,10 +2636,11 @@ down.addEventListener("click",()=>{
         bg1.style.opacity = "1";
 
     }
+    console.log(times);
     
-});
-
-up.addEventListener("click",()=>{
+}
+up.addEventListener("click",upFn);
+function upFn(){
     if(eyeNum>1){
         eyeNum -=1;
         eye.src = "./styles/images/share/eye"+eyeNum+".png";
@@ -2670,7 +2710,226 @@ up.addEventListener("click",()=>{
         bg1.style.transition = "1s";
         bg1.style.opacity = "0";
     }
-});
+    console.log(times);
+    
+}
+    
+function resetroomFn(){
+    if(resetNum === 1){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(20deg) translateY(200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
+    
+        bg3.style.transform = "rotate(20deg) translateY(200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
+    
+        bg4.style.transform = "rotate(20deg) translateY(200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+    
+        bg5.style.transform = "rotate(20deg) translateY(200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(20deg) translateY(200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(20deg) translateY(200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
 
+        return;
+    }
+    if(resetNum ===2){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(20deg) translateY(200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
     
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
     
+        bg4.style.transform = "rotate(20deg) translateY(200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+    
+        bg5.style.transform = "rotate(20deg) translateY(200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(20deg) translateY(200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(20deg) translateY(200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
+
+        return;
+    }
+    if(resetNum ===3){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
+    
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
+    
+        bg4.style.transform = "rotate(20deg) translateY(200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+    
+        bg5.style.transform = "rotate(20deg) translateY(200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(20deg) translateY(200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(20deg) translateY(200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
+        
+        return;
+    }
+    if(resetNum ===4){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
+    
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
+    
+        bg4.style.transform = "rotate(20deg) translateY(200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+    
+        bg5.style.transform = "rotate(20deg) translateY(200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(20deg) translateY(200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
+
+        return;
+    }
+    if(resetNum ===5){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
+    
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
+    
+        bg4.style.transform = "rotate(20deg) translateY(200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+    
+        bg5.style.transform = "rotate(20deg) translateY(200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
+
+        return;
+    }
+    if(resetNum ===6){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
+    
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
+    
+        bg4.style.transform = "rotate(20deg) translateY(200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+    
+        bg5.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
+
+        return;
+    }
+    if(resetNum ===7){
+        bg1.style.transform = "rotate(20deg) translateY(200%)";
+        bg1.style.transition = "1s";
+        bg1.style.opacity = "0";
+        
+        bg2.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg2.style.transition = "1s";
+        bg2.style.opacity = "0";
+    
+        bg3.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg3.style.transition = "1s";
+        bg3.style.opacity = "0";
+    
+        bg4.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg4.style.transition = "1s";
+        bg4.style.opacity = "0";
+
+        bg5.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg5.style.transition = "1s";
+        bg5.style.opacity = "0";
+    
+        bg6.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg6.style.transition = "1s";
+        bg6.style.opacity = "0";
+    
+        bg7.style.transform = "rotate(-20deg) translateY(-200%)";
+        bg7.style.transition = "1s";
+        bg7.style.opacity = "0";
+
+        return;
+    }
+}
