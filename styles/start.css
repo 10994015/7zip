@@ -1,0 +1,225 @@
+@font-face{
+    font-family: ChironSansHKProItVF;
+    src: url(./font/ChironSansHKProItVF.otf);
+}
+html, body{
+    background-color: #000;
+    padding-top: 5px;
+}
+#start-top{
+    width:1150px;
+    margin:auto;
+    position: relative;
+}
+#start-top .top-bg{
+    width:100%;
+}
+#mouse{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:2400px;
+    transform: translate(-64.5%,-59.5%);
+}
+#s-border{
+    position: absolute;
+    top: 76px;
+    left:76px;
+    width:998px;
+    height: 428px;
+    background-color: transparent;
+    overflow: hidden;
+    /* background-image: url(./images/start/top.png); */
+    background-position: center;
+    background-size: cover;
+    transition: .5;
+}
+#borderIMG{
+    transition: .3s;
+}
+
+#s-border img{
+    width:998px;
+}
+#pageBtnBox{
+    display: flex;
+    width:1300px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+#pageBtnBox img{
+    width:150px;
+    margin: 0 50px;
+    cursor: pointer;
+
+}
+#start-center{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-top: 100px;
+}
+#start-center .center-bg{
+    width:100%;
+}
+#start-center #aboutImg{
+    position: absolute;
+    top: 153px;
+    left:4px;
+    width:967px;
+}
+#start-center #aboutText{
+    position: absolute;
+    top: 140px;
+    left:996px;
+    width:280px;
+}
+
+#about-btn01{
+    position: absolute;
+    top: 1px;
+    left:975px;
+    background: transparent;
+    width:80px;
+    height: 112px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-btn02 {
+    position: absolute;
+    top: 1px;
+    left:1057px;
+    background: transparent;
+    width:80px;
+    height: 112px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-btn03 {
+    position: absolute;
+    top: 1px;
+    left:1137.5px;
+    background: transparent;
+    width:80px;
+    height: 112px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-btn04 {
+    position: absolute;
+    top: 1px;
+    left:1218px;
+    background: transparent;
+    width:80px;
+    height: 112px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-btn01 > p,
+#about-btn02 > p,
+#about-btn03 > p,
+#about-btn04 > p{
+    position: absolute;
+    bottom: -10px;
+    left:calc(50% - 12px);
+    color:#ccc;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    font-family: ChironSansHKProItVF;
+
+}
+
+#start-bottom{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-top: 100px;
+}
+#start-bottom .bottom-bg{
+    width:100%;
+}
+#btn01color{
+    width:72px;
+    height: 104px;
+    background-color: #EA5739;
+    opacity: 0;
+    transition: .3s;
+}
+#btn02color{
+    width:72px;
+    height: 104px;
+    background-color: #266FB7;
+    opacity: 0;
+    transition: .3s;
+}
+#btn03color{
+    width:72px;
+    height: 104px;
+    background-color: #90CDB2;
+    opacity: 0;
+    transition: .3s;
+}
+#btn04color{
+    width:72px;
+    height: 104px;
+    background-color: #D63F92;
+    opacity: 0;
+    transition: .3s;
+}
+#operate{
+    position: absolute;
+    top: 175px;
+    left:120px;
+    width:1050px;
+}
+#operateBtn1{
+    position: absolute;
+    top: 37.85px;
+    right:2px;
+    width:79.5px;
+    cursor: default;
+}
+#operateBtn2{
+    position: absolute;
+    top: 94px;
+    right:2px;
+    width:79.5px;
+    cursor: pointer;
+}
+#footer{
+    width:1300px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+}
+#footer #footer-left{
+    width:400px;
+}
+#footer #footer-right{
+    width:400px;
+}
+#footer .footerRightBox {
+    position: relative;
+}
+#footer .footerRightBox #enter{
+    position: absolute;
+    top: 210px;
+    left: calc(50% - 100px);
+    width:200px;
+    z-index: 9;
+    cursor: pointer;
+}
