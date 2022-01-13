@@ -578,3 +578,43 @@
     display: none;
     z-index: 2;
 }
+
+
+#room03 #r3alertPage{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 9999999999999;
+    display: none;
+} 
+#room03 #r3alert{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+
+}
+#room03 #r3alertText{
+    color:#fff;
+    font-size: 20px;
+    font-family: fzyxb;
+    letter-spacing:3px;
+}
+#room03 #r3alertBtn{
+    width: 100px;
+    height: 35px;
+    border: 1px #ccc solid;
+    background-color: transparent;
+    color:#ccc;
+    text-align: center;
+    line-height: 35px;
+    transform: translateY(30px);
+    cursor: pointer;
+    font-family: 'Manrope';
+    font-weight: 600;
+    letter-spacing:3px;
+}

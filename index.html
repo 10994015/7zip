@@ -7,6 +7,7 @@
     <title>7ZIP</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/style2.css">
     <link rel="stylesheet" href="./styles/room01.css">
     <link rel="stylesheet" href="./styles/room02.css">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="./styles/room07.css">
     <link rel="stylesheet" href="./styles/pass07.css">
 <body>
-      <img src="./styles/images/open.gif" alt="" class="OpeningAnimation">
+      <!-- <img src="./styles/images/open.gif" alt="" class="OpeningAnimation"> -->
       <main id="main">
           <h1 id="t" style="color:#fff"></h1>
           <div class="share">
@@ -203,6 +204,14 @@
             <img src="./styles/images/index3/card-right.png" alt="" class="card-right" id="r1-card-right">
             <img src="./styles/images/index3/card-left.png" alt="" class="card-left" id="r1-card-left">
         </div>
+
+        <div id="r1alertPage">
+            <div id="r1alertBox" class="alertBox">
+                <p id="r1alertText">密碼正確</p>
+                <div id="r1alertBtn">OK</div>
+            </div>
+        </div>
+
         <div class="room01ImgBox">
             <img src="./styles/images/room01/prevPage.png" alt="" class="prevPage" id="r1-prevPage">
             <div class="textBox">
@@ -271,6 +280,12 @@
                 <img src="./styles/images/index1/card-right.png" alt="" class="card-right" id="r2-card-right">
                 <img src="./styles/images/index1/card-left.png" alt="" class="card-left" id="r2-card-left">
             </div>
+            <div id="r2alertPage">
+                <div id="r2alertBox" class="alertBox">
+                    <p id="r2alertText">密碼正確</p>
+                    <div id="r2alertBtn">OK</div>
+                </div>
+            </div>
             <div class="room02ImgBox">
                 <img src="./styles/images/room02/prevPage.png" alt="" class="prevPage" id="r2-prevPage">
                 <div class="textBox">
@@ -329,6 +344,12 @@
             <img src="./styles/images/index7/card.png" alt="" class="card" id="r3-card">
             <img src="./styles/images/index7/card-right.png" alt="" class="card-right" id="r3-card-right">
             <img src="./styles/images/index7/card-left.png" alt="" class="card-left" id="r3-card-left">
+        </div>
+        <div id="r3alertPage">
+            <div id="r3alertBox" class="alertBox">
+                <p id="r3alertText">密碼正確</p>
+                <div id="r3alertBtn">OK</div>
+            </div>
         </div>
         <div class="room03ImgBox">
             <img src="./styles/images/room03/prevPage.png" alt="" class="prevPage" id="r3-prevPage">
@@ -396,6 +417,12 @@
             <img src="./styles/images/index4/card.png" alt="" class="card" id="r4-card">
             <img src="./styles/images/index4/card-right.png" alt="" class="card-right" id="r4-card-right">
             <img src="./styles/images/index4/card-left.png" alt="" class="card-left" id="r4-card-left">
+        </div>
+        <div id="r4alertPage">
+            <div id="r4alertBox" class="alertBox">
+                <p id="r4alertText">密碼正確</p>
+                <div id="r4alertBtn">OK</div>
+            </div>
         </div>
         <div class="room04ImgBox">
             <img src="./styles/images/room04/prevPage.png" alt="" class="prevPage" id="r4-prevPage">
@@ -468,6 +495,12 @@
             <img src="./styles/images/index5/card-right.png" alt="" class="card-right" id="r5-card-right">
             <img src="./styles/images/index5/card-left.png" alt="" class="card-left" id="r5-card-left">
         </div>
+        <div id="r5alertPage">
+            <div id="r5alertBox" class="alertBox">
+                <p id="r5alertText">密碼正確</p>
+                <div id="r5alertBtn">OK</div>
+            </div>
+        </div>
         <div class="room05ImgBox">
             <img src="./styles/images/room05/prevPage.png" alt="" class="prevPage" id="r5-prevPage">
             <div class="textBox">
@@ -517,142 +550,152 @@
     </div>
 
 
-      <div id="room06">
-                <div class="bgimg" id="room06Bg">
-                    <img src="./styles/images/room06/bg2.png" alt="">
-                </div>
-                
-                <div class="room" id="bg02">
-                    <img src="./styles/images/index6/bg.png" alt="" class="background" id="r6-background">
-                    <img src="./styles/images/index6/peple.png" alt="" class="people" id="r6-people">
-                    <img src="./styles/images/index6/card.png" alt="" class="card" id="r6-card">
-                    <img src="./styles/images/index6/card-right.png" alt="" class="card-right" id="r6-card-right">
-                    <img src="./styles/images/index6/card-left.png" alt="" class="card-left" id="r6-card-left">
-                </div>
-
-                <div class="room06ImgBox">
-                    <!-- <img src="./styles/images/room06/bg2.png" alt="" id="room06Bg"> -->
-                    <img src="./styles/images/room06/prevPage.png" alt="" class="prevPage" id="r6-prevPage">
-                    <div class="textBox">
-                        <p class="roomText" id="room06Text"></p>
-                    </div>
-                    <img src="./styles/images/room06/people.png" alt="" id="room06People">
-                    <input type="text" class="password" id="r6Password" autocomplete="off">
-                    <div class="r6botoomBorder" id="r6border1"></div>
-                    <div class="r6botoomBorder" id="r6border2"></div>
-                    <div class="r6botoomBorder" id="r6border3"></div>
-                    <div class="r6botoomBorder" id="r6border4"></div>
-                    <img src="./styles/images/room06/enter.png" alt="" class="roomEnter" id="r6Enter">
-                    <img src="./styles/images/room06/eyeBtn.png" alt="" class="roomBtn" id="r6eyeBtn">
-                    <img src="./styles/images/room06/faceBtn.png" alt="" class="roomBtn" id="r6faceBtn">
-                    <img src="./styles/images/room06/makeupBtn.png" alt="" class="roomBtn" id="r6makeupBtn">
-                    <img src="./styles/images/room06/noseBtn.png" alt="" class="roomBtn" id="r6noseBtn">
-                    <img src="./styles/images/room06/bells.png" alt="" id="r6bells">
-                    <div id="r6bellshover"></div>
-                    <img src="./styles/images/room06/changeeye.png" alt="" id="r6face">
-                    <img src="./styles/images/room06/follow.png" alt="" id="r6follow">
-                    <img src="./styles/images/room06/app.png" alt="" id="r6photo">
-                    <img src="./styles/images/room06/editimg.png" alt="" id="r6editimg">
-                    <img src="./styles/images/room06/vase.png" alt="" id="r6vase">
-                    <img src="./styles/images/room06/Venus1.png" alt="" id="r6venus">
-                    <div id="r6touchFollow"></div>
-                    
-                    <div id="r6venusBox"></div>
-                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike1">
-                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike2">
-                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike3">
-                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike4">
-                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike5">
-                    <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike6">
-
-                    <div id="cartBox"></div>
-                    <div id="liveNum">0000+</div>
-                    <img src="./styles/images/room06/msg1.png" alt="" id="r6msg1">
-                    <img src="./styles/images/room06/msg2.png" alt="" id="r6msg2">
-                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove1">
-                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove2">
-                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove3">
-                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove4">
-                    <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove5">
-
-                    <img src="./styles/images/room06/Venus2.png" alt="" id="r6venus2">
-                    <img src="./styles/images/room06/love.png" alt=""  id="r6love1">
-                    <img src="./styles/images/room06/love.png" alt=""  id="r6love2">
-                    <img src="./styles/images/room06/love.png" alt=""  id="r6love3">
-                    <img src="./styles/images/room06/love.png" alt=""  id="r6love4">
-                    <img src="./styles/images/room06/love.png" alt=""  id="r6love5">
-
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow1">
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow2">
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow3">
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow4">
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow5">
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow6">
-                    <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow7">
-
-                    
-                </div>
-      </div>
-
-
-
-      <div id="room07">
-            <div class="bgimg" id="room07Bg">
-                <img src="./styles/images/room07/zip.png" alt="">
+    <div id="room06">
+            <div class="bgimg" id="room06Bg">
+                <img src="./styles/images/room06/bg2.png" alt="">
             </div>
             
-            <div class="room" id="bg01">
-                <img src="./styles/images/index2/bg.png" alt="" class="background" id="r7-background">
-                <img src="./styles/images/index2/peple.png" alt="" class="people" id="r7-people">
-                <img src="./styles/images/index2/card.png" alt="" class="card" id="r7-card">
-                <img src="./styles/images/index2/card-right.png" alt="" class="card-right" id="r7-card-right">
-                <img src="./styles/images/index2/card-left.png" alt="" class="card-left" id="r7-card-left">
+            <div class="room" id="bg02">
+                <img src="./styles/images/index6/bg.png" alt="" class="background" id="r6-background">
+                <img src="./styles/images/index6/peple.png" alt="" class="people" id="r6-people">
+                <img src="./styles/images/index6/card.png" alt="" class="card" id="r6-card">
+                <img src="./styles/images/index6/card-right.png" alt="" class="card-right" id="r6-card-right">
+                <img src="./styles/images/index6/card-left.png" alt="" class="card-left" id="r6-card-left">
             </div>
-
-            <div class="room07ImgBox">
-                <img src="./styles/images/room07/prevPage.png" alt="" class="prevPage" id="r7-prevPage">
+            <div id="r6alertPage">
+                <div id="r6alertBox" class="alertBox">
+                    <p id="r6alertText">密碼正確</p>
+                    <div id="r6alertBtn">OK</div>
+                </div>
+            </div>
+            <div class="room06ImgBox">
+                <!-- <img src="./styles/images/room06/bg2.png" alt="" id="room06Bg"> -->
+                <img src="./styles/images/room06/prevPage.png" alt="" class="prevPage" id="r6-prevPage">
                 <div class="textBox">
-                    <p class="roomText" id="room07Text"></p>
+                    <p class="roomText" id="room06Text"></p>
                 </div>
-                <img src="./styles/images/room07/people.png" alt="" id="room07People">
-                <input type="text" class="password" id="r7Password" autocomplete="off">
-                <div class="r7botoomBorder" id="r7border1"></div>
-                <div class="r7botoomBorder" id="r7border2"></div>
-                <div class="r7botoomBorder" id="r7border3"></div>
-                <div class="r7botoomBorder" id="r7border4"></div>
-                <img src="./styles/images/room07/enter.png" alt="" class="roomEnter" id="r7Enter">
-                <img src="./styles/images/room07/zenly.png" alt="" class="roomZenly" id="r7Zenly">
-                <img src="./styles/images/room07/yellowlove.png" alt="" class="yellowlove" id="r7YellowLove">
-                <img src="./styles/images/room07/redlove.png" alt="" class="redlove" id="r7RedLove">
-                <div id="r7hoverLove"></div>
-                <img src="./styles/images/room07/bird.png" alt="" id="r7Bird">
-                <img src="./styles/images/room07/foot.png" alt="" id="r7foot">
-                <img src="./styles/images/room07/cupid.png" alt="" id="r7cupid">
-                <img src="./styles/images/room07/puppet.png" alt="" id="r7puppet">
-                <img src="./styles/images/room07/GPS.png" alt="" id="r7Gps">
-                <div id="r7hoverGPS"></div>
-                <div id="r7talkBox">
-                    <img src="./styles/images/room07/talkhover.png" alt="" id="r7talkhover">
-                    <img src="./styles/images/room07/talk.png" alt="" id="r7talk">
-                </div>
-                <div id="r7sabrinaBox">
-                        <img src="./styles/images/room07/sabrinahover.png" alt="" id="r7sabrinahover">
-                        <img src="./styles/images/room07/sabrina.png" alt="" id="r7sabrina">
-                </div>
-                <img src="./styles/images/room07/butterfly.png" alt="" id="r7Butterfly">
-                <div id="r7fishBox">
-                    <img src="./styles/images/room07/leftfish.png" alt="" id="r7leftfish">
-                    <img src="./styles/images/room07/rightfish.png" alt=""  id="r7rightfish">
-                </div>
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow1">
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow2">
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow3">
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow4">
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow5">
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow6">
-                <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow7">
+                <img src="./styles/images/room06/people.png" alt="" id="room06People">
+                <input type="text" class="password" id="r6Password" autocomplete="off">
+                <div class="r6botoomBorder" id="r6border1"></div>
+                <div class="r6botoomBorder" id="r6border2"></div>
+                <div class="r6botoomBorder" id="r6border3"></div>
+                <div class="r6botoomBorder" id="r6border4"></div>
+                <img src="./styles/images/room06/enter.png" alt="" class="roomEnter" id="r6Enter">
+                <img src="./styles/images/room06/eyeBtn.png" alt="" class="roomBtn" id="r6eyeBtn">
+                <img src="./styles/images/room06/faceBtn.png" alt="" class="roomBtn" id="r6faceBtn">
+                <img src="./styles/images/room06/makeupBtn.png" alt="" class="roomBtn" id="r6makeupBtn">
+                <img src="./styles/images/room06/noseBtn.png" alt="" class="roomBtn" id="r6noseBtn">
+                <img src="./styles/images/room06/bells.png" alt="" id="r6bells">
+                <div id="r6bellshover"></div>
+                <img src="./styles/images/room06/changeeye.png" alt="" id="r6face">
+                <img src="./styles/images/room06/follow.png" alt="" id="r6follow">
+                <img src="./styles/images/room06/app.png" alt="" id="r6photo">
+                <img src="./styles/images/room06/editimg.png" alt="" id="r6editimg">
+                <img src="./styles/images/room06/vase.png" alt="" id="r6vase">
+                <img src="./styles/images/room06/Venus1.png" alt="" id="r6venus">
+                <div id="r6touchFollow"></div>
+                
+                <div id="r6venusBox"></div>
+                <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike1">
+                <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike2">
+                <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike3">
+                <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike4">
+                <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike5">
+                <img src="./styles/images/room06/biglike.png" alt="" class="r6like" id="r6biglike6">
+
+                <div id="cartBox"></div>
+                <div id="liveNum">0000+</div>
+                <img src="./styles/images/room06/msg1.png" alt="" id="r6msg1">
+                <img src="./styles/images/room06/msg2.png" alt="" id="r6msg2">
+                <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove1">
+                <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove2">
+                <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove3">
+                <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove4">
+                <img src="./styles/images/room06/love.png" alt="" class="r6liveLove" id="r6liveLove5">
+
+                <img src="./styles/images/room06/Venus2.png" alt="" id="r6venus2">
+                <img src="./styles/images/room06/love.png" alt=""  id="r6love1">
+                <img src="./styles/images/room06/love.png" alt=""  id="r6love2">
+                <img src="./styles/images/room06/love.png" alt=""  id="r6love3">
+                <img src="./styles/images/room06/love.png" alt=""  id="r6love4">
+                <img src="./styles/images/room06/love.png" alt=""  id="r6love5">
+
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow1">
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow2">
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow3">
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow4">
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow5">
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow6">
+                <img src="./styles/images/room06/zip_.png" alt="" class="r6arrow" id="r6arrow7">
+
+                
             </div>
+    </div>
+
+
+
+    <div id="room07">
+        <div class="bgimg" id="room07Bg">
+            <img src="./styles/images/room07/zip.png" alt="">
         </div>
+        
+        <div class="room" id="bg01">
+            <img src="./styles/images/index2/bg.png" alt="" class="background" id="r7-background">
+            <img src="./styles/images/index2/peple.png" alt="" class="people" id="r7-people">
+            <img src="./styles/images/index2/card.png" alt="" class="card" id="r7-card">
+            <img src="./styles/images/index2/card-right.png" alt="" class="card-right" id="r7-card-right">
+            <img src="./styles/images/index2/card-left.png" alt="" class="card-left" id="r7-card-left">
+        </div>
+        <div id="r7alertPage">
+                <div id="r7alertBox" class="alertBox">
+                    <p id="r7alertText">密碼正確</p>
+                    <div id="r7alertBtn">OK</div>
+                </div>
+            </div>
+        <div class="room07ImgBox">
+            <img src="./styles/images/room07/prevPage.png" alt="" class="prevPage" id="r7-prevPage">
+            <div class="textBox">
+                <p class="roomText" id="room07Text"></p>
+            </div>
+            <img src="./styles/images/room07/people.png" alt="" id="room07People">
+            <input type="text" class="password" id="r7Password" autocomplete="off">
+            <div class="r7botoomBorder" id="r7border1"></div>
+            <div class="r7botoomBorder" id="r7border2"></div>
+            <div class="r7botoomBorder" id="r7border3"></div>
+            <div class="r7botoomBorder" id="r7border4"></div>
+            <img src="./styles/images/room07/enter.png" alt="" class="roomEnter" id="r7Enter">
+            <img src="./styles/images/room07/zenly.png" alt="" class="roomZenly" id="r7Zenly">
+            <img src="./styles/images/room07/yellowlove.png" alt="" class="yellowlove" id="r7YellowLove">
+            <img src="./styles/images/room07/redlove.png" alt="" class="redlove" id="r7RedLove">
+            <div id="r7hoverLove"></div>
+            <img src="./styles/images/room07/bird.png" alt="" id="r7Bird">
+            <img src="./styles/images/room07/foot.png" alt="" id="r7foot">
+            <img src="./styles/images/room07/cupid.png" alt="" id="r7cupid">
+            <img src="./styles/images/room07/puppet.png" alt="" id="r7puppet">
+            <img src="./styles/images/room07/GPS.png" alt="" id="r7Gps">
+            <div id="r7hoverGPS"></div>
+            <div id="r7talkBox">
+                <img src="./styles/images/room07/talkhover.png" alt="" id="r7talkhover">
+                <img src="./styles/images/room07/talk.png" alt="" id="r7talk">
+            </div>
+            <div id="r7sabrinaBox">
+                    <img src="./styles/images/room07/sabrinahover.png" alt="" id="r7sabrinahover">
+                    <img src="./styles/images/room07/sabrina.png" alt="" id="r7sabrina">
+            </div>
+            <img src="./styles/images/room07/butterfly.png" alt="" id="r7Butterfly">
+            <div id="r7fishBox">
+                <img src="./styles/images/room07/leftfish.png" alt="" id="r7leftfish">
+                <img src="./styles/images/room07/rightfish.png" alt=""  id="r7rightfish">
+            </div>
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow1">
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow2">
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow3">
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow4">
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow5">
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow6">
+            <img src="./styles/images/room07/zip_.png" alt="" class="r7arrow" id="r7arrow7">
+        </div>
+    </div>
 </div>
         <div id="room01pass"><p style="color:#fff;">第一關過關</p></div>
         <div id="room02pass"><p style="color:#fff;">第二關過關</p></div>

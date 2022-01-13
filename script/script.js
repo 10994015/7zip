@@ -97,7 +97,10 @@ var r1typeBox = document.getElementById('r1typeBox');
 var r1typeText = document.getElementById('r1typeText');
 var r1flash  = document.getElementById('r1flash');
 var r1cloud = document.getElementById('r1cloud');
-yes[0].addEventListener("click",openRoom01)
+var r1alertPage = document.getElementById('r1alertPage');
+var r1alertText = document.getElementById('r1alertText');
+var r1alertBtn = document.getElementById('r1alertBtn');
+yes[0].addEventListener("click",openRoom01);
 function openRoom01(){
     main.style.display = "none";
     room01.style.display = "block";
@@ -271,11 +274,31 @@ function openRoom01(){
     r1typeBox.addEventListener("mouseout",()=>{
         r1typeText.style.display = "none";
     })
+    r1Enter.addEventListener("mousedown",()=>{
+        r1Enter.src="./styles/images/room01/enter2.png";
+    })
+    r1Enter.addEventListener("mouseup",()=>{
+        r1Enter.src="./styles/images/room01/enter.png";
+    })
     r1Enter.addEventListener("click",()=>{
-        if(r1Password.value!="1204") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room01.style.display = "none";
-        room01pass.style.display = "block";
+        if(r1Password.value!="1204"){
+            r1alertText.innerHTML = "密碼錯誤"
+            r1alertPage.style.display = "block";
+            return;
+        }
+        r1alertText.innerHTML = "密碼正確"
+        r1alertPage.style.display = "block";
+    })
+    r1alertBtn.addEventListener("click",()=>{
+        if(r1alertText.innerHTML == "密碼錯誤"){
+            r1alertPage.style.display = "none";
+            return;
+        }
+        if(r1alertText.innerHTML == "密碼正確"){
+            room01.style.display = "none";
+            room01pass.style.display = "block";
+            r1alertPage.style.display = "none";
+        }
     })
     r1Password.addEventListener("keydown",(e)=>{
         if(e.keyCode !== 13) return; 
@@ -284,12 +307,16 @@ function openRoom01(){
     r1Password.addEventListener("keyup",(e)=>{
         if(e.keyCode !== 13) return; 
         r1Enter.src="./styles/images/room01/enter.png";
-        if(r1Password.value!=="1204") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room01.style.display = "none";
-        room01pass.style.display = "block";
+        if(r1Password.value!="1204"){
+            r1alertText.innerHTML = "密碼錯誤"
+            r1alertPage.style.display = "block";
+            return;
+        }
+        r1alertText.innerHTML = "密碼正確"
+        r1alertPage.style.display = "block";
         
     })
+    
     setInterval(()=>{
         r1arrow[0].style.opacity = 0;
         r1arrow[1].style.opacity = 0;
@@ -425,6 +452,9 @@ var r2play = document.getElementById('r2play');
 var r2bullet = document.getElementById('r2bullet');
 var r2playBox = document.getElementById('r2playBox');
 var r2arrow = document.getElementsByClassName('r2arrow');
+var r2alertPage = document.getElementById('r2alertPage');
+var r2alertText = document.getElementById('r2alertText');
+var r2alertBtn = document.getElementById('r2alertBtn');
 yes[1].addEventListener("click",openRoom02);
 function openRoom02(){
     main.style.display = "none";
@@ -562,11 +592,31 @@ function openRoom02(){
         r2bullet.style.opacity = "0";
         r2bullet.style.animation = "none";
     })
+    r2Enter.addEventListener("mousedown",()=>{
+        r2Enter.src="./styles/images/room02/enter2.png";
+    })
+    r2Enter.addEventListener("mouseup",()=>{
+        r2Enter.src="./styles/images/room02/enter.png";
+    })
     r2Enter.addEventListener("click",()=>{
-        if(r2Password.value!="0923") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room02.style.display = "none";
-        room02pass.style.display = "block";
+        if(r2Password.value!="0923"){
+            r2alertText.innerHTML = "密碼錯誤"
+            r2alertPage.style.display = "block";
+            return;
+        }
+        r2alertText.innerHTML = "密碼正確"
+        r2alertPage.style.display = "block";
+    })
+    r2alertBtn.addEventListener("click",()=>{
+        if(r2alertText.innerHTML == "密碼錯誤"){
+            r2alertPage.style.display = "none";
+            return;
+        }
+        if(r2alertText.innerHTML == "密碼正確"){
+            room02.style.display = "none";
+            room02pass.style.display = "block";
+            r2alertPage.style.display = "none";
+        }
     })
     r2Password.addEventListener("keydown",(e)=>{
         if(e.keyCode !== 13) return; 
@@ -575,10 +625,13 @@ function openRoom02(){
     r2Password.addEventListener("keyup",(e)=>{
         if(e.keyCode !== 13) return; 
         r2Enter.src="./styles/images/room02/enter.png";
-        if(r2Password.value!=="0923") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room02.style.display = "none";
-        room02pass.style.display = "block";
+        if(r2Password.value!="0923"){
+            r2alertText.innerHTML = "密碼錯誤"
+            r2alertPage.style.display = "block";
+            return;
+        }
+        r2alertText.innerHTML = "密碼正確"
+        r2alertPage.style.display = "block";
         
     })
     setInterval(()=>{
@@ -719,6 +772,9 @@ var r3detailsBox = document.getElementById('r3detailsBox');
 var r3item = document.getElementsByClassName('r3item');
 var r3plateBox = document.getElementById('r3plateBox');
 var r3candyhouseBox = document.getElementById('r3candyhouseBox');
+var r3alertPage = document.getElementById('r3alertPage');
+var r3alertText = document.getElementById('r3alertText');
+var r3alertBtn = document.getElementById('r3alertBtn');
 yes[2].addEventListener("click",openRoom03)
 function openRoom03(){
     main.style.display = "none";
@@ -924,12 +980,32 @@ function openRoom03(){
             r3arrow[6].style.opacity = 0;
         },4000)
     },4000)
-
+    r3Enter.addEventListener("mousedown",()=>{
+        r3Enter.src="./styles/images/room03/enter2.png";
+    })
+    r3Enter.addEventListener("mouseup",()=>{
+        r3Enter.src="./styles/images/room03/enter.png";
+    })
     r3Enter.addEventListener("click",()=>{
-        if(r3Password.value!="1800") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room03.style.display = "none";
-        room03pass.style.display = "block";
+        if(r3Password.value!="1800"){
+            r3alertText.innerHTML = "密碼錯誤"
+            r3alertPage.style.display = "block";
+            return;
+        }
+        r3alertText.innerHTML = "密碼正確"
+        r3alertPage.style.display = "block";
+    })
+    r3alertBtn.addEventListener("click",()=>{
+        if(r3alertText.innerHTML == "密碼錯誤"){
+            r3alertPage.style.display = "none";
+            return;
+        }
+        if(r3alertText.innerHTML == "密碼正確"){
+            room03.style.display = "none";
+            room03pass.style.display = "block";
+            r3alertPage.style.display = "none";
+
+        }
     })
     r3Password.addEventListener("keydown",(e)=>{
         if(e.keyCode !== 13) return; 
@@ -938,10 +1014,13 @@ function openRoom03(){
     r3Password.addEventListener("keyup",(e)=>{
         if(e.keyCode !== 13) return; 
         r3Enter.src="./styles/images/room03/enter.png";
-        if(r3Password.value!=="1800") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room03.style.display = "none";
-        room03pass.style.display = "block";
+        if(r3Password.value!="1800"){
+            r3alertText.innerHTML = "密碼錯誤"
+            r3alertPage.style.display = "block";
+            return;
+        }
+        r3alertText.innerHTML = "密碼正確"
+        r3alertPage.style.display = "block";
     })
     r3PrevPage.addEventListener("click",()=>{
         times = -1;
@@ -1043,6 +1122,9 @@ var r4gold2 = document.getElementById('r4gold2');
 var r4gold3 = document.getElementById('r4gold3');
 var r4gold4 = document.getElementById('r4gold4');
 var r4gold5 = document.getElementById('r4gold5');
+var r4alertPage = document.getElementById('r4alertPage');
+var r4alertText = document.getElementById('r4alertText');
+var r4alertBtn = document.getElementById('r4alertBtn');
 yes[3].addEventListener("click",openRoom04)
 function openRoom04(){
     main.style.display = "none";
@@ -1270,12 +1352,32 @@ function openRoom04(){
             r4arrow[6].style.opacity = 0;
         },4000)
     },4000)
-
+    r4Enter.addEventListener("mousedown",()=>{
+        r4Enter.src="./styles/images/room04/enter2.png";
+    })
+    r4Enter.addEventListener("mouseup",()=>{
+        r4Enter.src="./styles/images/room04/enter.png";
+    })
     r4Enter.addEventListener("click",()=>{
-        if(r4Password.value!="10350") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room04.style.display = "none";
-        room04pass.style.display = "block";
+        if(r4Password.value!="10350"){
+            r4alertText.innerHTML = "密碼錯誤"
+            r4alertPage.style.display = "block";
+            return;
+        }
+        r4alertText.innerHTML = "密碼正確"
+        r4alertPage.style.display = "block";
+    })
+    r4alertBtn.addEventListener("click",()=>{
+        if(r4alertText.innerHTML == "密碼錯誤"){
+            r4alertPage.style.display = "none";
+            return;
+        }
+        if(r4alertText.innerHTML == "密碼正確"){
+            room04.style.display = "none";
+            room04pass.style.display = "block";
+            r4alertPage.style.display = "none";
+
+        }
     })
     r4Password.addEventListener("keydown",(e)=>{
         if(e.keyCode !== 13) return; 
@@ -1284,10 +1386,13 @@ function openRoom04(){
     r4Password.addEventListener("keyup",(e)=>{
         if(e.keyCode !== 13) return; 
         r4Enter.src="./styles/images/room04/enter.png";
-        if(r4Password.value!=="10350") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room04.style.display = "none";
-        room04pass.style.display = "block";
+        if(r4Password.value!="10350"){
+            r4alertText.innerHTML = "密碼錯誤"
+            r4alertPage.style.display = "block";
+            return;
+        }
+        r4alertText.innerHTML = "密碼正確"
+        r4alertPage.style.display = "block";
         
     })
     r4PrevPage.addEventListener("click",()=>{
@@ -1372,6 +1477,9 @@ var r5view = document.getElementById('r5view');
 var r5light = document.getElementById('r5light');
 var r5handBox = document.getElementById('r5handBox');
 var r5hand = document.getElementById('r5hand');
+var r5alertPage = document.getElementById('r5alertPage');
+var r5alertText = document.getElementById('r5alertText');
+var r5alertBtn = document.getElementById('r5alertBtn');
 yes[4].addEventListener("click",openRoom05)
 function openRoom05(){
     main.style.display = "none";
@@ -1492,12 +1600,32 @@ function openRoom05(){
         room05Text.innerHTML = "";
         r5view.style.animation = "none";
     })
-
+    r5Enter.addEventListener("mousedown",()=>{
+        r5Enter.src="./styles/images/room05/enter2.png";
+    })
+    r5Enter.addEventListener("mouseup",()=>{
+        r5Enter.src="./styles/images/room05/enter.png";
+    })
     r5Enter.addEventListener("click",()=>{
-        if(r5Password.value!="0814") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room05.style.display = "none";
-        room05pass.style.display = "block";
+        if(r5Password.value!="0814"){
+            r5alertText.innerHTML = "密碼錯誤"
+            r5alertPage.style.display = "block";
+            return;
+        }
+        r5alertText.innerHTML = "密碼正確"
+        r5alertPage.style.display = "block";
+    })
+    r5alertBtn.addEventListener("click",()=>{
+        if(r5alertText.innerHTML == "密碼錯誤"){
+            r5alertPage.style.display = "none";
+            return;
+        }
+        if(r5alertText.innerHTML == "密碼正確"){
+            room05.style.display = "none";
+            room05pass.style.display = "block";
+            r5alertPage.style.display = "none";
+
+        }
     })
     r5Password.addEventListener("keydown",(e)=>{
         if(e.keyCode !== 13) return; 
@@ -1506,10 +1634,13 @@ function openRoom05(){
     r5Password.addEventListener("keyup",(e)=>{
         if(e.keyCode !== 13) return; 
         r5Enter.src="./styles/images/room05/enter.png";
-        if(r5Password.value!=="0814") return alert("密碼錯誤");
-        alert("密碼正確!");
-        room05.style.display = "none";
-        room05pass.style.display = "block";
+        if(r5Password.value!="0814"){
+            r5alertText.innerHTML = "密碼錯誤";
+            r5alertPage.style.display = "block";
+            return;
+        }
+        r5alertText.innerHTML = "密碼正確";
+        r5alertPage.style.display = "block";
         
     })
     setInterval(()=>{
@@ -1663,6 +1794,10 @@ var liveadd = null;
 var room06People = document.getElementById('room06People');
 var r6arrow = document.getElementsByClassName('r6arrow');
 var r6botoomBorder = document.getElementsByClassName('r6botoomBorder');
+
+var r6alertPage = document.getElementById('r6alertPage');
+var r6alertText = document.getElementById('r6alertText');
+var r6alertBtn = document.getElementById('r6alertBtn');
 
 yes[5].addEventListener("click",openRoom06)
 function openRoom06(){
@@ -1892,11 +2027,32 @@ r6venus2.addEventListener("mouseout",()=>{
     room06Text.style.opacity = "0";
     room06Text.innerHTML = "";
 })
+r6Enter.addEventListener("mousedown",()=>{
+    r6Enter.src="./styles/images/room06/enter2.png";
+})
+r6Enter.addEventListener("mouseup",()=>{
+    r6Enter.src="./styles/images/room06/enter.png";
+})
 r6Enter.addEventListener("click",()=>{
-    if(r6Password.value!="2954") return alert("密碼錯誤");
-    alert("密碼正確!");
-    room06.style.display = "none";
-    room06pass.style.display = "block";
+    if(r6Password.value!="2954"){
+        r6alertText.innerHTML = "密碼錯誤"
+        r6alertPage.style.display = "block";
+        return;
+    }
+    r6alertText.innerHTML = "密碼正確"
+    r6alertPage.style.display = "block";
+})
+r6alertBtn.addEventListener("click",()=>{
+    if(r6alertText.innerHTML == "密碼錯誤"){
+        r6alertPage.style.display = "none";
+        return;
+    }
+    if(r6alertText.innerHTML == "密碼正確"){
+        room06.style.display = "none";
+        room06pass.style.display = "block";
+        r6alertPage.style.display = "none";
+
+    }
 })
 r6Password.addEventListener("keydown",(e)=>{
     if(e.keyCode !== 13) return; 
@@ -1905,10 +2061,13 @@ r6Password.addEventListener("keydown",(e)=>{
 r6Password.addEventListener("keyup",(e)=>{
     if(e.keyCode !== 13) return; 
     r6Enter.src="./styles/images/room06/enter.png";
-    if(r6Password.value!=="2954") return alert("密碼錯誤");
-    alert("密碼正確!");
-    room06.style.display = "none";
-    room06pass.style.display = "block";
+    if(r6Password.value!="2954"){
+        r6alertText.innerHTML = "密碼錯誤"
+        r6alertPage.style.display = "block";
+        return;
+    }
+    r6alertText.innerHTML = "密碼正確"
+    r6alertPage.style.display = "block";
     
 })
 setInterval(()=>{
@@ -2036,6 +2195,9 @@ var roomEnter = document.getElementsByClassName('roomEnter');
 var room07People  =document.getElementById('room07People');
 var r7arrow = document.getElementsByClassName('r7arrow');
 var r7botoomBorder = document.getElementsByClassName('r7botoomBorder');
+var r7alertPage = document.getElementById('r7alertPage');
+var r7alertText = document.getElementById('r7alertText');
+var r7alertBtn = document.getElementById('r7alertBtn');
 yes[6].addEventListener("click",openRoom07)
 function openRoom07(){
     main.style.display = "none";
@@ -2171,12 +2333,27 @@ r7Enter.addEventListener("mouseup",()=>{
     r7Enter.src="./styles/images/room07/enter.png";
 })
 r7Enter.addEventListener("click",()=>{
-    if(r7Password.value!="3691") return alert("密碼錯誤");
-    alert("密碼正確!");
-    room07.style.display = "none";
-    room07pass.style.display = "block";
+    if(r7Password.value!="3691"){
+        r7alertText.innerHTML = "密碼錯誤"
+        r7alertPage.style.display = "block";
+        return;
+    }
+    r7alertText.innerHTML = "密碼正確"
+    r7lertPage.style.display = "block";
+
     passmainNum = 7;
     p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
+})
+r7alertBtn.addEventListener("click",()=>{
+    if(r7alertText.innerHTML == "密碼錯誤"){
+        r7alertPage.style.display = "none";
+        return;
+    }
+    if(r7alertText.innerHTML == "密碼正確"){
+        room07.style.display = "none";
+        room07pass.style.display = "block";
+        r7alertPage.style.display = "none";
+    }
 })
 r7Password.addEventListener("keydown",(e)=>{
     if(e.keyCode !== 13) return; 
@@ -2185,10 +2362,14 @@ r7Password.addEventListener("keydown",(e)=>{
 r7Password.addEventListener("keyup",(e)=>{
     if(e.keyCode !== 13) return; 
     r7Enter.src="./styles/images/room07/enter.png";
-    if(r7Password.value!=="3691") return alert("密碼錯誤");
-    alert("密碼正確!");
-    room07.style.display = "none";
-    room07pass.style.display = "block";
+    if(r7Password.value!="3691"){
+        r7alertText.innerHTML = "密碼錯誤"
+        r7alertPage.style.display = "block";
+        return;
+    }
+    r7alertText.innerHTML = "密碼正確"
+    r7alertPage.style.display = "block";
+
     passmainNum = 7;
     p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
 })
