@@ -18,6 +18,10 @@
     font-family: MANROPE;
     src: url(./MANROPE/Manrope-Medium.ttf);
   }
+  @font-face {
+    font-family: fzyxb;
+    src: url('./font/FZYXB.TTF');
+  }
  html{
     font-family: MANROPE,MANROPE,Arial, Helvetica, sans-serif;
     overflow: hidden;
@@ -331,4 +335,22 @@ main{
 }
 #model0,#model1,#model2,#model3{
     display: none;
+}
+
+#p1-prevPage,
+#p2-prevPage,
+#p3-prevPage,
+#p4-prevPage,
+#p5-prevPage,
+#p6-prevPage{
+    border:none;
+    outline: none;
+    width:150px;
+    height: 35px;
+    border:#ccc solid 1px;
+    color:#ccc;
+    background-color: transparent;
+    font-family: fzyxb;
+    cursor: pointer;
+    margin-top: 10px;
 }

@@ -2,6 +2,10 @@
     font-family: yo;
     src: url('./font/源樣黑.ttf');
   }
+  @font-face {
+    font-family: fzyxb;
+    src: url('./font/FZYXB.TTF');
+  }
 #room07{
     width: 1400px;
     height: 672px;

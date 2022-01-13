@@ -1,3 +1,7 @@
+@font-face {
+    font-family: fzyxb;
+    src: url('./font/FZYXB.TTF');
+  }
 #room03{
     width: 1400px;
     height: 672px;
