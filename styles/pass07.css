@@ -21,16 +21,18 @@
 }
 #room07pass #room07passTop #p7box{
     position: absolute;
-    top: 199px;
-    left:1062px;
-    width:180px;
+    top: 250px;
+    left:1046px;
+    width:170px;
     height: auto;
     cursor: pointer;
 }
 #room07pass #room07passTop #p7-prevPage{
     position: absolute;
-    top: 0;
-    left:0;
+    top: 9px;
+    left:31px;
+    width:50px;
+    cursor: pointer;
 }
 #room07pass #room07passCenter{
     position: relative;
