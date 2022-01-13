@@ -357,8 +357,9 @@ function openRoom01(){
         },4000)
     },4000)
 
-    r1PrevPage.addEventListener("click",()=>{
-        times = -1;
+    r1PrevPage.addEventListener("click",clearR1room);
+function clearR1room(){
+    times = -1;
         eyeNum = 2;
         resetNum = 1;
         resetroomFn();
@@ -409,9 +410,9 @@ function openRoom01(){
         for(let a=0;a<r1arrow.length;a++){
             r1arrow[a].style.display = "none";
         }
-        
-    })
-
+        room01pass.style.display = "none";
+        r1Password.value = "";
+}
 // room01 END
 
 // room02
@@ -673,8 +674,9 @@ function openRoom02(){
             r2arrow[6].style.opacity = 0;
         },4000)
     },4000)
-    r2PrevPage.addEventListener("click",()=>{
-        times = 0;
+    r2PrevPage.addEventListener("click",clearR2room);
+function clearR2room(){
+    times = 0;
         eyeNum = 1;
         resetNum = 2;
         resetroomFn();
@@ -728,8 +730,9 @@ function openRoom02(){
         r2card.style.display = "block";
         r2cardRight.style.display = "block";
         r2cardLeft.style.display = "block"; 
-    })
-
+        room02pass.style.display = "none";
+        r2Password.value = "";
+}
 
 // room02 END
 
@@ -1022,63 +1025,64 @@ function openRoom03(){
         r3alertText.innerHTML = "密碼正確"
         r3alertPage.style.display = "block";
     })
-    r3PrevPage.addEventListener("click",()=>{
-        times = -1;
-        eyeNum = 2;
-        resetNum = 3;
-        resetroomFn();
-        downFn();
-        room03.style.display = "none";
-        main.style.display = "block";
-        model[0].style.display = "none";
-        model03.style.display = "none";
-        model1.style.display = "none";
-        model2.style.display = "none";
-        model3.style.display = "none";
-        room03Bg.style.opacity = "0";
-        room03People.style.display = "none";
-        room03Text.style.display = "none";
-        r3Enter.style.display = "none";
-        r3Password.style.display = "none";
-        r3Password.value="";
-        r3PrevPage.style.display = "none";
+    r3PrevPage.addEventListener("click",clearR3room);
+function clearR3room(){
+    times = -1;
+    eyeNum = 2;
+    resetNum = 3;
+    resetroomFn();
+    downFn();
+    room03.style.display = "none";
+    main.style.display = "block";
+    model[0].style.display = "none";
+    model03.style.display = "none";
+    model1.style.display = "none";
+    model2.style.display = "none";
+    model3.style.display = "none";
+    room03Bg.style.opacity = "0";
+    room03People.style.display = "none";
+    room03Text.style.display = "none";
+    r3Enter.style.display = "none";
+    r3Password.style.display = "none";
+    r3Password.value="";
+    r3PrevPage.style.display = "none";
 
-        r3imgslides.style.display = "none";
-        r3left.style.display = "none";
-        r3right.style.display = "none";
-        r3paint.style.display = "none";
-        r3couponBox.style.display = "none";
-        r3requestBox.style.display = "none";
-        r3usBox.style.display = "none";
-        r3storeBox.style.display = "none";
-        r3candyhouse.style.display = "none";
-        r3chick.style.display = "none";
-        r3cover.style.display = "none";
-        r3motorcycle.style.display = "none";
-        r3hourglass.style.display = "none";
-        r3hourglassBox.style.display = "none";
-        r3window.style.display = "none";
-        r3mosaic.style.display = "none";
-        r3detailsBox.style.display = "none";
-        r3plateBox.style.display = "none";
-        r3candyhouseBox.style.display = "none";
-        for(let s=0;s<r3imgslide.length;s++){
-            r3imgslide[s].style.display = "none";
+    r3imgslides.style.display = "none";
+    r3left.style.display = "none";
+    r3right.style.display = "none";
+    r3paint.style.display = "none";
+    r3couponBox.style.display = "none";
+    r3requestBox.style.display = "none";
+    r3usBox.style.display = "none";
+    r3storeBox.style.display = "none";
+    r3candyhouse.style.display = "none";
+    r3chick.style.display = "none";
+    r3cover.style.display = "none";
+    r3motorcycle.style.display = "none";
+    r3hourglass.style.display = "none";
+    r3hourglassBox.style.display = "none";
+    r3window.style.display = "none";
+    r3mosaic.style.display = "none";
+    r3detailsBox.style.display = "none";
+    r3plateBox.style.display = "none";
+    r3candyhouseBox.style.display = "none";
+    for(let s=0;s<r3imgslide.length;s++){
+        r3imgslide[s].style.display = "none";
+    }
+    
+    r3people.style.display = "block";
+    r3card.style.display = "block";
+    r3cardRight.style.display = "block";
+    r3cardLeft.style.display = "block"; 
+    for(let b=0;b<r3botoomBorder.length;b++){
+            r3botoomBorder[b].style.display = "none";
         }
-        
-        r3people.style.display = "block";
-        r3card.style.display = "block";
-        r3cardRight.style.display = "block";
-        r3cardLeft.style.display = "block"; 
-        for(let b=0;b<r3botoomBorder.length;b++){
-                r3botoomBorder[b].style.display = "none";
-            }
-        for(let a=0;a<r3arrow.length;a++){
-            r3arrow[a].style.display = "none";
-        }
-        
-    })
-
+    for(let a=0;a<r3arrow.length;a++){
+        r3arrow[a].style.display = "none";
+    }
+    room03pass.style.display = "none";
+    r3Password.value = "";
+}
 // room03 END
 
 // room04 
@@ -1395,53 +1399,54 @@ function openRoom04(){
         r4alertPage.style.display = "block";
         
     })
-    r4PrevPage.addEventListener("click",()=>{
-        times = -2;
-        eyeNum = 3;
-        resetNum = 4;
-        resetroomFn();
-        downFn();
-        room04.style.display = "none";
-        main.style.display = "block";
-        model[0].style.display = "none";
-        model04.style.display = "none";
-        model1.style.display = "none";
-        model2.style.display = "none";
-        model3.style.display = "none";
-        room04Bg.style.opacity = "0";
-        room04People.style.display = "none";
-        room04Text.style.display = "none";
-        r4Enter.style.display = "none";
-        r4Password.style.display = "none";
-        r4Password.value="";
-        r4PrevPage.style.display = "none";
+    r4PrevPage.addEventListener("click",clearR4room);
+function clearR4room(){
+    times = -2;
+    eyeNum = 3;
+    resetNum = 4;
+    resetroomFn();
+    downFn();
+    room04.style.display = "none";
+    main.style.display = "block";
+    model[0].style.display = "none";
+    model04.style.display = "none";
+    model1.style.display = "none";
+    model2.style.display = "none";
+    model3.style.display = "none";
+    room04Bg.style.opacity = "0";
+    room04People.style.display = "none";
+    room04Text.style.display = "none";
+    r4Enter.style.display = "none";
+    r4Password.style.display = "none";
+    r4Password.value="";
+    r4PrevPage.style.display = "none";
 
-        r4productBox1.style.display = "none";
-        r4productBox2.style.display = "none";
-        r4productBox3.style.display = "none";
-        r4productBox4.style.display = "none";
-        r4liveBox.style.display = "none";
-        r4shopaholicBox.style.display = "none";
-        r4pig.style.display = "none";
-        r4progress.style.display = "none";
-        r4double11.style.display = "none";
-        r4date11.style.display = "none";
-        r4airplane.style.display = "none";
-        r4shopBox.style.display = "none";
-        
-        r4people.style.display = "block";
-        r4card.style.display = "block";
-        r4cardRight.style.display = "block";
-        r4cardLeft.style.display = "block"; 
-        for(let b=0;b<r4botoomBorder.length;b++){
-                r4botoomBorder[b].style.display = "none";
-            }
-        for(let a=0;a<r4arrow.length;a++){
-            r4arrow[a].style.display = "none";
+    r4productBox1.style.display = "none";
+    r4productBox2.style.display = "none";
+    r4productBox3.style.display = "none";
+    r4productBox4.style.display = "none";
+    r4liveBox.style.display = "none";
+    r4shopaholicBox.style.display = "none";
+    r4pig.style.display = "none";
+    r4progress.style.display = "none";
+    r4double11.style.display = "none";
+    r4date11.style.display = "none";
+    r4airplane.style.display = "none";
+    r4shopBox.style.display = "none";
+    
+    r4people.style.display = "block";
+    r4card.style.display = "block";
+    r4cardRight.style.display = "block";
+    r4cardLeft.style.display = "block"; 
+    for(let b=0;b<r4botoomBorder.length;b++){
+            r4botoomBorder[b].style.display = "none";
         }
-        
-    })
-
+    for(let a=0;a<r4arrow.length;a++){
+        r4arrow[a].style.display = "none";
+    }
+    room04pass.style.display = "none";
+    r4Password.value = "";
+}
 // room04 END
 
 // room05 
@@ -1682,61 +1687,62 @@ function openRoom05(){
             r5arrow[6].style.opacity = 0;
         },4000)
     },4000)
-    r5PrevPage.addEventListener("click",()=>{
-        times = -3;
-        eyeNum = 4;
-        resetNum = 5;
-        resetroomFn();
-        downFn();
-        r5people.src = "styles/images/index5/peple.png";
-        room05.style.display = "none";
-        main.style.display = "block";
-        model[0].style.display = "none";
-        model05.style.display = "none";
-        model1.style.display = "none";
-        model2.style.display = "none";
-        model3.style.display = "none";
-        room05Bg.style.opacity = "0";
+    r5PrevPage.addEventListener("click",clearR5room);
+function clearR5room(){
+    times = -3;
+    eyeNum = 4;
+    resetNum = 5;
+    resetroomFn();
+    downFn();
+    r5people.src = "styles/images/index5/peple.png";
+    room05.style.display = "none";
+    main.style.display = "block";
+    model[0].style.display = "none";
+    model05.style.display = "none";
+    model1.style.display = "none";
+    model2.style.display = "none";
+    model3.style.display = "none";
+    room05Bg.style.opacity = "0";
 
-        room05Text.style.display = "none";
-        r5Enter.style.display = "none";
-        r5Password.style.display = "none";
-        r5Password.value="";
-        r5PrevPage.style.display = "none";
+    room05Text.style.display = "none";
+    r5Enter.style.display = "none";
+    r5Password.style.display = "none";
+    r5Password.value="";
+    r5PrevPage.style.display = "none";
 
-        r5puzzle1.style.display  = "none";
-        r5puzzle2.style.display  = "none";
-        r5pussleBox.style.display  = "none";
-        r5show.style.display = "none";
-        r5showBox.style.display = "none";
-        r5sloth.style.display = "none";
-        r5checkBox.style.display = "none";
-        r5BelphegoBox1.style.display = "none";
-        r5BelphegoBox2.style.display = "none";
-        r5originalBox.style.display = "none";
-        r5copycatBox.style.display = "none";
-        r5copycatBox2.style.display = "none";
-        r5viewBox.style.display = "none";
-        r5cat.style.display = "none";
-        r5view.style.display = "none";
-        r5light.style.display = "none";
-        r5handBox.style.display = "none";
-        r5hand.style.display = "none";
-        room05People.style.display = "none";
-      
-        for(let b=0;b<r5botoomBorder.length;b++){
-                r5botoomBorder[b].style.display = "none";
-            }
-        for(let a=0;a<r5arrow.length;a++){
-            r5arrow[a].style.display = "none";
+    r5puzzle1.style.display  = "none";
+    r5puzzle2.style.display  = "none";
+    r5pussleBox.style.display  = "none";
+    r5show.style.display = "none";
+    r5showBox.style.display = "none";
+    r5sloth.style.display = "none";
+    r5checkBox.style.display = "none";
+    r5BelphegoBox1.style.display = "none";
+    r5BelphegoBox2.style.display = "none";
+    r5originalBox.style.display = "none";
+    r5copycatBox.style.display = "none";
+    r5copycatBox2.style.display = "none";
+    r5viewBox.style.display = "none";
+    r5cat.style.display = "none";
+    r5view.style.display = "none";
+    r5light.style.display = "none";
+    r5handBox.style.display = "none";
+    r5hand.style.display = "none";
+    room05People.style.display = "none";
+  
+    for(let b=0;b<r5botoomBorder.length;b++){
+            r5botoomBorder[b].style.display = "none";
         }
-        r5people.style.display = "block";
-        r5card.style.display = "block";
-        r5cardRight.style.display = "block";
-        r5cardLeft.style.display = "block"; 
-    
-    })
-
+    for(let a=0;a<r5arrow.length;a++){
+        r5arrow[a].style.display = "none";
+    }
+    r5people.style.display = "block";
+    r5card.style.display = "block";
+    r5cardRight.style.display = "block";
+    r5cardLeft.style.display = "block"; 
+    room05pass.style.display = "none";
+    r5Password.value = "";
+}
 // room05 END
 
 
@@ -2109,7 +2115,8 @@ setInterval(()=>{
         r6arrow[6].style.opacity = 0;
     },4000)
 },4000)
-r6PrevPage.addEventListener("click",()=>{
+r6PrevPage.addEventListener("click",clearR6room)
+function clearR6room(){
     times = -4;
     eyeNum = 5;
     resetNum = 6;
@@ -2157,9 +2164,9 @@ r6PrevPage.addEventListener("click",()=>{
     r6card.style.display = "block";
     r6cardRight.style.display = "block";
     r6cardLeft.style.display = "block"; 
-
-})
-
+    room06pass.style.display = "none";
+    r6Password.value = "";
+}
 // room6 end
 
 
@@ -2458,6 +2465,18 @@ function clearR7room(){
     r7Password.value = "";
 }
 // room7 END
+var p1PrevPage = document.getElementById('p1-prevPage');
+var p2PrevPage = document.getElementById('p2-prevPage');
+var p3PrevPage = document.getElementById('p3-prevPage');
+var p4PrevPage = document.getElementById('p4-prevPage');
+var p5PrevPage = document.getElementById('p5-prevPage');
+var p6PrevPage = document.getElementById('p6-prevPage');
+p1PrevPage.addEventListener("click",clearR1room);
+p2PrevPage.addEventListener("click",clearR2room);
+p3PrevPage.addEventListener("click",clearR3room);
+p4PrevPage.addEventListener("click",clearR4room);
+p5PrevPage.addEventListener("click",clearR5room);
+p6PrevPage.addEventListener("click",clearR6room);
 // pass07
 var p7box =  document.getElementById('p7box');
 var p7control1 = document.getElementById('p7control1');
