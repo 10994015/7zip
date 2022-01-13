@@ -990,7 +990,7 @@ function openRoom03(){
         r3Enter.src="./styles/images/room03/enter.png";
     })
     r3Enter.addEventListener("click",()=>{
-        if(r3Password.value!="1800"){
+        if(r3Password.value!="1500"){
             r3alertText.innerHTML = "密碼錯誤"
             r3alertPage.style.display = "block";
             return;
@@ -1017,7 +1017,7 @@ function openRoom03(){
     r3Password.addEventListener("keyup",(e)=>{
         if(e.keyCode !== 13) return; 
         r3Enter.src="./styles/images/room03/enter.png";
-        if(r3Password.value!="1800"){
+        if(r3Password.value!="1500"){
             r3alertText.innerHTML = "密碼錯誤"
             r3alertPage.style.display = "block";
             return;
