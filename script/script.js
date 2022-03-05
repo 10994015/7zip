@@ -2466,17 +2466,30 @@ function clearR7room(){
 }
 // room7 END
 var p1PrevPage = document.getElementById('p1-prevPage');
+var p1PrevPage2 = document.getElementById('p1-prevPage-2');
 var p2PrevPage = document.getElementById('p2-prevPage');
 var p3PrevPage = document.getElementById('p3-prevPage');
 var p4PrevPage = document.getElementById('p4-prevPage');
 var p5PrevPage = document.getElementById('p5-prevPage');
 var p6PrevPage = document.getElementById('p6-prevPage');
 p1PrevPage.addEventListener("click",clearR1room);
+p1PrevPage2.addEventListener("click",clearR1room);
 p2PrevPage.addEventListener("click",clearR2room);
 p3PrevPage.addEventListener("click",clearR3room);
 p4PrevPage.addEventListener("click",clearR4room);
 p5PrevPage.addEventListener("click",clearR5room);
 p6PrevPage.addEventListener("click",clearR6room);
+
+//pass01
+var p1box = document.getElementById('p1box');
+
+p1box.addEventListener('mouseover',()=>{
+    p1box.src="./styles/images/pass01/box2.png";
+})
+p1box.addEventListener('mouseout',()=>{
+    p1box.src="./styles/images/pass01/box.png";
+})
+
 // pass07
 var p7box =  document.getElementById('p7box');
 var p7control1 = document.getElementById('p7control1');

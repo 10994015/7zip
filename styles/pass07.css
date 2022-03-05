@@ -14,9 +14,9 @@
     position: relative;
     margin-bottom: 50px;
 }
-#room07pass #room07passTop #topbg,
-#room07pass #room07passCenter #centerbg,
-#room07pass #room07passBottom #bottombg{
+#room07pass #room07passTop #topbg07,
+#room07pass #room07passCenter #centerbg07,
+#room07pass #room07passBottom #bottombg07{
     width:100%;
 }
 #room07pass #room07passTop #p7box{

@@ -1,0 +1,62 @@
+#room01pass{
+    width:100%;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    left:0;
+}
+
+#room01pass #room01passTop,
+#room01pass #room01passBottom{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+#room01pass #room01passTop #topbg01,
+#room01pass #room01passBottom #bottombg01{
+    width:100%;
+}
+#room01pass #room01passTop #p1-prevPage{
+    position: absolute;
+    top: -3px;
+    left:4px;
+    width:46px;
+    height: 38px;
+    cursor: pointer;
+    border:none;
+}
+#room01pass #room01passBottom #p1-prevPage-2{
+    position: absolute;
+    top: 6px;
+    left:4px;
+    width:46px;
+    height: 38px;
+    cursor: pointer;
+    border:none;
+}
+#room01pass #room01passTop #p1box{
+    position: absolute;
+    top: 267.5px;
+    left:1073px;
+    width:168px;
+    height: auto;
+    cursor: pointer;
+}
+
+#room01pass #room01passBottom #p1body {
+    position: absolute;
+    top: 280px;
+    left:430px;
+    width:800px;
+    height: auto;
+    cursor: pointer;
+}
+#room01pass #room01passBottom #p1head {
+    position: absolute;
+    top: 208px;
+    left:1066px;
+    width:100px;
+    height: auto;
+    cursor: pointer;
+}
