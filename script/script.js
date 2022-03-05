@@ -104,7 +104,7 @@ yes[0].addEventListener("click",openRoom01);
 function openRoom01(){
     main.style.display = "none";
     room01.style.display = "block";
-   
+    document.getElementById('bg01').style.display="block";
     setTimeout(()=>{
         room01Bg.style.opacity = "1";
         r1people.style.display = "none";
@@ -2472,22 +2472,242 @@ var p3PrevPage = document.getElementById('p3-prevPage');
 var p4PrevPage = document.getElementById('p4-prevPage');
 var p5PrevPage = document.getElementById('p5-prevPage');
 var p6PrevPage = document.getElementById('p6-prevPage');
-p1PrevPage.addEventListener("click",clearR1room);
+p1PrevPage.addEventListener("click",preroom01);
 p1PrevPage2.addEventListener("click",clearR1room);
 p2PrevPage.addEventListener("click",clearR2room);
 p3PrevPage.addEventListener("click",clearR3room);
 p4PrevPage.addEventListener("click",clearR4room);
 p5PrevPage.addEventListener("click",clearR5room);
 p6PrevPage.addEventListener("click",clearR6room);
-
+function preroom01(){
+        room01pass.style.display  = "none";
+        r1Password.value = "";
+        openRoom01();
+        document.getElementById('bg01').style.display="none";
+}
 //pass01
 var p1box = document.getElementById('p1box');
-
+var p1number = document.getElementById('p1number');
+var p1up = document.getElementById('p1up');
+var p1down = document.getElementById('p1down');
+var p1num = 10;
+var p1body = document.getElementById('p1body');
+var p1outwardBtn1 = document.getElementById('p1outwardBtn1');
+var p1outwardBtn2 = document.getElementById('p1outwardBtn2');
+var p1outwardBtn3 = document.getElementById('p1outwardBtn3');
+var p1outwardBtn4 = document.getElementById('p1outwardBtn4');
+var p1outwardBtn5 = document.getElementById('p1outwardBtn5');
+var p1headtext = document.getElementById('p1headtext');
+var p1headleft = document.getElementById('p1headleft');
+var p1headright = document.getElementById('p1headright');
+var p1headnum = 1;
+var p1attr1 = document.getElementById('p1attr1');
+var p1attr2 = document.getElementById('p1attr2');
+var p1attr3 = document.getElementById('p1attr3');
+var p1attr4 = document.getElementById('p1attr4');
+var p1attr5 = document.getElementById('p1attr5');
+var p1attr6 = document.getElementById('p1attr6');
+var p1attr1num = 0;
+var p1attr2num = 0;
+var p1attr3num = 0;
+var p1attr4num = 0;
+var p1attr5num = 0;
+var p1attr6num = 0;
+var p1addnumber1 = document.getElementById('p1addnumber1');
+var p1addnumber2 = document.getElementById('p1addnumber2');
+var p1addnumber3 = document.getElementById('p1addnumber3');
+var p1addnumber4 = document.getElementById('p1addnumber4');
+var p1addnumber5 = document.getElementById('p1addnumber5');
+p1attr1.addEventListener('click',()=>{
+    p1attr1num++;
+    if(p1attr1num % 2 === 1){
+        p1attr1.src = "./styles/images/pass01/push1.png";
+    }else{
+        p1attr1.src = "./styles/images/pass01/attr1.png";
+    }
+})
+p1attr2.addEventListener('click',()=>{
+    p1attr2num++;
+    if(p1attr2num % 2 === 1){
+        p1attr2.src = "./styles/images/pass01/push2.png";
+    }else{
+        p1attr2.src = "./styles/images/pass01/attr2.png";
+    }
+})
+p1attr3.addEventListener('click',()=>{
+    p1attr3num++;
+    if(p1attr3num % 2 === 1){
+        p1attr3.src = "./styles/images/pass01/push3.png";
+    }else{
+        p1attr3.src = "./styles/images/pass01/attr3.png";
+    }
+})
+p1attr4.addEventListener('click',()=>{
+    p1attr4num++;
+    if(p1attr4num % 2 === 1){
+        p1attr4.src = "./styles/images/pass01/push4.png";
+    }else{
+        p1attr4.src = "./styles/images/pass01/attr4.png";
+    }
+})
+p1attr5.addEventListener('click',()=>{
+    p1attr5num++;
+    if(p1attr5num % 2 === 1){
+        p1attr5.src = "./styles/images/pass01/push5.png";
+    }else{
+        p1attr5.src = "./styles/images/pass01/attr5.png";
+    }
+})
+p1attr6.addEventListener('click',()=>{
+    p1attr6num++;
+    if(p1attr6num % 2 === 1){
+        p1attr6.src = "./styles/images/pass01/push6.png";
+    }else{
+        p1attr6.src = "./styles/images/pass01/attr6.png";
+    }
+})
 p1box.addEventListener('mouseover',()=>{
     p1box.src="./styles/images/pass01/box2.png";
 })
 p1box.addEventListener('mouseout',()=>{
     p1box.src="./styles/images/pass01/box.png";
+})
+p1up.addEventListener('click',()=>{
+    if(p1num<20){
+        p1num ++;
+    }
+    p1number.innerHTML = p1num + "cm";
+})
+p1down.addEventListener('click', ()=>{
+    if(p1num>10){
+        p1num --;
+    }
+    p1number.innerHTML = p1num + "cm";
+})
+p1outwardBtn1.style.backgroundColor = "#D8057D";
+const clearp1outwardBtnColor = ()=>{
+    p1outwardBtn1.style.backgroundColor = "transparent";
+    p1outwardBtn2.style.backgroundColor = "transparent";
+    p1outwardBtn3.style.backgroundColor = "transparent";
+    p1outwardBtn4.style.backgroundColor = "transparent";
+    p1outwardBtn5.style.backgroundColor = "transparent";
+}
+p1outwardBtn1.addEventListener("click",()=>{
+    clearp1outwardBtnColor();
+    p1outwardBtn1.style.backgroundColor = "#D8057D";
+    p1body.src = "./styles/images/pass01/body1.png";
+})
+p1outwardBtn2.addEventListener("click",()=>{
+    clearp1outwardBtnColor();
+    p1outwardBtn2.style.backgroundColor = "#D8057D";
+    p1body.src = "./styles/images/pass01/body2.png";
+})
+p1outwardBtn3.addEventListener("click",()=>{
+    clearp1outwardBtnColor();
+    p1outwardBtn3.style.backgroundColor = "#D8057D";
+    p1body.src = "./styles/images/pass01/body3.png";
+})
+p1outwardBtn4.addEventListener("click",()=>{
+    clearp1outwardBtnColor();
+    p1outwardBtn4.style.backgroundColor = "#D8057D";
+    p1body.src = "./styles/images/pass01/body4.png";
+})
+p1outwardBtn5.addEventListener("click",()=>{
+    clearp1outwardBtnColor();
+    p1outwardBtn5.style.backgroundColor = "#D8057D";
+    p1body.src = "./styles/images/pass01/body5.png";
+})
+p1headleft.addEventListener('click',()=>{
+    if(p1headnum > 1){
+        p1headnum --;
+    }
+    p1headtext.src = `./styles/images/pass01/headtext${p1headnum}.png`;
+    p1head.src = `./styles/images/pass01/head${p1headnum}.png`;
+    if(p1headnum==1){
+        p1head.style.top = "211px";
+        p1head.style.left = "1065px";
+        p1head.style.width = "100px";
+        return;
+    }
+    if(p1headnum==2){
+        p1head.style.top = "215px";
+        p1head.style.left = "1056px";
+        p1head.style.width = "111px";
+        return;
+    }
+    if(p1headnum==3){
+        p1head.style.top = "212px";
+        p1head.style.left = "1060px";
+        p1head.style.width = "108px";
+        return;
+    }
+    if(p1headnum==4){
+        p1head.style.top = "215px";
+        p1head.style.left = "1060px";
+        p1head.style.width = "105px";
+        return;
+    }
+})
+p1headright.addEventListener('click',()=>{
+    if(p1headnum < 4){
+        p1headnum ++;
+    }
+    p1headtext.src = `./styles/images/pass01/headtext${p1headnum}.png`;
+    p1head.src = `./styles/images/pass01/head${p1headnum}.png`;
+    if(p1headnum==1){
+        p1head.style.top = "211px";
+        p1head.style.left = "1065px";
+        p1head.style.width = "100px";
+        return;
+    }
+    if(p1headnum==2){
+        p1head.style.top = "215px";
+        p1head.style.left = "1056px";
+        p1head.style.width = "111px";
+        return;
+    }
+    if(p1headnum==3){
+        p1head.style.top = "212px";
+        p1head.style.left = "1060px";
+        p1head.style.width = "108px";
+        return;
+    }
+    if(p1headnum==4){
+        p1head.style.top = "215px";
+        p1head.style.left = "1060px";
+        p1head.style.width = "105px";
+        return;
+    }
+})
+var p1addnumber1num = 0;
+var p1addnumber2num = 0;
+var p1addnumber3num = 0;
+var p1addnumber4num = 0;
+var p1addnumber5num = 0;
+p1add1.addEventListener('click',()=>{
+    p1addnumber1num++;
+    p1addnumber1.style.display = "block";
+    p1addnumber1.innerHTML = p1addnumber1num;
+})
+p1add2.addEventListener('click',()=>{
+    p1addnumber2num++;
+    p1addnumber2.style.display = "block";
+    p1addnumber2.innerHTML = p1addnumber2num;
+})
+p1add3.addEventListener('click',()=>{
+    p1addnumber3num++;
+    p1addnumber3.style.display = "block";
+    p1addnumber3.innerHTML = p1addnumber3num;
+})
+p1add4.addEventListener('click',()=>{
+    p1addnumber4num++;
+    p1addnumber4.style.display = "block";
+    p1addnumber4.innerHTML = p1addnumber4num;
+})
+p1add5.addEventListener('click',()=>{
+    p1addnumber5num++;
+    p1addnumber5.style.display = "block";
+    p1addnumber5.innerHTML = p1addnumber5num;
 })
 
 // pass07
