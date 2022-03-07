@@ -2,10 +2,49 @@
     width:100%;
     height: auto;
     position: absolute;
+    /* position: relative; */
     top: 30px;
     left:0;
 }
-
+#room01pass #room01passContent{
+    width:100%;
+    margin:auto;
+    /* position: relative; */
+    margin-top: 50px;
+    height: 600px;
+    /* background-image: url("./images/pass01/top.png"); */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+#room01pass #room01passContent::-webkit-scrollbar {
+    width: 0.1em;
+  }
+  #room01pass #room01passContent::-webkit-scrollbar-button{
+    background: #000;
+  }
+  #room01pass #room01passContent::-webkit-scrollbar-track-piece{
+    background: #000;
+  }
+  #room01pass #room01passContent::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    height: 0;
+    width:0;
+    display: none;
+    opacity: none;
+  }
+  #room01pass #pass01border{
+    width:1300px;
+    margin:auto;
+    position: relative;
+}
+#room01pass #p1border{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
 #room01pass #room01passTop,
 #room01pass #room01passBottom{
     width:1300px;
@@ -17,16 +56,17 @@
 #room01pass #room01passBottom #bottombg01{
     width:100%;
 }
-#room01pass #room01passTop #p1-prevPage{
+
+#room01pass  #p1-prevPage{
     position: absolute;
-    top: -1px;
+    top: 0px;
     left:7px;
     width:40px;
     height: 32px;
     cursor: pointer;
     border:none;
 }
-#room01pass #room01passTop #p1-prevPage:hover{
+#room01pass  #p1-prevPage:hover{
     transform: scale(1.1);
 }
 #room01pass #room01passBottom #p1-prevPage-2{
@@ -43,25 +83,25 @@
 }
 #room01pass #room01passTop #p1box{
     position: absolute;
-    top: 267.5px;
+    top: 218.5px;
     left:1073px;
-    width:169px;
+    width:170px;
     height: auto;
     cursor: pointer;
 }
 
 #room01pass #room01passBottom #p1body {
     position: absolute;
-    top: 280px;
-    left:431px;
+    top: 229px;
+    left:430px;
     width:808px;
     height: auto;
 }
 #room01pass #room01passBottom #p1head {
     position: absolute;
-    top: 211px;
-    left:1065px;
-    width:100px;
+    top: 162px;
+    left:1062px;
+    width:99px;
     height: auto;
     /* top: 215px;
     left:1056px;
@@ -69,7 +109,7 @@
 }
 #room01pass #room01passBottom #p1cm{
     position: absolute;
-    top: 565px;
+    top: 518px;
     left:825px;
     display: flex;
     justify-content: center;
@@ -97,31 +137,32 @@
     cursor: pointer;
 }
 #room01pass #room01passBottom .p1outwardBtn#p1outwardBtn1{
-    top: 318.5px;
+    top: 270.5px;
 }
 #room01pass #room01passBottom .p1outwardBtn#p1outwardBtn2{
-    top: 340.5px;
+    top: 292.5px;
 }
 #room01pass #room01passBottom .p1outwardBtn#p1outwardBtn3{
-    top: 362.5px;
+    top: 314.5px;
 }
 #room01pass #room01passBottom .p1outwardBtn#p1outwardBtn4{
-    top: 384.5px;
+    top: 336.5px;
 }
 #room01pass #room01passBottom .p1outwardBtn#p1outwardBtn5{
-    top: 406.5px;
+    top: 358.5px;
 }
 
 #room01pass #room01passBottom #p1headtext {
     position: absolute;
-    top: 381px;
+    /* top: 381px; */
+    top: 335px;
     left:409px;
     width:100px;
     height: auto;
 }
 #room01pass #room01passBottom #p1headleft{
     position: absolute;
-    top: 412px;
+    top: 366px;
     left:409px;
     width:48px;
     height: auto;
@@ -129,7 +170,7 @@
 }
 #room01pass #room01passBottom #p1headright{
     position: absolute;
-    top: 412px;
+    top: 366px;
     left:461px;
     width:48px;
     height: auto;
@@ -138,7 +179,7 @@
 
 #room01pass #room01passBottom .p1add{
     position: absolute;
-    top: 549px;
+    top: 505px;
     width:70px;
     height: auto;
     cursor: pointer;
@@ -160,7 +201,7 @@
 }
 #room01pass #room01passBottom .p1addnumber{
     position: absolute;
-    top: 538px;
+    top: 495px;
     width:20px;
     height: 20px;
     background-color: #D8057D;
@@ -191,7 +232,7 @@
 }
 #room01pass #room01passBottom #p1attr1 {
     position: absolute;
-    top: 176px;
+    top: 127px;
     left:597px;
     width:70px;
     height: auto;
@@ -199,7 +240,7 @@
 }
 #room01pass #room01passBottom #p1attr2 {
     position: absolute;
-    top: 176px;
+    top: 127px;
     left:677px;
     width:70px;
     height: auto;
@@ -207,7 +248,7 @@
 }
 #room01pass #room01passBottom #p1attr3 {
     position: absolute;
-    top: 176px;
+    top: 127px;
     left:757px;
     width:70px;
     height: auto;
@@ -215,7 +256,7 @@
 }
 #room01pass #room01passBottom #p1attr4 {
     position: absolute;
-    top: 210px;
+    top: 163px;
     left:597px;
     width:70px;
     height: auto;
@@ -223,7 +264,7 @@
 }
 #room01pass #room01passBottom #p1attr5 {
     position: absolute;
-    top: 210px;
+    top: 163px;
     left:677px;
     width:70px;
     height: auto;
@@ -231,7 +272,7 @@
 }
 #room01pass #room01passBottom #p1attr6 {
     position: absolute;
-    top: 210px;
+    top: 163px;
     left:757px;
     width:70px;
     height: auto;

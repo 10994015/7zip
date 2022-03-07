@@ -2473,7 +2473,7 @@ var p4PrevPage = document.getElementById('p4-prevPage');
 var p5PrevPage = document.getElementById('p5-prevPage');
 var p6PrevPage = document.getElementById('p6-prevPage');
 p1PrevPage.addEventListener("click",preroom01);
-p1PrevPage2.addEventListener("click",clearR1room);
+// p1PrevPage2.addEventListener("click",clearR1room);
 p2PrevPage.addEventListener("click",clearR2room);
 p3PrevPage.addEventListener("click",clearR3room);
 p4PrevPage.addEventListener("click",clearR4room);
@@ -2624,27 +2624,27 @@ p1headleft.addEventListener('click',()=>{
     p1headtext.src = `./styles/images/pass01/headtext${p1headnum}.png`;
     p1head.src = `./styles/images/pass01/head${p1headnum}.png`;
     if(p1headnum==1){
-        p1head.style.top = "211px";
-        p1head.style.left = "1065px";
-        p1head.style.width = "100px";
+        p1head.style.top = "162px";
+        p1head.style.left = "1062px";
+        p1head.style.width = "99px";
         return;
     }
     if(p1headnum==2){
-        p1head.style.top = "215px";
-        p1head.style.left = "1056px";
-        p1head.style.width = "111px";
+        p1head.style.top = "169px";
+        p1head.style.left = "1062px";
+        p1head.style.width = "104px";
         return;
     }
     if(p1headnum==3){
-        p1head.style.top = "212px";
-        p1head.style.left = "1060px";
+        p1head.style.top = "162px";
+        p1head.style.left = "1058px";
         p1head.style.width = "108px";
         return;
     }
     if(p1headnum==4){
-        p1head.style.top = "215px";
-        p1head.style.left = "1060px";
-        p1head.style.width = "105px";
+        p1head.style.top = "166px";
+        p1head.style.left = "1061px";
+        p1head.style.width = "103px";
         return;
     }
 })
@@ -2655,27 +2655,27 @@ p1headright.addEventListener('click',()=>{
     p1headtext.src = `./styles/images/pass01/headtext${p1headnum}.png`;
     p1head.src = `./styles/images/pass01/head${p1headnum}.png`;
     if(p1headnum==1){
-        p1head.style.top = "211px";
-        p1head.style.left = "1065px";
-        p1head.style.width = "100px";
+        p1head.style.top = "162px";
+        p1head.style.left = "1062px";
+        p1head.style.width = "99px";
         return;
     }
     if(p1headnum==2){
-        p1head.style.top = "215px";
-        p1head.style.left = "1056px";
-        p1head.style.width = "111px";
+        p1head.style.top = "169px";
+        p1head.style.left = "1062px";
+        p1head.style.width = "104px";
         return;
     }
     if(p1headnum==3){
-        p1head.style.top = "212px";
-        p1head.style.left = "1060px";
+        p1head.style.top = "162px";
+        p1head.style.left = "1058px";
         p1head.style.width = "108px";
         return;
     }
     if(p1headnum==4){
-        p1head.style.top = "215px";
-        p1head.style.left = "1060px";
-        p1head.style.width = "105px";
+        p1head.style.top = "166px";
+        p1head.style.left = "1061px";
+        p1head.style.width = "103px";
         return;
     }
 })
