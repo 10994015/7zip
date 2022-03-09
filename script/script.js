@@ -1,10 +1,10 @@
 var OpeningAnimation = document.getElementsByClassName('OpeningAnimation')[0];
     setTimeout(()=>{
         OpeningAnimation.style.opacity="0";
-    },11000)
+    },22000)
     setTimeout(()=>{
         OpeningAnimation.style.display="none";
-    },12000);
+    },23000);
 var main = document.getElementById("main");
 var up = document.getElementById('up');
 var down = document.getElementById('down');
