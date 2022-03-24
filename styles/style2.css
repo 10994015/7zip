@@ -197,17 +197,22 @@ main{
 }
 
 /* -----------------視窗----------------- */
+.modelBox{
+    display: none;
+    width:
+}
 .model{
     position: absolute;
     position: relative;
-    width:900px;
+    width:1300px;
     height: 600px;
     top: calc(50% - 300px);
-    left: calc(50% - 450px);
+    left: calc(50% - 650px);
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
+    background-color: transparent;
     
 }
 .model .main-model{
@@ -266,20 +271,20 @@ main{
     position: absolute;
     width: 300px;
     top: 150px;
-    right: 30px;
+    right: 210px;
     height: 300px;
 }
 .model .bg-model.model2{
     position: absolute;
     width: 300px;
     top: 100px;
-    left: 100px;
+    left: 320px;
     height: 200px;
 }
 .model .bg-model.model3{
     position: absolute;
     top: 350px;
-    left: 120px;
+    left: 340px;
     width: 400px;
     height: 220px;
     display: flex;

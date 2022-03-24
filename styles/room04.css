@@ -94,7 +94,7 @@
 #room04 #r4Password{
     position: absolute;
     bottom: 6.5%;
-    right:13%;
+    right:10.8%;
     width: 200px;
     height: 60px;
     font-size: 36px;
@@ -102,7 +102,7 @@
     border:none;
     background-color: transparent;
     color:#FFCEB6;
-    letter-spacing:11px;
+    letter-spacing:12.9px;
     font-family: 'Comfortaa';
     transform: scale(1,0.7);
     font-weight: 600;
@@ -120,19 +120,19 @@
 
 }
 #room04 .r4botoomBorder#r4border1{
-    left:72.7%;
+    left:74.7%;
 }
 #room04 .r4botoomBorder#r4border2{
-    left:74.9%;
+    left:76.9%;
 }
 #room04 .r4botoomBorder#r4border3{
-    left:77.1%;
+    left:79.1%;
 }
 #room04 .r4botoomBorder#r4border4{
-    left:79.3%;
+    left:81.3%;
 }
 #room04 .r4botoomBorder#r4border5{
-    left:81.5%;
+    left:83.5%;
 }
 #room04 #r4Enter{ 
     position: absolute;

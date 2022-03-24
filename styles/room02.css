@@ -93,7 +93,7 @@
 #room02 #r2Password{
     position: absolute;
     bottom: 6.5%;
-    right:13%;
+    right:9.7%;
     width: 200px;
     height: 60px;
     font-size: 36px;
@@ -119,16 +119,16 @@
 
 }
 #room02 .r2botoomBorder#r2border1{
-    left:72.7%;
+    left:75.7%;
 }
 #room02 .r2botoomBorder#r2border2{
-    left:74.9%;
+    left:77.9%;
 }
 #room02 .r2botoomBorder#r2border3{
-    left:77.1%;
+    left:80.1%;
 }
 #room02 .r2botoomBorder#r2border4{
-    left:79.3%;
+    left:82.3%;
 }
 #room02 #r2Enter{ 
     position: absolute;

@@ -93,7 +93,7 @@
 #room05 #r5Password{
     position: absolute;
     bottom: 6.5%;
-    right:13%;
+    right:9.7%;
     width: 200px;
     height: 60px;
     font-size: 36px;
@@ -119,19 +119,19 @@
 
 }
 #room05 .r5botoomBorder#r5border1{
-    left:72.7%;
+    left:75.7%;
 }
 #room05 .r5botoomBorder#r5border2{
-    left:74.9%;
+    left:77.9%;
 }
 #room05 .r5botoomBorder#r5border3{
-    left:77.1%;
+    left:80.1%;
 }
 #room05 .r5botoomBorder#r5border4{
-    left:79.3%;
+    left:82.3%;
 }
 #room05 .r5botoomBorder#r5border5{
-    left:81.5%;
+    left:84.5%;
 }
 #room05 #r5Enter{ 
     position: absolute;
