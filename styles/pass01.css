@@ -46,7 +46,9 @@
     left:0;
 }
 #room01pass #room01passTop,
-#room01pass #room01passBottom{
+#room01pass #room01passBottom,
+#room01pass #room01passBottom2,
+#room01pass #room01passselect{
     width:1300px;
     margin:auto;
     position: relative;
@@ -54,7 +56,9 @@
     height: 550px;
 }
 #room01pass #room01passTop #topbg01,
-#room01pass #room01passBottom #bottombg01{
+#room01pass #room01passBottom #bottombg01,
+#room01pass #room01passBottom #bottombg01girl,
+#room01pass #room01passselect #p1selectbg{
     width:100%;
 }
 
@@ -68,6 +72,18 @@
     border:none;
 }
 #room01pass  #p1-prevPage:hover{
+    transform: scale(1.1);
+}
+#room01pass  #p1-home{
+    position: absolute;
+    top: 10px;
+    left:61.5px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room01pass  #p1-home:hover{
     transform: scale(1.1);
 }
 #room01pass #room01passBottom #p1-prevPage-2{
@@ -84,21 +100,28 @@
 }
 #room01pass #room01passTop #p1box{
     position: absolute;
-    top: 218.5px;
-    left:1073px;
-    width:170px;
+    top: 226px;
+    left:1081.5px;
+    width:154px;
     height: auto;
     cursor: pointer;
 }
 
-#room01pass #room01passBottom #p1body {
+#room01pass #room01passBottom #p1body{
     position: absolute;
     top: 229px;
     left:430px;
     width:808px;
     height: auto;
 }
-#room01pass #room01passBottom #p1head {
+#room01pass #room01passBottom #p1body2{
+    position: absolute;
+    top: 229px;
+    left:480px;
+    width:780px;
+    height: auto;
+}
+#room01pass #room01passBottom #p1head{
     position: absolute;
     top: 162px;
     left:1062px;
@@ -107,6 +130,13 @@
     /* top: 215px;
     left:1056px;
     width:111px; */
+}
+#room01pass #room01passBottom #p1head2{
+    position: absolute;
+    top: 139px;
+    left:1028px;
+    width:122px;
+    height: auto;
 }
 #room01pass #room01passBottom #p1cm{
     position: absolute;
@@ -276,6 +306,30 @@
     top: 163px;
     left:757px;
     width:70px;
+    height: auto;
+    cursor: pointer;
+}
+#room01pass #room01passselect #p1boy{
+    position: absolute;
+    top: 193px;
+    left:535px;
+    width:276px;
+    height: auto;
+    cursor: pointer;
+}
+#room01pass #room01passselect #p1girl{
+    position: absolute;
+    top: 193px;
+    left:845px;
+    width:276px;
+    height: auto;
+    cursor: pointer;
+}
+#room01pass #room01passselect #p1step{
+    position: absolute;
+    bottom: 38px;
+    right:67px;
+    width:87px;
     height: auto;
     cursor: pointer;
 }

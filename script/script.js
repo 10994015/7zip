@@ -2518,6 +2518,7 @@ var p1addnumber2 = document.getElementById('p1addnumber2');
 var p1addnumber3 = document.getElementById('p1addnumber3');
 var p1addnumber4 = document.getElementById('p1addnumber4');
 var p1addnumber5 = document.getElementById('p1addnumber5');
+const room01passBottom2 = document.getElementById('room01passBottom2');
 p1attr1.addEventListener('click',()=>{
     p1attr1num++;
     if(p1attr1num % 2 === 1){
@@ -2710,6 +2711,53 @@ p1add5.addEventListener('click',()=>{
     p1addnumber5.innerHTML = p1addnumber5num;
 })
 
+function p1closeFn(){
+    // room01passselect.style.display = "none";
+    room01passBottom.style.display = "none"
+}
+function p1openboy(){
+    bottombg01girl.style.display = "none";
+    p1body2.style.display = "none";
+    p1head2.style.display = "none";
+}
+function p1opengirl(){
+    bottombg01.style.display = "none";
+    p1body.style.display = "none";
+    p1head.style.display = "none";
+    p1cm.style.display = "none";
+}
+
+p1closeFn();
+const p1selectbg = document.getElementById('p1selectbg');
+const p1boy = document.getElementById('p1boy');
+const p1girl = document.getElementById('p1girl');
+const p1step = document.getElementById('p1step');
+
+p1boy.addEventListener('click',()=>{
+    p1girl.src = "./styles/images/pass01/girl.png";
+    p1boy.src = "./styles/images/pass01/boy2.png";
+})
+p1girl.addEventListener('click',()=>{
+    p1boy.src = "./styles/images/pass01/boy.png";
+    p1girl.src = "./styles/images/pass01/girl2.png";
+})
+p1step.addEventListener('mouseover',()=>{
+    p1step.src = "./styles/images/pass01/step2.png";
+})
+p1step.addEventListener('mouseout',()=>{
+    p1step.src = "./styles/images/pass01/step.png";
+})
+p1step.addEventListener('click',()=>{
+    if(p1boy.src.split("pass01/")[1] === "boy2.png" && p1girl.src.split("pass01/")[1] === "girl.png"){
+        room01passselect.style.display = "none";
+        p1openboy();
+        room01passBottom.style.display = "block";
+    }else if(p1girl.src.split("pass01/")[1] === "girl2.png" && p1boy.src.split("pass01/")[1] === "boy.png"){
+        room01passselect.style.display = "none";
+        p1opengirl();
+        room01passBottom.style.display = "block";
+    }else{}
+})
 // pass07
 var p7box =  document.getElementById('p7box');
 var p7control1 = document.getElementById('p7control1');
