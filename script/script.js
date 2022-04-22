@@ -5,6 +5,8 @@ var OpeningAnimation = document.getElementsByClassName('OpeningAnimation')[0];
     setTimeout(()=>{
         OpeningAnimation.style.display="none";
     },23000);
+
+let passLevel = 0;
 var main = document.getElementById("main");
 var up = document.getElementById('up');
 var down = document.getElementById('down');
@@ -295,6 +297,13 @@ function openRoom01(){
             return;
         }
         if(r1alertText.innerHTML == "密碼正確"){
+            passanim.style.display = "block";
+            passLevel = 1;
+            passanimFn();
+            setTimeout(()=>{
+                passanim.style.display = "none";
+                passLevel = 0;
+            },4000)
             room01.style.display = "none";
             room01pass.style.display = "block";
             r1alertPage.style.display = "none";
@@ -614,6 +623,13 @@ function openRoom02(){
             return;
         }
         if(r2alertText.innerHTML == "密碼正確"){
+            passanim.style.display = "block";
+            passLevel = 2;
+            passanimFn();
+            setTimeout(()=>{
+                passanim.style.display = "none";
+                passLevel = 0;
+            },4000)
             room02.style.display = "none";
             room02pass.style.display = "block";
             r2alertPage.style.display = "none";
@@ -1004,6 +1020,13 @@ function openRoom03(){
             return;
         }
         if(r3alertText.innerHTML == "密碼正確"){
+            passanim.style.display = "block";
+            passLevel = 3;
+            passanimFn();
+            setTimeout(()=>{
+                passanim.style.display = "none";
+                passLevel = 0;
+            },4000)
             room03.style.display = "none";
             room03pass.style.display = "block";
             r3alertPage.style.display = "none";
@@ -1377,6 +1400,13 @@ function openRoom04(){
             return;
         }
         if(r4alertText.innerHTML == "密碼正確"){
+            passanim.style.display = "block";
+            passLevel = 4;
+            passanimFn();
+            setTimeout(()=>{
+                passanim.style.display = "none";
+                passLevel = 0;
+            },4000)
             room04.style.display = "none";
             room04pass.style.display = "block";
             r4alertPage.style.display = "none";
@@ -1626,6 +1656,13 @@ function openRoom05(){
             return;
         }
         if(r5alertText.innerHTML == "密碼正確"){
+            passanim.style.display = "block";
+            passLevel = 5;
+            passanimFn();
+            setTimeout(()=>{
+                passanim.style.display = "none";
+                passLevel = 0;
+            },4000)
             room05.style.display = "none";
             room05pass.style.display = "block";
             r5alertPage.style.display = "none";
@@ -2054,6 +2091,13 @@ r6alertBtn.addEventListener("click",()=>{
         return;
     }
     if(r6alertText.innerHTML == "密碼正確"){
+        passanim.style.display = "block";
+        passLevel = 6;
+        passanimFn();
+        setTimeout(()=>{
+            passanim.style.display = "none";
+            passLevel = 0;
+        },4000)
         room06.style.display = "none";
         room06pass.style.display = "block";
         r6alertPage.style.display = "none";
@@ -2357,6 +2401,13 @@ r7alertBtn.addEventListener("click",()=>{
         return;
     }
     if(r7alertText.innerHTML == "密碼正確"){
+        passanim.style.display = "block";
+        passLevel = 7;
+        passanimFn();
+        setTimeout(()=>{
+            passanim.style.display = "none";
+            passLevel = 0;
+        },4000)
         room07.style.display = "none";
         room07pass.style.display = "block";
         r7alertPage.style.display = "none";
@@ -3483,4 +3534,197 @@ function resetroomFn(){
 
         return;
     }
+}
+const elapsedTime = document.getElementById('elapsedTime');
+const timeLeft = document.getElementById('timeLeft');
+const ratio = document.getElementById('ratio');
+const passanimLeftText = document.getElementById('passanimLeftText');
+const passmark = document.getElementsByClassName('passmark')[0];
+const passanimTitle = document.getElementsByClassName('passanimTitle')[0];
+const passanimBar = document.getElementById('passanimBar');
+function passanimFn(){
+    let passanimNum = 0;
+    let ratioNum = 0;
+    let passanimTimer = null;
+    let ratioTimer = null;
+    passanimTitle.innerText = "";
+    passanimLeftText.innerHTML = "";
+    passanimTimer = setInterval(()=>{
+        passanimNum++;
+        elapsedTime.innerHTML = `00:00:0${passanimNum}`;
+        timeLeft.innerHTML = "00:00:0" + (3 - passanimNum);
+        if(passanimNum==3){
+            clearInterval(passanimTimer);
+        }
+    },1000)
+    ratioTimer = setInterval(()=>{
+        ratioNum++;
+        ratio.innerHTML = ratioNum + "%";
+        if(ratioNum==100){
+            clearInterval(ratioTimer);
+        }
+    },30)
+    if(passLevel === 1){
+        passmark.src = "./styles/images/passanim/01.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-01...";
+        passanimLeftText.style.color = "#e13085";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#e13085,#e13085,#e13085,#e13085,#5e4b9d)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( ER()TICISM ))))))) <br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. KISS<br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. PAN<br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:1423 Y:227<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "% MESSAGE %<br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "% ENTER %";
+        },1800)
+    }else if(passLevel === 2){
+        passmark.src = "./styles/images/passanim/02.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-02...";
+        passanimLeftText.style.color = "#156fbf";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#156fbf,#156fbf,#156fbf,#156fbf,#f54927)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( KN()WLEDGE )))))))<br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. OWL <br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. ATHENA<br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:484 Y:453<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += ">> KNIFE<br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "> ENTER";
+        },1800)
+    }else if(passLevel === 3){
+        passmark.src = "./styles/images/passanim/03.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-03...";
+        passanimLeftText.style.color = "#f2a400";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#f2a400,#f2a400,#f2a400,#f2a400,#156fbf)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( G()URMET )))))))<br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. FEE  <br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. DELICACY <br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:486 Y:197<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "// DISCOUNT<br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "/ ENTER /";
+        },1800)
+    }else if(passLevel === 4){
+        passmark.src = "./styles/images/passanim/04.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-04...";
+        passanimLeftText.style.color = "#f54927";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#f54927,#f54927,#f54927,#f54927,#82c9ac)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( SH()PAH()LIC )))))))<br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. CART   <br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. LIVE STREAM <br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:507 Y:372<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "$ PRICE <br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "$$ ENTER";
+        },1800)
+    }else if(passLevel === 5){
+        passmark.src = "./styles/images/passanim/05.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-05...";
+        passanimLeftText.style.color = "#92ccc8";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#92ccc8,#92ccc8,#92ccc8,#92ccc8,#e7e300)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( SLACK ))))))) <br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. BELPHEGOR <br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. COPYCAT <br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:402 Y:186<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "__ DATE _ <br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "_ ENTER _";
+        },1800)
+    }else if(passLevel === 6){
+        passmark.src = "./styles/images/passanim/06.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-06...";
+        passanimLeftText.style.color = "#e7e300";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#e7e300,#e7e300,#e7e300,#e7e300,#e13085)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( SUPERI()RITY ))))))) <br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. POST  <br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. VENUS <br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:1115 Y:124<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "* ACCOUNT *** <br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += " * ENTER ***";
+        },1800)
+    }else if(passLevel === 7){
+        passmark.src = "./styles/images/passanim/07.png";
+        passanimTitle.innerText = "正在解壓縮 D:\7.ZIP\R-07...";
+        passanimLeftText.style.color = "#c62d35";
+        passanimBar.style.background = " -webkit-linear-gradient(left,#c62d35,#c62d35,#c62d35,#c62d35,#5e4b9d)";
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "(( C()NTR()L ))))))) <br>";
+        },300)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "[+] 01. PUPPET   <br>";
+        },600)
+        setTimeout(() => {
+            passanimLeftText.innerHTML += "[+] 02. CAGE <br>";
+        }, 900);
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "KEY = X:411 Y:224<br>";
+        },1200)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += "! APP ! <br>";
+        },1500)
+        setTimeout(()=>{
+            passanimLeftText.innerHTML += " ! ENTER !";
+        },1800)
+    }
+    
 }

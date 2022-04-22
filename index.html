@@ -802,32 +802,26 @@
         </div>
 
         <div id="passanim">
-            <p>(( ER()TICISM ))))))) <br>
-                [+] 01. KISS <br>
-                [+] 02. PAN <br>
-                KEY = X:1423 Y:227 <br>
-                % MESSAGE %<br>
-                % ENTER %
-                </p>
-                <img src="./styles/images/passanim/01.png" class="passmark">
+            <p id="passanimLeftText"></p>
+                <img src="" class="passmark">
             <div class="imgbox">
-                <h1>正在解壓縮 D:\7.ZIP\R-01...</h1>
+                <h1 class="passanimTitle">正在解壓縮 D:\7.ZIP\R-01...</h1>
                 <table>
                     <tr>
-                        <td>經過時間:</td><td>00:00:05</td> <td>大小:</td><td>134M</td>
+                        <td>經過時間:</td><td id="elapsedTime">00:00:05</td> <td>大小:</td><td>134M</td>
                     </tr>
                     <tr>
-                        <td>剩餘時間:</td><td>00:00:02</td><td>速度:</td><td>8540 KB/s</td>
+                        <td>剩餘時間:</td><td id="timeLeft">00:00:02</td><td>速度:</td><td>8540 KB/s</td>
                     </tr>
                     <tr>
                         <td>檔案:</td><td>1</td><td>已處理</td><td>110M</td>
                     </tr>
                     <tr>
-                        <td>壓縮率:</td><td>95%</td><td>封裝後大小:</td><td>105M</td>
+                        <td>壓縮率:</td><td id="ratio">95%</td><td>封裝後大小:</td><td>105M</td>
                     </tr>
                 </table>
                 <div class="progressBar">
-                    <div class="bar"></div>
+                    <div class="bar" id="passanimBar"></div>
                 </div>
                 <img src="./styles/images/passanim/model.png" alt="">
             </div>

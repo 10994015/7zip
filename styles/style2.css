@@ -369,6 +369,7 @@ main{
     height: 100vh;
     background: #000000;
     z-index: 99999999999999999999999999999999;
+    /* display: none; */
 }
 #passanim > p {
     color:#fff;
@@ -400,9 +401,10 @@ main{
     position: absolute;
     top: 30px;
     left:70px;
-    font-family: fzyxb;
+    font-family: Manrope ,fzyxb;
     font-size: 20px;
     font-weight: 600;
+    letter-spacing:2px;
 
 }
 #passanim .imgbox > img{
@@ -411,17 +413,18 @@ main{
 }
 #passanim .imgbox > table{
     position: absolute;
-    top: 140px;
+    top: 110px;
     left:50%;
     min-width:560px;
     transform: translateX(-50%);
     border:none;
     color:#fff;
     font-family: fzyxb;
+    letter-spacing:2px;
 }
 #passanim .imgbox > table td{
     width:120px;
-    height: 35px;
+    height: 30px;
     font-size: 20px;
 }
 #passanim .imgbox .progressBar{
@@ -436,8 +439,8 @@ main{
 #passanim .imgbox .progressBar >.bar{
     width:100%;
     height: 100%;
-    background:  -webkit-linear-gradient(left,#156FBF,#F04929);;
-    animation: baranim 2s none linear ;
+    background:  -webkit-linear-gradient(left,#156FBF,#156FBF,#156FBF,#156FBF,#F04929);
+    animation: baranim 3s none linear ;
 }
 @keyframes baranim{
     0%{
