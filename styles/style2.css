@@ -369,7 +369,7 @@ main{
     height: 100vh;
     background: #000000;
     z-index: 99999999999999999999999999999999;
-    /* display: none; */
+    display: none;
 }
 #passanim > p {
     color:#fff;
