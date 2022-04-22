@@ -2484,7 +2484,20 @@ function preroom01(){
         r1Password.value = "";
         openRoom01();
         document.getElementById('bg01').style.display="none";
+        room01passBottom.style.display = "none";
+        room01passselect.style.display = "block";
 }
+//prehome
+
+function prehome(){
+    room01pass.style.display = "none";
+    r1Password.value = "";
+    room01passBottom.style.display = "none";
+    room01passselect.style.display = "block";
+    clearR1room();
+}
+
+
 //pass01
 var p1box = document.getElementById('p1box');
 var p1number = document.getElementById('p1number');
@@ -2519,6 +2532,11 @@ var p1addnumber3 = document.getElementById('p1addnumber3');
 var p1addnumber4 = document.getElementById('p1addnumber4');
 var p1addnumber5 = document.getElementById('p1addnumber5');
 const room01passBottom2 = document.getElementById('room01passBottom2');
+const p1body2 = document.getElementById('p1body2');
+const p1head2 = document.getElementById('p1head2');
+const p1girlheadtext = document.getElementById('p1girlheadtext');
+const p1home = document.getElementById('p1-home');
+p1home.addEventListener('click',prehome);
 p1attr1.addEventListener('click',()=>{
     p1attr1num++;
     if(p1attr1num % 2 === 1){
@@ -2597,55 +2615,76 @@ p1outwardBtn1.addEventListener("click",()=>{
     clearp1outwardBtnColor();
     p1outwardBtn1.style.backgroundColor = "#D8057D";
     p1body.src = "./styles/images/pass01/body1.png";
+    p1body2.src = "./styles/images/pass01/body6.png";
 })
 p1outwardBtn2.addEventListener("click",()=>{
     clearp1outwardBtnColor();
     p1outwardBtn2.style.backgroundColor = "#D8057D";
     p1body.src = "./styles/images/pass01/body2.png";
+    p1body.src = "./styles/images/pass01/body2.png";
+    p1body2.src = "./styles/images/pass01/body7.png";
 })
 p1outwardBtn3.addEventListener("click",()=>{
     clearp1outwardBtnColor();
     p1outwardBtn3.style.backgroundColor = "#D8057D";
     p1body.src = "./styles/images/pass01/body3.png";
+    p1body2.src = "./styles/images/pass01/body8.png";
 })
 p1outwardBtn4.addEventListener("click",()=>{
     clearp1outwardBtnColor();
     p1outwardBtn4.style.backgroundColor = "#D8057D";
     p1body.src = "./styles/images/pass01/body4.png";
+    p1body2.src = "./styles/images/pass01/body9.png";
 })
 p1outwardBtn5.addEventListener("click",()=>{
     clearp1outwardBtnColor();
     p1outwardBtn5.style.backgroundColor = "#D8057D";
     p1body.src = "./styles/images/pass01/body5.png";
+    p1body2.src = "./styles/images/pass01/body10.png";
 })
 p1headleft.addEventListener('click',()=>{
     if(p1headnum > 1){
         p1headnum --;
     }
     p1headtext.src = `./styles/images/pass01/headtext${p1headnum}.png`;
+    p1girlheadtext.src = `./styles/images/pass01/girlheadtext${p1headnum}.png`;
     p1head.src = `./styles/images/pass01/head${p1headnum}.png`;
+    p1head2.src = `./styles/images/pass01/girlhead${p1headnum}.png`;
     if(p1headnum==1){
         p1head.style.top = "162px";
         p1head.style.left = "1062px";
         p1head.style.width = "99px";
+
+        p1head2.style.top = "139px";
+        p1head2.style.left = "1028px";
+        p1head2.style.width = "122px";
         return;
     }
     if(p1headnum==2){
         p1head.style.top = "169px";
         p1head.style.left = "1062px";
         p1head.style.width = "104px";
+        p1head2.style.top = "140px";
+        p1head2.style.left = "1035px";
+        p1head2.style.width = "109px";
         return;
     }
     if(p1headnum==3){
         p1head.style.top = "162px";
         p1head.style.left = "1058px";
         p1head.style.width = "108px";
+        p1head2.style.top = "149px";
+        p1head2.style.left = "1021px";
+        p1head2.style.width = "141px";
         return;
     }
     if(p1headnum==4){
         p1head.style.top = "166px";
         p1head.style.left = "1061px";
         p1head.style.width = "103px";
+        p1head2.style.top = "143px";
+        p1head2.style.left = "1033px";
+        p1head2.style.width = "105px";
         return;
     }
 })
@@ -2654,29 +2693,47 @@ p1headright.addEventListener('click',()=>{
         p1headnum ++;
     }
     p1headtext.src = `./styles/images/pass01/headtext${p1headnum}.png`;
+    p1girlheadtext.src = `./styles/images/pass01/girlheadtext${p1headnum}.png`;
     p1head.src = `./styles/images/pass01/head${p1headnum}.png`;
+    p1head2.src = `./styles/images/pass01/girlhead${p1headnum}.png`;
     if(p1headnum==1){
         p1head.style.top = "162px";
         p1head.style.left = "1062px";
         p1head.style.width = "99px";
+
+        p1head2.style.top = "139px";
+        p1head2.style.left = "1028px";
+        p1head2.style.width = "122px";
         return;
     }
     if(p1headnum==2){
         p1head.style.top = "169px";
         p1head.style.left = "1062px";
         p1head.style.width = "104px";
+        
+        p1head2.style.top = "140px";
+        p1head2.style.left = "1035px";
+        p1head2.style.width = "109px";
         return;
     }
     if(p1headnum==3){
         p1head.style.top = "162px";
         p1head.style.left = "1058px";
         p1head.style.width = "108px";
+
+        p1head2.style.top = "149px";
+        p1head2.style.left = "1021px";
+        p1head2.style.width = "141px";
         return;
     }
     if(p1headnum==4){
         p1head.style.top = "166px";
         p1head.style.left = "1061px";
         p1head.style.width = "103px";
+
+        p1head2.style.top = "143px";
+        p1head2.style.left = "1033px";
+        p1head2.style.width = "105px";
         return;
     }
 })
@@ -2719,12 +2776,25 @@ function p1openboy(){
     bottombg01girl.style.display = "none";
     p1body2.style.display = "none";
     p1head2.style.display = "none";
+    p1girlheadtext.style.display = "none";
+
+    bottombg01.style.display = "block";
+    p1body.style.display = "block";
+    p1head.style.display = "block";
+    p1cm.style.display = "flex";
+    p1headtext.style.display = "block";
 }
 function p1opengirl(){
     bottombg01.style.display = "none";
     p1body.style.display = "none";
     p1head.style.display = "none";
     p1cm.style.display = "none";
+    p1headtext.style.display = "none";
+
+    bottombg01girl.style.display = "block";
+    p1body2.style.display = "block";
+    p1head2.style.display = "block";
+    p1girlheadtext.style.display = "block";
 }
 
 p1closeFn();
@@ -3117,7 +3187,7 @@ function downFn(){
         bg1.style.opacity = "1";
 
     }
-    console.log(times);
+    // console.log(times);
     
 }
 up.addEventListener("click",upFn);
@@ -3191,7 +3261,7 @@ function upFn(){
         bg1.style.transition = "1s";
         bg1.style.opacity = "0";
     }
-    console.log(times);
+    // console.log(times);
     
 }
     

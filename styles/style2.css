@@ -360,3 +360,90 @@ main{
     margin-top: 10px;
     font-size: 16px;
 }
+
+#passanim{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background: #000000;
+    z-index: 99999999999999999999999999999999;
+}
+#passanim > p {
+    color:#fff;
+    font-family: Manrope;
+    font-size:30px;
+    line-height: 1.6;
+    color:#e13085;
+    position: absolute;
+    left:180px;
+    top: 100px;
+}
+#passanim .passmark{
+    position: absolute;
+    top: 450px;
+    left:180px;
+    width:250px;
+    height: auto;
+}
+#passanim .imgbox{
+    width: 700px;
+    height: 425.68px;
+    position: absolute;
+    top: 50%;
+    right:150px;
+    transform: translateY(-50%);
+    
+}
+#passanim .imgbox > h1{
+    position: absolute;
+    top: 30px;
+    left:70px;
+    font-family: fzyxb;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+#passanim .imgbox > img{
+    width:100%;
+    height: 100%;
+}
+#passanim .imgbox > table{
+    position: absolute;
+    top: 140px;
+    left:50%;
+    min-width:560px;
+    transform: translateX(-50%);
+    border:none;
+    color:#fff;
+    font-family: fzyxb;
+}
+#passanim .imgbox > table td{
+    width:120px;
+    height: 35px;
+    font-size: 20px;
+}
+#passanim .imgbox .progressBar{
+    width:600px;
+    height: 50px;
+    border:1px #fff solid;
+    position: absolute;
+    bottom:20px;
+    left:50%;
+    transform: translateX(-50%);
+}
+#passanim .imgbox .progressBar >.bar{
+    width:100%;
+    height: 100%;
+    background:  -webkit-linear-gradient(left,#156FBF,#F04929);;
+    animation: baranim 2s none linear ;
+}
+@keyframes baranim{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:100%;
+    }
+}

@@ -137,6 +137,9 @@
     left:1028px;
     width:122px;
     height: auto;
+
+
+
 }
 #room01pass #room01passBottom #p1cm{
     position: absolute;
@@ -183,7 +186,8 @@
     top: 358.5px;
 }
 
-#room01pass #room01passBottom #p1headtext {
+#room01pass #room01passBottom #p1headtext,
+#room01pass #room01passBottom #p1girlheadtext {
     position: absolute;
     /* top: 381px; */
     top: 335px;

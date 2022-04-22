@@ -54,7 +54,7 @@
     height: 442px;
     position: absolute;
     left: calc(50% - 410px);
-    top:calc(50% - 280px);
+    top:calc(50% - 250px);
     z-index: 1;
     animation: start 1s linear;
     
