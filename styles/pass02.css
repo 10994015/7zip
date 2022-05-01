@@ -1,0 +1,369 @@
+#room02pass{
+    width:100%;
+    height: auto;
+    position: absolute;
+    /* position: relative; */
+    top: 30px;
+    left:0;
+}
+#room02pass #room02passContent{
+    width:100%;
+    margin:auto;
+    /* position: relative; */
+    margin-top: 50px;
+    height: 600px;
+    /* background-image: url("./images/pass02/top.png"); */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+#room02pass #room02passContent::-webkit-scrollbar {
+    width: 0.1em;
+  }
+  #room02pass #room02passContent::-webkit-scrollbar-button{
+    background: #000;
+  }
+  #room02pass #room02passContent::-webkit-scrollbar-track-piece{
+    background: #000;
+  }
+  #room02pass #room02passContent::-webkit-scrollbar-thumb {
+    /* background-color: #fff;
+    height: 0;
+    width:0;
+    display: none;
+    opacity: none; */
+  }
+  #room02pass #pass02border{
+    width:1300px;
+    margin:auto;
+    position: relative;
+}
+#room02pass #p2border{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+#room02pass  #p2-prevPage{
+    position: absolute;
+    top: 0px;
+    left:7px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room02pass  #p2-prevPage:hover{
+    transform: scale(1.1);
+}
+#room02pass  #p2-home{
+    position: absolute;
+    top: 10px;
+    left:61.5px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room02pass  #p2-home:hover{
+    transform: scale(1.1);
+}
+#room02pass #room02passTop,
+#room02pass #room02passBottom,
+#room02pass #room02passselect{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 50px;
+    height: 550px;
+}
+#room02pass #room02passTop #topbg02,
+#room02pass #room02passselect #p2selectbg,
+#room02pass #room02passBottom #p2bottomManBg{
+    width:100%;
+}
+#room02pass #room02passTop #p2inter{
+    position: absolute;
+    top: 223px;
+    left:1070px;
+    width:176px;
+    height: auto;
+    cursor: pointer;
+}
+
+#room02pass #room02passselect #p2man{
+    position: absolute;
+    top: 398px;
+    left: 417px;
+    width:40px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2woman{
+    position: absolute;
+    top: 400px;
+    left: 458px;
+    width:40px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin1{
+    position: absolute;
+    top: 138.6px;
+    left: 1016.5px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin2{
+    position: absolute;
+    top: 189px;
+    left: 1016.5px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin3{
+    position: absolute;
+    top: 164px;
+    left: 1060px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin4{
+    position: absolute;
+    top: 138.6px;
+    left: 1103.8px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin5{
+    position: absolute;
+    top: 189px;
+    left: 1103.8px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin6{
+    position: absolute;
+    top: 164px;
+    left: 1148px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin7{
+    position: absolute;
+    top: 138.6px;
+    left: 1192.3px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2origin8{
+    position: absolute;
+    top: 189px;
+    left: 1192.3px;
+    width:58.2px;
+    height: auto;
+    cursor: pointer;
+}
+
+#room02pass #room02passselect #p2add1{
+    position: absolute;
+    top: 329px;
+    left: 1011.5px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add2{
+    position: absolute;
+    top: 380px;
+    left: 1011.5px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add3{
+    position: absolute;
+    top: 354px;
+    left: 1057px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add4{
+    position: absolute;
+    top: 329px;
+    left: 1101.5px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add5{
+    position: absolute;
+    top: 380px;
+    left: 1101.5px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add6{
+    position: absolute;
+    top: 354px;
+    left: 1146.5px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add7{
+    position: absolute;
+    top: 329px;
+    left: 1191px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2add8{
+    position: absolute;
+    top: 380px;
+    left: 1191px;
+    width:60.2px;
+    height: auto;
+    cursor: pointer;
+}
+
+#room02pass #room02passselect #p2originB1{
+    position: absolute;
+    top: 148.5px;
+    left: 682px;
+    width:41px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2originB2{
+    position: absolute;
+    top: 186.5px;
+    left: 703px;
+    width:41px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2originB3{
+    position: absolute;
+    top: 148.5px;
+    left: 725px;
+    width:41px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2originB4{
+    position: absolute;
+    top: 186.5px;
+    left: 747px;
+    width:41px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passselect #p2addB1{
+    position: absolute;
+    top: 148.5px;
+    left: 841px;
+    width:41px;
+    height: auto;
+}
+#room02pass #room02passselect #p2addB2{
+    position: absolute;
+    top: 186.5px;
+    left: 862px;
+    width:41px;
+    height: auto;
+}
+#room02pass #room02passselect #p2addB3{
+    position: absolute;
+    top: 148.5px;
+    left: 884px;
+    width:41px;
+    height: auto;
+}
+#room02pass #room02passselect #p2addB4{
+    position: absolute;
+    top: 186.5px;
+    left: 906px;
+    width:41px;
+    height: auto;
+}
+#room02pass #room02passselect .p2originB{
+    display: none;
+}
+#room02pass #room02passselect .p2addB{
+    display: none;
+}
+
+#room02pass #room02passselect #p2check{
+    position: absolute;
+    top: 270px;
+    left: 780px;
+    width:90px;
+    height: auto;
+    cursor: pointer;
+}
+#room02pass #room02passBottom{
+    display: none;
+}
+#room02pass #room02passBottom #p2able1{
+    position: absolute;
+    top: 118px;
+    left: 601px;
+    width:96px;
+    height: auto;
+}
+#room02pass #room02passBottom #p2able2{
+    position: absolute;
+    top: 222px;
+    left: 541px;
+    width:96px;
+    height: auto;
+}
+#room02pass #room02passBottom #p2able3{
+    position: absolute;
+    top: 340px;
+    left: 541px;
+    width:96px;
+    height: auto;
+}
+#room02pass #room02passBottom #p2able4{
+    position: absolute;
+    top: 444px;
+    left: 601px;
+    width:96px;
+    height: auto;
+}
+#room02pass #room02passBottom #p2inputName{
+    position: absolute;
+    top: 145px;
+    left: 1072px;
+    width:100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+#room02pass #room02passBottom #p2inputName input{
+    color:#fff;
+    outline: none;
+    border:none;
+    font-size: 18px;
+    background: transparent;
+    width:20px;
+    display: inline-block;
+}
+#room02pass #room02passBottom #p2inputName img{
+    width:15px;
+    height: auto;
+}

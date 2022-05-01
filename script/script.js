@@ -469,6 +469,7 @@ yes[1].addEventListener("click",openRoom02);
 function openRoom02(){
     main.style.display = "none";
     room02.style.display = "block";
+    document.getElementById('bg03').style.display="block";
     setTimeout(()=>{
         room02Bg.style.opacity = "1";
         room02People.style.display = "block";
@@ -2525,7 +2526,7 @@ var p5PrevPage = document.getElementById('p5-prevPage');
 var p6PrevPage = document.getElementById('p6-prevPage');
 p1PrevPage.addEventListener("click",preroom01);
 // p1PrevPage2.addEventListener("click",clearR1room);
-p2PrevPage.addEventListener("click",clearR2room);
+p2PrevPage.addEventListener("click",preroom02);
 p3PrevPage.addEventListener("click",clearR3room);
 p4PrevPage.addEventListener("click",clearR4room);
 p5PrevPage.addEventListener("click",clearR5room);
@@ -2538,16 +2539,29 @@ function preroom01(){
         room01passBottom.style.display = "none";
         room01passselect.style.display = "block";
 }
+function preroom02(){
+    room02pass.style.display  = "none";
+    r2Password.value = "";
+    openRoom02();
+    document.getElementById('bg03').style.display="none";
+    room02passBottom.style.display = "none";
+    room02passselect.style.display = "block";
+}
 //prehome
-
-function prehome(){
+document.getElementById('p2-home').addEventListener('click',prehome02);
+function prehome01(){
     room01pass.style.display = "none";
     r1Password.value = "";
     room01passBottom.style.display = "none";
     room01passselect.style.display = "block";
     clearR1room();
 }
-
+function prehome02(){
+    room02pass.style.display = "none";
+    room02passBottom.style.display = "none";
+    room02passselect.style.display = "block";
+    clearR2room();
+}
 
 //pass01
 var p1box = document.getElementById('p1box');
@@ -2587,7 +2601,7 @@ const p1body2 = document.getElementById('p1body2');
 const p1head2 = document.getElementById('p1head2');
 const p1girlheadtext = document.getElementById('p1girlheadtext');
 const p1home = document.getElementById('p1-home');
-p1home.addEventListener('click',prehome);
+p1home.addEventListener('click',prehome01);
 p1attr1.addEventListener('click',()=>{
     p1attr1num++;
     if(p1attr1num % 2 === 1){
@@ -2879,6 +2893,200 @@ p1step.addEventListener('click',()=>{
         room01passBottom.style.display = "block";
     }else{}
 })
+
+//pass02
+
+const p2inter = document.getElementById('p2inter');
+const p2man = document.getElementById('p2man');
+const p2woman = document.getElementById('p2woman');
+let p2gender = "";
+let p2originArr = [];
+let p2addArr = [];
+let originNum = "";
+let p2addNum = "";
+const p2origin = document.getElementsByClassName('p2origin');
+const p2add = document.getElementsByClassName('p2add');
+const p2originB = document.getElementsByClassName('p2originB');
+const p2bottomManBg = document.getElementById('p2bottomManBg');
+const p2able1 = document.getElementById('p2able1');
+const p2able2 = document.getElementById('p2able2');
+const p2able3 = document.getElementById('p2able3');
+const p2able4 = document.getElementById('p2able4');
+let p2PresetManArr = ['5','2','6','3'];
+p2inter.addEventListener('mouseover',()=>{
+    p2inter.src = "./styles/images/pass02/inter2.png";
+})
+p2inter.addEventListener('mouseout',()=>{
+    p2inter.src = "./styles/images/pass02/inter1.png";
+})
+p2man.addEventListener('click',()=>{
+    p2woman.src = "./styles/images/pass02/woman1.png";
+    if(p2gender != "man"){
+        p2gender = "man";
+        p2man.src = "./styles/images/pass02/man2.png";
+    }else{
+        p2gender = "";
+        p2man.src = "./styles/images/pass02/man1.png";
+    }
+})
+p2woman.addEventListener('click',()=>{
+    p2man.src = "./styles/images/pass02/man1.png";
+    if(p2gender != "woman"){
+        p2gender = "woman";
+        p2woman.src = "./styles/images/pass02/woman2.png";
+    }else{
+        p2gender = "";
+        p2woman.src = "./styles/images/pass02/woman1.png";
+    }
+})
+for(let i=0;i<p2origin.length;i++){
+    p2origin[i].addEventListener('click',p2originFn);
+}
+for(let i=0;i<p2add.length;i++){
+    p2add[i].addEventListener('click',p2addFn);
+}
+for(let i=0;i<p2originB.length;i++){
+    p2originB[i].addEventListener('click',p2originBFn);
+}
+p2check.addEventListener('click',()=>{
+    if(p2gender!=="man" && p2gender!=="woman"){
+        return;
+    }
+    room02passselect.style.display = "none";
+    if(p2gender === "man"){
+        p2bottomManBg.src = "./styles/images/pass02/manBg.png";
+    }else if(p2gender === "woman"){
+        p2bottomManBg.src = "./styles/images/pass02/womanBg.png";
+    }
+    p2ableFn();
+
+    room02passBottom.style.display = "block";
+})
+function p2ableFn(){
+    p2PresetManArr.forEach((item)=>{
+        if(p2addArr.length < 4){
+            if(!p2originArr.includes(item)){
+                p2addArr.push(item);
+            }
+        }
+    })
+    console.log(p2addArr);
+    p2able1.src = `./styles/images/pass02/able/${p2addArr[0]}.png`;
+    p2able2.src = `./styles/images/pass02/able/${p2addArr[1]}.png`;
+    p2able3.src = `./styles/images/pass02/able/${p2addArr[2]}.png`;
+    p2able4.src = `./styles/images/pass02/able/${p2addArr[3]}.png`;
+}
+function p2originBFn(){
+    console.log(Number(this.id.split('B')[1])-1);
+    p2originArr.splice(Number(this.id.split('B')[1])-1,1);
+    p2addArr.splice(Number(this.id.split('B')[1])-1,1);
+    checkOriginFn();
+    checkAddFn();
+}
+function p2originFn(){
+    originNum = this.src.split('able/')[1].split('.')[0];
+    if(p2originArr.length < 4){
+        if(!p2originArr.includes(originNum)){
+            if(p2originArr.length === p2addArr.length){
+                p2originArr.push(originNum);
+            }
+        }
+    }
+    checkOriginFn();
+    
+}
+function p2addFn(){
+    p2addNum = this.src.split('able/')[1].split('.')[0];
+    if(p2addArr.length<4){
+        if(!p2addArr.includes(p2addNum)){
+            if(p2originArr.length - p2addArr.length === 1){
+                p2addArr.push(p2addNum);
+            }
+        }
+    }
+    checkAddFn();
+}
+
+function checkOriginFn(){
+    if(p2originArr.length === 0){
+        p2originB1.style.display = "none";
+        p2originB2.style.display = "none";
+        p2originB3.style.display = "none";
+        p2originB4.style.display = "none";
+    }
+    if(p2originArr.length === 1){
+        p2originB1.style.display = "block";
+        p2originB2.style.display = "none";
+        p2originB3.style.display = "none";
+        p2originB4.style.display = "none";
+        p2originB1.src = `./styles/images/pass02/able/B${p2originArr[0]}.png`;
+    }else if(p2originArr.length === 2){
+        p2originB1.style.display = "block";
+        p2originB2.style.display = "block";
+        p2originB3.style.display = "none";
+        p2originB4.style.display = "none";
+        p2originB1.src = `./styles/images/pass02/able/B${p2originArr[0]}.png`;
+        p2originB2.src = `./styles/images/pass02/able/B${p2originArr[1]}.png`;
+    }else if(p2originArr.length === 3){
+        p2originB1.style.display = "block";
+        p2originB2.style.display = "block";
+        p2originB3.style.display = "block";
+        p2originB4.style.display = "none";
+        p2originB1.src = `./styles/images/pass02/able/B${p2originArr[0]}.png`;
+        p2originB2.src = `./styles/images/pass02/able/B${p2originArr[1]}.png`;
+        p2originB3.src = `./styles/images/pass02/able/B${p2originArr[2]}.png`;
+    }else if(p2originArr.length === 4){
+        p2originB1.style.display = "block";
+        p2originB2.style.display = "block";
+        p2originB3.style.display = "block";
+        p2originB4.style.display = "block";
+        p2originB1.src = `./styles/images/pass02/able/B${p2originArr[0]}.png`;
+        p2originB2.src = `./styles/images/pass02/able/B${p2originArr[1]}.png`;
+        p2originB3.src = `./styles/images/pass02/able/B${p2originArr[2]}.png`;
+        p2originB4.src = `./styles/images/pass02/able/B${p2originArr[3]}.png`;
+    }
+}
+function checkAddFn(){
+    if(p2addArr.length === 0){
+        p2addB1.style.display = "none";
+        p2addB2.style.display = "none";
+        p2addB3.style.display = "none";
+        p2addB4.style.display = "none";
+
+    }
+    if(p2addArr.length === 1){
+        p2addB1.style.display = "block";
+        p2addB2.style.display = "none";
+        p2addB3.style.display = "none";
+        p2addB4.style.display = "none";
+        p2addB1.src = `./styles/images/pass02/able/B${p2addArr[0]}.png`;
+    }else if(p2addArr.length === 2){
+        p2addB1.style.display = "block";
+        p2addB2.style.display = "block";
+        p2addB3.style.display = "none";
+        p2addB4.style.display = "none";
+        p2addB1.src = `./styles/images/pass02/able/B${p2addArr[0]}.png`;
+        p2addB2.src = `./styles/images/pass02/able/B${p2addArr[1]}.png`;
+    }else if(p2addArr.length === 3){
+        p2addB1.style.display = "block";
+        p2addB2.style.display = "block";
+        p2addB3.style.display = "block";
+        p2addB4.style.display = "none";
+        p2addB1.src = `./styles/images/pass02/able/B${p2addArr[0]}.png`;
+        p2addB2.src = `./styles/images/pass02/able/B${p2addArr[1]}.png`;
+        p2addB3.src = `./styles/images/pass02/able/B${p2addArr[2]}.png`;
+    }
+    else if(p2addArr.length === 4){
+        p2addB1.style.display = "block";
+        p2addB2.style.display = "block";
+        p2addB3.style.display = "block";
+        p2addB4.style.display = "block";
+        p2addB1.src = `./styles/images/pass02/able/B${p2addArr[0]}.png`;
+        p2addB2.src = `./styles/images/pass02/able/B${p2addArr[1]}.png`;
+        p2addB3.src = `./styles/images/pass02/able/B${p2addArr[2]}.png`;
+        p2addB4.src = `./styles/images/pass02/able/B${p2addArr[3]}.png`;
+    }
+}
 // pass07
 var p7box =  document.getElementById('p7box');
 var p7control1 = document.getElementById('p7control1');
