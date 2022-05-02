@@ -1,3 +1,7 @@
+@font-face {
+    font-family: cshk;
+    src: url('./font/ChironSansHKProItVF.otf');
+  }
 #room02pass{
     width:100%;
     height: auto;
@@ -360,10 +364,22 @@
     border:none;
     font-size: 18px;
     background: transparent;
-    width:20px;
     display: inline-block;
+    width:10px;
+    font-family: cshk;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0 5px;
 }
 #room02pass #room02passBottom #p2inputName img{
-    width:15px;
+    width:12px;
+    height: auto;
+}
+
+#room02pass #room02passBottom #p2table{
+    position: absolute;
+    top: 320px;
+    left: 1020px;
+    width:250px;
     height: auto;
 }

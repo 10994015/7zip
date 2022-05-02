@@ -2913,6 +2913,8 @@ const p2able2 = document.getElementById('p2able2');
 const p2able3 = document.getElementById('p2able3');
 const p2able4 = document.getElementById('p2able4');
 let p2PresetManArr = ['5','2','6','3'];
+const p2inputNamebox = document.getElementById('p2inputNamebox');
+const p2table = document.getElementById('p2table');
 p2inter.addEventListener('mouseover',()=>{
     p2inter.src = "./styles/images/pass02/inter2.png";
 })
@@ -2959,9 +2961,44 @@ p2check.addEventListener('click',()=>{
         p2bottomManBg.src = "./styles/images/pass02/womanBg.png";
     }
     p2ableFn();
-
+    p2tableFn();
     room02passBottom.style.display = "block";
 })
+
+p2inputNamebox.addEventListener('keyup',()=>{
+    console.log(p2inputNamebox.value.length);
+    p2inputNamebox.style.width = p2inputNamebox.value.length *15 +"px";
+})
+function p2tableFn(){
+    if(p2gender === "man"){
+        if((p2addArr.includes('15')||p2addArr.includes('11')) && (!p2addArr.includes('12')&&!p2addArr.includes('13')&&!p2addArr.includes('14')&&!p2addArr.includes('16')&&!p2addArr.includes('17')&&!p2addArr.includes('18'))){
+            p2table.src = "./styles/images/pass02/man01.png";
+        }else if((p2addArr.includes('12')||p2addArr.includes('14')) && (!p2addArr.includes('11')&&!p2addArr.includes('13')&&!p2addArr.includes('15')&&!p2addArr.includes('16')&&!p2addArr.includes('17')&&!p2addArr.includes('18'))){
+            p2table.src = "./styles/images/pass02/man02.png";
+        }else if((p2addArr.includes('13')||p2addArr.includes('17')) && (!p2addArr.includes('11')&&!p2addArr.includes('12')&&!p2addArr.includes('14')&&!p2addArr.includes('16')&&!p2addArr.includes('15')&&!p2addArr.includes('18'))){
+            p2table.src = "./styles/images/pass02/man03.png";
+        }else if((p2addArr.includes('16')||p2addArr.includes('18')) && (!p2addArr.includes('11')&&!p2addArr.includes('12')&&!p2addArr.includes('14')&&!p2addArr.includes('13')&&!p2addArr.includes('15')&&!p2addArr.includes('17'))){
+            p2table.src = "./styles/images/pass02/man04.png";
+        }else{
+            p2table.src = "./styles/images/pass02/man05.png";
+        }
+        return;
+    }
+    if(p2gender === "woman"){
+        if((p2addArr.includes('15')||p2addArr.includes('11')) && (!p2addArr.includes('12')&&!p2addArr.includes('13')&&!p2addArr.includes('14')&&!p2addArr.includes('16')&&!p2addArr.includes('17')&&!p2addArr.includes('18'))){
+            p2table.src = "./styles/images/pass02/woman01.png";
+        }else if((p2addArr.includes('12')||p2addArr.includes('14')) && (!p2addArr.includes('11')&&!p2addArr.includes('13')&&!p2addArr.includes('15')&&!p2addArr.includes('16')&&!p2addArr.includes('17')&&!p2addArr.includes('18'))){
+            p2table.src = "./styles/images/pass02/woman02.png";
+        }else if((p2addArr.includes('13')||p2addArr.includes('17')) && (!p2addArr.includes('11')&&!p2addArr.includes('12')&&!p2addArr.includes('14')&&!p2addArr.includes('16')&&!p2addArr.includes('15')&&!p2addArr.includes('18'))){
+            p2table.src = "./styles/images/pass02/woman03.png";
+        }else if((p2addArr.includes('16')||p2addArr.includes('18')) && (!p2addArr.includes('11')&&!p2addArr.includes('12')&&!p2addArr.includes('14')&&!p2addArr.includes('13')&&!p2addArr.includes('15')&&!p2addArr.includes('17'))){
+            p2table.src = "./styles/images/pass02/woman04.png";
+        }else{
+            p2table.src = "./styles/images/pass02/woman05.png";
+        }
+        return;
+    }
+}
 function p2ableFn(){
     p2PresetManArr.forEach((item)=>{
         if(p2addArr.length < 4){
