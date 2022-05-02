@@ -1157,6 +1157,7 @@ yes[3].addEventListener("click",openRoom04)
 function openRoom04(){
     main.style.display = "none";
     room04.style.display = "block";
+    document.getElementById('bg04').style.display="block";
     setTimeout(()=>{
         room04Bg.style.opacity = "1";
         room04People.style.display = "block";
@@ -2528,7 +2529,7 @@ p1PrevPage.addEventListener("click",preroom01);
 // p1PrevPage2.addEventListener("click",clearR1room);
 p2PrevPage.addEventListener("click",preroom02);
 p3PrevPage.addEventListener("click",clearR3room);
-p4PrevPage.addEventListener("click",clearR4room);
+p4PrevPage.addEventListener("click",preroom04);
 p5PrevPage.addEventListener("click",clearR5room);
 p6PrevPage.addEventListener("click",clearR6room);
 function preroom01(){
@@ -2547,8 +2548,16 @@ function preroom02(){
     room02passBottom.style.display = "none";
     room02passselect.style.display = "block";
 }
+
+function preroom04(){
+    room04pass.style.display  = "none";
+    r4Password.value = "";
+    openRoom04();
+    document.getElementById('bg04').style.display="none";
+}
 //prehome
 document.getElementById('p2-home').addEventListener('click',prehome02);
+document.getElementById('p4-home').addEventListener('click',prehome04);
 function prehome01(){
     room01pass.style.display = "none";
     r1Password.value = "";
@@ -2562,7 +2571,12 @@ function prehome02(){
     room02passselect.style.display = "block";
     clearR2room();
 }
-
+function prehome04(){
+    room04pass.style.display = "none";
+    r4Password.value = "";
+    // room04passBottom.style.display = "none";
+    clearR4room();
+}
 //pass01
 var p1box = document.getElementById('p1box');
 var p1number = document.getElementById('p1number');
@@ -3124,6 +3138,195 @@ function checkAddFn(){
         p2addB4.src = `./styles/images/pass02/able/B${p2addArr[3]}.png`;
     }
 }
+
+//pass04
+const p4cloth = document.getElementById('p4cloth');
+const p4btn01 = document.getElementById('p4btn01');
+const p4btn02 = document.getElementById('p4btn02');
+const p4btn03 = document.getElementById('p4btn03');
+const p4btn04 = document.getElementById('p4btn04');
+const p4addClothBox = document.getElementById('p4addClothBox');
+const p4addCloth = document.getElementById('p4addCloth');
+const p4clothTop = document.getElementById('p4clothTop');
+const p4clothBottom = document.getElementById('p4clothBottom');
+const p4clothBuy = document.getElementById('p4clothBuy');
+const p4addLifeBox = document.getElementById('p4addLifeBox');
+const p4addLife = document.getElementById('p4addLife');
+const p4lifeTop = document.getElementById('p4lifeTop');
+const p4lifeBottom = document.getElementById('p4lifeBottom');
+const p4lifeBuy = document.getElementById('p4lifeBuy');
+const p4life = document.getElementById('p4life');
+let p4ClothNum = 0;
+let p4LifeNum = 0;
+let p4HealthNum = 1;
+let p4ActionNum = 0;
+p4cloth.addEventListener('mouseover',()=>{
+    p4cloth.src = "./styles/images/pass04/cloth2.png";
+})
+p4cloth.addEventListener('mouseout',()=>{
+    p4cloth.src = "./styles/images/pass04/cloth1.png";
+})
+p4btn01.addEventListener('click',()=>{
+    if(p4btn01.src.split('pass04/')[1] == "btn1A.png"){
+        p4btn01.src = "./styles/images/pass04/btn1B.png";
+        p4addClothBox.style.display = "block";
+    }else{
+        p4btn01.src = "./styles/images/pass04/btn1A.png";
+        p4addClothBox.style.display = "none";
+    }
+})
+p4btn02.addEventListener('click',()=>{
+    if(p4btn02.src.split('pass04/')[1] == "btn2A.png"){
+        p4btn02.src = "./styles/images/pass04/btn2B.png";
+        p4addLifeBox.style.display = "block";
+    }else{
+        p4btn02.src = "./styles/images/pass04/btn2A.png";
+        p4addLifeBox.style.display = "none";
+    }
+})
+p4btn03.addEventListener('click',()=>{
+    if(p4btn03.src.split('pass04/')[1] == "btn3A.png"){
+        p4btn03.src = "./styles/images/pass04/btn3B.png";
+        p4addHealthBox.style.display = "block";
+        p4addOnBox.style.display = "block";
+    }else{
+        p4btn03.src = "./styles/images/pass04/btn3A.png";
+        p4addHealthBox.style.display = "none";
+        p4addOnBox.style.display = "none";
+    }
+})
+p4btn04.addEventListener('click',()=>{
+    if(p4btn04.src.split('pass04/')[1] == "btn4A.png"){
+        p4btn04.src = "./styles/images/pass04/btn4B.png";
+        p4actionBox.style.display = "block";
+    }else{
+        p4btn04.src = "./styles/images/pass04/btn4A.png";
+        p4actionBox.style.display = "none";
+    }
+})
+p4clothTop.addEventListener('click',()=>{
+    if(p4ClothNum === 1){
+        p4ClothNum--;
+    }
+    p4addCloth.src = "./styles/images/pass04/cloth01.png";
+    
+})
+p4clothBottom.addEventListener('click',()=>{
+    if(p4ClothNum === 0){
+        p4ClothNum++;
+    }
+    p4addCloth.src = "./styles/images/pass04/cloth02.png";
+})
+p4lifeTop.addEventListener('click',()=>{
+    if(p4LifeNum === 1){
+        p4LifeNum--;
+    }
+    p4addLife.src = "./styles/images/pass04/life01.png";
+})
+p4lifeBottom.addEventListener('click',()=>{
+    if(p4LifeNum === 0){
+        p4LifeNum++;
+    }
+    p4addLife.src = "./styles/images/pass04/life02.png";
+})
+p4lifeBuy.addEventListener('click',()=>{
+    if(p4LifeNum === 0){
+        p4life.style.display = "block";
+        p4life.style.top = "290px";
+        p4life.src = "./styles/images/pass04/cat.png";
+    }else if(p4LifeNum === 1){
+        p4life.style.display = "block";
+        p4life.style.top = "307px";
+        p4life.src = "./styles/images/pass04/dog.png";
+    }
+})
+p4clothBuy.addEventListener('click',()=>{
+    if(p4ClothNum===0){
+        p4people.src = "./styles/images/pass04/people02.png";
+        p4people.style.top = "133px";
+    }
+    else if(p4ClothNum===1){
+        p4people.src = "./styles/images/pass04/people03.png";
+        p4people.style.top = "133px";
+    }
+})
+p4healthTop.addEventListener('click',()=>{
+    if(p4HealthNum>1){
+        p4HealthNum--;
+    }
+    p4addHealth.src = `./styles/images/pass04/health0${p4HealthNum}.png`;
+})
+p4healthBottom.addEventListener('click',()=>{
+    if(p4HealthNum<3){
+        p4HealthNum++;
+    }
+    p4addHealth.src = `./styles/images/pass04/health0${p4HealthNum}.png`;
+})
+p4healthBuy.addEventListener('click',()=>{
+    p4healthObj.src = `./styles/images/pass04/healthobj${p4HealthNum}.png`;
+    if(p4HealthNum===1){
+        p4healthObj.style.left = "878px";
+        p4healthObj.style.width = "80px";
+    }
+    if(p4HealthNum===2){
+        p4healthObj.style.left = "895px";
+        p4healthObj.style.width = "48px";
+    }
+    if(p4HealthNum===3){
+        p4healthObj.style.left = "873px";
+        p4healthObj.style.width = "100px";
+    }
+    p4healthObj.style.display = "block";
+})
+p4addon1.addEventListener('click',()=>{
+    if(p4addon1.src.split('addon1')[1].split('.')[0]==="A"){
+        p4addon1.src = "./styles/images/pass04/addon1B.png";
+    }else{
+        p4addon1.src = "./styles/images/pass04/addon1A.png";
+    }
+})
+p4addon2.addEventListener('click',()=>{
+    if(p4addon2.src.split('addon2')[1].split('.')[0]==="A"){
+        p4addon2.src = "./styles/images/pass04/addon2B.png";
+    }else{
+        p4addon2.src = "./styles/images/pass04/addon2A.png";
+    }
+})
+p4addon3.addEventListener('click',()=>{
+    if(p4addon3.src.split('addon3')[1].split('.')[0]==="A"){
+        p4addon3.src = "./styles/images/pass04/addon3B.png";
+    }else{
+        p4addon3.src = "./styles/images/pass04/addon3A.png";
+    }
+})
+p4actionTop.addEventListener('click',()=>{
+    if(p4ActionNum === 1){
+        p4ActionNum--;
+    }
+    p4action.src = "./styles/images/pass04/action1.png";
+    
+})
+p4actionBottom.addEventListener('click',()=>{
+    if(p4ActionNum === 0){
+        p4ActionNum++;
+    }
+    p4action.src = "./styles/images/pass04/action2.png";
+})
+p4actionBuy.addEventListener('click',()=>{
+    if(p4ActionNum===0){
+        p4actionObj.src = "./styles/images/pass04/actionobj1.png";
+        p4actionObj.style.display = "block";
+        p4actionObj.style.top = "80px";
+        p4actionObj.style.left = "557px";
+        p4actionObj.style.width = "293px";
+    }else if(p4ActionNum===1){
+        p4actionObj.src = "./styles/images/pass04/actionobj2.png";
+        p4actionObj.style.display = "block";
+        p4actionObj.style.top = "260px";
+        p4actionObj.style.left = "525px";
+        p4actionObj.style.width = "372px";
+    }
+})
 // pass07
 var p7box =  document.getElementById('p7box');
 var p7control1 = document.getElementById('p7control1');

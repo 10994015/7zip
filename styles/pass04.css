@@ -1,0 +1,357 @@
+#room04pass{
+    width:100%;
+    height: auto;
+    position: absolute;
+    /* position: relative; */
+    top: 30px;
+    left:0;
+}
+#room04pass #room04passContent{
+    width:100%;
+    margin:auto;
+    /* position: relative; */
+    margin-top: 50px;
+    height: 600px;
+    /* background-image: url("./images/pass04/top.png"); */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+#room04pass #room04passContent::-webkit-scrollbar {
+    width: 0.1em;
+  }
+  #room04pass #room04passContent::-webkit-scrollbar-button{
+    background: #000;
+  }
+  #room04pass #room04passContent::-webkit-scrollbar-track-piece{
+    background: #000;
+  }
+  #room04pass #room04passContent::-webkit-scrollbar-thumb {
+    /* background-color: #fff;
+    height: 0;
+    width:0;
+    display: none;
+    opacity: none; */
+  }
+  #room04pass #pass04border{
+    width:1300px;
+    margin:auto;
+    position: relative;
+}
+#room04pass #p4border{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+#room04pass  #p4-prevPage{
+    position: absolute;
+    top: 0px;
+    left:7px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room04pass  #p4-prevPage:hover{
+    transform: scale(1.1);
+}
+#room04pass  #p4-home{
+    position: absolute;
+    top: 10px;
+    left:61.5px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room04pass  #p4-home:hover{
+    transform: scale(1.1);
+}
+
+#room04pass #room04passTop,
+#room04pass #room04passBottom{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 50px;
+    height: 550px;
+}
+#room04pass #room04passTop #topbg04,
+#room04pass #room04passBottom #p4bottomBg{
+    width:100%;
+}
+#room04pass #room04passTop #p4cloth{
+    position: absolute;
+    top: 232px;
+    left:1095px;
+    width:106px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4people{
+    position: absolute;
+    top: 130.5px;
+    left:817px;
+    width:235px;
+    height: auto;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4btn01{
+    position: absolute;
+    top: 180px;
+    left:397px;
+    width:120px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99999;
+}
+ 
+#room04pass #room04passBottom #p4btn02{
+    position: absolute;
+    top: 235px;
+    left:397px;
+    width:120px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99999;
+}
+#room04pass #room04passBottom #p4btn03{
+    position: absolute;
+    top: 290px;
+    left:397px;
+    width:120px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99999;
+}
+#room04pass #room04passBottom #p4btn04{
+    position: absolute;
+    top: 345px;
+    left:397px;
+    width:120px;
+    height: auto;
+    cursor: pointer;
+     z-index: 99999;
+}
+
+#room04pass #room04passBottom #p4addClothBox{
+    position: absolute;
+    top: 85px;
+    left:548px;
+    width:234px;
+    height: auto;
+    display: none;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4addClothBox #p4addCloth{
+    width:100%;
+}
+#room04pass #room04passBottom #p4addClothBox #p4clothTop{
+    position: absolute;
+    top: 0;
+    right:0;
+    width:29px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4addClothBox #p4clothBottom{
+    position: absolute;
+    top: 27px;
+    right:0;
+    width:29px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4addClothBox #p4clothBuy {
+    position: absolute;
+    bottom: 0px;
+    right:0;
+    width:29px;
+    height: 55px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#room04pass #room04passBottom #p4addLifeBox{
+    position: absolute;
+    top: 240px;
+    right:40px;
+    width:190px;
+    height: auto;
+    z-index: 99;
+    display: none;
+}
+#room04pass #room04passBottom #p4addLifeBox #p4addLife{
+    width:100%;
+}
+#room04pass #room04passBottom #p4addLifeBox #p4lifeTop{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:24px;
+    height: 21px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4addLifeBox #p4lifeBottom{
+    position: absolute;
+    top:22px;
+    left:0;
+    width:24px;
+    height: 21px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4addLifeBox #p4lifeBuy{
+    position: absolute;
+    bottom:0px;
+    left:0;
+    width:24px;
+    height: 45px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4life{
+    position: absolute;
+    top: 290px;
+    left:580px;
+    width:200px;
+    height: auto;
+    display: none;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4addHealthBox{
+    position: absolute;
+    top: 85px;
+    left:548px;
+    width:234px;
+    height: auto;
+    display: none;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4addHealthBox #p4addHealth{
+    width:100%;
+}
+#room04pass #room04passBottom #p4addHealthBox #p4healthTop{
+    position: absolute;
+    top: 0;
+    right:0;
+    width:29px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4addHealthBox #p4healthBottom{
+    position: absolute;
+    top: 27px;
+    right:0;
+    width:29px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4addHealthBox #p4healthBuy {
+    position: absolute;
+    bottom: 0px;
+    right:0;
+    width:29px;
+    height: 55px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#room04pass #room04passBottom #p4healthObj{
+    position: absolute;
+    top: 292px;
+    left:878px;
+    width:80px;
+    height: auto;
+    cursor: pointer;
+    display: none;
+    z-index: 99;
+}
+
+#room04pass #room04passBottom #p4addOnBox{
+    position: absolute;
+    top:250px;
+    right:55px;
+    width:100px;
+    height: 243px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4addOnBox img{
+    width:100%;
+    margin:3px 0;
+    cursor: pointer;
+}
+#room04pass #room04passBottom #p4addOnBox #p4addontitle{
+    cursor: default;
+}
+#room04pass #room04passBottom #p4actionBox{
+    position: absolute;
+    top: 240px;
+    right:40px;
+    width:190px;
+    height: auto;
+    display: none;
+    z-index: 99;
+}
+#room04pass #room04passBottom #p4actionBox #p4action{
+    width:100%;
+}
+#room04pass #room04passBottom #p4actionBox #p4actionTop{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:24px;
+    height: 21px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4actionBox #p4actionBottom{
+    position: absolute;
+    top:22px;
+    left:0;
+    width:24px;
+    height: 21px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4actionBox #p4actionBuy{
+    position: absolute;
+    bottom:0px;
+    left:0;
+    width:24px;
+    height: 45px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#room04pass #room04passBottom #p4actionObj{
+    position: absolute;
+    top: 80px;
+    left: 557px;
+    width:293px;
+    height: auto;
+    z-index: 7;
+    display: none;
+}
+
+
+#room04pass #room04passBottom #p4table{
+    position: absolute;
+    top: 323px;
+    left: 432px;
+    width:859px;
+    height: auto;
+    z-index: 9;
+}
