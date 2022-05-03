@@ -1,0 +1,181 @@
+#room03pass{
+    width:100%;
+    height: auto;
+    position: absolute;
+    /* position: relative; */
+    top: 30px;
+    left:0;
+}
+#room03pass #room03passContent{
+    width:100%;
+    margin:auto;
+    /* position: relative; */
+    margin-top: 50px;
+    height: 600px;
+    /* background-image: url("./images/pass03/top.png"); */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+#room03pass #room03passContent::-webkit-scrollbar {
+    width: 0.1em;
+  }
+  #room03pass #room03passContent::-webkit-scrollbar-button{
+    background: #000;
+  }
+  #room03pass #room03passContent::-webkit-scrollbar-track-piece{
+    background: #000;
+  }
+  #room03pass #room03passContent::-webkit-scrollbar-thumb {
+    /* background-color: #fff;
+    height: 0;
+    width:0;
+    display: none;
+    opacity: none; */
+  }
+  #room03pass #pass03border{
+    width:1300px;
+    margin:auto;
+    position: relative;
+}
+#room03pass #p3border{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+#room03pass  #p3-prevPage{
+    position: absolute;
+    top: 0px;
+    left:7px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room03pass  #p3-prevPage:hover{
+    transform: scale(1.1);
+}
+#room03pass  #p3-home{
+    position: absolute;
+    top: 10px;
+    left:61.5px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room03pass  #p3-home:hover{
+    transform: scale(1.1);
+}
+
+#room03pass #room03passTop,
+#room03pass #room03passselect,
+#room03pass #room03passBottom{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 50px;
+    height: 550px;
+}
+#room03pass #room03passTop #topbg03,
+#room03pass #room03passselect #p3selectbg,
+#room03pass #room03passBottom #p3bottomBg{
+    width:100%;
+}
+#room03pass #room03passTop #p3egg{
+    position: absolute;
+    top: 232px;
+    left:1087px;
+    width:143px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#room03pass #room03passselect #p3mealsleft{
+    position: absolute;
+    top: 290px;
+    left:405px;
+    width:25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 99;
+    background-color: transparent;
+}
+#room03pass #room03passselect #p3mealsright{
+    position: absolute;
+    top: 290px;
+    left:442px;
+    width:25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 99;
+    background-color: transparent;
+}
+#room03pass #room03passselect #p3meals{
+    position: absolute;
+    top: 95px;
+    left:390px;
+    width:200px;
+    height: auto;
+    z-index: 99;
+}
+#room03pass #room03passselect #p3peopletop{
+    position: absolute;
+    top: 158px;
+    left:956px;
+    width:25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 99;
+    background-color: transparent;
+}
+#room03pass #room03passselect #p3peoplebottom{
+    position: absolute;
+    top: 196px;
+    left:956px;
+    width:25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 99;
+    background-color: transparent;
+}
+#room03pass #room03passselect #p3people{
+    position: absolute;
+    top: 100px;
+    left:990px;
+    width:270px;
+    height: auto;
+    z-index: 99;
+}
+#room03pass #room03passselect #p3step{
+    position: absolute;
+    top:455px;
+    left:780px;
+    width:100px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room03pass #room03passBottom{
+    display: none;
+}
+#room03pass #room03passBottom #p3bottompeople{
+    position: absolute;
+    bottom: 24px;
+    left:550px;
+    width:557px;
+    height: auto;
+    z-index: 99;
+}
+#room03pass #room03passBottom #p3bottommeals{
+    position: absolute;
+    bottom: 10px;
+    left:730px;
+    width:200px;
+    height: auto;
+    z-index: 99;
+}

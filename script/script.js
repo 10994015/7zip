@@ -2528,7 +2528,7 @@ var p6PrevPage = document.getElementById('p6-prevPage');
 p1PrevPage.addEventListener("click",preroom01);
 // p1PrevPage2.addEventListener("click",clearR1room);
 p2PrevPage.addEventListener("click",preroom02);
-p3PrevPage.addEventListener("click",clearR3room);
+p3PrevPage.addEventListener("click",preroom03);
 p4PrevPage.addEventListener("click",preroom04);
 p5PrevPage.addEventListener("click",clearR5room);
 p6PrevPage.addEventListener("click",clearR6room);
@@ -2548,7 +2548,12 @@ function preroom02(){
     room02passBottom.style.display = "none";
     room02passselect.style.display = "block";
 }
-
+function preroom03(){
+    room03pass.style.display  = "none";
+    r3Password.value = "";
+    openRoom03();
+    document.getElementById('bg07').style.display="none";
+}
 function preroom04(){
     room04pass.style.display  = "none";
     r4Password.value = "";
@@ -2557,6 +2562,7 @@ function preroom04(){
 }
 //prehome
 document.getElementById('p2-home').addEventListener('click',prehome02);
+document.getElementById('p3-home').addEventListener('click',prehome03);
 document.getElementById('p4-home').addEventListener('click',prehome04);
 function prehome01(){
     room01pass.style.display = "none";
@@ -2570,6 +2576,13 @@ function prehome02(){
     room02passBottom.style.display = "none";
     room02passselect.style.display = "block";
     clearR2room();
+}
+function prehome03(){
+    room03pass.style.display = "none";
+    r3Password.value = "";
+    room03passBottom.style.display = "none";
+    room03passselect.style.display = "block";
+    clearR3room();
 }
 function prehome04(){
     room04pass.style.display = "none";
@@ -3139,6 +3152,121 @@ function checkAddFn(){
     }
 }
 
+//pass03
+const room03passselect = document.getElementById('room03passselect');
+const room03passBottom = document.getElementById('room03passBottom');
+const p3egg = document.getElementById('p3egg');
+const p3mealsleft = document.getElementById('p3mealsleft');
+const p3mealsright = document.getElementById('p3mealsright');
+const p3meals = document.getElementById('p3meals');
+const p3peopletop = document.getElementById('p3peopletop');
+const p3peoplebottom = document.getElementById('p3peoplebottom');
+const p3people = document.getElementById('p3people');
+const p3step = document.getElementById('p3step');
+const p3bottompeople = document.getElementById('p3bottompeople');
+const p3bottommeals = document.getElementById('p3bottommeals');
+let p3mealsNum = 1;
+let p3peopleNum = 1;
+p3egg.addEventListener('mouseover',()=>{
+    p3egg.src = "./styles/images/pass03/egg2.png";
+})
+p3egg.addEventListener('mouseout',()=>{
+    p3egg.src = "./styles/images/pass03/egg1.png";
+})
+p3mealsright.addEventListener('click',()=>{
+    if(p3mealsNum < 7 ){
+        p3mealsNum++;
+    }else{
+        p3mealsNum = 1;
+    }
+    p3meals.src = `./styles/images/pass03/meals${p3mealsNum}.png`;
+})
+p3mealsleft.addEventListener('click',()=>{
+    if(p3mealsNum > 1 ){
+        p3mealsNum--;
+    }else{
+        p3mealsNum = 7;
+    }
+    p3meals.src = `./styles/images/pass03/meals${p3mealsNum}.png`;
+})
+p3peoplebottom.addEventListener('click',()=>{
+    if(p3peopleNum < 7){
+        p3peopleNum++;
+    }else{
+        p3peopleNum = 1;
+    }
+    p3people.src = `./styles/images/pass03/people${p3peopleNum}.png`;
+})
+p3peopletop.addEventListener('click',()=>{
+    if(p3peopleNum > 1){
+        p3peopleNum--;
+    }else{
+        p3peopleNum = 7;
+    }
+    p3people.src = `./styles/images/pass03/people${p3peopleNum}.png`;
+})
+p3step.addEventListener('click',()=>{
+    room03passselect.style.display = "none";
+    if(p3peopleNum === 1){
+        p3bottompeople.style.left = "550px";
+        p3bottompeople.style.width = "557px";
+    }
+    else if(p3peopleNum === 2){
+        p3bottompeople.style.left = "526px";
+        p3bottompeople.style.width = "604px";
+    }
+    else if(p3peopleNum === 3){
+        p3bottompeople.style.left = "522px";
+        p3bottompeople.style.width = "612px";
+    }
+    else if(p3peopleNum === 4){
+        p3bottompeople.style.left = "549px";
+        p3bottompeople.style.width = "558px";
+    }
+    else if(p3peopleNum === 5){
+        p3bottompeople.style.left = "496px";
+        p3bottompeople.style.width = "659px";
+    }
+    else if(p3peopleNum === 6){
+        p3bottompeople.style.left = "468px";
+        p3bottompeople.style.width = "708px";
+    }
+    else{
+        p3bottompeople.style.left = "498px";
+        p3bottompeople.style.width = "644px";
+    }
+    if(p3mealsNum === 1){
+        p3bottommeals.style.left = "730px";
+        p3bottommeals.style.width = "200px";
+    }
+    else if(p3mealsNum === 2){
+        p3bottommeals.style.left = "687px";
+        p3bottommeals.style.width = "275px";
+    }
+    else if(p3mealsNum === 3){
+        p3bottommeals.style.left = "728px";
+        p3bottommeals.style.width = "200px";
+    }
+    else if(p3mealsNum === 4){
+        p3bottommeals.style.left = "728px";
+        p3bottommeals.style.width = "200px";
+    }
+    else if(p3mealsNum === 5){
+        p3bottommeals.style.left = "728px";
+        p3bottommeals.style.width = "200px";
+    }
+    else if(p3mealsNum === 6){
+        p3bottommeals.style.left = "728px";
+        p3bottommeals.style.width = "200px";
+    }
+    else{
+        p3bottommeals.style.left = "728px";
+        p3bottommeals.style.width = "200px";
+    }
+    room03passBottom.style.display = "block";
+    p3bottompeople.src = `./styles/images/pass03/bottom/people${p3peopleNum}.png`
+    p3bottommeals.src = `./styles/images/pass03/bottom/meals${p3mealsNum}.png`
+})
 //pass04
 const p4cloth = document.getElementById('p4cloth');
 const p4btn01 = document.getElementById('p4btn01');
