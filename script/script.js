@@ -3166,8 +3166,20 @@ p4cloth.addEventListener('mouseover',()=>{
 p4cloth.addEventListener('mouseout',()=>{
     p4cloth.src = "./styles/images/pass04/cloth1.png";
 })
+function p4btninit(){
+    p4btn01.src = "./styles/images/pass04/btn1A.png";
+    p4btn02.src = "./styles/images/pass04/btn2A.png";
+    p4btn03.src = "./styles/images/pass04/btn3A.png";
+    p4btn04.src = "./styles/images/pass04/btn4A.png";
+    p4addClothBox.style.display = "none";
+    p4addLifeBox.style.display = "none";
+    p4addOnBox.style.display = "none";
+    p4addHealthBox.style.display = "none";
+    p4actionBox.style.display = "none";
+}
 p4btn01.addEventListener('click',()=>{
     if(p4btn01.src.split('pass04/')[1] == "btn1A.png"){
+        p4btninit();
         p4btn01.src = "./styles/images/pass04/btn1B.png";
         p4addClothBox.style.display = "block";
     }else{
@@ -3177,6 +3189,7 @@ p4btn01.addEventListener('click',()=>{
 })
 p4btn02.addEventListener('click',()=>{
     if(p4btn02.src.split('pass04/')[1] == "btn2A.png"){
+        p4btninit();
         p4btn02.src = "./styles/images/pass04/btn2B.png";
         p4addLifeBox.style.display = "block";
     }else{
@@ -3186,6 +3199,7 @@ p4btn02.addEventListener('click',()=>{
 })
 p4btn03.addEventListener('click',()=>{
     if(p4btn03.src.split('pass04/')[1] == "btn3A.png"){
+        p4btninit();
         p4btn03.src = "./styles/images/pass04/btn3B.png";
         p4addHealthBox.style.display = "block";
         p4addOnBox.style.display = "block";
@@ -3197,6 +3211,7 @@ p4btn03.addEventListener('click',()=>{
 })
 p4btn04.addEventListener('click',()=>{
     if(p4btn04.src.split('pass04/')[1] == "btn4A.png"){
+        p4btninit();
         p4btn04.src = "./styles/images/pass04/btn4B.png";
         p4actionBox.style.display = "block";
     }else{
