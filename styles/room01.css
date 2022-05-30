@@ -2,6 +2,7 @@
     font-family: fzyx;
     src: url(./font/FZYXB.TTF);
 }
+
 #room01{
     width: 1400px;
     height: 672px;
@@ -11,11 +12,33 @@
     left:0;
     margin: auto;
     overflow: hidden;
+    /* overflow-x:scroll;  */
     /* background: url("./images/room07/bg.png") no-repeat; */
     background-size:cover;
     display: none;
     z-index: 999;
+    overflow-x:scroll ;
 }
+#room01::-webkit-scrollbar {
+    height: 10px;
+  }
+
+#room01::-webkit-scrollbar-button {
+    background: transparent;
+    border-radius: 4px;
+  }
+
+#room01::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+#room01::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 67, 157, .6);
+  }
+
+#room01::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
 #room01 .bgimg{
     width: 1400px;
     height: 672px;
@@ -52,7 +75,6 @@
     top:calc(50% - 250px);
     z-index: 1;
     animation: start 1s linear;
-    
 }
 
 #room01 #room01People{

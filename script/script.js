@@ -60,6 +60,7 @@ var room01 = document.getElementById('room01');
 var room01Bg = document.getElementById('room01Bg');
 var room01Text = document.getElementById('room01Text');
 var r1people = document.getElementById('r1-people');
+var r1background = document.getElementById('r1-background');
 var r1card = document.getElementById('r1-card');
 var r1cardRight = document.getElementById('r1-card-right');
 var r1cardLeft = document.getElementById('r1-card-left');
@@ -110,6 +111,7 @@ function openRoom01(){
     setTimeout(()=>{
         room01Bg.style.opacity = "1";
         r1people.style.display = "none";
+        r1background.style.display = "none";
         room01Text.style.display = "block";
         r1Enter.style.display = "block";
         r1PrevPage.style.display = "block";
@@ -410,6 +412,7 @@ function clearR1room(){
         r1cloud.style.display = "none";
         
         r1people.style.display = "block";
+        r1background.style.display = "block";
         r1card.style.display = "block";
         r1cardRight.style.display = "block";
         r1cardLeft.style.display = "block"; 
@@ -2206,6 +2209,9 @@ function clearR6room(){
     for(let a=0;a<r6arrow.length;a++){
         r6arrow[a].style.display = "none";
     }
+        
+   
+
     r6people.style.display = "block";
     r6card.style.display = "block";
     r6cardRight.style.display = "block";
@@ -2531,7 +2537,7 @@ p2PrevPage.addEventListener("click",preroom02);
 p3PrevPage.addEventListener("click",preroom03);
 p4PrevPage.addEventListener("click",preroom04);
 p5PrevPage.addEventListener("click",clearR5room);
-p6PrevPage.addEventListener("click",clearR6room);
+p6PrevPage.addEventListener("click",preroom06);
 function preroom01(){
         room01pass.style.display  = "none";
         r1Password.value = "";
@@ -2560,10 +2566,17 @@ function preroom04(){
     openRoom04();
     document.getElementById('bg04').style.display="none";
 }
+function preroom06(){
+    room06pass.style.display  = "none";
+    r6Password.value = "";
+    openRoom06();
+    document.getElementById('bg02').style.display="none";
+}
 //prehome
 document.getElementById('p2-home').addEventListener('click',prehome02);
 document.getElementById('p3-home').addEventListener('click',prehome03);
 document.getElementById('p4-home').addEventListener('click',prehome04);
+document.getElementById('p6-home').addEventListener('click',prehome06);
 function prehome01(){
     room01pass.style.display = "none";
     r1Password.value = "";
@@ -2589,6 +2602,16 @@ function prehome04(){
     r4Password.value = "";
     // room04passBottom.style.display = "none";
     clearR4room();
+}
+function prehome06(){
+    room06pass.style.display = "none";
+    r6Password.value = "";
+    room06passBottom1.style.display = "none";
+    room06passBottom2.style.display = "none";
+    room06passBottom3.style.display = "none";
+    room06passBottom4.style.display = "none";
+    room06passselect.style.display = "block";
+    clearR6room();
 }
 //pass01
 var p1box = document.getElementById('p1box');
@@ -3470,6 +3493,167 @@ p4actionBuy.addEventListener('click',()=>{
         p4actionObj.style.width = "372px";
     }
 })
+
+//pass06
+const p6egg = document.getElementById('p6egg');
+const p6girl = document.getElementById('p6girl');
+const p6boy = document.getElementById('p6boy');
+const p6people = document.getElementById('p6people');
+const p6monkey = document.getElementById('p6monkey');
+const p6s1 = document.getElementById('p6s1');
+const p6s2 = document.getElementById('p6s2');
+const p6s3 = document.getElementById('p6s3');
+const p6s4 = document.getElementById('p6s4');
+const p6chkbtn = document.getElementById('p6chkbtn');
+let p6selectArr = [0,0];
+p6egg.addEventListener('mouseover',()=>{
+    p6egg.src = "./styles/images/pass06/egg2.png";
+})
+p6egg.addEventListener('mouseout',()=>{
+    p6egg.src = "./styles/images/pass06/egg1.png";
+})
+p6girl.addEventListener('click',()=>{
+    p6seletinit()
+    if(p6girl.src.split('girl')[1] === "1.png" ){
+        p6girl.src = "./styles/images/pass06/girl2.png";
+        p6girl.style.width = "190px";
+        p6girl.style.left = "440px";
+        p6girl.style.top = "170px";
+        p6selectArr[0] = 1;
+    }else{
+        p6girl.src = "./styles/images/pass06/girl1.png"
+        p6girl.style.width = "170px";
+        p6girl.style.left = "450px";
+        p6girl.style.top = "180px";
+        p6selectArr[0] = 0;
+    }
+})
+p6boy.addEventListener('click',()=>{
+    p6seletinit()
+    if(p6boy.src.split('boy')[1] === "1.png" ){
+        p6boy.src = "./styles/images/pass06/boy2.png";
+        p6boy.style.width = "190px";
+        p6boy.style.left = "640px";
+        p6boy.style.top = "170px";
+        p6selectArr[0] = 1;
+        p6selectArr[0] = 2;
+    }else{
+        p6boy.src = "./styles/images/pass06/boy1.png"
+        p6boy.style.width = "170px";
+        p6boy.style.left = "650px";
+        p6boy.style.top = "180px";
+        p6selectArr[0] = 0;
+    }
+})
+p6people.addEventListener('click',()=>{
+    p6seletinit()
+    if(p6people.src.split('people')[1] === "1.png" ){
+        p6people.src = "./styles/images/pass06/people2.png";
+        p6people.style.width = "190px";
+        p6people.style.left = "840px";
+        p6people.style.top = "170px";
+        p6selectArr[0] = 3;
+    }else{
+        p6people.src = "./styles/images/pass06/people1.png"
+        p6people.style.width = "170px";
+        p6people.style.left = "850px";
+        p6people.style.top = "180px";
+        p6selectArr[0] = 0;
+    }
+})
+p6monkey.addEventListener('click',()=>{
+    p6seletinit()
+    if(p6monkey.src.split('monkey')[1] === "1.png" ){
+        p6monkey.src = "./styles/images/pass06/monkey2.png";
+        p6monkey.style.width = "190px";
+        p6monkey.style.left = "1040px";
+        p6monkey.style.top = "170px";
+        p6selectArr[0] = 4;
+    }else{
+        p6monkey.src = "./styles/images/pass06/monkey1.png"
+        p6monkey.style.width = "170px";
+        p6monkey.style.left = "1050px";
+        p6monkey.style.top = "180px";
+        p6selectArr[0] = 0;
+    }
+})
+p6s1.addEventListener('click',()=>{
+    p6seletinit2()
+    if(p6selsctborder1.style.display === "block"){
+        p6selsctborder1.style.display = "none";
+        p6selectArr[1] = 0;
+    }else{
+        p6selsctborder1.style.display = "block";
+        p6selectArr[1] = 1;
+    }
+    p6chkArr();
+})
+p6s2.addEventListener('click',()=>{
+    p6seletinit2()
+    if(p6selsctborder2.style.display === "block"){
+        p6selsctborder2.style.display = "none";
+        p6selectArr[1] = 0;
+    }else{
+        p6selsctborder2.style.display = "block";
+        p6selectArr[1] = 2;
+    }
+    p6chkArr();
+})
+p6s3.addEventListener('click',()=>{
+    p6seletinit2()
+    if(p6selsctborder3.style.display === "block"){
+        p6selsctborder3.style.display = "none";
+        p6selectArr[1] = 0;
+    }else{
+        p6selsctborder3.style.display = "block";
+        p6selectArr[1] = 3;
+    }
+    p6chkArr();
+})
+p6s4.addEventListener('click',()=>{
+    p6seletinit2()
+    if(p6selsctborder4.style.display === "block"){
+        p6selsctborder4.style.display = "none";
+        p6selectArr[1] = 0;
+    }else{
+        p6selsctborder4.style.display = "block";
+        p6selectArr[1] = 4;
+    }
+    p6chkArr();
+})
+
+
+function p6seletinit(){
+    p6selectArr[0] = 0;
+    p6girl.src = "./styles/images/pass06/girl1.png"
+    p6boy.src = "./styles/images/pass06/boy1.png"
+    p6people.src = "./styles/images/pass06/people1.png"
+    p6monkey.src = "./styles/images/pass06/monkey1.png"
+    p6girl.style.width = "170px";
+    p6girl.style.left = "450px";
+    p6girl.style.top = "180px";
+    p6boy.style.width = "170px";
+    p6boy.style.left = "650px";
+    p6boy.style.top = "180px";
+    p6people.style.width = "170px";
+    p6people.style.left = "850px";
+    p6people.style.top = "180px";
+    p6monkey.style.width = "170px";
+    p6monkey.style.left = "1050px";
+    p6monkey.style.top = "180px";
+}
+function p6seletinit2(){
+    p6selectArr[1] = 0;
+    p6selsctborder1.style.display = "none";
+    p6selsctborder2.style.display = "none";
+    p6selsctborder3.style.display = "none";
+    p6selsctborder4.style.display = "none";
+}
+function p6chkArr(){
+    if(p6selectArr[0] != 0 && p6selectArr[1] != 0){
+        p6chkbtn.style.display = "block";
+    }
+}
 // pass07
 var p7box =  document.getElementById('p7box');
 var p7control1 = document.getElementById('p7control1');
