@@ -15,7 +15,30 @@
     background-size:cover;
     display: none;
     z-index: 999;
+    overflow-x:scroll ;
 }
+#room02::-webkit-scrollbar {
+    height: 10px;
+  }
+
+#room02::-webkit-scrollbar-button {
+    background: transparent;
+    border-radius: 4px;
+  }
+
+#room02::-webkit-scrollbar-track-piece {
+    background: transparent;
+    background-color: #444;
+  }
+#room02::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #000;
+    border:1px #aaa solid;
+  }
+
+#room02::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
 #room02 .bgimg{
     width: 1400px;
     height: 672px;

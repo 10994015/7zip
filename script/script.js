@@ -116,7 +116,7 @@ function openRoom01(){
         r1Enter.style.display = "block";
         r1PrevPage.style.display = "block";
         r1Password.style.display = "block";
-
+        document.getElementById('bg01').style.display="none";
         r1authority.style.display = "block";
         r1ansBox.style.display = "block";
         r1ans.style.display = "block";
@@ -482,7 +482,7 @@ function openRoom02(){
         r2Enter.style.display = "block";
         r2PrevPage.style.display = "block";
         r2Password.style.display = "block";
-
+        document.getElementById('bg03').style.display="none";
         r2ansBox.style.display = "block";
         r2chickBox.style.display = "block";
         r2chick.style.display = "block";
@@ -812,7 +812,7 @@ function openRoom03(){
         r3Enter.style.display = "block";
         r3PrevPage.style.display = "block";
         r3Password.style.display = "block";
-        
+        document.getElementById('bg07').style.display="none";
         r3imgslides.style.display = "flex";
         r3left.style.display = "block";
         r3right.style.display = "block";
@@ -1172,7 +1172,7 @@ function openRoom04(){
         r4Enter.style.display = "block";
         r4PrevPage.style.display = "block";
         r4Password.style.display = "block";
-
+        document.getElementById('bg04').style.display="none";
         r4productBox1.style.display = "block";
         r4productBox2.style.display = "block";
         r4productBox3.style.display = "block";
@@ -1536,7 +1536,7 @@ function openRoom05(){
         r5Enter.style.display = "block";
         r5PrevPage.style.display = "block";
         r5Password.style.display = "block";
-
+        document.getElementById('bg05').style.display="none";
         r5puzzle1.style.display  = "block";
         r5puzzle2.style.display  = "block";
         r5pussleBox.style.display  = "block";
@@ -1862,6 +1862,7 @@ function openRoom06(){
         room06Bg.style.opacity = "1";
         room06People.style.display = "block";
         r6people.style.display = "none";
+        document.getElementById('bg02').style.display="none";
         room06Text.style.display = "block";
         r6Enter.style.display = "block";
         r6PrevPage.style.display = "block";
@@ -2269,6 +2270,7 @@ function openRoom07(){
     // console.log(bgimg);
     setTimeout(()=>{
         room07People.style.display = "block";
+        document.getElementById('bg08').style.display="none";
         r7people.style.display = "none";
         room07Bg.style.opacity = "1";
         room07Text.style.display = "block";

@@ -11,7 +11,7 @@
     left:0;
 }
 #room02pass #room02passContent{
-    width:100%;
+    width:90%;
     margin:auto;
     /* position: relative; */
     margin-top: 50px;
@@ -20,23 +20,27 @@
     background-position: center;
     background-size: cover;
     overflow-y: scroll;
-    overflow-x: none;
+    overflow-x: scroll;
 }
 #room02pass #room02passContent::-webkit-scrollbar {
     width: 0.1em;
+    height: 10px;
   }
   #room02pass #room02passContent::-webkit-scrollbar-button{
-    background: #000;
+    background: transparent;
+    border-radius: 4px;
   }
   #room02pass #room02passContent::-webkit-scrollbar-track-piece{
-    background: #000;
+    background: transparent;
+    background-color: #444;
   }
   #room02pass #room02passContent::-webkit-scrollbar-thumb {
-    /* background-color: #fff;
-    height: 0;
-    width:0;
-    display: none;
-    opacity: none; */
+    border-radius: 0px;
+    background-color: #000;
+    border:1px #aaa solid;
+  }
+  #room02pass #room02passContent::-webkit-scrollbar-track {
+    box-shadow: transparent;
   }
   #room02pass #pass02border{
     width:1300px;
