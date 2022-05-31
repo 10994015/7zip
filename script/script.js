@@ -4860,6 +4860,7 @@ p7changeBtn.addEventListener('click',()=>{
     p7memSrc = p7memories.src.split('-')[0];
     p7memories.src = p7memSrc + "-1.png";
     p7revise.src = "./styles/images/pass07/revise1.png";
+    p7position.src = "./styles/images/pass07/position1.png";
     if(p7gender === 0){
         p7gender = 1;
         p7head.src = "./styles/images/pass07/girl1.png";
@@ -4925,6 +4926,7 @@ p7posBtn01.addEventListener('click',()=>{
     p7initposBtnFn();
     p7posBtn01.src = "./styles/images/pass07/posBtn1chk.png";
     p7positionNum = 1;
+    p7position.src = "./styles/images/pass07/position1.png";
     p7revise.src = "./styles/images/pass07/revise1.png";
     if(p7gender === 0){
         p7memories.src = "./styles/images/pass07/memGirl1-1.png";
@@ -4936,6 +4938,7 @@ p7posBtn02.addEventListener('click',()=>{
     p7initposBtnFn();
     p7posBtn02.src = "./styles/images/pass07/posBtn2chk.png";
     p7positionNum = 2;
+    p7position.src = "./styles/images/pass07/position2.png";
     p7revise.src = "./styles/images/pass07/revise1.png";
     if(p7gender === 0){
         p7memories.src = "./styles/images/pass07/memGirl2-1.png";
@@ -4947,6 +4950,7 @@ p7posBtn03.addEventListener('click',()=>{
     p7initposBtnFn();
     p7posBtn03.src = "./styles/images/pass07/posBtn3chk.png";
     p7positionNum = 3;
+    p7position.src = "./styles/images/pass07/position3.png";
     p7revise.src = "./styles/images/pass07/revise1.png";
     if(p7gender === 0){
         p7memories.src = "./styles/images/pass07/memGirl3-1.png";

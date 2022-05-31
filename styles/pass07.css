@@ -16,9 +16,7 @@
     background-position: center;
     background-size: cover;
     overflow-y: scroll;
-    overflow-x: none;
     overflow-x:scroll ;
-
 }
 #room07pass #room07passContent::-webkit-scrollbar {
     width: 0.1em;
