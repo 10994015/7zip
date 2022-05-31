@@ -1,3 +1,7 @@
+@font-face {
+    font-family: yyBlack;
+    src: url('./font/源樣黑.ttc');
+  }
 #room06pass{
     width:100%;
     height: auto;
@@ -399,15 +403,7 @@
     height: auto;
     z-index: 99;
 }
-/* 這個不用 */
-#room06pass #room06passBottom1 #p6b1role{
-    position: absolute;
-    top: 155px;
-    left:810px;
-    width:140px;
-    height: auto;
-    z-index: 99;
-}
+
 #room06pass #room06passBottom1 #p6b1no2,
 #room06pass #room06passBottom2 #p6b2no2,
 #room06pass #room06passBottom3 #p6b3no2,
@@ -462,6 +458,7 @@
     color:#E8E146;
     font-size: 14px;
     z-index: 99;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1loveNum2,
 #room06pass #room06passBottom2 #p6b2loveNum2,
@@ -473,6 +470,7 @@
     color:#E8E146;
     font-size: 14px;
     z-index: 99;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1loveNum3,
 #room06pass #room06passBottom2 #p6b2loveNum3,
@@ -484,6 +482,7 @@
     color:#E8E146;
     font-size: 14px;
     z-index: 99;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1loveNum4,
 #room06pass #room06passBottom2 #p6b2loveNum4,
@@ -495,6 +494,7 @@
     color:#E8E146;
     font-size: 14px;
     z-index: 99;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1loveNum5,
 #room06pass #room06passBottom2 #p6b2loveNum5,
@@ -506,6 +506,7 @@
     color:#E8E146;
     font-size: 14px;
     z-index: 99;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1lefttop,
 #room06pass #room06passBottom2 #p6b2lefttop,
@@ -539,6 +540,7 @@
     left:111px;
     z-index: 100;
     color:#E8E146;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1lefttop > .p6b1lefttopName,
 #room06pass #room06passBottom2 #p6b2lefttop > .p6b2lefttopName,
@@ -549,6 +551,7 @@
     left:88px;
     z-index: 100;
     color:#E8E146;
+    font-family: yyBlack;
 }
 #room06pass #room06passBottom1 #p6b1title,
 #room06pass #room06passBottom2 #p6b2title,
@@ -560,6 +563,14 @@
     width:250px;
     height: auto;
     z-index: 999;
+}
+#room06pass #room06passBottom1 #p6b1role{
+    position: absolute;
+    bottom: 30px;
+    left:810px;
+    width:160px;
+    height: auto;
+    z-index: 99;
 }
 #room06pass #room06passBottom2 #p6b2role{
     position: absolute;
@@ -573,7 +584,7 @@
     position: absolute;
     bottom: 20px;
     left:810px;
-    width:140px;
+    width:160px;
     height: auto;
     z-index: 99;
 }
@@ -581,7 +592,7 @@
     position: absolute;
     bottom: 10px;
     left:810px;
-    width:140px;
+    width:160px;
     height: auto;
     z-index: 99;
 }

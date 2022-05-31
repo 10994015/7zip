@@ -1,0 +1,286 @@
+#room05pass{
+    width:100%;
+    height: auto;
+    position: absolute;
+    /* position: relative; */
+    top: 30px;
+    left:0;
+}
+#room05pass #room05passContent{
+    width:100%;
+    margin:auto;
+    /* position: relative; */
+    margin-top: 50px;
+    height: 610px;
+    /* background-image: url("./images/pass05/top.png"); */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+#room05pass #room05passContent::-webkit-scrollbar {
+    width: 0.1em;
+  }
+  #room05pass #room05passContent::-webkit-scrollbar-button{
+    background: #000;
+  }
+  #room05pass #room05passContent::-webkit-scrollbar-track-piece{
+    background: #000;
+  }
+  #room05pass #room05passContent::-webkit-scrollbar-thumb {
+    /* background-color: #fff;
+    height: 0;
+    width:0;
+    display: none;
+    opacity: none; */
+  }
+  #room05pass #pass05border{
+    width:1300px;
+    margin:auto;
+    position: relative;
+}
+#room05pass #p5border{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+#room05pass  #p5-prevPage{
+    position: absolute;
+    top: 0px;
+    left:7px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room05pass  #p5-prevPage:hover{
+    transform: scale(1.1);
+}
+#room05pass  #p5-home{
+    position: absolute;
+    top: 10px;
+    left:61.5px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room05pass  #p5-home:hover{
+    transform: scale(1.1);
+}
+
+#room05pass #room05passTop,
+#room05pass #room05passBottom,
+#room05pass #room05passselect{
+    width:1300px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 50px;
+    height: 550px;
+}
+#room05pass #room05passTop #topbg05,
+#room05pass #room05passBottom #p5resultBg,
+#room05pass #room05passselect #p5selectbg{
+    width:100%;
+}
+#room05pass #room05passTop #p5egg{
+    position: absolute;
+    top: 197px;
+    left:1094px;
+    width:147px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#room05pass #room05passselect #p5bottomBg{
+    position: absolute;
+    top: 71px;
+    left:366px;
+    width:925px;
+    height: auto;
+    z-index: 100;
+}
+#room05pass #room05passselect #p5toggleboy{
+    position: absolute;
+    top: 100px;
+    left:1050px;
+    width:100px;
+    height: auto;
+    cursor: pointer;
+    z-index: 101;
+}
+#room05pass #room05passselect #p5togglegirl{
+    position: absolute;
+    top: 100px;
+    left:1150px;
+    width:100px;
+    height: auto;
+    cursor: pointer;
+    z-index: 101;
+}
+#room05pass #room05passselect #p5predict{
+    position: absolute;
+    top: 90px;
+    left:400px;
+    width:240px;
+    height: auto;
+    z-index: 101;
+}
+#room05pass #room05passselect #p5leftSelect1{
+    position: absolute;
+    top: 361px;
+    left:416px;
+    width:154px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+#room05pass #room05passselect #p5leftSelect2{
+    position: absolute;
+    top: 361px;
+    left:509px;
+    width:154px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+#room05pass #room05passselect #p5centerSelect1{
+    position: absolute;
+    top: 361px;
+    left:705px;
+    width:154px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+#room05pass #room05passselect #p5centerSelect2{
+    position: absolute;
+    top: 361px;
+    left:798px;
+    width:154px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+#room05pass #room05passselect #p5rightSelect1{
+    position: absolute;
+    top: 361px;
+    left:994px;
+    width:154px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+#room05pass #room05passselect #p5rightSelect2{
+    position: absolute;
+    top: 361px;
+    left:1087px;
+    width:154px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+#room05pass #room05passselect #p5rightSelect1boy{
+    position: absolute;
+    top: 361px;
+    left:1012px;
+    width:212px;
+    height: auto;
+    z-index: 102;
+    cursor: pointer;
+    display: none;
+}
+ #room05pass #room05passselect #p5rightSelect2boy{
+    position: absolute;
+    top: 361px;
+    left:994px;
+    width:150px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+    display: none;
+}
+
+#room05pass #room05passselect #p5rightSelect3boy{
+    position: absolute;
+    top: 361px;
+    left:1107px;
+    width:135px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+    display: none;
+}
+#p5rightboyDiv1{
+    position: absolute;
+    top: 361px;
+    left:1012px;
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    z-index: 103;
+    cursor: pointer;
+    display: none;
+}
+#p5rightboyDiv2{
+    position: absolute;
+    top: 361px;
+    left:994px;
+    width: 100px;
+    height: 150px;
+    background-color: transparent;
+    z-index: 104;
+    cursor: pointer;
+    display: none;
+}
+#p5rightboyDiv3{
+    position: absolute;
+    top: 361px;
+    left:1150px;
+    width: 100px;
+    height: 150px;
+    background-color: transparent;
+    z-index: 103;
+    cursor: pointer;
+    display: none;
+}
+#room05pass #room05passselect #p5chkBtn{
+    position: absolute;
+    top: 286px;
+    left:1137px;
+    width:100px;
+    height: auto;
+    z-index: 101;
+    cursor: pointer;
+}
+
+#room05pass #room05passBottom #p5resultSmallBg{
+    position: absolute;
+    top: 71px;
+    left:366px;
+    width:925px;
+    height: auto;
+    z-index: 100;
+}
+#room05pass #room05passBottom #p5resultPeople{
+    position: absolute;
+    bottom:-11px;
+    left:367px;
+    width:923px;
+    height: auto;
+    z-index: 101;
+}
+#room05pass #room05passBottom #p5resultBox{
+    position: absolute;
+    top: 400px;
+    right:30px;
+    width:200px;
+    height: auto;
+    z-index: 102;
+}
+#room05pass #room05passBottom{
+    display: none;
+}

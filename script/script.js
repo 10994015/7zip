@@ -422,6 +422,7 @@ function clearR1room(){
         for(let a=0;a<r1arrow.length;a++){
             r1arrow[a].style.display = "none";
         }
+        bg01.style.display = "block";
         room01pass.style.display = "none";
         r1Password.value = "";
 }
@@ -746,6 +747,7 @@ function clearR2room(){
         for(let a=0;a<r2arrow.length;a++){
             r2arrow[a].style.display = "none";
         }
+        bg03.style.display = "block";
         r2people.style.display = "block";
         r2card.style.display = "block";
         r2cardRight.style.display = "block";
@@ -1107,6 +1109,7 @@ function clearR3room(){
     for(let a=0;a<r3arrow.length;a++){
         r3arrow[a].style.display = "none";
     }
+    bg07.style.display = "block";
     room03pass.style.display = "none";
     r3Password.value = "";
 }
@@ -1479,6 +1482,7 @@ function clearR4room(){
     for(let a=0;a<r4arrow.length;a++){
         r4arrow[a].style.display = "none";
     }
+    bg04.style.display = "block";
     room04pass.style.display = "none";
     r4Password.value = "";
 }
@@ -1778,6 +1782,7 @@ function clearR5room(){
     for(let a=0;a<r5arrow.length;a++){
         r5arrow[a].style.display = "none";
     }
+    bg05.style.display = "block";
     r5people.style.display = "block";
     r5card.style.display = "block";
     r5cardRight.style.display = "block";
@@ -2211,7 +2216,7 @@ function clearR6room(){
     }
         
    
-
+    bg02.style.display = "block";
     r6people.style.display = "block";
     r6card.style.display = "block";
     r6cardRight.style.display = "block";
@@ -2522,6 +2527,7 @@ function clearR7room(){
     r7cardLeft.style.display = "block"; 
     room07pass.style.display = "none";
     r7Password.value = "";
+    bg08.style.display = "block";
 }
 // room7 END
 var p1PrevPage = document.getElementById('p1-prevPage');
@@ -2531,13 +2537,15 @@ var p3PrevPage = document.getElementById('p3-prevPage');
 var p4PrevPage = document.getElementById('p4-prevPage');
 var p5PrevPage = document.getElementById('p5-prevPage');
 var p6PrevPage = document.getElementById('p6-prevPage');
+var p7PrevPage = document.getElementById('p7-prevPage');
 p1PrevPage.addEventListener("click",preroom01);
 // p1PrevPage2.addEventListener("click",clearR1room);
 p2PrevPage.addEventListener("click",preroom02);
 p3PrevPage.addEventListener("click",preroom03);
 p4PrevPage.addEventListener("click",preroom04);
-p5PrevPage.addEventListener("click",clearR5room);
+p5PrevPage.addEventListener("click",preroom05);
 p6PrevPage.addEventListener("click",preroom06);
+p7PrevPage.addEventListener("click",preroom07);
 function preroom01(){
         room01pass.style.display  = "none";
         r1Password.value = "";
@@ -2566,28 +2574,46 @@ function preroom04(){
     openRoom04();
     document.getElementById('bg04').style.display="none";
 }
+function preroom05(){
+    room05pass.style.display  = "none";
+    r5Password.value = "";
+    openRoom05();
+    room05passBottom.style.display = "none";
+    room05passselect.style.display = "block";
+    document.getElementById('bg05').style.display="none";
+}
 function preroom06(){
     room06pass.style.display  = "none";
     r6Password.value = "";
     openRoom06();
     document.getElementById('bg02').style.display="none";
 }
+function preroom07(){
+    room07pass.style.display  = "none";
+    r7Password.value = "";
+    openRoom07();
+    document.getElementById('bg08').style.display="none";
+}
 //prehome
 document.getElementById('p2-home').addEventListener('click',prehome02);
 document.getElementById('p3-home').addEventListener('click',prehome03);
 document.getElementById('p4-home').addEventListener('click',prehome04);
+document.getElementById('p5-home').addEventListener('click',prehome05);
 document.getElementById('p6-home').addEventListener('click',prehome06);
+document.getElementById('p7-home').addEventListener('click',prehome07);
 function prehome01(){
     room01pass.style.display = "none";
     r1Password.value = "";
     room01passBottom.style.display = "none";
     room01passselect.style.display = "block";
+    document.getElementById('bg01').style.display  = "block";
     clearR1room();
 }
 function prehome02(){
     room02pass.style.display = "none";
     room02passBottom.style.display = "none";
     room02passselect.style.display = "block";
+    document.getElementById('bg03').style.display  = "block";
     clearR2room();
 }
 function prehome03(){
@@ -2595,13 +2621,23 @@ function prehome03(){
     r3Password.value = "";
     room03passBottom.style.display = "none";
     room03passselect.style.display = "block";
+    document.getElementById('bg07').style.display  = "block";
     clearR3room();
 }
 function prehome04(){
     room04pass.style.display = "none";
     r4Password.value = "";
     // room04passBottom.style.display = "none";
+    document.getElementById('bg04').style.display  = "block";
     clearR4room();
+}
+function prehome05(){
+    room05pass.style.display = "none";
+    r5Password.value = "";
+    room05passBottom.style.display = "none";
+    room05passselect.style.display = "block";
+    document.getElementById('bg05').style.display  = "block";
+    clearR5room();
 }
 function prehome06(){
     room06pass.style.display = "none";
@@ -2611,7 +2647,14 @@ function prehome06(){
     room06passBottom3.style.display = "none";
     room06passBottom4.style.display = "none";
     room06passselect.style.display = "block";
+    document.getElementById('bg02').style.display  = "block";
     clearR6room();
+}
+function prehome07(){
+    room07pass.style.display = "none";
+    r7Password.value = "";
+    document.getElementById('bg08').style.display  = "block";
+    clearR7room();
 }
 //pass01
 var p1box = document.getElementById('p1box');
@@ -3494,6 +3537,283 @@ p4actionBuy.addEventListener('click',()=>{
     }
 })
 
+//pass05
+const p5egg = document.getElementById('p5egg');
+let p5src = "./styles/images/pass05/";
+let p5gender = 0;
+let p5girlArr = [1,1,1];
+let p5boyArr = [1,1,1];
+p5toggleboy.addEventListener('click',()=>{
+    p5gender = 1;
+    p5resultPeople.style.width = "700px";
+    p5bottomBg.src = p5src + "bottom2.png";
+    p5toggleboy.src = p5src + "toggleboy2.png"
+    p5togglegirl.src = p5src + "togglegirl1.png"
+    p5leftSelect1.src = p5src + "gym2.png";
+    p5leftSelect2.src = p5src + "park1.png";
+    p5centerSelect1.src = p5src + "sport2.png";
+    p5centerSelect2.src = p5src + "dog1.png";
+
+    p5rightSelect1.style.display = "none";
+    p5rightSelect2.style.display = "none";
+    p5rightSelect1boy.style.display = "block";
+    p5rightSelect2boy.style.display = "block";
+    p5rightSelect3boy.style.display = "block";
+    p5rightboyDiv1.style.display = "block";
+    p5rightboyDiv2.style.display = "block";
+    p5rightboyDiv3.style.display = "block";
+})
+p5togglegirl.addEventListener('click',()=>{
+    p5gender = 0;
+    p5resultPeople.style.width = "923px";
+    p5bottomBg.src = p5src + "bottom1.png";
+    p5toggleboy.src = p5src + "toggleboy1.png"
+    p5togglegirl.src = p5src + "togglegirl2.png"
+    p5leftSelect1.src = p5src + "caffee2.png";
+    p5leftSelect2.src = p5src + "store1.png";
+    p5centerSelect1.src = p5src + "tea2.png";
+    p5centerSelect2.src = p5src + "selfie1.png";
+
+    p5rightSelect1boy.style.display = "none";
+    p5rightSelect2boy.style.display = "none";
+    p5rightSelect3boy.style.display = "none";
+    p5rightSelect1.style.display = "block";
+    p5rightSelect2.style.display = "block";
+    p5rightboyDiv1.style.display = "none";
+    p5rightboyDiv2.style.display = "none";
+    p5rightboyDiv3.style.display = "none";
+})
+p5leftSelect1.addEventListener('click',()=>{
+    if(p5gender ===0 ){
+        p5leftSelect1.src = p5src + "caffee2.png";
+        p5leftSelect2.src = p5src + "store1.png";
+        p5predict.src = p5src + "pregirl5.png"
+        p5girlArr[0] = 1;
+    }else if(p5gender === 1){
+        p5leftSelect1.src = p5src + "gym2.png";
+        p5leftSelect2.src = p5src + "park1.png";
+        p5predict.src = p5src + "preboy4.png"
+        p5boyArr[0] = 1;
+    }
+})
+p5leftSelect2.addEventListener('click',()=>{
+    if(p5gender ===0 ){
+        p5leftSelect1.src = p5src + "caffee1.png";
+        p5leftSelect2.src = p5src + "store2.png";
+        p5predict.src = p5src + "pregirl3.png"
+        p5girlArr[0] = 2;
+    }else if(p5gender === 1){
+        p5leftSelect1.src = p5src + "gym1.png";
+        p5leftSelect2.src = p5src + "park2.png";
+        p5predict.src = p5src + "preboy2.png"
+        p5boyArr[0] = 2;
+    }
+})
+p5centerSelect1.addEventListener('click',()=>{
+    if(p5gender === 0 ){
+        p5centerSelect1.src = p5src + "tea2.png";
+        p5centerSelect2.src = p5src + "selfie1.png";
+        p5predict.src = p5src + "pregirl1.png"
+        p5girlArr[1] = 1;
+        p5resultPeople.style.left = "367px"
+    }else if(p5gender === 1){
+        p5centerSelect1.src = p5src + "sport2.png";
+        p5centerSelect2.src = p5src + "dog1.png";
+        p5predict.src = p5src + "preboy5.png"
+        p5boyArr[1] = 1;
+        p5resultPeople.style.left = "700px"
+    }
+})
+p5centerSelect2.addEventListener('click',()=>{
+    if(p5gender === 0 ){
+        p5centerSelect1.src = p5src + "tea1.png";
+        p5centerSelect2.src = p5src + "selfie2.png";
+        p5predict.src = p5src + "pregirl4.png"
+        p5girlArr[1] = 2;
+        p5resultPeople.style.left = "367px"
+    }else if(p5gender === 1){
+        p5centerSelect1.src = p5src + "sport1.png";
+        p5centerSelect2.src = p5src + "dog2.png";
+        p5predict.src = p5src + "preboy6.png"
+        p5boyArr[1] = 2;
+        p5resultPeople.style.left = "367px"
+    }
+})
+p5rightSelect1.addEventListener('click',()=>{
+    p5rightSelect1.src = p5src + "sweet2.png";
+    p5rightSelect2.src = p5src + "babes1.png";
+    p5predict.src = p5src + "pregirl2.png"
+    p5girlArr[2] = 1;
+})
+p5rightSelect2.addEventListener('click',()=>{
+    p5rightSelect1.src = p5src + "sweet1.png";
+    p5rightSelect2.src = p5src + "babes2.png";
+    p5predict.src = p5src + "pregirl6.png"
+    p5girlArr[2] = 2;
+})
+p5rightboyDiv1.addEventListener('click',()=>{
+    p5rightSelect1boy.src = p5src + "bas2.png";
+    p5rightSelect2boy.src = p5src + "motor1.png";
+    p5rightSelect3boy.src = p5src + "walk1.png";
+    p5predict.src = p5src + "preboy1.png"
+    p5boyArr[2] = 1;
+})
+p5rightboyDiv2.addEventListener('click',()=>{
+    p5rightSelect1boy.src = p5src + "bas1.png";
+    p5rightSelect2boy.src = p5src + "motor2.png";
+    p5rightSelect3boy.src = p5src + "walk1.png";
+    p5predict.src = p5src + "preboy7.png"
+    p5boyArr[2] = 2;
+})
+p5rightboyDiv3.addEventListener('click',()=>{
+    p5rightSelect1boy.src = p5src + "bas1.png";
+    p5rightSelect2boy.src = p5src + "motor1.png";
+    p5rightSelect3boy.src = p5src + "walk2.png";
+    p5predict.src = p5src + "preboy3.png"
+    p5boyArr[2] = 3;
+})
+p5togglegirl.addEventListener('click',()=>{
+    p5toggleboy.src = "./styles/images/pass05/toggleboy1.png"
+    p5togglegirl.src = "./styles/images/pass05/togglegirl2.png"
+})
+p5egg.addEventListener('mouseover',()=>{
+    p5egg.src = "./styles/images/pass05/egg2.png";
+})
+p5egg.addEventListener('mouseout',()=>{
+    p5egg.src = "./styles/images/pass05/egg1.png";
+})
+p5chkBtn.addEventListener('click',()=>{
+    
+    if(p5gender === 0){
+        room05passselect.style.display = "none";
+        room05passBottom.style.display = "block";
+        if(p5girlArr.toString()  === [1,1,1].toString() ){
+            p5resultSmallBg.src = p5src + "bgcaffee.png";
+            p5resultPeople.src = p5src + "girlRole1.png";
+            p5resultBox.src = p5src + "result/girl/111.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [1,1,2].toString() ){
+            p5resultSmallBg.src = p5src + "bgcaffee.png";
+            p5resultPeople.src = p5src + "girlRole3.png";
+            p5resultBox.src = p5src + "result/girl/112.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [1,2,1].toString() ){
+            p5resultSmallBg.src = p5src + "bgcaffee.png";
+            p5resultPeople.src = p5src + "girlRole2.png";
+            p5resultBox.src = p5src + "result/girl/121.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [1,2,2].toString() ){
+            p5resultSmallBg.src = p5src + "bgcaffee.png";
+            p5resultPeople.src = p5src + "girlRole4.png";
+            p5resultBox.src = p5src + "result/girl/122.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [2,1,1].toString() ){
+            p5resultSmallBg.src = p5src + "bgstore.png";
+            p5resultPeople.src = p5src + "girlRole1.png";
+            p5resultBox.src = p5src + "result/girl/211.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [2,1,2].toString() ){
+            p5resultSmallBg.src = p5src + "bgstore.png";
+            p5resultPeople.src = p5src + "girlRole3.png";
+            p5resultBox.src = p5src + "result/girl/212.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [2,2,1].toString() ){
+            p5resultSmallBg.src = p5src + "bgstore.png";
+            p5resultPeople.src = p5src + "girlRole2.png";
+            p5resultBox.src = p5src + "result/girl/221.png";
+            return;
+        }
+        if(p5girlArr.toString()  === [2,2,2].toString() ){
+            p5resultSmallBg.src = p5src + "bgstore.png";
+            p5resultPeople.src = p5src + "girlRole4.png";
+            p5resultBox.src = p5src + "result/girl/222.png";
+            return;
+        }
+        
+    }
+    if(p5gender === 1){
+        room05passselect.style.display = "none";
+        room05passBottom.style.display = "block";
+        if(p5boyArr.toString()  === [1,1,1].toString() ){
+            p5resultSmallBg.src = p5src + "bggym.png";
+            p5resultPeople.src = p5src + "boyRole1.png";
+            p5resultBox.src = p5src + "result/boy/111.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [1,1,2].toString() ){
+            p5resultSmallBg.src = p5src + "bggym.png";
+            p5resultPeople.src = p5src + "boyRole1.png";
+            p5resultBox.src = p5src + "result/boy/112.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [1,1,3].toString() ){
+            p5resultSmallBg.src = p5src + "bggym.png";
+            p5resultPeople.src = p5src + "boyRole1.png";
+            p5resultBox.src = p5src + "result/boy/113.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [1,2,1].toString() ){
+            p5resultSmallBg.src = p5src + "bggym.png";
+            p5resultPeople.src = p5src + "boyRole2.png";
+            p5resultBox.src = p5src + "result/boy/121.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [1,2,2].toString() ){
+            p5resultSmallBg.src = p5src + "bggym.png";
+            p5resultPeople.src = p5src + "boyRole2.png";
+            p5resultBox.src = p5src + "result/boy/122.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [1,2,3].toString() ){
+            p5resultSmallBg.src = p5src + "bggym.png";
+            p5resultPeople.src = p5src + "boyRole2.png";
+            p5resultBox.src = p5src + "result/boy/123.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [2,1,1].toString() ){
+            p5resultSmallBg.src = p5src + "bgpark.png";
+            p5resultPeople.src = p5src + "boyRole1.png";
+            p5resultBox.src = p5src + "result/boy/211.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [2,1,2].toString() ){
+            p5resultSmallBg.src = p5src + "bgpark.png";
+            p5resultPeople.src = p5src + "boyRole1.png";
+            p5resultBox.src = p5src + "result/boy/212.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [2,1,3].toString() ){
+            p5resultSmallBg.src = p5src + "bgpark.png";
+            p5resultPeople.src = p5src + "boyRole1.png";
+            p5resultBox.src = p5src + "result/boy/213.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [2,2,1].toString() ){
+            p5resultSmallBg.src = p5src + "bgpark.png";
+            p5resultPeople.src = p5src + "boyRole2.png";
+            p5resultBox.src = p5src + "result/boy/221.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [2,2,2].toString() ){
+            p5resultSmallBg.src = p5src + "bgpark.png";
+            p5resultPeople.src = p5src + "boyRole2.png";
+            p5resultBox.src = p5src + "result/boy/222.png";
+            return;
+        }
+        if(p5boyArr.toString()  === [2,2,3].toString() ){
+            p5resultSmallBg.src = p5src + "bgpark.png";
+            p5resultPeople.src = p5src + "boyRole2.png";
+            p5resultBox.src = p5src + "result/boy/223.png";
+            return;
+        }
+    }
+})
 //pass06
 const p6egg = document.getElementById('p6egg');
 const p6girl = document.getElementById('p6girl');
@@ -3505,7 +3825,18 @@ const p6s2 = document.getElementById('p6s2');
 const p6s3 = document.getElementById('p6s3');
 const p6s4 = document.getElementById('p6s4');
 const p6chkbtn = document.getElementById('p6chkbtn');
+const p6obj1 = document.getElementsByClassName('p6obj1');
+const p6obj2 = document.getElementsByClassName('p6obj2');
+const p6obj3 = document.getElementsByClassName('p6obj3');
+const p6obj4 = document.getElementsByClassName('p6obj4');
+const p6obj5 = document.getElementsByClassName('p6obj5');
+const p6hover1 = document.getElementsByClassName('p6hover1');
+const p6hover2 = document.getElementsByClassName('p6hover2');
+const p6hover3 = document.getElementsByClassName('p6hover3');
+const p6hover4 = document.getElementsByClassName('p6hover4');
+const p6hover5 = document.getElementsByClassName('p6hover5');
 let p6selectArr = [0,0];
+let loverNum = 3000;
 p6egg.addEventListener('mouseover',()=>{
     p6egg.src = "./styles/images/pass06/egg2.png";
 })
@@ -3527,6 +3858,7 @@ p6girl.addEventListener('click',()=>{
         p6girl.style.top = "180px";
         p6selectArr[0] = 0;
     }
+    p6chkArr();
 })
 p6boy.addEventListener('click',()=>{
     p6seletinit()
@@ -3544,6 +3876,7 @@ p6boy.addEventListener('click',()=>{
         p6boy.style.top = "180px";
         p6selectArr[0] = 0;
     }
+    p6chkArr();
 })
 p6people.addEventListener('click',()=>{
     p6seletinit()
@@ -3560,6 +3893,7 @@ p6people.addEventListener('click',()=>{
         p6people.style.top = "180px";
         p6selectArr[0] = 0;
     }
+    p6chkArr();
 })
 p6monkey.addEventListener('click',()=>{
     p6seletinit()
@@ -3576,6 +3910,7 @@ p6monkey.addEventListener('click',()=>{
         p6monkey.style.top = "180px";
         p6selectArr[0] = 0;
     }
+    p6chkArr();
 })
 p6s1.addEventListener('click',()=>{
     p6seletinit2()
@@ -3622,7 +3957,857 @@ p6s4.addEventListener('click',()=>{
     p6chkArr();
 })
 
+p6chkbtn.addEventListener('click',()=>{
+    if(p6selectArr[1]===1){
+        room06passselect.style.display = "none";
+        room06passBottom3.style.display = "block";
+        
+    }else if(p6selectArr[1]===2){
+        room06passselect.style.display = "none";
+        room06passBottom1.style.display = "block";
+    }else if(p6selectArr[1]===3){
+        room06passselect.style.display = "none";
+        room06passBottom2.style.display = "block";
+    }else if(p6selectArr[1]===4){
+        room06passselect.style.display = "none";
+        room06passBottom4.style.display = "block";
+    }else{
+        return;
+    }
+    p6roleFn();
+})
+for(let i=0;i<p6obj1.length;i++){
+    p6obj1[i].addEventListener('click',p6obj1Fn)
+}
+p6b1obj1.addEventListener('click',()=>{
+    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2050;
+    p6b1loveNum2.innerHTML = 2550;
+    p6b1loveNum3.innerHTML = 2050;
+    if(p6selectArr[0]===1){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head1.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b1no2.src = "./styles/images/pass06/head1.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head3.png";
+        p6b1no4.src = "./styles/images/pass06/head1.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head4.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b1obj2.addEventListener('click',()=>{
+    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2250;
+    p6b1loveNum2.innerHTML = 2250;
+    if(p6selectArr[0]===1){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head1.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b1no2.src = "./styles/images/pass06/head1.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head3.png";
+        p6b1no4.src = "./styles/images/pass06/head1.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head4.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b1obj3.addEventListener('click',()=>{
+    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2500;
+    p6b1loveNum2.innerHTML = 2500;
+    if(p6selectArr[0]===1){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head1.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b1no2.src = "./styles/images/pass06/head1.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head3.png";
+        p6b1no4.src = "./styles/images/pass06/head1.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head4.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b1obj4.addEventListener('click',()=>{
+    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2150;
+    p6b1loveNum2.innerHTML = 2550;
+    p6b1loveNum3.innerHTML = 2150;
+    if(p6selectArr[0]===1){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head1.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b1no2.src = "./styles/images/pass06/head1.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head3.png";
+        p6b1no4.src = "./styles/images/pass06/head1.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head4.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b1obj5.addEventListener('click',()=>{
+    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2450;
+    p6b1loveNum2.innerHTML = 2550;
+    p6b1loveNum3.innerHTML = 2450;
+    if(p6selectArr[0]===1){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head1.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b1no2.src = "./styles/images/pass06/head1.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head3.png";
+        p6b1no4.src = "./styles/images/pass06/head1.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head4.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b2obj1.addEventListener('click',()=>{
+    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2650;
+    p6b2loveNum2.innerHTML = 2650;
+    p6b2loveNum3.innerHTML = 2550;
+    if(p6selectArr[0]===1){
+        p6b2no2.src = "./styles/images/pass06/head1.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head1.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b2no2.src = "./styles/images/pass06/head3.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head1.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b2no2.src = "./styles/images/pass06/head4.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b2obj2.addEventListener('click',()=>{
+    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2500;
+    p6b2loveNum2.innerHTML = 2550;
+    p6b2loveNum3.innerHTML = 2500;
+    if(p6selectArr[0]===1){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head1.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b2no2.src = "./styles/images/pass06/head1.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head3.png";
+        p6b2no4.src = "./styles/images/pass06/head1.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head4.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b2obj3.addEventListener('click',()=>{
+    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2840;
+    p6b2loveNum2.innerHTML = 2840;
+    p6b2loveNum3.innerHTML = 2550;
+    if(p6selectArr[0]===1){
+        p6b2no2.src = "./styles/images/pass06/head1.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head1.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b2no2.src = "./styles/images/pass06/head3.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head1.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b2no2.src = "./styles/images/pass06/head4.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b2obj4.addEventListener('click',()=>{
+    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2550;
+    p6b2loveNum2.innerHTML = 2550;
+    p6b2loveNum3.innerHTML = 2550;
+    if(p6selectArr[0]===1){
+        p6b2no2.src = "./styles/images/pass06/head1.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head1.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b2no2.src = "./styles/images/pass06/head3.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head1.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b2no2.src = "./styles/images/pass06/head4.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b2obj5.addEventListener('click',()=>{
+    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2900;
+    p6b2loveNum2.innerHTML = 2900;
+    p6b1loveNum3.innerHTML = 2550;
+    if(p6selectArr[0]===1){
+        p6b2no2.src = "./styles/images/pass06/head1.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head1.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b2no2.src = "./styles/images/pass06/head3.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head1.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b2no2.src = "./styles/images/pass06/head4.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b3obj1.addEventListener('click',()=>{
+    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2250;
+    p6b3loveNum2.innerHTML = 2250;
+    if(p6selectArr[0]===1){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head1.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b3no2.src = "./styles/images/pass06/head1.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head3.png";
+        p6b3no4.src = "./styles/images/pass06/head1.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head4.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b3obj2.addEventListener('click',()=>{
+    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2650;
+    p6b3loveNum3.innerHTML = 2650;
+    if(p6selectArr[0]===1){
+        p6b3no2.src = "./styles/images/pass06/head1.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head1.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b3no2.src = "./styles/images/pass06/head3.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head1.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b3no2.src = "./styles/images/pass06/head4.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b3obj3.addEventListener('click',()=>{
+    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2550;
+    p6b3loveNum2.innerHTML = 2550;
+    if(p6selectArr[0]===1){
+        p6b3no2.src = "./styles/images/pass06/head1.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head1.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b3no2.src = "./styles/images/pass06/head3.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head1.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b3no2.src = "./styles/images/pass06/head4.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b3obj4.addEventListener('click',()=>{
+    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2150;
+    p6b3loveNum2.innerHTML = 2150;
+    if(p6selectArr[0]===1){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head1.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b3no2.src = "./styles/images/pass06/head1.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head3.png";
+        p6b3no4.src = "./styles/images/pass06/head1.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head4.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b3obj5.addEventListener('click',()=>{
+    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2250;
+    p6b3loveNum2.innerHTML = 2250;
+    if(p6selectArr[0]===1){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head1.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b3no2.src = "./styles/images/pass06/head1.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head3.png";
+        p6b3no4.src = "./styles/images/pass06/head1.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head4.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b4obj1.addEventListener('click',()=>{
+    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2050;
+    p6b4loveNum2.innerHTML = 2550;
+    p6b4loveNum3.innerHTML = 2050;
+    if(p6selectArr[0]===1){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head1.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b4no2.src = "./styles/images/pass06/head1.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head3.png";
+        p6b4no4.src = "./styles/images/pass06/head1.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head4.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b4obj2.addEventListener('click',()=>{
+    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2250;
+    p6b4loveNum2.innerHTML = 2550;
+    p6b4loveNum3.innerHTML = 2250;
+    if(p6selectArr[0]===1){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head1.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b4no2.src = "./styles/images/pass06/head1.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head3.png";
+        p6b4no4.src = "./styles/images/pass06/head1.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head4.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b4obj3.addEventListener('click',()=>{
+    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2500;
+    p6b4loveNum2.innerHTML = 2550;
+    p6b4loveNum3.innerHTML = 2500;
+    if(p6selectArr[0]===1){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head1.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b4no2.src = "./styles/images/pass06/head1.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head3.png";
+        p6b4no4.src = "./styles/images/pass06/head1.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head4.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b4obj4.addEventListener('click',()=>{
+    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2150;
+    p6b4loveNum2.innerHTML = 2550;
+    p6b4loveNum3.innerHTML = 2150;
+    if(p6selectArr[0]===1){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head1.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b4no2.src = "./styles/images/pass06/head1.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head3.png";
+        p6b4no4.src = "./styles/images/pass06/head1.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head4.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+p6b4obj5.addEventListener('click',()=>{
+    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2450;
+    p6b4loveNum2.innerHTML = 2550;
+    p6b4loveNum3.innerHTML = 2450;
+    if(p6selectArr[0]===1){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head1.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===2){
+        p6b4no2.src = "./styles/images/pass06/head1.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===3){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head3.png";
+        p6b4no4.src = "./styles/images/pass06/head1.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+        return;
+    }
+    if(p6selectArr[0]===4){
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head4.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head1.png";
+        return;
+    }
+})
+function p6obj1Fn(){
+    let p6h1 = this.parentNode.getElementsByClassName('p6hover1')[0];
+    p6hoverInit();
+    if(p6h1.style.display === "block"){
+        p6h1.style.display = "none";
+    }else{
+        p6h1.style.display = "block";
+    }
+}
+for(let i=0;i<p6obj2.length;i++){
+    p6obj2[i].addEventListener('click',p6obj2Fn)
+}
+function p6obj2Fn(){
+    let p6h2 = this.parentNode.getElementsByClassName('p6hover2')[0];
+    p6hoverInit();
+    if(p6h2.style.display === "block"){
+        p6h2.style.display = "none";
+    }else{
+        p6h2.style.display = "block";
+    }
+}
+for(let i=0;i<p6obj3.length;i++){
+    p6obj3[i].addEventListener('click',p6obj3Fn)
+}
+function p6obj3Fn(){
+    let p6h3 = this.parentNode.getElementsByClassName('p6hover3')[0];
+    p6hoverInit();
+    if(p6h3.style.display === "block"){
+        p6h3.style.display = "none";
+    }else{
+        p6h3.style.display = "block";
+    }
+}
+for(let i=0;i<p6obj4.length;i++){
+    p6obj4[i].addEventListener('click',p6obj4Fn)
+}
+function p6obj4Fn(){
+    let p6h4 = this.parentNode.getElementsByClassName('p6hover4')[0];
+    p6hoverInit();
+    if(p6h4.style.display === "block"){
+        p6h4.style.display = "none";
+    }else{
+        p6h4.style.display = "block";
+    }
+}
+for(let i=0;i<p6obj5.length;i++){
+    p6obj5[i].addEventListener('click',p6obj5Fn)
+}
+function p6obj5Fn(){
+    let p6h5 = this.parentNode.getElementsByClassName('p6hover5')[0];
+    p6hoverInit();
+    if(p6h5.style.display === "block"){
+        p6h5.style.display = "none";
+    }else{
+        p6h5.style.display = "block";
+    }
+}
+function p6hoverInit(){
+    for(let i=0;i<=3;i++){
+        p6hover1[i].style.display = "none";
+        p6hover2[i].style.display = "none";
+        p6hover3[i].style.display = "none";
+        p6hover4[i].style.display = "none";
+        p6hover5[i].style.display = "none";
+    }
+}
+function p6roleFn(){
+    if(p6selectArr[0]===1){
+        document.getElementsByClassName('p6b1lefttopName')[0].innerHTML = "女性";
+        document.getElementsByClassName('p6b2lefttopName')[0].innerHTML = "女性";
+        document.getElementsByClassName('p6b3lefttopName')[0].innerHTML = "女性";
+        document.getElementsByClassName('p6b4lefttopName')[0].innerHTML = "女性";
+        p6b1role.src = "./styles/images/pass06/girl.png";
+        p6b2role.src = "./styles/images/pass06/girl.png";
+        p6b3role.src = "./styles/images/pass06/girl.png";
+        p6b4role.src = "./styles/images/pass06/girl.png";
 
+        p6b1no2.src = "./styles/images/pass06/head1.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        p6b2no2.src = "./styles/images/pass06/head1.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        p6b3no2.src = "./styles/images/pass06/head1.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        p6b4no2.src = "./styles/images/pass06/head1.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+    }
+    if(p6selectArr[0]===2){
+        document.getElementsByClassName('p6b1lefttopName')[0].innerHTML = "男性";
+        document.getElementsByClassName('p6b2lefttopName')[0].innerHTML = "男性";
+        document.getElementsByClassName('p6b3lefttopName')[0].innerHTML = "男性";
+        document.getElementsByClassName('p6b4lefttopName')[0].innerHTML = "男性";
+        p6b1role.src = "./styles/images/pass06/boy.png";
+        p6b2role.src = "./styles/images/pass06/boy.png";
+        p6b3role.src = "./styles/images/pass06/boy.png";
+        p6b4role.src = "./styles/images/pass06/boy.png";
+
+        p6b1no2.src = "./styles/images/pass06/head2.png";
+        p6b1no3.src = "./styles/images/pass06/head1.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        p6b2no2.src = "./styles/images/pass06/head2.png";
+        p6b2no3.src = "./styles/images/pass06/head1.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        p6b3no2.src = "./styles/images/pass06/head2.png";
+        p6b3no3.src = "./styles/images/pass06/head1.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        p6b4no2.src = "./styles/images/pass06/head2.png";
+        p6b4no3.src = "./styles/images/pass06/head1.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+    }
+    if(p6selectArr[0]===3){
+        document.getElementsByClassName('p6b1lefttopName')[0].innerHTML = "機器人";
+        document.getElementsByClassName('p6b2lefttopName')[0].innerHTML = "機器人";
+        document.getElementsByClassName('p6b3lefttopName')[0].innerHTML = "機器人";
+        document.getElementsByClassName('p6b4lefttopName')[0].innerHTML = "機器人";
+        p6b1role.src = "./styles/images/pass06/people.png";
+        p6b2role.src = "./styles/images/pass06/people.png";
+        p6b3role.src = "./styles/images/pass06/people.png";
+        p6b4role.src = "./styles/images/pass06/people.png";
+
+        p6b1no2.src = "./styles/images/pass06/head3.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head1.png";
+        p6b1no5.src = "./styles/images/pass06/head4.png";
+        p6b2no2.src = "./styles/images/pass06/head3.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head1.png";
+        p6b2no5.src = "./styles/images/pass06/head4.png";
+        p6b3no2.src = "./styles/images/pass06/head3.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head1.png";
+        p6b3no5.src = "./styles/images/pass06/head4.png";
+        p6b4no2.src = "./styles/images/pass06/head3.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head1.png";
+        p6b4no5.src = "./styles/images/pass06/head4.png";
+    }
+    if(p6selectArr[0]===4){
+        document.getElementsByClassName('p6b1lefttopName')[0].innerHTML = "猴子";
+        document.getElementsByClassName('p6b2lefttopName')[0].innerHTML = "猴子";
+        document.getElementsByClassName('p6b3lefttopName')[0].innerHTML = "猴子";
+        document.getElementsByClassName('p6b4lefttopName')[0].innerHTML = "猴子";
+        p6b1role.src = "./styles/images/pass06/monkey.png";
+        p6b2role.src = "./styles/images/pass06/monkey.png";
+        p6b3role.src = "./styles/images/pass06/monkey.png";
+        p6b4role.src = "./styles/images/pass06/monkey.png";
+
+        p6b1no2.src = "./styles/images/pass06/head4.png";
+        p6b1no3.src = "./styles/images/pass06/head2.png";
+        p6b1no4.src = "./styles/images/pass06/head3.png";
+        p6b1no5.src = "./styles/images/pass06/head1.png";
+        p6b2no2.src = "./styles/images/pass06/head4.png";
+        p6b2no3.src = "./styles/images/pass06/head2.png";
+        p6b2no4.src = "./styles/images/pass06/head3.png";
+        p6b2no5.src = "./styles/images/pass06/head1.png";
+        p6b3no2.src = "./styles/images/pass06/head4.png";
+        p6b3no3.src = "./styles/images/pass06/head2.png";
+        p6b3no4.src = "./styles/images/pass06/head3.png";
+        p6b3no5.src = "./styles/images/pass06/head1.png";
+        p6b4no2.src = "./styles/images/pass06/head4.png";
+        p6b4no3.src = "./styles/images/pass06/head2.png";
+        p6b4no4.src = "./styles/images/pass06/head3.png";
+        p6b4no5.src = "./styles/images/pass06/head1.png";
+    }
+}
 function p6seletinit(){
     p6selectArr[0] = 0;
     p6girl.src = "./styles/images/pass06/girl1.png"
@@ -3654,125 +4839,163 @@ function p6chkArr(){
         p6chkbtn.style.display = "block";
     }
 }
-// pass07
-var p7box =  document.getElementById('p7box');
-var p7control1 = document.getElementById('p7control1');
-var p7control2 = document.getElementById('p7control2');
-var p7control3 = document.getElementById('p7control3');
-var p7control4 = document.getElementById('p7control4');
-var p7people = document.getElementById('p7people');
-var p7badge = document.getElementById('p7badge');
-var p7PrevPage = document.getElementById('p7-prevPage');
-var p7eye = document.getElementsByClassName('p7eye');
-var p7eyeBox = document.getElementById('p7eyeBox');
-var p7mainEye = document.getElementById('p7mainEye');
-var p7eyeUp = document.getElementById('p7eyeUp');
-var p7eyeDown = document.getElementById('p7eyeDown');
-p7box.addEventListener("mouseover",()=>{
-    p7box.src="./styles/images/pass07/box2.png";
-    
-})
-p7box.addEventListener("mouseout",()=>{
-    p7box.src="./styles/images/pass07/box.png";
-})
-p7control1.addEventListener("click",()=>{
-    p7people.style.top = "65px";
-    p7people.style.left = "405px";
-    p7badge.style.display = "block";
-    
-    for(let p=0;p<passBadge07.length;p++){
-        passBadge07[p].src ="./styles/images/pass07/s1.png";
-    }
-    $('html, body').animate({scrollTop: 1500}, 1500);
-})
-p7control2.addEventListener("click",()=>{
-    p7people.style.top = "280px";
-    p7people.style.left = "620px";
-    p7badge.style.display = "block";
-    for(let p=0;p<passBadge07.length;p++){
-        passBadge07[p].src ="./styles/images/pass07/s2.png";
-    }
-     $('html, body').animate({scrollTop: 1500}, 1500);
-    
-})
-p7control3.addEventListener("click",()=>{
-    p7people.style.top = "65px";
-    p7people.style.left = "814px";
-    p7badge.style.display = "block";
-    for(let p=0;p<passBadge07.length;p++){
-        passBadge07[p].src ="./styles/images/pass07/s3.png";
-    }
-    $('html, body').animate({scrollTop: 1500}, 1500);
 
+//pass07
+const p7egg = document.getElementById('p7egg');
+let p7gender = 0;
+let p7positionNum = 1;
+let p7memSrc = "";
+p7egg.addEventListener('mouseover',()=>{
+    p7egg.src = "./styles/images/pass07/egg2.png"
 })
-p7control4.addEventListener("click",()=>{
-    p7people.style.top = "280px";
-    p7people.style.left = "1048px";
-    p7badge.style.display = "block";
-    for(let p=0;p<passBadge07.length;p++){
-        passBadge07[p].src ="./styles/images/pass07/s4.png";
-    }
-    $('html, body').animate({scrollTop: 1500}, 1500);
-
+p7egg.addEventListener('mouseout',()=>{
+    p7egg.src = "./styles/images/pass07/egg1.png"
 })
-
-p7eyeUp.addEventListener("click",()=>{
-    passmainNum--;
-    if(passmainNum<1){
-        passmainNum = 7;
+p7changeBtn.addEventListener('click',()=>{
+    p7initposBtnFn();
+    p7posBtn01.src = "./styles/images/pass07/posBtn1chk.png"
+    p7positionNum = 1;
+    p7memSrc = p7memories.src.split('-')[0];
+    p7memories.src = p7memSrc + "-1.png";
+    p7revise.src = "./styles/images/pass07/revise1.png";
+    if(p7gender === 0){
+        p7gender = 1;
+        p7head.src = "./styles/images/pass07/girl1.png";
+        p7feelbtn1.src = "./styles/images/pass07/feelbtn2.png";
+        p7feelbtn2.src = "./styles/images/pass07/feelbtn1.png";
+        p7feelbtn3.src = "./styles/images/pass07/feelbtn1.png";
+        p7feelbtn4.src = "./styles/images/pass07/feelbtn1.png";
+        p7selectGender.src = "./styles/images/pass07/woman.png";
+        p7memories.src = "./styles/images/pass07/memBoy1-1.png";
+        p7intimacy.src = "./styles/images/pass07/中下-男原始.png";
+        return;
     }
-    p7mainEye.style.opacity = 0;
-    setTimeout(()=>{
-        p7mainEye.style.opacity = 1;
-    },1)
-    p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
+    if(p7gender === 1){
+        p7gender = 0;
+        p7head.src = "./styles/images/pass07/boy1.png";
+        p7feelbtn1.src = "./styles/images/pass07/feelbtn2.png";
+        p7feelbtn2.src = "./styles/images/pass07/feelbtn1.png";
+        p7feelbtn3.src = "./styles/images/pass07/feelbtn1.png";
+        p7feelbtn4.src = "./styles/images/pass07/feelbtn1.png";
+        p7selectGender.src = "./styles/images/pass07/man.png";
+        p7memories.src = "./styles/images/pass07/memGirl1-1.png";
+        p7intimacy.src = "./styles/images/pass07/中下-女原始.png";
+        return;
+    }
 })
-p7eyeDown.addEventListener("click",()=>{
-    passmainNum++;
-    if(passmainNum>7){
-        passmainNum = 1;
+p7feelbtn1.addEventListener('click',()=>{
+    p7initFeelFn();
+    p7feelbtn1.src = "./styles/images/pass07/feelbtn2.png";
+    if(p7gender == 0){
+        p7head.src = "./styles/images/pass07/boy1.png";
+    }else if(p7gender == 1){
+        p7head.src = "./styles/images/pass07/girl1.png";
     }
-    p7mainEye.style.opacity = 0;
-    setTimeout(()=>{
-        p7mainEye.style.opacity = 1;
-    },1)
-    p7mainEye.src = "./styles/images/share/pass-eye0"+passmainNum+".png";
 })
-p7mainEye.addEventListener("click",changeroom);
-p7PrevPage.addEventListener("click",clearR7room);
-function changeroom(){
-    clearR7room();
-    if(passmainNum === 1){
-        openRoom01();
-        return;
+p7feelbtn2.addEventListener('click',()=>{
+    p7initFeelFn();
+    p7feelbtn2.src = "./styles/images/pass07/feelbtn2.png";
+    if(p7gender == 0){
+        p7head.src = "./styles/images/pass07/boy2.png";
+    }else if(p7gender == 1){
+        p7head.src = "./styles/images/pass07/girl2.png";
     }
-    if(passmainNum === 2){
-        openRoom02();
-        return;
+})
+p7feelbtn3.addEventListener('click',()=>{
+    p7initFeelFn();
+    p7feelbtn3.src = "./styles/images/pass07/feelbtn2.png";
+    if(p7gender == 0){
+        p7head.src = "./styles/images/pass07/boy3.png";
+    }else if(p7gender == 1){
+        p7head.src = "./styles/images/pass07/girl3.png";
     }
-    if(passmainNum === 3){
-        openRoom03();
-        return;
+})
+p7feelbtn4.addEventListener('click',()=>{
+    p7initFeelFn();
+    p7feelbtn4.src = "./styles/images/pass07/feelbtn2.png";
+    if(p7gender == 0){
+        p7head.src = "./styles/images/pass07/boy4.png";
+    }else if(p7gender == 1){
+        p7head.src = "./styles/images/pass07/girl4.png";
     }
-    if(passmainNum === 4){
-        openRoom04();
-        return;
+})
+p7posBtn01.addEventListener('click',()=>{
+    p7initposBtnFn();
+    p7posBtn01.src = "./styles/images/pass07/posBtn1chk.png";
+    p7positionNum = 1;
+    p7revise.src = "./styles/images/pass07/revise1.png";
+    if(p7gender === 0){
+        p7memories.src = "./styles/images/pass07/memGirl1-1.png";
+    }else if(p7gender === 1){
+        p7memories.src = "./styles/images/pass07/memBoy1-1.png";
     }
-    if(passmainNum === 5){
-        openRoom05();
-        return;
+})
+p7posBtn02.addEventListener('click',()=>{
+    p7initposBtnFn();
+    p7posBtn02.src = "./styles/images/pass07/posBtn2chk.png";
+    p7positionNum = 2;
+    p7revise.src = "./styles/images/pass07/revise1.png";
+    if(p7gender === 0){
+        p7memories.src = "./styles/images/pass07/memGirl2-1.png";
+    }else if(p7gender === 1){
+        p7memories.src = "./styles/images/pass07/memBoy2-1.png";
     }
-    if(passmainNum === 6){
-        openRoom06();
-        return;
+})
+p7posBtn03.addEventListener('click',()=>{
+    p7initposBtnFn();
+    p7posBtn03.src = "./styles/images/pass07/posBtn3chk.png";
+    p7positionNum = 3;
+    p7revise.src = "./styles/images/pass07/revise1.png";
+    if(p7gender === 0){
+        p7memories.src = "./styles/images/pass07/memGirl3-1.png";
+    }else if(p7gender === 1){
+        p7memories.src = "./styles/images/pass07/memBoy3-1.png";
     }
-    if(passmainNum === 7){
-        openRoom07();
-        return;
+})
+p7revise.addEventListener('click',()=>{
+    p7memSrc = p7memories.src.split('-')[0];
+    p7memories.src = p7memSrc + "-2.png";
+    p7revise.src = "./styles/images/pass07/revise2.png";
+    if(p7gender===0){
+        if(p7positionNum === 1){
+            p7intimacy.src = "./styles/images/pass07/中下-女1.png"
+            return;
+        }
+        if(p7positionNum === 2){
+            p7intimacy.src = "./styles/images/pass07/中下-女2.png"
+            return;
+        }
+        if(p7positionNum === 3){
+            p7intimacy.src = "./styles/images/pass07/中下-女3.png"
+            return;
+        }
     }
-
+    if(p7gender===1){
+        if(p7positionNum === 1){
+            p7intimacy.src = "./styles/images/pass07/中下-男1.png"
+            return;
+        }
+        if(p7positionNum === 2){
+            p7intimacy.src = "./styles/images/pass07/中下-男2.png"
+            return;
+        }
+        if(p7positionNum === 3){
+            p7intimacy.src = "./styles/images/pass07/中下-男3.png"
+            return;
+        }
+    }
+})
+function p7initposBtnFn(){
+    p7posBtn01.src = "./styles/images/pass07/posBtn1.png";
+    p7posBtn02.src = "./styles/images/pass07/posBtn2.png";
+    p7posBtn03.src = "./styles/images/pass07/posBtn3.png";
 }
-// pass07 END
+function p7initFeelFn(){
+    p7feelbtn1.src = "./styles/images/pass07/feelbtn1.png";
+    p7feelbtn2.src = "./styles/images/pass07/feelbtn1.png";
+    p7feelbtn3.src = "./styles/images/pass07/feelbtn1.png";
+    p7feelbtn4.src = "./styles/images/pass07/feelbtn1.png";
+}
 // t.innerHTML = "times:"+times;
 bg1.addEventListener("click",()=>{
     model[0].style.display = "flex";

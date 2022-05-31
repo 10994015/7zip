@@ -1,208 +1,219 @@
-
 #room07pass{
     width:100%;
     height: auto;
     position: absolute;
+    /* position: relative; */
     top: 30px;
     left:0;
 }
+#room07pass #room07passContent{
+    width:100%;
+    margin:auto;
+    /* position: relative; */
+    margin-top: 50px;
+    height: 610px;
+    /* background-image: url("./images/pass07/top.png"); */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+#room07pass #room07passContent::-webkit-scrollbar {
+    width: 0.1em;
+  }
+  #room07pass #room07passContent::-webkit-scrollbar-button{
+    background: #000;
+  }
+  #room07pass #room07passContent::-webkit-scrollbar-track-piece{
+    background: #000;
+  }
+  #room07pass #room07passContent::-webkit-scrollbar-thumb {
+    /* background-color: #fff;
+    height: 0;
+    width:0;
+    display: none;
+    opacity: none; */
+  }
+  #room07pass #pass07border{
+    width:1300px;
+    margin:auto;
+    position: relative;
+}
+#room07pass #p7border{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+#room07pass  #p7-prevPage{
+    position: absolute;
+    top: 10px;
+    left:7px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room07pass  #p7-prevPage:hover{
+    transform: scale(1.1);
+}
+#room07pass  #p7-home{
+    position: absolute;
+    top: 10px;
+    left:61.5px;
+    width:40px;
+    height: 32px;
+    cursor: pointer;
+    border:none;
+}
+#room07pass  #p7-home:hover{
+    transform: scale(1.1);
+}
+
 #room07pass #room07passTop,
-#room07pass #room07passCenter,
-#room07pass #room07passBottom{
+#room07pass #room07passBottom,
+#room07pass #room07passselect{
     width:1300px;
     margin:auto;
     position: relative;
     margin-bottom: 50px;
+    height: 550px;
 }
 #room07pass #room07passTop #topbg07,
-#room07pass #room07passCenter #centerbg07,
-#room07pass #room07passBottom #bottombg07{
+#room07pass #room07passBottom #p7resultBg,
+#room07pass #room07passselect #p7selectbg{
     width:100%;
 }
-#room07pass #room07passTop #p7box{
+#room07pass #room07passTop #p7egg{
     position: absolute;
-    top: 250px;
-    left:1046px;
+    top: 199px;
+    left:1070px;
+    width:178px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7feelbtn1{
+    position: absolute;
+    top: 200px;
+    left:420px;
+    width:20px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7feelbtn2{
+    position: absolute;
+    top: 200px;
+    left:480px;
+    width:20px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7feelbtn3{
+    position: absolute;
+    top: 200px;
+    left:540px;
+    width:20px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7feelbtn4{
+    position: absolute;
+    top: 200px;
+    left:600px;
+    width:20px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7position{
+    position: absolute;
+    top: 335px;
+    left:394px;
+    width:246px;
+    height: auto;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7posBtn01{
+    position: absolute;
+    top: 414px;
+    left:615px;
+    width:25px;
+    height: auto;
+    z-index: 99;
+    cursor: pointer;
+}
+#room07pass #room07passselect #p7posBtn02{
+    position: absolute;
+    top: 444px;
+    left:615px;
+    width:25px;
+    height: auto;
+    z-index: 99;
+    cursor: pointer;
+}
+#room07pass #room07passselect #p7posBtn03{
+    position: absolute;
+    top: 474px;
+    left:615px;
+    width:25px;
+    height: auto;
+    z-index: 99;
+    cursor: pointer;
+}
+#room07pass #room07passselect #p7head{
+    position: absolute;
+    top: 150px;
+    left:675px;
+    width:325px;
+    height: auto;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7selectGender{
+    position: absolute;
+    top: 120px;
+    left:1050px;
+    width:200px;
+    height: auto;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7changeBtn{
+    position: absolute;
+    top: 120px;
+    left:1050px;
+    width:90px;
+    height: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+#room07pass #room07passselect #p7intimacy{
+    position: absolute;
+    top: 515px;
+    left:743px;
     width:170px;
     height: auto;
     cursor: pointer;
+    z-index: 99;
 }
-#room07pass #room07passTop #p7-prevPage{
+#room07pass #room07passselect #p7memories{
     position: absolute;
-    top: 9px;
-    left:31px;
-    width:50px;
-    cursor: pointer;
-}
-#room07pass #room07passCenter{
-    position: relative;
-}
-#room07pass #room07passCenter .p7control{
-    position: absolute;
-    width:181px;
+    top: 250px;
+    left:1054px;
+    width:210px;
     height: auto;
     cursor: pointer;
-    transition: all .5s ease;
+    z-index: 99;
 }
-#room07pass #room07passCenter #p7control1{
+#room07pass #room07passselect #p7revise{
     position: absolute;
-    top: 230px;
-    left:380px;
-    transition: all .5s ease;
-}
-#room07pass #room07passCenter #p7control2{
-    position: absolute;
-    top: 443px;
-    left:597px;
-}
-#room07pass #room07passCenter #p7control3{
-    position: absolute;
-    top: 232px;
-    left:792px;
-}
-#room07pass #room07passCenter #p7control4{
-    position: absolute;
-    top: 443px;
-    left:1021px;
-}
-#room07pass #room07passCenter #p7people{
-    position: absolute;
-    top: 300px;
-    left:230px;
-    /* transform: translate(175px, -235px); */
-    /* top:65px;
-    left:405px; */
-    /* top:65px;
-    left:814px; */
-    /* top:280px;
-    left:620px; */
-    /* top:280px;
-    left:1029px; */
-    width:140px;
-}
-#room07pass #room07passBottom{
-    position: relative;
-}
-#room07pass #room07passBottom #p7badge{
-    position: absolute;
-    top: 387px;
-    left:282px;
-    width:115px;
-    display: none;
-}
-#room07pass #room07passBottom .passBadge07{
-    animation: badge 2s infinite linear;
-}
-@keyframes badge{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.2);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-#room07pass #room07passBottom #p7eyeBox{
-    position: absolute;
-    top: 38%;
-    left:87.8%;
-    background-color: transparent;
-    z-index: 999;
-    border-radius: 50%;
+    top: 450px;
+    left:1125px;
+    width:75px;
+    height: auto;
     cursor: pointer;
+    z-index: 99;
 }
-#room07pass #room07passBottom #p7eyeBox #p7mainEye{
-    position: absolute;
-    top: 7px;
-    left: 1px;
-    width:125px;
-    transition: .5s;
-}
-#room07pass #room07passBottom #p7eyeUp{
-    position: absolute;
-    top: 11.2%;
-    left:89.3%;
-    width:87px;
-    height: 87px;
-    background-color: transparent;
-    z-index: 999;
-    border-radius: 50%;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7eyeDown{
-    position: absolute;
-    top: 75.8%;
-    left:89.3%;
-    width:87px;
-    height: 87px;
-    background-color: transparent;
-    z-index: 999;
-    border-radius: 50%;
-    cursor: pointer;
-}
-#room07pass #room07passBottom #p7eye1{
-    position: absolute;
-    top: 1%;
-    right: 4%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .1s linear;
-    display:none;
-}
-#room07pass #room07passBottom #p7eye2{
-    position: absolute;
-    top: 13%;
-    right: 2%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .2s linear;
-    display:none;
-}
-#room07pass #room07passBottom #p7eye3{
-    position: absolute;
-    top: 25%;
-    right: 0%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .3s linear;
-    display:none;
-}
-#room07pass #room07passBottom #p7eye4{
-    position: absolute;
-    top: 37%;
-    right: -2%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .4s linear;
-    display:none;
-}
-#room07pass #room07passBottom #p7eye5{
-    position: absolute;
-    top: 49%;
-    right: 0%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .5s linear;
-    display:none;
-}
-#room07pass #room07passBottom #p7eye6{
-    position: absolute;
-    top: 61%;
-    right: 2%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .6s linear;
-    display:none;
-}
-#room07pass #room07passBottom #p7eye7{
-    position: absolute;
-    top: 73%;
-    right: 4%;
-    width:70px;
-    cursor: pointer;
-    animation:  p7eye .7s linear;
-    display:none;
-}
-
