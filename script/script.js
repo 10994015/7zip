@@ -422,7 +422,7 @@ function clearR1room(){
         for(let a=0;a<r1arrow.length;a++){
             r1arrow[a].style.display = "none";
         }
-        bg01.style.display = "block";
+        document.getElementById('bg01').style.display = "block";
         room01pass.style.display = "none";
         r1Password.value = "";
 }
@@ -747,7 +747,7 @@ function clearR2room(){
         for(let a=0;a<r2arrow.length;a++){
             r2arrow[a].style.display = "none";
         }
-        bg03.style.display = "block";
+        document.getElementById('bg03').style.display = "block";
         r2people.style.display = "block";
         r2card.style.display = "block";
         r2cardRight.style.display = "block";
@@ -1109,7 +1109,7 @@ function clearR3room(){
     for(let a=0;a<r3arrow.length;a++){
         r3arrow[a].style.display = "none";
     }
-    bg07.style.display = "block";
+    document.getElementById('bg07').style.display = "block";
     room03pass.style.display = "none";
     r3Password.value = "";
 }
@@ -1482,7 +1482,7 @@ function clearR4room(){
     for(let a=0;a<r4arrow.length;a++){
         r4arrow[a].style.display = "none";
     }
-    bg04.style.display = "block";
+    bg04.style.display = "block";document.getElementById('bg04').style.display = "block";
     room04pass.style.display = "none";
     r4Password.value = "";
 }
@@ -1782,7 +1782,7 @@ function clearR5room(){
     for(let a=0;a<r5arrow.length;a++){
         r5arrow[a].style.display = "none";
     }
-    bg05.style.display = "block";
+    document.getElementById('bg05').style.display = "block";
     r5people.style.display = "block";
     r5card.style.display = "block";
     r5cardRight.style.display = "block";
@@ -2215,9 +2215,7 @@ function clearR6room(){
     for(let a=0;a<r6arrow.length;a++){
         r6arrow[a].style.display = "none";
     }
-        
-   
-    bg02.style.display = "block";
+    document.getElementById('bg02').style.display = "block";
     r6people.style.display = "block";
     r6card.style.display = "block";
     r6cardRight.style.display = "block";
@@ -2297,12 +2295,12 @@ function openRoom07(){
             r7arrow[a].style.display = "block";
         }
     },1000)
-    setTimeout(()=>{
-        r7people.style.display = "none";
-        r7card.style.display = "none";
-        r7cardRight.style.display = "none";
-        r7cardLeft.style.display = "none"; 
-    },2000);
+    // setTimeout(()=>{
+    //     r7people.style.display = "none";
+    //     r7card.style.display = "none";
+    //     r7cardRight.style.display = "none";
+    //     r7cardLeft.style.display = "none"; 
+    // },2000);
    
 }
 room07People.addEventListener("mouseover",()=>{
@@ -2529,7 +2527,7 @@ function clearR7room(){
     r7cardLeft.style.display = "block"; 
     room07pass.style.display = "none";
     r7Password.value = "";
-    bg08.style.display = "block";
+    document.getElementById('bg08').style.display = "block";
 }
 // room7 END
 var p1PrevPage = document.getElementById('p1-prevPage');
