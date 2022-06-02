@@ -3866,7 +3866,6 @@ p6boy.addEventListener('click',()=>{
         p6boy.style.width = "190px";
         p6boy.style.left = "640px";
         p6boy.style.top = "170px";
-        p6selectArr[0] = 1;
         p6selectArr[0] = 2;
     }else{
         p6boy.src = "./styles/images/pass06/boy1.png"
@@ -3975,771 +3974,205 @@ p6chkbtn.addEventListener('click',()=>{
     }
     p6roleFn();
 })
-// for(let i=0;i<p6obj1.length;i++){
-//     p6obj1[i].addEventListener('click',p6obj1Fn)
-// }
-// const p6objBtn = document.getElementsByClassName('p6objBtn');
-// let loverNum = 3000;
-// let b1loverArr = [-150,950,2555,3000,3500];
-// //950,750,500,850,550
-// let b1loverRank = [4,3,2,1];
-// let b1loverranking = 3;
-// let b1ranknum = 3;
+
+const p6objBtn = document.getElementsByClassName('p6objBtn');
+let loverNum = 3000;
+let b1loverArr = [-150,950,2555,3000,3500];
+//950,750,500,850,550
+let p6girlloverRank = [4,3,2,1];
+let p6boyloverRank = [4,3,1,2];
+let p6peopleloverRank = [4,1,2,3];
+let p6monkeyloverRank = [1,3,2,4];
+let p6objbtnindex = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 // for(let i=0;i<p6objBtn.length;i++){
 //     p6objBtn[i].addEventListener('click',calcloverNUmFn)
 // }
-// function calcloverNUmFn(){
-//     console.log(b1loverArr.indexOf(loverNum)); // 3
-//     b1indexof = b1loverArr.indexOf(loverNum);
-//     loverNum = loverNum - Number(this.alt); //2050
-//     b1loverArr[b1indexof] = loverNum; //[-150,950,2555,2050,3500];
-//     let newloverArr = b1loverArr.sort((a,b)=>{
-//         return a - b;
-//     })
-//     console.log(newloverArr); //[-150,950,,2050,2550,3500];
-//     console.log(newloverArr.indexOf(loverNum)); //2
+function calcloverNUmFn(event,idx,b6lovenum){
+    console.log(b1loverArr.indexOf(loverNum)); // 3
+    b1indexof = b1loverArr.indexOf(loverNum);
+    console.log(event);
     
-//     for(let i=1;i<=5;i++){
-//         document.getElementById(`p6b1loveNum${i}`).innerHTML = newloverArr[5-i];
-//     }
-//     console.log(this.id.split('p6b')[1].split('obj')[0]);
-    
-//     if(this.id.split('p6b')[1].split('obj')[0] == 1){
-//         //4=-150, 3=950, 2=2550, 1=自己
-//         //[4,3,1,2]
-//         // b1loverRank.indexOf(1);
-//         b1loverRank.splice(b1loverRank.indexOf(1),1); // [4,3,2]
-       
-//         b1loverRank.splice(newloverArr.indexOf(loverNum),0,1);
-//         console.log(b1loverRank);
-        
-//     }
-    
-//     p6b1no5.src = `./styles/images/pass06/head${b1loverRank[0]}.png`;
-//     p6b1no4.src = `./styles/images/pass06/head${b1loverRank[1]}.png`;
-//     p6b1no3.src = `./styles/images/pass06/head${b1loverRank[2]}.png`;
-//     p6b1no2.src = `./styles/images/pass06/head${b1loverRank[3]}.png`;
-// }
+    if(p6objbtnindex[idx] == 0){
+        p6objbtnindex[idx] = 1;
+        //parentNode
+        // Number(this.id.split('obj')[1]);
+        event.parentNode.getElementsByClassName(`p6hover${event.id.split('obj')[1]}`)[0].style.display = "block";
 
-p6b1obj1.addEventListener('click',()=>{
-    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2050;
-    p6b1loveNum2.innerHTML = 2550;
-    p6b1loveNum3.innerHTML = 2050;
-    if(p6selectArr[0]===1){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head1.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b1no2.src = "./styles/images/pass06/head1.png";
-        p6b1no3.src = "./styles/images/pass06/head2.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head3.png";
-        p6b1no4.src = "./styles/images/pass06/head1.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head4.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b1obj2.addEventListener('click',()=>{
-    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2250;
-    p6b1loveNum2.innerHTML = 2250;
-    if(p6selectArr[0]===1){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head1.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b1no2.src = "./styles/images/pass06/head1.png";
-        p6b1no3.src = "./styles/images/pass06/head2.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head3.png";
-        p6b1no4.src = "./styles/images/pass06/head1.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head4.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b1obj3.addEventListener('click',()=>{
-    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2500;
-    p6b1loveNum2.innerHTML = 2500;
-    if(p6selectArr[0]===1){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head1.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b1no2.src = "./styles/images/pass06/head1.png";
-        p6b1no3.src = "./styles/images/pass06/head2.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head3.png";
-        p6b1no4.src = "./styles/images/pass06/head1.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head4.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b1obj4.addEventListener('click',()=>{
-    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2150;
-    p6b1loveNum2.innerHTML = 2550;
-    p6b1loveNum3.innerHTML = 2150;
-    if(p6selectArr[0]===1){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head1.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b1no2.src = "./styles/images/pass06/head1.png";
-        p6b1no3.src = "./styles/images/pass06/head2.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head3.png";
-        p6b1no4.src = "./styles/images/pass06/head1.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head4.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b1obj5.addEventListener('click',()=>{
-    p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2450;
-    p6b1loveNum2.innerHTML = 2550;
-    p6b1loveNum3.innerHTML = 2450;
-    if(p6selectArr[0]===1){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head1.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b1no2.src = "./styles/images/pass06/head1.png";
-        p6b1no3.src = "./styles/images/pass06/head2.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head3.png";
-        p6b1no4.src = "./styles/images/pass06/head1.png";
-        p6b1no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b1no2.src = "./styles/images/pass06/head2.png";
-        p6b1no3.src = "./styles/images/pass06/head4.png";
-        p6b1no4.src = "./styles/images/pass06/head3.png";
-        p6b1no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b2obj1.addEventListener('click',()=>{
-    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2650;
-    p6b2loveNum2.innerHTML = 2650;
-    p6b2loveNum3.innerHTML = 2550;
-    if(p6selectArr[0]===1){
-        p6b2no2.src = "./styles/images/pass06/head1.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head1.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b2no2.src = "./styles/images/pass06/head3.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head1.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b2no2.src = "./styles/images/pass06/head4.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b2obj2.addEventListener('click',()=>{
-    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2500;
-    p6b2loveNum2.innerHTML = 2550;
-    p6b2loveNum3.innerHTML = 2500;
-    if(p6selectArr[0]===1){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head1.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b2no2.src = "./styles/images/pass06/head1.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head3.png";
-        p6b2no4.src = "./styles/images/pass06/head1.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head4.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b2obj3.addEventListener('click',()=>{
-    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2840;
-    p6b2loveNum2.innerHTML = 2840;
-    p6b2loveNum3.innerHTML = 2550;
-    if(p6selectArr[0]===1){
-        p6b2no2.src = "./styles/images/pass06/head1.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head1.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b2no2.src = "./styles/images/pass06/head3.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head1.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b2no2.src = "./styles/images/pass06/head4.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b2obj4.addEventListener('click',()=>{
-    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2550;
-    p6b2loveNum2.innerHTML = 2550;
-    p6b2loveNum3.innerHTML = 2550;
-    if(p6selectArr[0]===1){
-        p6b2no2.src = "./styles/images/pass06/head1.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head1.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b2no2.src = "./styles/images/pass06/head3.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head1.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b2no2.src = "./styles/images/pass06/head4.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b2obj5.addEventListener('click',()=>{
-    p6b2lefttop.getElementsByClassName('p6b2lefttopNum')[0].innerHTML = 2900;
-    p6b2loveNum2.innerHTML = 2900;
-    p6b1loveNum3.innerHTML = 2550;
-    if(p6selectArr[0]===1){
-        p6b2no2.src = "./styles/images/pass06/head1.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b2no2.src = "./styles/images/pass06/head2.png";
-        p6b2no3.src = "./styles/images/pass06/head1.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b2no2.src = "./styles/images/pass06/head3.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head1.png";
-        p6b2no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b2no2.src = "./styles/images/pass06/head4.png";
-        p6b2no3.src = "./styles/images/pass06/head2.png";
-        p6b2no4.src = "./styles/images/pass06/head3.png";
-        p6b2no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b3obj1.addEventListener('click',()=>{
-    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2250;
-    p6b3loveNum2.innerHTML = 2250;
-    if(p6selectArr[0]===1){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head1.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b3no2.src = "./styles/images/pass06/head1.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head3.png";
-        p6b3no4.src = "./styles/images/pass06/head1.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head4.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b3obj2.addEventListener('click',()=>{
-    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2650;
-    p6b3loveNum3.innerHTML = 2650;
-    if(p6selectArr[0]===1){
-        p6b3no2.src = "./styles/images/pass06/head1.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head1.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b3no2.src = "./styles/images/pass06/head3.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head1.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b3no2.src = "./styles/images/pass06/head4.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b3obj3.addEventListener('click',()=>{
-    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2550;
-    p6b3loveNum2.innerHTML = 2550;
-    if(p6selectArr[0]===1){
-        p6b3no2.src = "./styles/images/pass06/head1.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head1.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b3no2.src = "./styles/images/pass06/head3.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head1.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b3no2.src = "./styles/images/pass06/head4.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b3obj4.addEventListener('click',()=>{
-    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2150;
-    p6b3loveNum2.innerHTML = 2150;
-    if(p6selectArr[0]===1){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head1.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b3no2.src = "./styles/images/pass06/head1.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head3.png";
-        p6b3no4.src = "./styles/images/pass06/head1.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head4.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b3obj5.addEventListener('click',()=>{
-    p6b3lefttop.getElementsByClassName('p6b3lefttopNum')[0].innerHTML = 2250;
-    p6b3loveNum2.innerHTML = 2250;
-    if(p6selectArr[0]===1){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head1.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b3no2.src = "./styles/images/pass06/head1.png";
-        p6b3no3.src = "./styles/images/pass06/head2.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head3.png";
-        p6b3no4.src = "./styles/images/pass06/head1.png";
-        p6b3no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b3no2.src = "./styles/images/pass06/head2.png";
-        p6b3no3.src = "./styles/images/pass06/head4.png";
-        p6b3no4.src = "./styles/images/pass06/head3.png";
-        p6b3no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b4obj1.addEventListener('click',()=>{
-    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2050;
-    p6b4loveNum2.innerHTML = 2550;
-    p6b4loveNum3.innerHTML = 2050;
-    if(p6selectArr[0]===1){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head1.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b4no2.src = "./styles/images/pass06/head1.png";
-        p6b4no3.src = "./styles/images/pass06/head2.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head3.png";
-        p6b4no4.src = "./styles/images/pass06/head1.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head4.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b4obj2.addEventListener('click',()=>{
-    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2250;
-    p6b4loveNum2.innerHTML = 2550;
-    p6b4loveNum3.innerHTML = 2250;
-    if(p6selectArr[0]===1){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head1.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b4no2.src = "./styles/images/pass06/head1.png";
-        p6b4no3.src = "./styles/images/pass06/head2.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head3.png";
-        p6b4no4.src = "./styles/images/pass06/head1.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head4.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b4obj3.addEventListener('click',()=>{
-    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2500;
-    p6b4loveNum2.innerHTML = 2550;
-    p6b4loveNum3.innerHTML = 2500;
-    if(p6selectArr[0]===1){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head1.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b4no2.src = "./styles/images/pass06/head1.png";
-        p6b4no3.src = "./styles/images/pass06/head2.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head3.png";
-        p6b4no4.src = "./styles/images/pass06/head1.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head4.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b4obj4.addEventListener('click',()=>{
-    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2150;
-    p6b4loveNum2.innerHTML = 2550;
-    p6b4loveNum3.innerHTML = 2150;
-    if(p6selectArr[0]===1){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head1.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b4no2.src = "./styles/images/pass06/head1.png";
-        p6b4no3.src = "./styles/images/pass06/head2.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head3.png";
-        p6b4no4.src = "./styles/images/pass06/head1.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head4.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-p6b4obj5.addEventListener('click',()=>{
-    p6b4lefttop.getElementsByClassName('p6b4lefttopNum')[0].innerHTML = 2450;
-    p6b4loveNum2.innerHTML = 2550;
-    p6b4loveNum3.innerHTML = 2450;
-    if(p6selectArr[0]===1){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head1.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===2){
-        p6b4no2.src = "./styles/images/pass06/head1.png";
-        p6b4no3.src = "./styles/images/pass06/head2.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===3){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head3.png";
-        p6b4no4.src = "./styles/images/pass06/head1.png";
-        p6b4no5.src = "./styles/images/pass06/head4.png";
-        return;
-    }
-    if(p6selectArr[0]===4){
-        p6b4no2.src = "./styles/images/pass06/head2.png";
-        p6b4no3.src = "./styles/images/pass06/head4.png";
-        p6b4no4.src = "./styles/images/pass06/head3.png";
-        p6b4no5.src = "./styles/images/pass06/head1.png";
-        return;
-    }
-})
-function p6obj1Fn(){
-    let p6h1 = this.parentNode.getElementsByClassName('p6hover1')[0];
-    p6hoverInit();
-    if(p6h1.style.display === "block"){
-        p6h1.style.display = "none";
     }else{
-        p6h1.style.display = "block";
+        p6objbtnindex[idx] = 0;
+        event.parentNode.getElementsByClassName(`p6hover${event.id.split('obj')[1]}`)[0].style.display = "none";
     }
-}
-for(let i=0;i<p6obj2.length;i++){
-    p6obj2[i].addEventListener('click',p6obj2Fn)
-}
-function p6obj2Fn(){
-    let p6h2 = this.parentNode.getElementsByClassName('p6hover2')[0];
-    p6hoverInit();
-    if(p6h2.style.display === "block"){
-        p6h2.style.display = "none";
+    if(p6objbtnindex[idx] == 1){
+        loverNum = loverNum - Number(b6lovenum); //2050
     }else{
-        p6h2.style.display = "block";
+        loverNum = loverNum + Number(b6lovenum);
     }
-}
-for(let i=0;i<p6obj3.length;i++){
-    p6obj3[i].addEventListener('click',p6obj3Fn)
-}
-function p6obj3Fn(){
-    let p6h3 = this.parentNode.getElementsByClassName('p6hover3')[0];
-    p6hoverInit();
-    if(p6h3.style.display === "block"){
-        p6h3.style.display = "none";
-    }else{
-        p6h3.style.display = "block";
+    
+    b1loverArr[b1indexof] = loverNum; //[-150,950,2555,2050,3500];
+    let newloverArr = b1loverArr.sort((a,b)=>{
+        return a - b;
+    })
+    console.log(newloverArr); //[-150,950,,2050,2550,3500];
+    console.log(newloverArr.indexOf(loverNum)); //2
+    if(event.id.split('p6b')[1].split('obj')[0]==1){
+        for(let i=1;i<=5;i++){
+            document.getElementById(`p6b1loveNum${i}`).innerHTML = newloverArr[5-i];
+        }
+        p6b1lefttopNum.innerHTML = loverNum;
+        if(loverNum>2555){
+            p6b1title.src = "./styles/images/pass06/bottom1/title1.png";
+        }else if(loverNum<=2555 && loverNum>950){
+            p6b1title.src = "./styles/images/pass06/bottom1/title2.png";
+        }else if(loverNum<=950 && loverNum>-150){
+            p6b1title.src = "./styles/images/pass06/bottom1/title3.png";
+        }else if(loverNum<=-150){
+            p6b1title.src = "./styles/images/pass06/bottom1/title4.png";
+        }
+    }else if(event.id.split('p6b')[1].split('obj')[0]==2){
+        for(let i=1;i<=5;i++){
+            document.getElementById(`p6b2loveNum${i}`).innerHTML = newloverArr[5-i];
+        }
+        p6b2lefttopNum.innerHTML = loverNum;
+        if(loverNum>2555){
+            p6b2title.src = "./styles/images/pass06/bottom2/title1.png";
+        }else if(loverNum<=2555 && loverNum>950){
+            p6b2title.src = "./styles/images/pass06/bottom2/title2.png";
+        }else if(loverNum<=950 && loverNum>-150){
+            p6b2title.src = "./styles/images/pass06/bottom2/title3.png";
+        }else if(loverNum<=-150){
+            p6b2title.src = "./styles/images/pass06/bottom2/title4.png";
+        }
+    }else if(event.id.split('p6b')[1].split('obj')[0]==3){
+        for(let i=1;i<=5;i++){
+            document.getElementById(`p6b3loveNum${i}`).innerHTML = newloverArr[5-i];
+        }
+        p6b3lefttopNum.innerHTML = loverNum;
+        if(loverNum>2555){
+            p6b3title.src = "./styles/images/pass06/bottom3/title1.png";
+        }else if(loverNum<=2555 && loverNum>950){
+            p6b3title.src = "./styles/images/pass06/bottom3/title2.png";
+        }else if(loverNum<=950 && loverNum>-150){
+            p6b3title.src = "./styles/images/pass06/bottom3/title3.png";
+        }else if(loverNum<=-150){
+            p6b3title.src = "./styles/images/pass06/bottom3/title4.png";
+        }
+    }else if(event.id.split('p6b')[1].split('obj')[0]==4){
+        for(let i=1;i<=5;i++){
+            document.getElementById(`p6b4loveNum${i}`).innerHTML = newloverArr[5-i];
+        }
+        p6b4lefttopNum.innerHTML = loverNum;
+        if(loverNum>2555){
+            p6b4title.src = "./styles/images/pass06/bottom4/title1.png";
+        }else if(loverNum<=2555 && loverNum>950){
+            p6b4title.src = "./styles/images/pass06/bottom4/title2.png";
+        }else if(loverNum<=950 && loverNum>-150){
+            p6b4title.src = "./styles/images/pass06/bottom4/title3.png";
+        }else if(loverNum<=-150){
+            p6b4title.src = "./styles/images/pass06/bottom4/title4.png";
+        }
     }
-}
-for(let i=0;i<p6obj4.length;i++){
-    p6obj4[i].addEventListener('click',p6obj4Fn)
-}
-function p6obj4Fn(){
-    let p6h4 = this.parentNode.getElementsByClassName('p6hover4')[0];
-    p6hoverInit();
-    if(p6h4.style.display === "block"){
-        p6h4.style.display = "none";
-    }else{
-        p6h4.style.display = "block";
+    
+  
+    if(p6selectArr[0]==1){
+        p6girlloverRank.splice(p6girlloverRank.indexOf(1),1); // [4,3,2]
+        p6girlloverRank.splice(newloverArr.indexOf(loverNum),0,1);
+        p6b1no5.src = `./styles/images/pass06/head${p6girlloverRank[0]}.png`;
+        p6b1no4.src = `./styles/images/pass06/head${p6girlloverRank[1]}.png`;
+        p6b1no3.src = `./styles/images/pass06/head${p6girlloverRank[2]}.png`;
+        p6b1no2.src = `./styles/images/pass06/head${p6girlloverRank[3]}.png`;
+
+        p6b2no5.src = `./styles/images/pass06/head${p6girlloverRank[0]}.png`;
+        p6b2no4.src = `./styles/images/pass06/head${p6girlloverRank[1]}.png`;
+        p6b2no3.src = `./styles/images/pass06/head${p6girlloverRank[2]}.png`;
+        p6b2no2.src = `./styles/images/pass06/head${p6girlloverRank[3]}.png`;
+
+        p6b3no5.src = `./styles/images/pass06/head${p6girlloverRank[0]}.png`;
+        p6b3no4.src = `./styles/images/pass06/head${p6girlloverRank[1]}.png`;
+        p6b3no3.src = `./styles/images/pass06/head${p6girlloverRank[2]}.png`;
+        p6b3no2.src = `./styles/images/pass06/head${p6girlloverRank[3]}.png`;
+
+        p6b4no5.src = `./styles/images/pass06/head${p6girlloverRank[0]}.png`;
+        p6b4no4.src = `./styles/images/pass06/head${p6girlloverRank[1]}.png`;
+        p6b4no3.src = `./styles/images/pass06/head${p6girlloverRank[2]}.png`;
+        p6b4no2.src = `./styles/images/pass06/head${p6girlloverRank[3]}.png`;
+        return;
     }
-}
-for(let i=0;i<p6obj5.length;i++){
-    p6obj5[i].addEventListener('click',p6obj5Fn)
-}
-function p6obj5Fn(){
-    let p6h5 = this.parentNode.getElementsByClassName('p6hover5')[0];
-    p6hoverInit();
-    if(p6h5.style.display === "block"){
-        p6h5.style.display = "none";
-    }else{
-        p6h5.style.display = "block";
+    if(p6selectArr[0]==2){
+        p6boyloverRank.splice(p6boyloverRank.indexOf(2),1); // [4,3,2]
+        p6boyloverRank.splice(newloverArr.indexOf(loverNum),0,2);
+        p6b1no5.src = `./styles/images/pass06/head${p6boyloverRank[0]}.png`;
+        p6b1no4.src = `./styles/images/pass06/head${p6boyloverRank[1]}.png`;
+        p6b1no3.src = `./styles/images/pass06/head${p6boyloverRank[2]}.png`;
+        p6b1no2.src = `./styles/images/pass06/head${p6boyloverRank[3]}.png`;
+
+        p6b2no5.src = `./styles/images/pass06/head${p6boyloverRank[0]}.png`;
+        p6b2no4.src = `./styles/images/pass06/head${p6boyloverRank[1]}.png`;
+        p6b2no3.src = `./styles/images/pass06/head${p6boyloverRank[2]}.png`;
+        p6b2no2.src = `./styles/images/pass06/head${p6boyloverRank[3]}.png`;
+
+        p6b3no5.src = `./styles/images/pass06/head${p6boyloverRank[0]}.png`;
+        p6b3no4.src = `./styles/images/pass06/head${p6boyloverRank[1]}.png`;
+        p6b3no3.src = `./styles/images/pass06/head${p6boyloverRank[2]}.png`;
+        p6b3no2.src = `./styles/images/pass06/head${p6boyloverRank[3]}.png`;
+
+        p6b4no5.src = `./styles/images/pass06/head${p6boyloverRank[0]}.png`;
+        p6b4no4.src = `./styles/images/pass06/head${p6boyloverRank[1]}.png`;
+        p6b4no3.src = `./styles/images/pass06/head${p6boyloverRank[2]}.png`;
+        p6b4no2.src = `./styles/images/pass06/head${p6boyloverRank[3]}.png`;
+        return;
     }
-}
-function p6hoverInit(){
-    for(let i=0;i<=3;i++){
-        p6hover1[i].style.display = "none";
-        p6hover2[i].style.display = "none";
-        p6hover3[i].style.display = "none";
-        p6hover4[i].style.display = "none";
-        p6hover5[i].style.display = "none";
+    if(p6selectArr[0]==3){
+        p6peopleloverRank.splice(p6peopleloverRank.indexOf(3),1); // [4,3,2]
+        p6peopleloverRank.splice(newloverArr.indexOf(loverNum),0,3);
+        p6b1no5.src = `./styles/images/pass06/head${p6peopleloverRank[0]}.png`;
+        p6b1no4.src = `./styles/images/pass06/head${p6peopleloverRank[1]}.png`;
+        p6b1no3.src = `./styles/images/pass06/head${p6peopleloverRank[2]}.png`;
+        p6b1no2.src = `./styles/images/pass06/head${p6peopleloverRank[3]}.png`;
+        
+        p6b2no5.src = `./styles/images/pass06/head${p6peopleloverRank[0]}.png`;
+        p6b2no4.src = `./styles/images/pass06/head${p6peopleloverRank[1]}.png`;
+        p6b2no3.src = `./styles/images/pass06/head${p6peopleloverRank[2]}.png`;
+        p6b2no2.src = `./styles/images/pass06/head${p6peopleloverRank[3]}.png`;
+
+        p6b3no5.src = `./styles/images/pass06/head${p6peopleloverRank[0]}.png`;
+        p6b3no4.src = `./styles/images/pass06/head${p6peopleloverRank[1]}.png`;
+        p6b3no3.src = `./styles/images/pass06/head${p6peopleloverRank[2]}.png`;
+        p6b3no2.src = `./styles/images/pass06/head${p6peopleloverRank[3]}.png`;
+
+        p6b4no5.src = `./styles/images/pass06/head${p6peopleloverRank[0]}.png`;
+        p6b4no4.src = `./styles/images/pass06/head${p6peopleloverRank[1]}.png`;
+        p6b4no3.src = `./styles/images/pass06/head${p6peopleloverRank[2]}.png`;
+        p6b4no2.src = `./styles/images/pass06/head${p6peopleloverRank[3]}.png`;
+        return;
     }
+    if(p6selectArr[0]==4){
+        p6monkeyloverRank.splice(p6monkeyloverRank.indexOf(4),1); // [4,3,2]
+        p6monkeyloverRank.splice(newloverArr.indexOf(loverNum),0,4);
+        p6b1no5.src = `./styles/images/pass06/head${p6monkeyloverRank[0]}.png`;
+        p6b1no4.src = `./styles/images/pass06/head${p6monkeyloverRank[1]}.png`;
+        p6b1no3.src = `./styles/images/pass06/head${p6monkeyloverRank[2]}.png`;
+        p6b1no2.src = `./styles/images/pass06/head${p6monkeyloverRank[3]}.png`;
+
+        p6b2no5.src = `./styles/images/pass06/head${p6monkeyloverRank[0]}.png`;
+        p6b2no4.src = `./styles/images/pass06/head${p6monkeyloverRank[1]}.png`;
+        p6b2no3.src = `./styles/images/pass06/head${p6monkeyloverRank[2]}.png`;
+        p6b2no2.src = `./styles/images/pass06/head${p6monkeyloverRank[3]}.png`;
+
+        p6b3no5.src = `./styles/images/pass06/head${p6monkeyloverRank[0]}.png`;
+        p6b3no4.src = `./styles/images/pass06/head${p6monkeyloverRank[1]}.png`;
+        p6b3no3.src = `./styles/images/pass06/head${p6monkeyloverRank[2]}.png`;
+        p6b3no2.src = `./styles/images/pass06/head${p6monkeyloverRank[3]}.png`;
+
+        p6b4no5.src = `./styles/images/pass06/head${p6monkeyloverRank[0]}.png`;
+        p6b4no4.src = `./styles/images/pass06/head${p6monkeyloverRank[1]}.png`;
+        p6b4no3.src = `./styles/images/pass06/head${p6monkeyloverRank[2]}.png`;
+        p6b4no2.src = `./styles/images/pass06/head${p6monkeyloverRank[3]}.png`;
+        return;
+    }
+    
+    
 }
+
 function p6roleFn(){
     if(p6selectArr[0]===1){
         document.getElementsByClassName('p6b1lefttopName')[0].innerHTML = "女性";
