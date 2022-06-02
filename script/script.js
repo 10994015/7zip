@@ -3836,7 +3836,6 @@ const p6hover3 = document.getElementsByClassName('p6hover3');
 const p6hover4 = document.getElementsByClassName('p6hover4');
 const p6hover5 = document.getElementsByClassName('p6hover5');
 let p6selectArr = [0,0];
-let loverNum = 3000;
 p6egg.addEventListener('mouseover',()=>{
     p6egg.src = "./styles/images/pass06/egg2.png";
 })
@@ -3976,9 +3975,52 @@ p6chkbtn.addEventListener('click',()=>{
     }
     p6roleFn();
 })
-for(let i=0;i<p6obj1.length;i++){
-    p6obj1[i].addEventListener('click',p6obj1Fn)
-}
+// for(let i=0;i<p6obj1.length;i++){
+//     p6obj1[i].addEventListener('click',p6obj1Fn)
+// }
+// const p6objBtn = document.getElementsByClassName('p6objBtn');
+// let loverNum = 3000;
+// let b1loverArr = [-150,950,2555,3000,3500];
+// //950,750,500,850,550
+// let b1loverRank = [4,3,2,1];
+// let b1loverranking = 3;
+// let b1ranknum = 3;
+// for(let i=0;i<p6objBtn.length;i++){
+//     p6objBtn[i].addEventListener('click',calcloverNUmFn)
+// }
+// function calcloverNUmFn(){
+//     console.log(b1loverArr.indexOf(loverNum)); // 3
+//     b1indexof = b1loverArr.indexOf(loverNum);
+//     loverNum = loverNum - Number(this.alt); //2050
+//     b1loverArr[b1indexof] = loverNum; //[-150,950,2555,2050,3500];
+//     let newloverArr = b1loverArr.sort((a,b)=>{
+//         return a - b;
+//     })
+//     console.log(newloverArr); //[-150,950,,2050,2550,3500];
+//     console.log(newloverArr.indexOf(loverNum)); //2
+    
+//     for(let i=1;i<=5;i++){
+//         document.getElementById(`p6b1loveNum${i}`).innerHTML = newloverArr[5-i];
+//     }
+//     console.log(this.id.split('p6b')[1].split('obj')[0]);
+    
+//     if(this.id.split('p6b')[1].split('obj')[0] == 1){
+//         //4=-150, 3=950, 2=2550, 1=自己
+//         //[4,3,1,2]
+//         // b1loverRank.indexOf(1);
+//         b1loverRank.splice(b1loverRank.indexOf(1),1); // [4,3,2]
+       
+//         b1loverRank.splice(newloverArr.indexOf(loverNum),0,1);
+//         console.log(b1loverRank);
+        
+//     }
+    
+//     p6b1no5.src = `./styles/images/pass06/head${b1loverRank[0]}.png`;
+//     p6b1no4.src = `./styles/images/pass06/head${b1loverRank[1]}.png`;
+//     p6b1no3.src = `./styles/images/pass06/head${b1loverRank[2]}.png`;
+//     p6b1no2.src = `./styles/images/pass06/head${b1loverRank[3]}.png`;
+// }
+
 p6b1obj1.addEventListener('click',()=>{
     p6b1lefttop.getElementsByClassName('p6b1lefttopNum')[0].innerHTML = 2050;
     p6b1loveNum2.innerHTML = 2550;
