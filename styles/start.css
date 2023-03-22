@@ -2,6 +2,12 @@
     font-family: ChironSansHKProItVF;
     src: url(./font/ChironSansHKProItVF.otf);
 }
+*{
+    user-select: none;
+}
+img{
+    -webkit-user-drag: none;
+}
 html, body{
     background-color: #000;
     padding-top: 5px;

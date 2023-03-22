@@ -1,3 +1,6 @@
+img{
+    -webkit-user-drag: none;
+}
 #room04pass{
     width:100%;
     height: auto;
